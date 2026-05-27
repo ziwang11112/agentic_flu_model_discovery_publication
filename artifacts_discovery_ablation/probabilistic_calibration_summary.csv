@@ -1,0 +1,19 @@
+series_name,model_name,interval_level,nominal_coverage,empirical_coverage,coverage_gap,average_interval_width,negative_log_likelihood,uncertainty_method,uncertainty_draws,interval_calibration_method,split,calibration_kind,interval_calibration_scale,artifact_dir
+0-4 yr,probabilistic_seir,50,0.5,0.7272727272727273,0.2272727272727273,0.32344274421081276,-0.39841470451127425,bootstrap,30,none,test,raw,1.0,robustness\0_4_yr\probabilistic_seir
+0-4 yr,probabilistic_seir,80,0.8,0.9090909090909091,0.10909090909090902,0.5101396393895049,-0.39841470451127425,bootstrap,30,none,test,raw,1.0,robustness\0_4_yr\probabilistic_seir
+0-4 yr,probabilistic_seir,95,0.95,1.0,0.050000000000000044,0.7503529268718928,-0.39841470451127425,bootstrap,30,none,test,raw,1.0,robustness\0_4_yr\probabilistic_seir
+18-49 yr,probabilistic_seir,50,0.5,0.9090909090909091,0.40909090909090906,0.14922894954745958,-8.9955880424308,bootstrap,30,none,test,raw,1.0,robustness\18_49_yr\probabilistic_seir
+18-49 yr,probabilistic_seir,80,0.8,1.0,0.19999999999999996,0.2491275475221008,-8.9955880424308,bootstrap,30,none,test,raw,1.0,robustness\18_49_yr\probabilistic_seir
+18-49 yr,probabilistic_seir,95,0.95,1.0,0.050000000000000044,0.35186782947197115,-8.9955880424308,bootstrap,30,none,test,raw,1.0,robustness\18_49_yr\probabilistic_seir
+5-17 yr,probabilistic_seir,50,0.5,0.6363636363636364,0.13636363636363635,0.20994835891068034,-9.730804949966668,bootstrap,30,none,test,raw,1.0,robustness\5_17_yr\probabilistic_seir
+5-17 yr,probabilistic_seir,80,0.8,1.0,0.19999999999999996,0.4313925594833812,-9.730804949966668,bootstrap,30,none,test,raw,1.0,robustness\5_17_yr\probabilistic_seir
+5-17 yr,probabilistic_seir,95,0.95,1.0,0.050000000000000044,0.7077951595576961,-9.730804949966668,bootstrap,30,none,test,raw,1.0,robustness\5_17_yr\probabilistic_seir
+50-64 yr,probabilistic_seir,50,0.5,1.0,0.5,0.24966694221455768,-1.3923578000920356,bootstrap,30,none,test,raw,1.0,robustness\50_64_yr\probabilistic_seir
+50-64 yr,probabilistic_seir,80,0.8,1.0,0.19999999999999996,0.469281272124894,-1.3923578000920356,bootstrap,30,none,test,raw,1.0,robustness\50_64_yr\probabilistic_seir
+50-64 yr,probabilistic_seir,95,0.95,1.0,0.050000000000000044,0.746514662572082,-1.3923578000920356,bootstrap,30,none,test,raw,1.0,robustness\50_64_yr\probabilistic_seir
+>= 65 yr,probabilistic_seir,50,0.5,1.0,0.5,0.7571188543647964,8.205375676431647,bootstrap,30,none,test,raw,1.0,robustness\ge__65_yr\probabilistic_seir
+>= 65 yr,probabilistic_seir,80,0.8,1.0,0.19999999999999996,1.2209776733494606,8.205375676431647,bootstrap,30,none,test,raw,1.0,robustness\ge__65_yr\probabilistic_seir
+>= 65 yr,probabilistic_seir,95,0.95,1.0,0.050000000000000044,1.7553295367373252,8.205375676431647,bootstrap,30,none,test,raw,1.0,robustness\ge__65_yr\probabilistic_seir
+Overall,probabilistic_seir,50,0.5,0.9090909090909091,0.40909090909090906,0.29009531877563094,-3.0323499740126136,bootstrap,30,none,test,raw,1.0,overall\probabilistic_seir
+Overall,probabilistic_seir,80,0.8,1.0,0.19999999999999996,0.48124216287700583,-3.0323499740126136,bootstrap,30,none,test,raw,1.0,overall\probabilistic_seir
+Overall,probabilistic_seir,95,0.95,1.0,0.050000000000000044,0.7535783483730877,-3.0323499740126136,bootstrap,30,none,test,raw,1.0,overall\probabilistic_seir

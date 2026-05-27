@@ -1,0 +1,7 @@
+series_name,best_test_model,best_test_mae,best_rolling_model,best_rolling_mean_mae
+0-4 yr,arima_auto_small,0.08181818181818182,constrained_structure_discovery,0.10020023537918905
+18-49 yr,arima_auto_small,0.009090909090909092,arima_auto_small,0.030449735449735452
+5-17 yr,rolling_mean_2wk,0.0,no_stability_discovery,0.03531906153742237
+50-64 yr,validation_only_structure_selection,0.03212085596758132,delayed_observation_seir,0.05277499821934543
+>= 65 yr,fractional_seir,0.11959681583178612,validation_only_structure_selection,0.15766557145570956
+Overall,delayed_observation_seir,0.03507646992012179,arima_auto_small,0.04349206349206349

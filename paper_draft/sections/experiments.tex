@@ -1,0 +1,133 @@
+\section{Experiments}
+
+\subsection{Data and forecasting task}
+
+We study weekly influenza hospitalization-rate forecasting using a
+FluSurv-NET CSV export. The benchmark reads the raw file with
+\texttt{skiprows=2}, removes non-tabular disclaimer rows with missing
+\texttt{WEEK} or \texttt{YEAR.1}, sorts observations chronologically by year
+and week, and creates a continuous weekly time index. The primary series is
+the weekly hospitalization rate for the \emph{Entire Network} catchment with
+all other metadata fields set to \emph{Overall}. We also evaluate five
+age-stratified series: \texttt{0-4 yr}, \texttt{5-17 yr},
+\texttt{18-49 yr}, \texttt{50-64 yr}, and \texttt{>= 65 yr}.
+
+For each series, we use a chronological split with the first $60\%$ of weeks
+for training, the next $20\%$ for validation, and the last $20\%$ for held-out
+test evaluation. In addition to fixed test evaluation, we compute
+rolling-origin forecasts at horizons $1$, $2$, and $4$ weeks ahead. The primary
+point metrics are MAE, RMSE, and sMAPE; probabilistic models also report
+interval and likelihood diagnostics when available.
+
+\subsection{Frozen result package}
+
+The discovery-ablation results used in this draft are frozen in the branch
+\texttt{codex-supplemental-experiment-results}. The implementation commit is
+\texttt{7d8ae4e48bf001ec24daacd413b7f403eb8c4392}; the result artifact commit
+is \texttt{09c93188e319aa51933f6029260fff2f3a09cd03}; the paper
+integration commit is
+\texttt{3608b641dc45ab35a347059ef53567371ce62f1e}. The result-freeze
+manifest is \texttt{reports/result\_freeze\_manifest.md}.
+
+The main result configuration is
+\texttt{configs/discovery\_ablation.yaml}. It writes artifacts under
+\texttt{artifacts\_discovery\_ablation/}, including
+\texttt{benchmark\_model\_summary.csv},
+\texttt{benchmark\_series\_winners.csv},
+\texttt{age\_group\_recommendation.csv}, and
+\texttt{paired\_rolling\_error\_comparison.csv}. The main frozen report is
+\texttt{reports/baseline\_ablation\_report.md}. Paper-ready compact tables
+are derived from those frozen artifacts without rerunning experiments.
+
+\subsection{Model families and opt-in forecasting baselines}
+
+The historical default benchmark remains unchanged: when
+\texttt{benchmark.models} is absent, the repository runs only the six original
+core models:
+\begin{enumerate}[leftmargin=1.5em]
+\item \texttt{deterministic\_seir},
+\item \texttt{probabilistic\_seir},
+\item \texttt{hospitalized\_seihr},
+\item \texttt{delayed\_observation\_seir},
+\item \texttt{fractional\_seir}, and
+\item \texttt{constrained\_structure\_discovery}.
+\end{enumerate}
+
+The frozen discovery-ablation configuration is opt-in and explicitly adds
+standard forecasting baselines:
+\begin{itemize}[leftmargin=1.5em]
+\item persistence and rolling means:
+\texttt{last\_observed}, \texttt{rolling\_mean\_2wk}, and
+\texttt{rolling\_mean\_4wk};
+\item small validation-selected ARIMA:
+\texttt{arima\_auto\_small};
+\item lagged regression baselines:
+\texttt{lagged\_ridge} and \texttt{lagged\_gradient\_boosting}; and
+\item an explicit \texttt{equal\_weight\_point\_ensemble}.
+\end{itemize}
+The ensemble is restricted by \texttt{benchmark.ensemble\_members} so that it
+does not accidentally average discovery-ablation variants.
+
+\subsection{Discovery-specific ablations}
+
+The constrained discovery model searches a bounded epidemic grammar over
+latent structures, fractional dynamics, observation maps, and delayed
+observation. The candidate structures are drawn from
+\texttt{SIR}, \texttt{SEIR}, \texttt{SEIRS}, \texttt{SEIHR}, and
+\texttt{SEIAR}; observation maps include \texttt{I}, \texttt{H},
+\texttt{I+H}, and \texttt{delayed\_I}. Validity rules reject observation maps
+whose required compartments are absent.
+
+The frozen ablation run evaluates five discovery-specific alternatives:
+\begin{description}[leftmargin=1.5em]
+\item[\texttt{random\_structure\_discovery}] randomly samples the same grammar
+under an explicit candidate budget and records the requested budget, actual
+budget, universe size, repeats, and seed.
+\item[\texttt{exhaustive\_structure\_discovery}] evaluates the full valid
+candidate universe for the current grammar. In the frozen run this universe has
+44 candidates, below the configured guard of 200.
+\item[\texttt{validation\_only\_structure\_selection}] selects strictly by
+validation MAE. Complexity and age-prior penalties are recorded as diagnostics
+but are not used in the score.
+\item[\texttt{no\_observation\_search\_discovery}] uses the stability-aware
+score but restricts the candidate universe to \texttt{observation\_map=I}.
+\item[\texttt{no\_stability\_discovery}] keeps multi-split, complexity, and
+age-prior terms but removes the rolling stability penalty from the score.
+\end{description}
+
+Every discovery leaderboard records the score policy, score formula, component
+metrics, penalties, and boolean flags indicating which components enter the
+score. The selected structure is then evaluated by the same final model-family
+pipeline as the core epidemic models.
+
+\subsection{No-leakage evaluation design}
+
+All selection decisions use only training, validation, and rolling-validation
+information. ARIMA order selection uses validation MAE only and is refit on
+train-plus-validation before test evaluation. Discovery structure selection
+uses candidate scores computed from training and validation windows. Delayed
+observation delay selection is validation-only. Held-out test metrics are
+computed only after the model specification or baseline hyperparameter choice
+has been fixed.
+
+The paired rolling-origin comparison is post-hoc reporting rather than model
+selection. It loads frozen model artifacts, identifies \texttt{series\_name}
+and \texttt{model\_name} from each \texttt{metrics.json}, and aligns rolling
+forecasts by \texttt{series\_name}, \texttt{horizon}, and \texttt{target\_t}.
+The reported sign convention is
+\[
+\Delta = \text{MAE}_{\text{challenger}} -
+         \text{MAE}_{\text{constrained discovery}},
+\]
+so positive values indicate lower rolling absolute error for constrained
+discovery.
+
+\subsection{Numerical diagnostics}
+
+The frozen benchmark retains all model-series rows for transparency, including
+rows flagged by numerical diagnostics. The summary table records fit-status
+fields, maximum prediction magnitudes, and a
+\texttt{numerical\_failure\_flag}. Flagged rows are reported in
+\texttt{artifacts\_discovery\_ablation/numerical\_failure\_summary.csv} and
+summarized in \texttt{reports/numerical\_failure\_audit.md}. These rows are not
+used to support positive claims.

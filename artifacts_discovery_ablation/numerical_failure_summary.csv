@@ -1,0 +1,109 @@
+series_name,model_name,model_family,numerical_failure_flag,train_success,train_plus_validation_success,full_success,max_abs_test_prediction,max_abs_full_prediction,test_mae,rolling_mean_mae
+Overall,hospitalized_seihr,epidemic_model,True,False,False,True,0.1855746609599483,7.858982857608401,0.0361116072756474,0.0856330318490348
+Overall,probabilistic_seir,epidemic_model,True,False,True,True,0.1894389446727153,7.82448836437305,0.0368224678800561,0.0956908549562055
+0-4 yr,hospitalized_seihr,epidemic_model,True,True,False,True,0.2728721224878578,7.5282269033061855,0.1174537462421978,0.2117238318423371
+18-49 yr,deterministic_seir,epidemic_model,True,False,True,True,0.0873506301897291,3.6994071101458816,0.0448469452587281,0.0734867207115275
+18-49 yr,fractional_seir,epidemic_model,True,False,True,True,0.1165786457967544,4.17463068702354,0.0786309385927032,0.0996051281525248
+18-49 yr,hospitalized_seihr,epidemic_model,True,True,False,True,0.0869748770504999,3.722823925141193,0.0446554813568855,0.0746322970087163
+50-64 yr,fractional_seir,epidemic_model,True,False,True,True,0.2429567956605187,10.98936555291026,0.0996879666410169,0.1250957050418382
+50-64 yr,hospitalized_seihr,epidemic_model,True,False,True,True,0.1315295307047194,10.217804006639426,0.0372262536420237,0.0635095125203646
+>= 65 yr,constrained_structure_discovery,structure_discovery,True,False,True,True,0.2619165674058172,23.969220034114315,0.1218656648080898,0.1748237283686136
+>= 65 yr,hospitalized_seihr,epidemic_model,True,False,True,True,0.5656057499653823,23.006898112173864,0.1295248371762156,0.2593269906277726
+>= 65 yr,validation_only_structure_selection,structure_discovery_ablation,True,True,False,True,0.2607428077645226,23.969859166709902,0.1222593384926004,0.1576655714557095
+Overall,arima_auto_small,forecast_baseline,False,True,True,True,0.2,8.9,0.109090909090909,0.0434920634920634
+Overall,constrained_structure_discovery,structure_discovery,False,True,True,True,0.1900029176780585,7.688720417553623,0.0369673461326827,0.0888715971007055
+Overall,delayed_observation_seir,epidemic_model,False,True,True,True,0.1797056731577669,7.82984801520611,0.0350764699201217,0.0814357127058704
+Overall,deterministic_seir,epidemic_model,False,True,True,True,0.1799679479569039,7.821453228644074,0.0351225754236325,0.0820588425321457
+Overall,equal_weight_point_ensemble,point_ensemble,False,True,True,True,0.1991790881312522,6.987889628073948,0.0779299826658217,0.0817614344288467
+Overall,exhaustive_structure_discovery,structure_discovery_ablation,False,True,True,True,0.1900024207557976,7.688607964269929,0.0369672002584754,0.0888727874115738
+Overall,fractional_seir,epidemic_model,False,True,True,True,0.242114342519793,8.216091340770113,0.0847808375028996,0.1355639381791604
+Overall,lagged_gradient_boosting,forecast_baseline,False,True,True,True,0.2,6.975,0.109090909090909,0.1022089947089947
+Overall,lagged_ridge,forecast_baseline,False,True,True,True,0.2,6.975,0.109090909090909,0.1022089947089947
+Overall,last_observed,forecast_baseline,False,True,True,True,0.2,8.9,0.109090909090909,0.0434920634920634
+Overall,no_observation_search_discovery,structure_discovery_ablation,False,True,True,True,0.0366535598793818,7.821781527556221,0.0702528646201435,0.0989187285988708
+Overall,no_stability_discovery,structure_discovery_ablation,False,True,True,True,0.1900026432061397,7.688704099106118,0.0369672655147238,0.0888715335286709
+Overall,random_structure_discovery,structure_discovery_ablation,False,True,True,True,0.1900026547210145,7.688735012819332,0.0369672691499873,0.088871950775121
+Overall,rolling_mean_2wk,forecast_baseline,False,True,True,True,0.2,7.9,0.109090909090909,0.0588095238095238
+Overall,rolling_mean_4wk,forecast_baseline,False,True,True,True,0.2,6.975,0.109090909090909,0.1022089947089947
+Overall,validation_only_structure_selection,structure_discovery_ablation,False,True,True,True,0.0298045247582051,7.750045406014476,0.0748445210679491,0.0849143024498197
+0-4 yr,arima_auto_small,forecast_baseline,False,True,True,True,0.1,7.4,0.0818181818181818,0.1416666666666667
+0-4 yr,constrained_structure_discovery,structure_discovery,False,True,True,True,0.0537717644319573,7.152603075983243,0.0884963717287904,0.100200235379189
+0-4 yr,delayed_observation_seir,epidemic_model,False,True,True,True,0.2738811966162544,7.566123478354333,0.1178551597002196,0.2211046093356117
+0-4 yr,deterministic_seir,epidemic_model,False,True,True,True,0.2738700835045169,7.56705864900585,0.1178509205339041,0.2134826030141098
+0-4 yr,equal_weight_point_ensemble,point_ensemble,False,True,True,True,0.1835405015028265,6.524954156772757,0.0980854780354459,0.1504969019875459
+0-4 yr,exhaustive_structure_discovery,structure_discovery_ablation,False,True,True,True,0.0085781184652791,7.134294966547863,0.091118122954874,0.1140895203142763
+0-4 yr,fractional_seir,epidemic_model,False,True,True,True,0.3018285491163747,7.646254337949593,0.1431439783413979,0.2178698705056177
+0-4 yr,lagged_gradient_boosting,forecast_baseline,False,True,True,True,0.175,6.7250000000000005,0.1022727272727272,0.1794378306878307
+0-4 yr,lagged_ridge,forecast_baseline,False,True,True,True,0.175,6.7250000000000005,0.1022727272727272,0.1794378306878307
+0-4 yr,last_observed,forecast_baseline,False,True,True,True,0.1,7.4,0.0818181818181818,0.1416666666666667
+0-4 yr,no_observation_search_discovery,structure_discovery_ablation,False,True,True,True,0.0085779571161322,7.134304386913813,0.091118122634469,0.1575152537203454
+0-4 yr,no_stability_discovery,structure_discovery_ablation,False,True,True,True,0.0105229364177496,7.09564287242669,0.0911295415172329,0.1187121761351911
+0-4 yr,probabilistic_seir,epidemic_model,False,True,True,True,0.2405939228619882,7.487426985982202,0.1050199701366873,0.1884846951841359
+0-4 yr,random_structure_discovery,structure_discovery_ablation,False,True,True,True,0.0537643372076704,7.152377340439171,0.0884966975923978,0.1006873358594265
+0-4 yr,rolling_mean_2wk,forecast_baseline,False,True,True,True,0.15,7.300000000000001,0.0954545454545454,0.1341137566137566
+0-4 yr,rolling_mean_4wk,forecast_baseline,False,True,True,True,0.175,6.7250000000000005,0.1022727272727272,0.1794378306878307
+0-4 yr,validation_only_structure_selection,structure_discovery_ablation,False,True,True,True,0.0537499033003082,7.152600570285034,0.0884973970395101,0.1124130283910399
+5-17 yr,arima_auto_small,forecast_baseline,False,True,True,True,0.0,2.7,0.0,0.0375925925925925
+5-17 yr,constrained_structure_discovery,structure_discovery,False,True,True,True,0.0111357043875397,1.9198663465648769,0.0043724261113881,0.0500154184526216
+5-17 yr,delayed_observation_seir,epidemic_model,False,True,True,True,0.0810461342256633,2.1529237086120885,0.0422127373221554,0.0805869105650665
+5-17 yr,deterministic_seir,epidemic_model,False,True,True,True,0.0814638933044019,2.152047923785173,0.0424762020230296,0.0799093755041065
+5-17 yr,equal_weight_point_ensemble,point_ensemble,False,True,True,True,0.0352747991321827,2.0867897391020325,0.0221097208665533,0.0471508897165037
+5-17 yr,exhaustive_structure_discovery,structure_discovery_ablation,False,True,True,True,0.0171791577434996,1.907290929279945,0.0110124009431363,0.0448183664615375
+5-17 yr,fractional_seir,epidemic_model,False,True,True,True,0.0812041946848532,2.1523388033323667,0.0423119804561203,0.0808107121142351
+5-17 yr,hospitalized_seihr,epidemic_model,False,True,True,True,0.0544992444004184,2.0981199301715074,0.0252440733543547,0.0538887701397637
+5-17 yr,lagged_gradient_boosting,forecast_baseline,False,True,True,True,0.025,2.1,0.025,0.040542328042328
+5-17 yr,lagged_ridge,forecast_baseline,False,True,True,True,0.025,2.1,0.025,0.040542328042328
+5-17 yr,last_observed,forecast_baseline,False,True,True,True,0.0,2.7,0.0,0.0375925925925925
+5-17 yr,no_observation_search_discovery,structure_discovery_ablation,False,True,True,True,0.095090237037161,2.06515868401417,0.0534253378929867,0.1018885105702366
+5-17 yr,no_stability_discovery,structure_discovery_ablation,False,True,True,True,0.0171715270004182,1.907316140436728,0.0110056735296232,0.0353190615374223
+5-17 yr,probabilistic_seir,epidemic_model,False,True,True,True,0.0404864150728179,1.9777351815135025,0.0336992311315922,0.0429075072549911
+5-17 yr,random_structure_discovery,structure_discovery_ablation,False,True,True,True,0.0161963082543147,1.930716926039616,0.0074295607826122,0.0504196746490553
+5-17 yr,rolling_mean_2wk,forecast_baseline,False,True,True,True,0.0,2.45,0.0,0.0359259259259259
+5-17 yr,rolling_mean_4wk,forecast_baseline,False,True,True,True,0.025,2.1,0.025,0.040542328042328
+5-17 yr,validation_only_structure_selection,structure_discovery_ablation,False,True,True,True,0.0111443730778065,1.9197776832881177,0.0043767589616843,0.0483469157011416
+18-49 yr,arima_auto_small,forecast_baseline,False,True,True,True,0.0,4.3,0.009090909090909,0.0304497354497354
+18-49 yr,constrained_structure_discovery,structure_discovery,False,True,True,True,0.0937179834751234,3.4400037820410074,0.0480175345095416,0.0787429435247173
+18-49 yr,delayed_observation_seir,epidemic_model,False,True,True,True,0.0873179848991701,3.7009530792047474,0.0448185372517307,0.0728272252849527
+18-49 yr,equal_weight_point_ensemble,point_ensemble,False,True,True,True,0.0524433804983598,3.3840829412580424,0.0397452407813543,0.0536725514816459
+18-49 yr,exhaustive_structure_discovery,structure_discovery_ablation,False,True,True,True,0.0937175597957071,3.439982577669207,0.0480173269033753,0.0787418202336159
+18-49 yr,lagged_gradient_boosting,forecast_baseline,False,True,True,True,0.05,3.275,0.05,0.0533928571428571
+18-49 yr,lagged_ridge,forecast_baseline,False,True,True,True,0.05,3.275,0.05,0.0533928571428571
+18-49 yr,last_observed,forecast_baseline,False,True,True,True,0.0,4.3,0.009090909090909,0.0304497354497354
+18-49 yr,no_observation_search_discovery,structure_discovery_ablation,False,True,True,True,0.0937178633642827,3.439906638404348,0.0480174730738215,0.0787422764073389
+18-49 yr,no_stability_discovery,structure_discovery_ablation,False,True,True,True,0.0937169119591762,3.4399801987105856,0.0480170126779231,0.0787409196935992
+18-49 yr,probabilistic_seir,epidemic_model,False,True,True,True,0.0909544561109448,3.626054312094314,0.0466892770890991,0.0808356180704669
+18-49 yr,random_structure_discovery,structure_discovery_ablation,False,True,True,True,0.0948899168603707,3.4124492590242688,0.0485998952509874,0.0798423983654796
+18-49 yr,rolling_mean_2wk,forecast_baseline,False,True,True,True,0.05,3.8,0.05,0.0366269841269841
+18-49 yr,rolling_mean_4wk,forecast_baseline,False,True,True,True,0.05,3.275,0.05,0.0533928571428571
+18-49 yr,validation_only_structure_selection,structure_discovery_ablation,False,True,True,True,0.013407327011483,3.3645025932580856,0.0152322375910909,0.0391850575863337
+50-64 yr,arima_auto_small,forecast_baseline,False,True,True,True,0.2,11.4,0.1181818181818181,0.0612698412698412
+50-64 yr,constrained_structure_discovery,structure_discovery,False,True,True,True,0.1322575565366728,10.22315080926283,0.0371607159032478,0.0540426538599386
+50-64 yr,delayed_observation_seir,epidemic_model,False,True,True,True,0.1242151056378618,10.36537692556106,0.0379598606458947,0.0527749982193454
+50-64 yr,deterministic_seir,epidemic_model,False,True,True,True,0.1234255758002519,10.363749597986724,0.0380364180002214,0.0564049117960326
+50-64 yr,equal_weight_point_ensemble,point_ensemble,False,True,True,True,0.1807980991435337,9.031980149122294,0.0738243811660783,0.0689384806374572
+50-64 yr,exhaustive_structure_discovery,structure_discovery_ablation,False,True,True,True,0.1322579344455125,10.223141925055623,0.0371606795659373,0.0540422166483086
+50-64 yr,lagged_gradient_boosting,forecast_baseline,False,True,True,True,0.2249999999999999,9.225,0.1431818181818181,0.1087698412698412
+50-64 yr,lagged_ridge,forecast_baseline,False,True,True,True,0.2249999999999999,9.225,0.1431818181818181,0.1087698412698412
+50-64 yr,last_observed,forecast_baseline,False,True,True,True,0.2,11.4,0.1181818181818181,0.0612698412698412
+50-64 yr,no_observation_search_discovery,structure_discovery_ablation,False,True,True,True,0.1337924625121995,10.081516999491862,0.0370094064638786,0.0557194610249131
+50-64 yr,no_stability_discovery,structure_discovery_ablation,False,True,True,True,0.1322579227651144,10.223140104164155,0.0371606803968233,0.054042754528754
+50-64 yr,probabilistic_seir,epidemic_model,False,True,True,True,0.153082753460552,10.168078144629504,0.0378052936296531,0.0825692988543455
+50-64 yr,random_structure_discovery,structure_discovery_ablation,False,True,True,True,0.1322578804057817,10.22314218383351,0.0371606842439276,0.0540426925928833
+50-64 yr,rolling_mean_2wk,forecast_baseline,False,True,True,True,0.2,10.35,0.1181818181818181,0.0682275132275132
+50-64 yr,rolling_mean_4wk,forecast_baseline,False,True,True,True,0.2249999999999999,9.225,0.1431818181818181,0.1087698412698412
+50-64 yr,validation_only_structure_selection,structure_discovery_ablation,False,True,True,True,0.100407787669058,10.447917025066792,0.0321208559675813,0.0831333544229542
+>= 65 yr,arima_auto_small,forecast_baseline,False,True,True,True,0.6,25.3,0.3272727272727272,0.2118518518518518
+>= 65 yr,delayed_observation_seir,epidemic_model,False,True,True,True,0.480516525801575,21.779520299594758,0.1197045664195558,0.221547799970161
+>= 65 yr,deterministic_seir,epidemic_model,False,True,True,True,0.4799467423019954,21.785782664280525,0.1196878756040543,0.2214527261276795
+>= 65 yr,equal_weight_point_ensemble,point_ensemble,False,True,True,True,0.5444761829129321,19.36561453757126,0.1863885958909291,0.2570531939571344
+>= 65 yr,exhaustive_structure_discovery,structure_discovery_ablation,False,True,True,True,0.2618474140252241,23.968598322643533,0.1218893284577907,0.1690159117505848
+>= 65 yr,fractional_seir,epidemic_model,False,True,True,True,0.4780841905608906,21.80835233962212,0.1195968158317861,0.3487002538608052
+>= 65 yr,lagged_gradient_boosting,forecast_baseline,False,True,True,True,0.5750000000000001,19.2,0.3022727272727273,0.3226455026455026
+>= 65 yr,lagged_ridge,forecast_baseline,False,True,True,True,0.5750000000000001,19.2,0.3022727272727273,0.3226455026455026
+>= 65 yr,last_observed,forecast_baseline,False,True,True,True,0.6,25.3,0.3272727272727272,0.2118518518518518
+>= 65 yr,no_observation_search_discovery,structure_discovery_ablation,False,True,True,True,0.4978303121064306,21.87890391142576,0.1201751782469264,0.2320849287670753
+>= 65 yr,no_stability_discovery,structure_discovery_ablation,False,True,True,True,0.261972567928441,23.96910108217534,0.12184782843297,0.1992541245289968
+>= 65 yr,probabilistic_seir,epidemic_model,False,True,True,True,0.5312143704648588,21.25530383005519,0.1245802086331797,0.2790092315418986
+>= 65 yr,random_structure_discovery,structure_discovery_ablation,False,True,True,True,0.2008771297297461,24.10416372547469,0.1518453927047748,0.1965252983704047
+>= 65 yr,rolling_mean_2wk,forecast_baseline,False,True,True,True,0.55,22.3,0.2772727272727273,0.2294312169312169
+>= 65 yr,rolling_mean_4wk,forecast_baseline,False,True,True,True,0.5750000000000001,19.2,0.3022727272727273,0.3226455026455026

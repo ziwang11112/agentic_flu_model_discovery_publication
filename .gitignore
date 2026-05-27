@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.pytest_tmp/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local environments
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+
+# Codex/local scratch
+.codex/
+.codex_*
+*_partial.csv
+*.log
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Generated benchmark artifacts by default
+artifacts*/
+!artifacts_discovery_ablation/
+artifacts_discovery_ablation/**
+!artifacts_discovery_ablation/*.csv
+!artifacts_discovery_ablation/*.json
+!artifacts_discovery_ablation/*.md
+
+# Paper build byproducts
+paper_draft/*.aux
+paper_draft/*.bbl
+paper_draft/*.blg
+paper_draft/*.fdb_latexmk
+paper_draft/*.fls
+paper_draft/*.log
+paper_draft/*.out
+paper_draft/*.toc
+paper_draft/*.synctex.gz
+
+# Keep generated paper figures
+!paper_draft/figures/
+!paper_draft/figures/*.pdf
+!paper_draft/figures/*.png

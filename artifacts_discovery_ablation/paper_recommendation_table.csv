@@ -1,0 +1,7 @@
+series_name,recommended_model,decision_type,best_test_model,best_test_mae,best_rolling_model,best_rolling_mean_mae,recommended_discovery_structure,observation_map,delay_weeks
+Overall,delayed_observation_seir,test_preferred,delayed_observation_seir,0.0350764699201217,arima_auto_small,0.0434920634920634,,,
+0-4 yr,constrained_structure_discovery,stability_preferred,arima_auto_small,0.0818181818181818,constrained_structure_discovery,0.100200235379189,SEIRS,delayed_I,1.0
+5-17 yr,rolling_mean_2wk,balanced_tradeoff,arima_auto_small,0.0,no_stability_discovery,0.0353190615374223,,,
+18-49 yr,arima_auto_small,consensus,arima_auto_small,0.009090909090909,arima_auto_small,0.0304497354497354,,,
+50-64 yr,exhaustive_structure_discovery,balanced_tradeoff,validation_only_structure_selection,0.0321208559675813,delayed_observation_seir,0.0527749982193454,SIR,I,0.0
+>= 65 yr,validation_only_structure_selection,stability_preferred,fractional_seir,0.1195968158317861,validation_only_structure_selection,0.1576655714557095,SEIRS,I,0.0

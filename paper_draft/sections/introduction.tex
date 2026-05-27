@@ -1,0 +1,45 @@
+\section{Introduction}
+
+Weekly influenza hospitalization forecasting sits at an awkward intersection
+between mechanistic epidemiology and operational prediction. Compartmental
+models remain attractive because they offer interpretable latent states,
+controllable inductive bias, and explicit constraints such as non-negativity
+and approximate mass conservation. At the same time, hospitalization rates are
+not observed directly as canonical infectious prevalence. A model can therefore
+fail not only because its latent disease dynamics are misspecified, but also
+because its \emph{observation semantics} are mismatched to the public-health
+quantity being predicted.
+
+This mismatch is especially relevant for a proof-of-concept benchmark based on
+FluSurv-NET hospitalization-rate series. One should not expect a single model
+family to dominate across all age strata. Different age groups may differ in
+latency, effective susceptibility recycling, reporting delay, and the extent to
+which observed hospitalization rates align with latent infectious burden.
+Accordingly, the central scientific question is not simply which model wins on
+one leaderboard, but rather:
+\begin{quote}
+Can a constrained, fully programmatic structure-discovery loop identify when
+simple mechanistic baselines are sufficient and when alternative latent or
+observation structures become useful?
+\end{quote}
+
+This publication package answers that question with a frozen
+discovery-ablation benchmark. The benchmark compares hand-specified epidemic
+models, opt-in forecasting baselines, constrained observation-aware structure
+discovery, same-grammar discovery ablations, and post-hoc paired rolling-origin
+comparisons. Candidate structures are generated from a bounded grammar, checked
+against biological validity rules, selected without test-set leakage, and then
+evaluated on held-out and rolling-origin forecasts.
+
+The main empirical outcome is intentionally cautious. The benchmark does
+\emph{not} support a single globally dominant model family. Instead, it
+supports \emph{age-aware and objective-aware model recommendation under
+structural and observation uncertainty}. Observation-aware constrained
+discovery is most useful for the pediatric \texttt{0-4 yr} series, where a
+delayed infectious observation map improves rolling-origin stability relative
+to an observation-fixed ablation. Adult strata often favor simpler forecasting
+baselines or hand-specified epidemic models.
+
+This clean repository preserves the code, compact frozen artifacts, paper
+figures, and reports needed to reproduce that publication narrative. It omits
+old exploratory artifacts and smoke outputs from the full research archive.

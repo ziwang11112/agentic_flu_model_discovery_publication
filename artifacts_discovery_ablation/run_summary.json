@@ -1,0 +1,17 @@
+{
+  "leaderboard_path": "artifacts_discovery_ablation\\benchmark_leaderboard.csv",
+  "probabilistic_calibration_path": "artifacts_discovery_ablation\\probabilistic_calibration_summary.csv",
+  "recommendation_path": "artifacts_discovery_ablation\\age_group_recommendation.csv",
+  "seed": 42,
+  "series_evaluated": [
+    "Overall",
+    "0-4 yr",
+    "5-17 yr",
+    "18-49 yr",
+    "50-64 yr",
+    ">= 65 yr"
+  ],
+  "summary_path": "artifacts_discovery_ablation\\benchmark_model_summary.csv",
+  "v3_summary_path": "artifacts_discovery_ablation\\v3_result_summary.md",
+  "winners_path": "artifacts_discovery_ablation\\benchmark_series_winners.csv"
+}

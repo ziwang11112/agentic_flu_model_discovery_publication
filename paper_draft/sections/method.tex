@@ -1,0 +1,100 @@
+\section{Method}
+
+\subsection{Benchmark objective}
+
+The benchmark compares forecasting model families for weekly influenza
+hospitalization-rate prediction under a common data-processing, fitting, and
+evaluation protocol. The objective is twofold:
+\begin{enumerate}[leftmargin=1.5em]
+\item quantify point-forecast performance across forecasting baselines,
+hand-specified epidemic models, and discovered epidemic structures; and
+\item determine whether constrained structure discovery provides useful
+age-specific latent or observation structures beyond strong baselines.
+\end{enumerate}
+
+All model selection and hyperparameter selection use only training,
+validation, or rolling-validation evidence. Held-out test metrics are computed
+only after the model family, structure, or baseline configuration has been
+selected.
+
+\subsection{Data processing and series construction}
+
+The raw FluSurv-NET CSV is read with \texttt{skiprows=2} to discard metadata
+lines above the table. Rows with missing \texttt{WEEK} or \texttt{YEAR.1} are
+removed, the remaining rows are sorted chronologically by year and week, and a
+continuous integer time index is created. The primary series is the
+\emph{Entire Network} / \emph{Overall} weekly hospitalization rate. The frozen
+run also evaluates five age-stratified series:
+\texttt{0--4 yr}, \texttt{5--17 yr}, \texttt{18--49 yr},
+\texttt{50--64 yr}, and \texttt{$\geq$65 yr}.
+
+\subsection{Forecasting baselines}
+
+The discovery-ablation configuration adds opt-in non-epidemic forecasting
+baselines. Persistence and rolling-mean baselines test whether recent observed
+rates are already sufficient. \texttt{arima\_auto\_small} chooses among a
+small fixed set of ARIMA orders by validation MAE and then refits on
+train-plus-validation for test forecasting. \texttt{lagged\_ridge} and
+\texttt{lagged\_gradient\_boosting} use lagged observations, linear time, and
+seasonal sine/cosine features with recursive multi-step forecasts. These
+baselines are opt-in; the historical default benchmark remains the original
+six epidemic model families.
+
+\subsection{Manual epidemic baselines}
+
+The hand-specified epidemic baselines include deterministic SEIR,
+probabilistic SEIR, hospitalized SEIHR, delayed-observation SEIR, and
+fractional SEIR variants. All epidemic states are normalized, and fitting uses
+explicit penalties for negative states and approximate mass-conservation
+violations. The delayed-observation SEIR baseline selects its delay using
+validation evidence only.
+
+\subsection{Constrained structure discovery}
+
+The discovery module searches over a bounded grammar rather than arbitrary
+symbolic dynamics. A structure specification contains:
+\begin{itemize}[leftmargin=1.5em]
+\item a compartment template from
+\{\texttt{SIR}, \texttt{SEIR}, \texttt{SEIRS}, \texttt{SEIHR}, \texttt{SEIAR}\},
+\item a fractional on/off flag,
+\item an observation map from
+\{\texttt{I}, \texttt{H}, \texttt{I+H}, \texttt{delayed\_I}\}, and
+\item a delay parameter in $\{0,1,2,3\}$ when the observation map is
+\texttt{delayed\_I}.
+\end{itemize}
+
+Validity rules enforce that infection originates from $S$, infectious-like
+states eventually reach recovery, no isolated compartments exist, and
+observation semantics are compatible with the latent template. For example,
+\texttt{obs=H} and \texttt{obs=I+H} require an $H$ compartment, while
+\texttt{obs=delayed\_I} requires an $I$ compartment and a valid delay.
+
+\subsection{Discovery score policies and ablations}
+
+The constrained discovery model uses a stability-aware score that combines
+multi-split validation error, rolling-origin stability, complexity penalties,
+and the configured age prior. The frozen ablation package compares this search
+against five same-grammar alternatives:
+\begin{itemize}[leftmargin=1.5em]
+\item \texttt{random\_structure\_discovery}, which evaluates a seeded random
+candidate budget;
+\item \texttt{exhaustive\_structure\_discovery}, which evaluates the valid
+grammar universe subject to an explicit candidate guard;
+\item \texttt{validation\_only\_structure\_selection}, whose score is exactly
+validation MAE;
+\item \texttt{no\_observation\_search\_discovery}, which restricts the
+candidate universe to \texttt{obs=I}; and
+\item \texttt{no\_stability\_discovery}, which removes the rolling stability
+penalty from the score while retaining other terms.
+\end{itemize}
+
+All discovery leaderboards include score-policy audit columns so that the
+selected structure can be traced back to the evidence and penalties used.
+
+\subsection{Post-hoc paired rolling comparison}
+
+After model selection is fixed, the analysis aligns rolling-origin forecasts
+by series, horizon, and target week. For each challenger and the constrained
+discovery reference, it reports paired mean absolute-error differences,
+bootstrap confidence intervals, and reference win rates. These paired
+comparisons summarize post-hoc evidence and are not used for model selection.

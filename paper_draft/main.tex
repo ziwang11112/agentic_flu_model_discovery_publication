@@ -1,0 +1,47 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{siunitx}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{float}
+
+\sisetup{
+  round-mode=places,
+  round-precision=4,
+  detect-all=true
+}
+
+\title{Agentic Influenza Model Discovery:\\Experiments and Results Draft}
+\author{}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This draft captures the current experimental and empirical core of
+\texttt{agentic\_flu\_model\_discovery}. The benchmark compares deterministic,
+probabilistic, fractional, hospitalization-aware, delayed-observation, and
+standard forecasting baselines against constrained non-LLM discovery and
+same-grammar discovery ablations. The current frozen evidence supports
+age-aware and objective-aware model selection under structural and observation
+uncertainty rather than a single globally dominant model family.
+\end{abstract}
+
+\tableofcontents
+
+\input{sections/introduction}
+\input{sections/method}
+\input{sections/experiments}
+\input{sections/results}
+\input{sections/limitations}
+
+\end{document}

@@ -1,0 +1,64 @@
+\section{Limitations}
+
+\paragraph{Not a FluSight leaderboard claim.}
+The frozen benchmark is a retrospective FluSurv-NET-style hospitalization-rate
+forecasting study. It should not be described as a FluSight challenge result,
+a real-time prospective forecast, or evidence of state-of-the-art performance
+against operational forecasting systems.
+
+\paragraph{No FluSight, Flusion, or SINDy comparison in this phase.}
+The discovery-ablation freeze intentionally focuses on standard forecasting
+baselines, hand-specified epidemic baselines, and same-grammar discovery
+ablations. It does not include FluSight models, Flusion-style systems, SINDy,
+symbolic regression, or other external forecasting frameworks. Those would be
+separate comparison projects and should not be implied by the current results.
+
+\paragraph{Grammar and budget dependence.}
+Discovery results depend on the bounded grammar, candidate evaluator, scoring
+policy, optimizer budget, and candidate-search budget used in
+\texttt{configs/discovery\_ablation.yaml}. Exhaustive search covers the current
+valid grammar universe, but the grammar itself remains intentionally small.
+Random search uses an explicit budget and seed. Conclusions should therefore
+be framed as evidence about this controlled discovery space rather than about
+all possible epidemic model structures.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/fig3_discovery_ablation_matrix.pdf}
+\caption{Supplementary discovery-ablation matrix. Cell values show
+rolling-origin MAE for same-grammar discovery variants, ranked within each age
+stratum by color. The figure is diagnostic evidence about the frozen grammar
+and budget, not a single-global-winner claim. Flagged
+cells are retained for transparency.}
+\label{fig:discovery-ablation-matrix}
+\end{figure}
+
+\paragraph{Objective dependence.}
+Held-out test MAE and rolling-origin MAE do not always select the same model.
+The results are best interpreted through objective-aware recommendations:
+users prioritizing fixed-split accuracy may choose different models than users
+prioritizing rolling-origin stability.
+
+\paragraph{Numerical failure transparency.}
+The benchmark retains rows with \texttt{numerical\_failure\_flag=True} in the
+artifact tables so that optimizer and prediction-scale issues remain visible.
+These flagged rows are not removed from descriptive summaries, but they are
+not used to support positive claims. In particular, any statement involving a
+flagged model-series row should be treated as descriptive and caveated.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.88\textwidth]{figures/fig5_numerical_failure_audit.pdf}
+\caption{Numerical failure flags by model family. Flagged rows are retained in
+the frozen artifacts for transparency and are not used to support positive
+claims.}
+\label{fig:numerical-failure-audit}
+\end{figure}
+
+\paragraph{Retrospective, dataset-specific evidence.}
+The strongest positive result is concentrated in the pediatric
+\texttt{0-4 yr} series. Adult strata often favor simpler forecasting baselines
+or manual epidemic models. The paper should therefore avoid claiming global
+discovery dominance and instead emphasize when observation-aware discovery is
+useful, when simpler models suffice, and why age-aware model selection is
+necessary.

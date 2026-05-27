@@ -1,0 +1,93 @@
+seed: 42
+
+data:
+  raw_csv: FluSurveillance_Custom_Download_Data.csv
+  processed_dir: data/processed_discovery_ablation_smoke
+  include_age_robustness: false
+  season_mode: pooled
+  seasons: []
+  age_groups:
+    - 0-4 yr
+    - 5-17 yr
+    - 18-49 yr
+    - 50-64 yr
+    - ">= 65 yr"
+
+artifacts:
+  root_dir: artifacts_discovery_ablation_smoke
+
+benchmark:
+  models:
+    - last_observed
+    - rolling_mean_4wk
+    - deterministic_seir
+    - delayed_observation_seir
+    - constrained_structure_discovery
+    - random_structure_discovery
+    - validation_only_structure_selection
+    - no_observation_search_discovery
+    - no_stability_discovery
+    - equal_weight_point_ensemble
+  ensemble_members:
+    - last_observed
+    - rolling_mean_4wk
+    - deterministic_seir
+    - delayed_observation_seir
+    - constrained_structure_discovery
+
+fitting:
+  n_restarts: 1
+  rolling_n_restarts: 0
+  maxiter: 25
+  negative_penalty: 10000.0
+  mass_penalty: 10000.0
+  prior_weight: 0.001
+  laplace_draws: 10
+  uncertainty_method: bootstrap
+  bootstrap_draws: 6
+  bootstrap_n_restarts: 0
+  calibrate_intervals: false
+  interval_calibration_method: conformal
+  calibration_draws: 4
+  calibration_scale_min: 0.25
+  calibration_scale_max: 1.25
+  calibration_scale_grid_size: 11
+
+uncertainty:
+  conformal:
+    enabled: false
+
+evaluation:
+  horizons:
+    - 1
+    - 2
+
+discovery:
+  beam_width: 2
+  max_rounds: 2
+  patience: 1
+  rolling_horizons:
+    - 1
+  multi_split_blocks: 2
+  random_candidate_budget: 4
+  random_repeats: 1
+  exhaustive_max_candidates: 8
+  allow_truncated_exhaustive: true
+  score_param_weight: 0.01
+  score_compartment_weight: 0.02
+  score_fractional_weight: 0.015
+  score_observation_weight: 0.005
+  score_delay_weight: 0.005
+  score_h_observation_weight: 0.005
+  score_recurrence_weight: 0.01
+  score_stability_weight: 0.2
+  score_multi_split_std_weight: 0.5
+  raw_l2_weight: 0.0005
+  seasonality_l2_weight: 0.005
+  rho_l2_weight: 0.002
+  init_l2_weight: 0.002
+  fractional_alpha_weight: 0.002
+  use_age_prior: true
+  age_prior_simple_bonus: 0.01
+  age_prior_recurrence_bonus: 0.01
+  age_prior_fractional_bonus: 0.005
