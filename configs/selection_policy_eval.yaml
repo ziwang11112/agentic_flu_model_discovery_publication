@@ -1,0 +1,29 @@
+seed: 42
+
+data:
+  frozen_artifact_root: artifacts_discovery_ablation
+  multiseason_artifact_root: artifacts_multiseason_robustness_compact
+
+artifacts:
+  root_dir: artifacts_selection_policy_eval_compact
+  report: reports/selection_policy_evaluation.md
+
+policy:
+  epsilon: 0.02
+  max_candidates: 100
+  policies:
+    - pareto_epsilon
+    - weighted_rubric
+    - hard_veto_decision_tree
+
+toy_tasks:
+  scenarios:
+    - sinusoidal_direct
+    - lagged_observation
+  seeds:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+

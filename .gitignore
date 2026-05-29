@@ -39,6 +39,12 @@ artifacts_multiseason_robustness_compact/**
 !artifacts_multiseason_robustness_compact/*.csv
 !artifacts_multiseason_robustness_compact/*.json
 !artifacts_multiseason_robustness_compact/*.md
+!artifacts_selection_policy_eval_compact/
+artifacts_selection_policy_eval_compact/**
+!artifacts_selection_policy_eval_compact/*.csv
+!artifacts_selection_policy_eval_compact/*.json
+!artifacts_selection_policy_eval_compact/*.jsonl
+!artifacts_selection_policy_eval_compact/*.md
 
 # Paper build byproducts
 paper_draft/*.aux

@@ -1,0 +1,5 @@
+scenario_name,seed,true_observation_label,selected_observation_label,recovered,direct_mae,lagged_2_mae
+sinusoidal_direct,1,direct,direct,True,0.012970938259204137,0.1504664569849451
+sinusoidal_direct,2,direct,direct,True,0.015378478011849906,0.15123613153262883
+lagged_observation,1,lagged_2,lagged_2,True,0.1547213325164274,0.012970938259204133
+lagged_observation,2,lagged_2,lagged_2,True,0.1542621480017471,0.015378478011849904

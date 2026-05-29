@@ -1,0 +1,17 @@
+audit_label,value
+no_single_global_winner,True
+age_or_group_specific_signal,True
+simple_baseline_competitive,True
+flagged_rows_descriptive_only,True
+posthoc_comparison_not_selection,True
+multiseason_mixed_if_present,True
+allowed_claim,no single global winner
+allowed_claim,group-specific observation-label signal
+allowed_claim,simple baselines remain competitive
+caveat,posthoc comparisons are not selection evidence
+caveat,flagged rows are descriptive only
+caveat,multi-season appendix is mixed under reduced budget
+rejected_claim,global structured-search superiority
+rejected_claim,forecasting state of the art
+rejected_claim,flagged rows as positive evidence
+rejected_claim,medical or intervention recommendation
