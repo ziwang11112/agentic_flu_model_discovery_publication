@@ -1,0 +1,7 @@
+season,status,reason,has_all_required_age_groups,present_age_groups,observed_week_count_min,observed_week_count_max,expected_week_count_max,missing_week_count,duplicate_row_count,min_year_label,min_week,max_year_label,max_week,recommended_split
+2018-19,complete,"passes required age, missing-week, duplicate, and preliminary checks",True,Overall; 0-4 yr; 5-17 yr; 18-49 yr; 50-64 yr; >= 65 yr,31,31,31,0,0,2018,40,2019,18,train
+2019-20,complete,"passes required age, missing-week, duplicate, and preliminary checks",True,Overall; 0-4 yr; 5-17 yr; 18-49 yr; 50-64 yr; >= 65 yr,31,31,31,0,0,2019,40,2020,18,train
+2021-22,complete,"passes required age, missing-week, duplicate, and preliminary checks",True,Overall; 0-4 yr; 5-17 yr; 18-49 yr; 50-64 yr; >= 65 yr,36,36,36,0,0,2021,40,2022,23,train
+2022-23,complete,"passes required age, missing-week, duplicate, and preliminary checks",True,Overall; 0-4 yr; 5-17 yr; 18-49 yr; 50-64 yr; >= 65 yr,31,31,31,0,0,2022,40,2023,18,train
+2023-24,complete,"passes required age, missing-week, duplicate, and preliminary checks",True,Overall; 0-4 yr; 5-17 yr; 18-49 yr; 50-64 yr; >= 65 yr,52,52,52,0,0,2023,40,2024,39,validation
+2024-25,complete,"passes required age, missing-week, duplicate, and preliminary checks",True,Overall; 0-4 yr; 5-17 yr; 18-49 yr; 50-64 yr; >= 65 yr,31,31,31,0,0,2024,40,2025,18,test

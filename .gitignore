@@ -34,6 +34,11 @@ artifacts_discovery_ablation/**
 !artifacts_discovery_ablation/*.csv
 !artifacts_discovery_ablation/*.json
 !artifacts_discovery_ablation/*.md
+!artifacts_multiseason_robustness_compact/
+artifacts_multiseason_robustness_compact/**
+!artifacts_multiseason_robustness_compact/*.csv
+!artifacts_multiseason_robustness_compact/*.json
+!artifacts_multiseason_robustness_compact/*.md
 
 # Paper build byproducts
 paper_draft/*.aux

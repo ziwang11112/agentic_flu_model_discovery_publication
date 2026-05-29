@@ -46,6 +46,15 @@ These flagged rows are not removed from descriptive summaries, but they are
 not used to support positive claims. In particular, any statement involving a
 flagged model-series row should be treated as descriptive and caveated.
 
+\paragraph{Multi-season robustness is mixed.}
+A compact season-separated robustness appendix evaluates completed FluSurv-NET
+seasons as independent within-season trajectories. This appendix does not test
+previous-season-to-future-season transfer forecasting and uses a reduced
+budget. Its pediatric results are mixed across seasons, so we treat the frozen
+discovery-ablation benchmark as the clearest evidence for the \texttt{0-4 yr}
+delayed-observation finding and use the multi-season check as a robustness
+caveat rather than as a stronger global claim.
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.88\textwidth]{figures/fig5_numerical_failure_audit.pdf}

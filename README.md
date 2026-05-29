@@ -12,6 +12,7 @@ discovery-ablation evidence package used by the paper draft:
 - constrained observation-aware structure discovery
 - random/exhaustive/validation/no-observation/no-stability discovery ablations
 - paired rolling-origin comparisons
+- compact multi-season robustness appendix
 - paper-ready compact result CSVs
 - paper figures and LaTeX draft
 
@@ -40,6 +41,8 @@ tests/                           compact tests for the frozen package
 scripts/build_baseline_comparison_report.py
 scripts/build_paper_figures.py
 artifacts_discovery_ablation/    compact frozen CSV/JSON/Markdown summaries
+artifacts_multiseason_robustness_compact/
+                                 compact appendix-only multi-season summaries
 paper_draft/                     LaTeX draft and generated figures
 reports/                         freeze, interpretation, audit, and figure reports
 ```
@@ -88,6 +91,21 @@ Rebuild paper figures from compact frozen CSV artifacts:
 python scripts/build_paper_figures.py
 ```
 
+Run the compact multi-season robustness appendix:
+
+```bash
+python scripts/run_multiseason_robustness.py --config configs/multiseason_robustness.yaml --log-level INFO
+python scripts/build_multiseason_robustness_report.py --artifact-root artifacts_multiseason_robustness_compact
+```
+
+The multi-season appendix uses CDC RESP-NET dataset `kvib-3txy`, transformed to
+FluSurv-NET hospitalization rates. It uses completed seasons only, excludes
+`2020-21` because required age strata are incomplete, and excludes `2025-26`
+because it is preliminary. Each completed season is evaluated as its own
+within-season trajectory; this is not a transfer-forecasting benchmark. Users
+should cite CDC/RESP-NET and verify redistribution terms before making
+derivative packages public.
+
 Run tests:
 
 ```bash
@@ -112,3 +130,6 @@ This package is intentionally narrow. It is not a FluSight leaderboard claim,
 does not include FluSight/Flusion/SINDy comparisons, and does not claim that
 discovery is globally best. The current evidence supports age-aware and
 objective-aware model recommendation under a controlled grammar and budget.
+The multi-season appendix is reduced-budget robustness evidence for the
+observation-aware discovery signal, not a replacement for the frozen main
+benchmark.

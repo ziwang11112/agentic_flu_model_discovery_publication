@@ -188,6 +188,19 @@ recommendations should state whether the priority is a fixed held-out split,
 rolling-origin stability, or interpretability. The frozen artifacts support
 this policy framing more strongly than a single leaderboard winner.
 
+\subsection{Compact multi-season robustness check}
+
+We include a compact season-separated appendix over six completed FluSurv-NET
+seasons. This appendix evaluates each season as an independent within-season
+trajectory, uses a reduced budget, and is not a previous-season-to-future-season
+transfer-forecasting experiment. Its pediatric results are mixed across
+seasons: the \texttt{0-4 yr} observation-aware signal from the frozen main
+benchmark is not uniformly repeated under this reduced robustness setting. We
+therefore treat the frozen discovery-ablation benchmark as the clearest
+evidence for the \texttt{0-4 yr} delayed-observation finding and use the
+multi-season appendix as a robustness caveat rather than as a stronger global
+claim.
+
 \subsection{Numerical failure audit}
 
 The frozen summary retains numerical diagnostics for every model-series row.

@@ -1,0 +1,89 @@
+seed: 526
+
+data:
+  raw_csv: data/raw/flusurvnet_multiseason_full.csv
+  completed_seasons_path: data/processed_flusurvnet_multiseason/recommended_completed_seasons.csv
+  seasons:
+    - 2018-19
+    - 2019-20
+    - 2021-22
+    - 2022-23
+    - 2023-24
+    - 2024-25
+  include_age_robustness: true
+  age_groups:
+    - 0-4 yr
+    - ">= 65 yr"
+
+artifacts:
+  root_dir: artifacts_multiseason_robustness_compact
+  temp_root: .codex_multiseason_tmp/full
+  report: reports/multiseason_robustness_appendix.md
+
+benchmark:
+  models:
+    - last_observed
+    - rolling_mean_4wk
+    - arima_auto_small
+    - deterministic_seir
+    - delayed_observation_seir
+    - constrained_structure_discovery
+    - no_observation_search_discovery
+    - validation_only_structure_selection
+
+fitting:
+  n_restarts: 1
+  rolling_n_restarts: 0
+  maxiter: 25
+  negative_penalty: 10000.0
+  mass_penalty: 10000.0
+  prior_weight: 0.001
+  laplace_draws: 20
+  uncertainty_method: bootstrap
+  bootstrap_draws: 6
+  bootstrap_n_restarts: 0
+  calibrate_intervals: false
+  interval_calibration_method: conformal
+  calibration_draws: 4
+  calibration_scale_min: 0.25
+  calibration_scale_max: 1.25
+  calibration_scale_grid_size: 11
+
+uncertainty:
+  conformal:
+    enabled: false
+
+evaluation:
+  horizons:
+    - 1
+
+discovery:
+  beam_width: 2
+  max_rounds: 2
+  patience: 1
+  rolling_horizons:
+    - 1
+    - 2
+  multi_split_blocks: 2
+  random_candidate_budget: 6
+  random_repeats: 1
+  exhaustive_max_candidates: 10
+  allow_truncated_exhaustive: true
+  score_param_weight: 0.01
+  score_compartment_weight: 0.02
+  score_fractional_weight: 0.015
+  score_observation_weight: 0.005
+  score_delay_weight: 0.005
+  score_h_observation_weight: 0.005
+  score_recurrence_weight: 0.01
+  score_stability_weight: 0.2
+  score_multi_split_std_weight: 0.5
+  raw_l2_weight: 0.0005
+  seasonality_l2_weight: 0.005
+  rho_l2_weight: 0.002
+  init_l2_weight: 0.002
+  fractional_alpha_weight: 0.002
+  use_age_prior: true
+  age_prior_simple_bonus: 0.01
+  age_prior_recurrence_bonus: 0.01
+  age_prior_fractional_bonus: 0.005

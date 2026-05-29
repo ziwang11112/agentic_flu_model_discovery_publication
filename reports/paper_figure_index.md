@@ -42,3 +42,17 @@ Flagged rows are retained for transparency but not used to support positive clai
 
 - PDF: `paper_draft/figures/fig5_numerical_failure_audit.pdf`
 - PNG: `paper_draft/figures/fig5_numerical_failure_audit.png`
+
+## Appendix: Multi-season recommendation modes
+
+This reduced-budget appendix figure summarizes recommendation modes across completed FluSurv-NET seasons. It is within-season robustness evidence and does not replace the frozen main benchmark.
+
+- PDF: `paper_draft/figures/fig_multiseason_recommendation_modes.pdf`
+- PNG: `paper_draft/figures/fig_multiseason_recommendation_modes.png`
+
+## Appendix: Multi-season observation-search impact
+
+This reduced-budget appendix figure compares constrained discovery with the no-observation-search ablation by season. Positive rolling-error deltas favor observation-aware discovery; mixed pediatric results should be interpreted as season-dependent evidence.
+
+- PDF: `paper_draft/figures/fig_multiseason_observation_search_impact.pdf`
+- PNG: `paper_draft/figures/fig_multiseason_observation_search_impact.png`

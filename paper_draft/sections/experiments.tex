@@ -131,3 +131,19 @@ fields, maximum prediction magnitudes, and a
 \texttt{artifacts\_discovery\_ablation/numerical\_failure\_summary.csv} and
 summarized in \texttt{reports/numerical\_failure\_audit.md}. These rows are not
 used to support positive claims.
+
+\subsection{Compact multi-season robustness appendix}
+
+As an appendix-only robustness check, we also evaluate completed FluSurv-NET
+seasons as independent within-season trajectories. This compact check uses CDC
+RESP-NET-derived FluSurv-NET data for seasons \texttt{2018-19},
+\texttt{2019-20}, \texttt{2021-22}, \texttt{2022-23}, \texttt{2023-24}, and
+\texttt{2024-25}; it excludes incomplete \texttt{2020-21} and preliminary
+\texttt{2025-26}. The appendix uses a reduced budget and the compact model set
+\texttt{last\_observed}, \texttt{rolling\_mean\_4wk},
+\texttt{arima\_auto\_small}, \texttt{deterministic\_seir},
+\texttt{delayed\_observation\_seir},
+\texttt{constrained\_structure\_discovery},
+\texttt{no\_observation\_search\_discovery}, and
+\texttt{validation\_only\_structure\_selection}. It is not a
+previous-season-to-future-season transfer-forecasting experiment.

@@ -435,8 +435,39 @@ def write_figure_index() -> None:
                 "",
             ]
         )
+    appendix_figures = [
+        (
+            "fig_multiseason_recommendation_modes",
+            "Appendix: Multi-season recommendation modes",
+            "This reduced-budget appendix figure summarizes recommendation modes across completed "
+            "FluSurv-NET seasons. It is within-season robustness evidence and does not replace the "
+            "frozen main benchmark.",
+        ),
+        (
+            "fig_multiseason_observation_search_impact",
+            "Appendix: Multi-season observation-search impact",
+            "This reduced-budget appendix figure compares constrained discovery with the "
+            "no-observation-search ablation by season. Positive rolling-error deltas favor "
+            "observation-aware discovery; mixed pediatric results should be interpreted as "
+            "season-dependent evidence.",
+        ),
+    ]
+    for stem, title, caption in appendix_figures:
+        if (FIGURE_DIR / f"{stem}.pdf").exists() and (FIGURE_DIR / f"{stem}.png").exists():
+            lines.extend(
+                [
+                    f"## {title}",
+                    "",
+                    caption,
+                    "",
+                    f"- PDF: `paper_draft/figures/{stem}.pdf`",
+                    f"- PNG: `paper_draft/figures/{stem}.png`",
+                    "",
+                ]
+            )
     FIGURE_INDEX.parent.mkdir(parents=True, exist_ok=True)
-    FIGURE_INDEX.write_text("\n".join(lines), encoding="utf-8")
+    with FIGURE_INDEX.open("w", encoding="utf-8", newline="\n") as handle:
+        handle.write("\n".join(lines))
 
 
 def main() -> None:

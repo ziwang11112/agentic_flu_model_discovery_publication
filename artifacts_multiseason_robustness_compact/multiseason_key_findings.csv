@@ -1,0 +1,4 @@
+age_group,num_seasons,recommended_model_mode,constrained_discovery_recommended_count,delayed_I_selected_count,positive_observation_search_delta_count,mean_delta_rolling_mean_mae,interpretation
+0-4 yr,6,no_observation_search_discovery,0,0,1,-0.7579658130742977,mixed season-dependent evidence
+>= 65 yr,6,arima_auto_small,0,3,4,0.05009882503495803,mixed season-dependent evidence
+Overall,6,arima_auto_small,1,1,3,-0.3699557689800375,mixed season-dependent evidence

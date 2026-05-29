@@ -59,3 +59,19 @@ The full artifact/history branch remains available in the original repository.
 This clean repository keeps compact frozen CSV summaries, paper figures, source code,
 tests, configs, and paper reports, but omits old exploratory artifacts and per-model
 diagnostic plots/traces.
+
+## Multi-Season Robustness Appendix
+
+The compact multi-season robustness appendix is an add-on check for the paper
+discussion. It does not replace the frozen discovery-ablation result above.
+
+- Appendix config: `configs/multiseason_robustness.yaml`
+- Appendix artifact root: `artifacts_multiseason_robustness_compact`
+- Appendix report: `reports/multiseason_robustness_appendix.md`
+- Data source: CDC RESP-NET dataset `kvib-3txy`, transformed to FluSurv-NET rates
+- Completed seasons only: `2018-19`, `2019-20`, `2021-22`, `2022-23`, `2023-24`, `2024-25`
+- Excluded: incomplete `2020-21`; preliminary `2025-26`
+
+This appendix evaluates each completed season as its own within-season
+trajectory. It is reduced-budget robustness evidence, not a FluSight leaderboard
+or previous-season-to-future-season transfer-forecasting claim.

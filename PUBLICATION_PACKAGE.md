@@ -10,6 +10,7 @@ This clean repository preserves:
 - opt-in forecasting baselines
 - discovery ablations
 - paired rolling-origin comparison
+- compact multi-season robustness appendix
 - paper draft and figures
 - compact frozen result CSVs
 - freeze and interpretation reports
@@ -35,7 +36,17 @@ pip install -r requirements.txt
 python run_experiment.py --config configs/discovery_ablation.yaml --log-level INFO
 python scripts/build_baseline_comparison_report.py --artifact-root artifacts_discovery_ablation --reference constrained_structure_discovery
 python scripts/build_paper_figures.py
+python scripts/run_multiseason_robustness.py --config configs/multiseason_robustness.yaml --log-level INFO
+python scripts/build_multiseason_robustness_report.py --artifact-root artifacts_multiseason_robustness_compact
 ```
+
+## Data attribution
+
+The multi-season appendix uses CDC RESP-NET dataset `kvib-3txy`, transformed to
+FluSurv-NET hospitalization rates. Completed seasons are used for appendix
+robustness checks; incomplete `2020-21` and preliminary `2025-26` are excluded
+from paper-level claims. Users should cite CDC/RESP-NET and verify
+redistribution terms before making derivative packages public.
 
 ## Paper figures
 
