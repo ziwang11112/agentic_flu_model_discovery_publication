@@ -37,6 +37,28 @@ def default_proposal_allowlist() -> ProposalAllowlist:
     )
 
 
+def proposal_allowlist_from_config(config: dict[str, Any] | None) -> ProposalAllowlist:
+    if not config:
+        return default_proposal_allowlist()
+    requested_families = tuple(str(value) for value in config.get("families", ()))
+    requested_models = set(str(value) for value in config.get("model_names", ()))
+    requested_observation_labels = tuple(str(value) for value in config.get("observation_labels", ()))
+    default = default_proposal_allowlist()
+    families = requested_families or default.families
+    models_by_family: dict[str, tuple[str, ...]] = {}
+    for family in families:
+        allowed_models = default.models_by_family.get(family, ())
+        if requested_models:
+            allowed_models = tuple(model for model in allowed_models if model in requested_models)
+        models_by_family[family] = tuple(sorted(allowed_models))
+    return ProposalAllowlist(
+        families=tuple(families),
+        models_by_family=models_by_family,
+        observation_labels=tuple(sorted(requested_observation_labels or default.observation_labels)),
+        delay_labels=default.delay_labels,
+    )
+
+
 def compact_evidence_context(model_summary: pd.DataFrame, *, max_rows: int = 24) -> list[dict[str, Any]]:
     columns = [
         "series_name",

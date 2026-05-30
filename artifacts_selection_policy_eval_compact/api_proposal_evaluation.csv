@@ -1,2 +1,2 @@
-api_run_status,skip_reason,proposal_count,valid_proposal_count,valid_proposal_rate,duplicate_rate,family_diversity,observation_label_diversity,top_epsilon_useful_rate
-skipped,api_disabled,0,0,0.0,0.0,0,0,0.0
+proposal_count,valid_proposal_count,valid_proposal_rate,duplicate_count,duplicate_rate,family_diversity,observation_label_diversity,top_epsilon_useful_count,top_epsilon_useful_rate,api_run_status,skip_reason,parse_error_count,parse_errors,raw_candidate_count
+10,10,1.0,0,0.0,4,2,10,1.0,completed,,0,,10

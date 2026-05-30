@@ -33,9 +33,11 @@ ENSEMBLE_MODELS = {"equal_weight_point_ensemble"}
 ALLOWED_OBSERVATION_LABELS = {
     "",
     "direct",
+    "lagged",
     "lagged_1",
     "lagged_2",
     "mixture",
+    "not_applicable",
     "I",
     "H",
     "I+H",

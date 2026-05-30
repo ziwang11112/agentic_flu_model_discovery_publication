@@ -7,7 +7,7 @@ from typing import Any
 import pandas as pd
 
 from src.selection.api_proposer import OpenAICompatibleJSONClient, StructuredAPIProposer
-from src.selection.proposal_prompts import default_proposal_allowlist
+from src.selection.proposal_prompts import proposal_allowlist_from_config
 from src.selection.schema import BudgetState, CandidateSpec
 from src.selection.verifier import verify_candidate
 from src.utils.io import ensure_dir
@@ -154,7 +154,8 @@ def run_api_proposal_evaluation(
             }
             _write_json_lf(status, status_path)
             return status
-        proposer = StructuredAPIProposer(client=client, allowlist=default_proposal_allowlist())
+        allowlist = proposal_allowlist_from_config(config.get("proposal_task", {}).get("candidate_allowlist"))
+        proposer = StructuredAPIProposer(client=client, allowlist=allowlist)
 
     try:
         parse_result = proposer.propose(

@@ -143,10 +143,12 @@ class OpenAICompatibleJSONClient:
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_prompt},
             ],
-            "temperature": float(config.get("temperature", 0.0)),
-            "max_tokens": int(config.get("max_tokens", 1200)),
             "response_format": {"type": "json_object"},
         }
+        if not model.startswith("gpt-5"):
+            body["temperature"] = float(config.get("temperature", 0.0))
+        token_limit_key = "max_completion_tokens" if model.startswith("gpt-5") else "max_tokens"
+        body[token_limit_key] = int(config.get("max_tokens", config.get("max_completion_tokens", 1200)))
         request = urllib.request.Request(
             endpoint,
             data=json.dumps(body).encode("utf-8"),
