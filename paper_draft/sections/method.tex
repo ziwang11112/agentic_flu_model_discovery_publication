@@ -1,21 +1,54 @@
 \section{Method}
 
-\subsection{Benchmark objective}
+\subsection{Framework objective}
 
-The benchmark compares forecasting model families for weekly influenza
-hospitalization-rate prediction under a common data-processing, fitting, and
-evaluation protocol. The objective is twofold:
+The method combines a frozen forecasting benchmark with a deterministic
+selection and evidence-audit layer. The benchmark compares forecasting model
+families for weekly influenza hospitalization-rate prediction under a common
+data-processing, fitting, and evaluation protocol. The selection layer then
+turns compact benchmark summaries into verified cross-family candidate
+records and auditable policy decisions. The objective is threefold:
 \begin{enumerate}[leftmargin=1.5em]
 \item quantify point-forecast performance across forecasting baselines,
 hand-specified epidemic models, and discovered epidemic structures; and
 \item determine whether constrained structure discovery provides useful
-age-specific latent or observation structures beyond strong baselines.
+age-specific latent or observation structures beyond strong baselines; and
+\item provide verifier-gated, claim-aware model-selection outputs that make
+clear which statements are supported by the evidence and which are not.
 \end{enumerate}
 
 All model selection and hyperparameter selection use only training,
 validation, or rolling-validation evidence. Held-out test metrics are computed
 only after the model family, structure, or baseline configuration has been
 selected.
+
+\subsection{Verifier-gated selection layer}
+
+The selection layer separates proposal, verification, evidence attachment,
+policy selection, and claim-boundary auditing. Candidate records use a fixed
+schema with a model family, model name, observation label, delay label,
+proposal rationale, and metadata. The model-family space is cross-family:
+forecasting baselines, hand-specified mechanistic baselines, structured search
+models, ablation models, and ensembles.
+
+The hard verifier rejects malformed records, duplicate identifiers, absolute
+artifact paths, invalid family/model combinations, invalid observation or
+delay labels, test metrics used as selection evidence, and numerically flagged
+rows used to support positive claims. API-assisted proposal, when enabled, is
+restricted to JSON output from an explicit allowlist and cannot generate model
+code or execute candidate definitions. The default selection evaluations are
+offline and deterministic.
+
+The main policy is \texttt{pareto\_epsilon}, which filters unsafe candidates
+and selects from an epsilon Pareto frontier over available selection evidence,
+rolling-origin error, complexity, and numerical risk. We also report a
+deterministic weighted-score policy as an ablation and a hard-veto decision
+tree that prioritizes safety, simple baseline sufficiency, and
+observation-label evidence. The claim-boundary auditor records whether the
+evidence supports cautious statements such as group-specific signal and no
+single global winner, and rejects statements such as global structured-search
+superiority, state-of-the-art forecasting, or using flagged rows as positive
+evidence.
 
 \subsection{Data processing and series construction}
 

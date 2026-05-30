@@ -18,7 +18,7 @@
   detect-all=true
 }
 
-\title{Agentic Influenza Model Discovery:\\Experiments and Results Draft}
+\title{Verifier-Gated Evidence-Aware Model Selection\\for Partially Observed Influenza Forecasting}
 \author{}
 \date{\today}
 
@@ -27,13 +27,22 @@
 \maketitle
 
 \begin{abstract}
-This draft captures the current experimental and empirical core of
-\texttt{agentic\_flu\_model\_discovery}. The benchmark compares deterministic,
-probabilistic, fractional, hospitalization-aware, delayed-observation, and
-standard forecasting baselines against constrained non-LLM discovery and
-same-grammar discovery ablations. The current frozen evidence supports
-age-aware and objective-aware model selection under structural and observation
-uncertainty rather than a single globally dominant model family.
+Partially observed infectious-disease forecasting requires choosing among
+simple statistical baselines, hand-specified mechanistic models, and structured
+search candidates without leaking held-out evidence or overstating what the
+results support. We present a verifier-gated, evidence-aware selection
+framework that converts frozen time-series benchmark summaries into
+cross-family candidate records, checks them with hard safety and provenance
+rules, applies interchangeable deterministic selection policies, and audits
+the resulting claim boundaries. FluSurv-NET hospitalization forecasting is the
+real-data case study: the frozen benchmark compares forecasting baselines,
+manual epidemic baselines, constrained observation-aware discovery, and
+same-grammar ablations. The evidence supports age-aware and objective-aware
+selection rather than a single global winner. Additional software evaluations
+show that the verifier rejects malformed or claim-unsafe records, an optional
+API proposer can produce allowlisted verifier-safe proposals in a small smoke
+test, and synthetic structured toy tasks validate observation-label and
+delay-label recovery logic without claiming real-world mechanism discovery.
 \end{abstract}
 
 \tableofcontents

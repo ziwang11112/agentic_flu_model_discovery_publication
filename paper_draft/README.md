@@ -1,7 +1,8 @@
 # Paper Draft
 
-This directory contains the LaTeX paper draft for the frozen
-discovery-ablation publication package.
+This directory contains the LaTeX paper draft for the verifier-gated
+evidence-aware model-selection publication package. The frozen
+discovery-ablation benchmark is the main real-data case study.
 
 Current sections:
 

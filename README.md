@@ -1,18 +1,23 @@
 # agentic_flu_model_discovery_publication
 
-Clean publication package for constrained influenza hospitalization-rate model discovery.
+Clean publication package for verifier-gated, evidence-aware cross-family
+model selection for partially observed influenza hospitalization-rate
+forecasting.
 
 This repository is derived from the full research/archive repository
 `ziwang11112/agentic_flu_model_discovery`, but it does not inherit the old Git
 history or old exploratory artifact blobs. It preserves the frozen
 discovery-ablation evidence package used by the paper draft:
 
+- verifier-gated candidate proposal, selection, and claim-boundary auditing
 - opt-in forecasting baselines
 - hand-specified epidemic baselines
 - constrained observation-aware structure discovery
 - random/exhaustive/validation/no-observation/no-stability discovery ablations
 - paired rolling-origin comparisons
 - compact multi-season robustness appendix
+- synthetic structured recovery validation
+- optional API-assisted structured proposal smoke outputs
 - paper-ready compact result CSVs
 - paper figures and LaTeX draft
 
@@ -33,6 +38,8 @@ runs, LLM traces, smoke outputs, and large diagnostic artifact roots.
   claim-boundary auditing over frozen summary tables.
 - Synthetic structured recovery supports the observation-label and delay-label
   selection logic under controlled toy time-series tasks.
+- The optional API-assisted proposal smoke is allowlist- and verifier-gated;
+  it is proposal-quality evidence, not forecasting-performance evidence.
 - Numerical failure flags are retained for transparency and are not used to
   support positive claims.
 

@@ -58,11 +58,14 @@ caveat rather than as a stronger global claim.
 \paragraph{Offline policy layer is not an autonomous scientific agent.}
 The verifier and selection-policy layer is deterministic, offline, and
 restricted to compact summary CSVs. It is not an autonomous scientific agent,
-does not call external LLM/API services, and does not run new model fits.
-Budgeted replay uses frozen compact rows and should not be read as a
-replacement for prospective experiments. The toy observation-label recovery
-task is generic numerical validation only; it is a software check for policy
-logic rather than evidence of real-world mechanism discovery.
+does not run new model fits, and should not be read as a replacement for
+prospective experiments. Budgeted replay uses frozen compact rows. The
+optional API-assisted proposal smoke test is constrained to structured JSON
+from an explicit allowlist; API output is verifier-gated, cannot generate
+model code, and is used only to evaluate proposal validity and diversity. The
+toy observation-label recovery task is generic numerical validation only; it
+is a software check for policy logic rather than evidence of real-world
+mechanism discovery.
 
 \paragraph{Synthetic structured recovery is software validation.}
 The Stage 4 structured recovery evaluation uses generic toy time series with

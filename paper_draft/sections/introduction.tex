@@ -10,26 +10,45 @@ fail not only because its latent disease dynamics are misspecified, but also
 because its \emph{observation semantics} are mismatched to the public-health
 quantity being predicted.
 
-This mismatch is especially relevant for a proof-of-concept benchmark based on
-FluSurv-NET hospitalization-rate series. One should not expect a single model
-family to dominate across all age strata. Different age groups may differ in
-latency, effective susceptibility recycling, reporting delay, and the extent to
-which observed hospitalization rates align with latent infectious burden.
-Accordingly, the central scientific question is not simply which model wins on
-one leaderboard, but rather:
+This mismatch is especially relevant for a proof-of-concept case study based
+on FluSurv-NET hospitalization-rate series. One should not expect a single
+model family to dominate across all age strata. Different age groups may
+differ in latency, effective susceptibility recycling, reporting delay, and
+the extent to which observed hospitalization rates align with latent
+infectious burden. Accordingly, the central methodological question is not
+simply which model wins on one leaderboard, but rather:
 \begin{quote}
-Can a constrained, fully programmatic structure-discovery loop identify when
-simple mechanistic baselines are sufficient and when alternative latent or
-observation structures become useful?
+Can a verifier-gated selection framework propose, check, compare, and audit
+cross-family forecasting candidates under structural and observation
+uncertainty without leaking test evidence or overclaiming the result?
 \end{quote}
 
-This publication package answers that question with a frozen
-discovery-ablation benchmark. The benchmark compares hand-specified epidemic
-models, opt-in forecasting baselines, constrained observation-aware structure
-discovery, same-grammar discovery ablations, and post-hoc paired rolling-origin
-comparisons. Candidate structures are generated from a bounded grammar, checked
-against biological validity rules, selected without test-set leakage, and then
-evaluated on held-out and rolling-origin forecasts.
+This publication package answers that question with a verifier-gated,
+evidence-aware cross-family model-selection layer and a frozen real-data
+case study. The framework represents proposed candidates as structured records,
+checks them against hard verifier rules, attaches evidence packets from compact
+benchmark summaries, applies interchangeable selection policies, and emits
+claim-boundary audit labels. The FluSurv-NET case study then compares
+hand-specified epidemic models, opt-in forecasting baselines, constrained
+observation-aware structure discovery, same-grammar discovery ablations, and
+post-hoc paired rolling-origin comparisons. Candidate structures are generated
+from a bounded grammar, checked for validity, selected without test-set
+leakage, and then evaluated on held-out and rolling-origin forecasts.
+
+The contributions are:
+\begin{enumerate}[leftmargin=1.5em]
+\item a verifier-gated proposal, selection, and claim-audit layer for
+cross-family time-series forecasting evidence;
+\item interchangeable deterministic policies, including
+\texttt{pareto\_epsilon}, weighted scoring, and a hard-veto decision tree;
+\item synthetic structured recovery validation over generic direct, lagged,
+mixture, and proxy observation-label toy tasks;
+\item an optional API-assisted structured proposal smoke test in which API
+outputs are JSON-only, allowlisted, and verifier-checked before use; and
+\item a FluSurv-NET case study showing age- and objective-dependent model
+selection across forecasting baselines, manual epidemic baselines, constrained
+observation-aware discovery, and discovery ablations.
+\end{enumerate}
 
 The main empirical outcome is intentionally cautious. The benchmark does
 \emph{not} support a single globally dominant model family. Instead, it

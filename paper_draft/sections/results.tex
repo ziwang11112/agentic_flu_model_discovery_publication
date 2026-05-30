@@ -204,6 +204,15 @@ used by the policies. The toy observation-label recovery task is a generic
 software check over simple numerical time series, not evidence of real-world
 mechanism recovery.
 
+The optional API-assisted proposal smoke test evaluates proposal quality only.
+In that smoke run, the structured proposer produced 10 allowlisted candidate
+records with verifier validity \num{1.0}, duplicate rate \num{0.0}, four
+model-family categories, two observation-label categories, and no
+claim-safety violations. These records were parsed as JSON and checked by the
+same verifier before use. They were not executed as model code, did not run
+new forecasts, and should not be interpreted as forecasting-performance
+evidence.
+
 \subsection{Synthetic structured recovery}
 
 Stage 4 evaluates whether the offline policy layer can recover known labels in
