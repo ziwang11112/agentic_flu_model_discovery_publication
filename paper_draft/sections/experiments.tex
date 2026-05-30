@@ -122,6 +122,26 @@ The reported sign convention is
 so positive values indicate lower rolling absolute error for constrained
 discovery.
 
+\subsection{Offline verifier and selection-policy audit}
+
+We also include a deterministic offline verifier and selection-policy audit
+over the compact frozen summary tables. This layer does not call external
+LLM/API services, does not run new forecasting experiments, and does not
+modify model artifacts. It reads existing CSV summaries and checks candidate
+metadata, selection evidence, and claim-boundary labels.
+
+The hard verifier evaluates a negative set containing malformed records,
+duplicate candidate identifiers, absolute artifact paths, selection evidence
+that incorrectly includes test metrics, numerically flagged rows used as
+positive evidence, and invalid observation or delay labels. The policy audit
+then compares three deterministic policies over the frozen candidate rows:
+\texttt{pareto\_epsilon}, deterministic weighted scoring, and a hard-veto
+decision tree. These policies are reported as offline interpretations over
+existing evidence. They are not used to select models for the frozen
+benchmark. The same audit emits claim-boundary labels for statements such as
+no single global winner, group-specific signals, post-hoc comparisons not
+being selection evidence, and flagged numerical rows being descriptive only.
+
 \subsection{Numerical diagnostics}
 
 The frozen benchmark retains all model-series rows for transparency, including

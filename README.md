@@ -29,6 +29,8 @@ runs, LLM traces, smoke outputs, and large diagnostic artifact roots.
   epidemic models.
 - Paired rolling-origin comparisons are post-hoc evidence, not model
   selection.
+- The repository includes an offline verifier and selection-policy layer for
+  claim-boundary auditing over frozen summary tables.
 - Numerical failure flags are retained for transparency and are not used to
   support positive claims.
 

@@ -188,6 +188,22 @@ recommendations should state whether the priority is a fixed held-out split,
 rolling-origin stability, or interpretability. The frozen artifacts support
 this policy framing more strongly than a single leaderboard winner.
 
+\subsection{Offline verifier and selection-policy audit}
+
+The offline selection-policy audit provides a software check on the frozen
+summary evidence rather than a new forecasting result. The verifier negative
+set has rejection rate \num{1.0}, rejecting malformed candidate records,
+duplicate identifiers, absolute artifact paths, test metrics used as
+selection evidence, numerically flagged rows used as positive evidence, and
+invalid observation or delay labels. The claim-boundary audit labels the
+evidence as supporting no single global winner and group-specific signals,
+while rejecting global-winner, state-of-the-art, and flagged-row-positive
+claims. Budgeted replay is descriptive over frozen compact rows only:
+held-out test MAE is carried only as a post-hoc descriptive column and is not
+used by the policies. The toy observation-label recovery task is a generic
+software check over simple numerical time series, not evidence of real-world
+mechanism recovery.
+
 \subsection{Compact multi-season robustness check}
 
 We include a compact season-separated appendix over six completed FluSurv-NET
