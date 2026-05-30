@@ -62,3 +62,28 @@ baselines or hand-specified epidemic models.
 This clean repository preserves the code, compact frozen artifacts, paper
 figures, and reports needed to reproduce that publication narrative. It omits
 old exploratory artifacts and smoke outputs from the full research archive.
+
+\paragraph{Relation to prior work.}
+Operational influenza forecasting efforts, including collaborative FluSight
+evaluations and ensemble systems, focus on prospective public-health
+prediction and operational readiness \cite{reich2019collaborative,
+reich2019accuracy,lutz2019pathforward,ray2024flusion}. Our FluSurv-NET study
+is instead a retrospective case study for verifier-gated cross-family model
+selection under partial observation, not a FluSight leaderboard entry.
+Mechanistic influenza forecasting has shown the value of compartmental
+structure and data assimilation for seasonal prediction
+\cite{shaman2012forecasting,shaman2013realtime}; here, the emphasis is on
+checking observation semantics, comparing against non-mechanistic baselines,
+and auditing which claims the evidence supports. Symbolic-regression systems
+such as SINDy, AI Feynman, and PySR search for interpretable equations from
+data \cite{brunton2016sindy,udrescu2020aifeynman,cranmer2023pysr}; our
+structured search is deliberately narrower and is embedded in a
+verifier-gated selection layer rather than framed as unconstrained equation
+discovery. Recent LLM/evaluator scientific-discovery systems motivate
+proposal-and-evaluation loops \cite{romera2024funsearch,shojaee2024llmsr,
+lu2024aiscientist}, but this work does not claim fully autonomous science:
+API-assisted proposal is optional, allowlisted, and verifier-checked before
+use. The evaluation design follows standard out-of-sample and rolling-origin
+forecasting principles \cite{tashman2000outofsample,hyndman2021fpp3}, while
+the main policy uses a Pareto-style multi-objective selection view inspired by
+multi-objective optimization \cite{deb2002nsga2}.

@@ -28,6 +28,8 @@ See:
 - `reports/result_freeze_manifest.md`
 - `reports/discovery_ablation_interpretation.md`
 - `reports/numerical_failure_audit.md`
+- `reports/reference_matrix.md`
+- `DATA_AVAILABILITY.md`
 
 ## Main reproduction commands
 
@@ -46,7 +48,9 @@ The multi-season appendix uses CDC RESP-NET dataset `kvib-3txy`, transformed to
 FluSurv-NET hospitalization rates. Completed seasons are used for appendix
 robustness checks; incomplete `2020-21` and preliminary `2025-26` are excluded
 from paper-level claims. Users should cite CDC/RESP-NET and verify
-redistribution terms before making derivative packages public.
+redistribution terms before making derivative packages public. See
+`DATA_AVAILABILITY.md` for the included raw files, compact derived artifacts,
+and regeneration commands.
 
 ## Paper figures
 

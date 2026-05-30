@@ -71,6 +71,8 @@ reports/                         freeze, interpretation, audit, and figure repor
 See also:
 
 - `PUBLICATION_PACKAGE.md`
+- `DATA_AVAILABILITY.md`
+- `reports/reference_matrix.md`
 - `reports/result_freeze_manifest.md`
 - `reports/discovery_ablation_interpretation.md`
 - `reports/numerical_failure_audit.md`
@@ -115,7 +117,9 @@ FluSurv-NET hospitalization rates. It uses completed seasons only, excludes
 because it is preliminary. Each completed season is evaluated as its own
 within-season trajectory; this is not a transfer-forecasting benchmark. Users
 should cite CDC/RESP-NET and verify redistribution terms before making
-derivative packages public.
+derivative packages public. See `DATA_AVAILABILITY.md` for source attribution,
+included raw and compact derived files, and report/figure regeneration
+commands.
 
 Run tests:
 

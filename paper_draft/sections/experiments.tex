@@ -3,7 +3,9 @@
 \subsection{Data and forecasting task}
 
 We study weekly influenza hospitalization-rate forecasting using a
-FluSurv-NET CSV export. The benchmark reads the raw file with
+FluSurv-NET CSV export from CDC/RESP-NET sources
+\cite{cdcFluSurvNet2026,cdcRespNet2026,naquin2024flusurvnet}. The benchmark
+reads the raw file with
 \texttt{skiprows=2}, removes non-tabular disclaimer rows with missing
 \texttt{WEEK} or \texttt{YEAR.1}, sorts observations chronologically by year
 and week, and creates a continuous weekly time index. The primary series is
