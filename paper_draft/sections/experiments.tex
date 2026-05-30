@@ -144,30 +144,32 @@ benchmark. The same audit emits claim-boundary labels for statements such as
 no single global winner, group-specific signals, post-hoc comparisons not
 being selection evidence, and flagged numerical rows being descriptive only.
 
-\subsection{Synthetic structured recovery evaluation}
+\subsection{Expanded synthetic structured recovery evaluation}
 
-Finally, we include a local synthetic structured recovery evaluation for the
+Finally, we include an expanded synthetic structured recovery sweep for the
 offline selection layer. This evaluation uses generic structured time-series
 toy tasks with known labels: \texttt{direct\_signal},
 \texttt{lagged\_signal\_1}, \texttt{lagged\_signal\_2},
 \texttt{mixture\_observation}, and \texttt{hidden\_component\_proxy}. The
-target labels are direct, lagged, mixture, and proxy observation labels,
-with delay labels for the lagged cases.
+target labels are direct, lagged, mixture, and proxy observation labels, with
+delay labels for the lagged cases.
 
-The evaluation is deterministic and small: ten seeds, noise levels
-\num{0.0}, \num{0.05}, and \num{0.10}, and candidate budgets
-\num{3}, \num{5}, \num{10}, and \num{20}. It compares
+The final sweep uses seeds 1--100, noise levels \num{0.0}, \num{0.025},
+\num{0.05}, \num{0.10}, and \num{0.15}, and candidate budgets \num{3},
+\num{5}, \num{10}, \num{20}, and \num{40}. It compares
 \texttt{pareto\_epsilon}, deterministic weighted scoring, a hard-veto
-decision tree, a random-label baseline, a no-observation-label baseline, and
-a deterministic seed proposer. The API-assisted proposal path is disabled in
-this evaluation. The outputs are compact CSV summaries under
-\texttt{artifacts\_selection\_policy\_eval\_compact/} and the report
-\texttt{reports/selection\_synthetic\_recovery\_report.md}.
+decision tree, a deterministic seed proposer, a random-label baseline, and a
+no-observation-label baseline. This yields \num{75000} evaluated
+policy-condition rows before aggregation. The API-assisted proposal path is
+disabled. The outputs are compact aggregate CSV summaries under
+\texttt{artifacts\_selection\_policy\_eval\_compact/} and the main synthetic
+validation report is
+\texttt{reports/selection\_synthetic\_recovery\_full\_report.md}.
 
 These toy tasks are software validation for observation-label, delay-label,
-and candidate-family recovery logic. They are not real-data forecasting
-experiments and are not evidence that the system recovers real-world epidemic
-mechanisms.
+and candidate-family recovery logic. They use no real FluSurv-NET data, are
+not real-data forecasting experiments, and are not evidence that the system
+recovers real-world epidemic mechanisms.
 
 \subsection{Numerical diagnostics}
 

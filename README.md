@@ -36,8 +36,9 @@ runs, LLM traces, smoke outputs, and large diagnostic artifact roots.
   selection.
 - The repository includes an offline verifier and selection-policy layer for
   claim-boundary auditing over frozen summary tables.
-- Synthetic structured recovery supports the observation-label and delay-label
-  selection logic under controlled toy time-series tasks.
+- The expanded synthetic structured recovery sweep supports observation-label
+  and delay-label selection logic under controlled toy time-series tasks; it
+  is not evidence of real-world mechanism recovery.
 - The optional API-assisted proposal smoke is allowlist- and verifier-gated;
   it is proposal-quality evidence, not forecasting-performance evidence.
 - Numerical failure flags are retained for transparency and are not used to

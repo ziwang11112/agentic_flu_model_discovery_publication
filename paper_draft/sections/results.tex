@@ -215,45 +215,49 @@ evidence.
 
 \subsection{Synthetic structured recovery}
 
-Stage 4 evaluates whether the offline policy layer can recover known labels in
-controlled structured time-series toy tasks. This is not a new real-data
-forecasting experiment and is not mechanism-discovery evidence. Under the
-local evaluation, \texttt{pareto\_epsilon} recovers the observation label at
-rate \num{0.735} and the delay label at rate \num{0.755}. The corresponding
-random-label baseline has observation-label recovery \num{0.242}, while the
-no-observation-label baseline has observation-label recovery \num{0.200}. The
-\texttt{pareto\_epsilon} top-epsilon hit rate is \num{0.808}.
+The expanded synthetic structured recovery sweep is the final synthetic
+validation result. It evaluates whether the offline policy layer can recover
+known labels in controlled structured time-series toy tasks over 100 seeds,
+five noise levels, and five candidate budgets. This is not a new real-data
+forecasting experiment and is not mechanism-discovery evidence. In the full
+sweep, \texttt{pareto\_epsilon} recovers the observation label at rate
+\num{0.7429}, the delay label at rate \num{0.7470}, and reaches a
+top-epsilon hit rate of \num{0.8504}. The corresponding random-label baseline
+has observation-label recovery \num{0.2597}, while the
+no-observation-label baseline has observation-label recovery \num{0.2000}.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.92\textwidth]{figures/fig_synthetic_structured_recovery.pdf}
-\caption{Synthetic structured recovery over generic time-series toy tasks.
-The figure summarizes observation-label, delay-label, and candidate-family
-recovery for deterministic selection policies and baselines. These tasks are
+\includegraphics[width=0.92\textwidth]{figures/fig_synthetic_recovery_full_policy_comparison.pdf}
+\caption{Expanded synthetic structured recovery over generic time-series toy
+tasks. The figure summarizes observation-label, delay-label, and top-epsilon
+hit rates for deterministic selection policies and baselines. These tasks are
 software validation for selection logic, not evidence of real-world mechanism
 recovery.}
-\label{fig:synthetic-structured-recovery}
+\label{fig:synthetic-recovery-full-policy}
 \end{figure}
 
+Pareto-epsilon and deterministic seed policies substantially outperform random
+and observation-fixed baselines; Pareto is not universally best. The
+deterministic seed proposer has observation-label recovery \num{0.8257},
+higher than \texttt{pareto\_epsilon} in this controlled sweep. At noise level
+\num{0.10}, \texttt{pareto\_epsilon} observation-label recovery remains
+\num{0.6800}. Its budget curve rises from \num{0.5720} at budget \num{3} to
+\num{0.8356} at budget \num{10} and remains at that level for larger budgets.
 The strongest synthetic evidence is in the lagged tasks
 \texttt{lagged\_signal\_1} and \texttt{lagged\_signal\_2}, where policies
 that can choose lagged observation labels outperform the no-observation-label
 baseline. Mixture and proxy tasks remain harder, especially for the hard-veto
-decision tree and weighted scoring variants. The deterministic seed proposer
-is also strong in this controlled setting, so the appropriate conclusion is
-not that \texttt{pareto\_epsilon} is universally best. Rather, the synthetic
-check shows that verifier-safe policy selection can recover observation and
-delay labels better than random or observation-fixed baselines on these toy
-tasks.
+decision tree and weighted scoring variants.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.92\textwidth]{figures/fig_synthetic_budget_curve.pdf}
-\caption{Budgeted synthetic structured recovery. The budget curve shows how
-observation-label recovery changes as more candidate records are available.
-This is a local software check over generic toy tasks and is not used as a
-real-data forecasting-performance result.}
-\label{fig:synthetic-budget-curve}
+\includegraphics[width=\textwidth]{figures/fig_synthetic_recovery_full_noise_budget.pdf}
+\caption{Noise and budget sensitivity in the expanded synthetic structured
+recovery sweep. The curves show observation-label recovery under increasing
+noise and candidate budget. This is a local software check over generic toy
+tasks and is not used as a real-data forecasting-performance result.}
+\label{fig:synthetic-recovery-full-noise-budget}
 \end{figure}
 
 \subsection{Compact multi-season robustness check}
