@@ -1,0 +1,11 @@
+proposer_type,layer,observation_label_recovery_rate,delay_label_recovery_rate,candidate_family_recovery_rate,best_rolling_error_after_k,budget_to_recover_true_label,budget_to_top_epsilon,valid_proposal_rate,duplicate_rate,out_of_allowlist_rejection_rate,claim_safety_violation_rate,top_epsilon_hit_rate,best_rolling_score_after_k,post_selection_test_mae,candidate_diversity
+deterministic_seed_proposer,synthetic_execution,1.0,0.8333333333333334,1.0,0.02605855546624655,3.0,4.0,1.0,0.0,0.0,0.0,0.8333333333333334,,,
+exhaustive_oracle,synthetic_execution,1.0,1.0,1.0,0.018573961343959118,3.0,3.0,1.0,0.0,0.0,0.0,1.0,,,
+failure_guided_proposer,synthetic_execution,1.0,1.0,1.0,0.018573961343959118,3.0,3.0,1.0,0.0,0.0,0.0,1.0,,,
+mock_api_proposer,synthetic_execution,1.0,1.0,1.0,0.018573961343959118,3.0,3.0,1.0,0.0,0.0,0.0,1.0,,,
+no_observation_label_baseline,synthetic_execution,0.5,0.5,0.5,0.06670270683813063,3.0,3.0,1.0,0.0,0.0,0.0,0.5,,,
+random_candidate_proposer,synthetic_execution,1.0,0.9444444444444444,1.0,0.021025095318563544,3.0,3.3333333333333335,1.0,0.0,0.0,0.0,0.9444444444444444,,,
+deterministic_seed_proposer,frozen_replay,,,,,,6.5,1.0,0.0,0.0,0.0,0.6666666666666666,0.08566829319811876,0.09656757710631352,2.3333333333333335
+mock_api_proposer,frozen_replay,,,,,,3.0,1.0,0.0,0.0,0.0,1.0,0.0718461494356262,0.09879364040984968,3.6666666666666665
+oracle_full_candidate_ranking,frozen_replay,,,,,,3.0,1.0,0.0,0.0,0.0,1.0,0.0718461494356262,0.09879364040984968,3.0
+random_candidate_proposer,frozen_replay,,,,,,6.5,1.0,0.0,0.0,0.0,0.6666666666666666,0.0844940325068952,0.07412216068625394,3.5

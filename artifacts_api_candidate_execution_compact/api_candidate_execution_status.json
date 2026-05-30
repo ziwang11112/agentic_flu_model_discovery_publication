@@ -1,0 +1,21 @@
+{
+  "api_enabled": false,
+  "api_use_mock": true,
+  "artifact_root": "artifacts_api_candidate_execution_compact",
+  "budgets": [
+    3,
+    5,
+    10
+  ],
+  "external_api_used": false,
+  "prompt_audit_rows": 20,
+  "realdata_rows": 24,
+  "safe_prompt_passed": true,
+  "selection_metric_sources": [
+    "rolling_mean_mae"
+  ],
+  "synthetic_rows": 216,
+  "test_metric_usage": [
+    "posthoc_descriptive_only"
+  ]
+}

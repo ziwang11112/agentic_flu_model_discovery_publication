@@ -1,0 +1,62 @@
+seed: 42
+scope: api_candidate_execution_smoke
+
+artifacts:
+  root_dir: artifacts_api_candidate_execution_compact
+  report: reports/api_candidate_execution_report.md
+
+api:
+  enabled: false
+  use_mock: true
+
+policy:
+  epsilon: 0.01
+
+budgets:
+  - 3
+  - 5
+  - 10
+
+candidate_allowlist:
+  - last_observed
+  - rolling_mean_4wk
+  - arima_auto_small
+  - deterministic_seir
+  - delayed_observation_seir
+  - constrained_structure_discovery
+  - no_observation_search_discovery
+  - validation_only_structure_selection
+  - random_structure_discovery
+  - exhaustive_structure_discovery
+
+synthetic:
+  enabled: true
+  tasks:
+    - direct_signal
+    - lagged_signal_2
+  seeds:
+    - 1
+    - 2
+    - 3
+  noise_levels:
+    - 0.0
+    - 0.05
+  proposers:
+    - mock_api_proposer
+    - deterministic_seed_proposer
+    - random_candidate_proposer
+    - failure_guided_proposer
+    - no_observation_label_baseline
+    - exhaustive_oracle
+
+realdata:
+  enabled: true
+  frozen_artifact_root: artifacts_discovery_ablation
+  series:
+    - Overall
+    - 0-4 yr
+  proposers:
+    - mock_api_proposer
+    - deterministic_seed_proposer
+    - random_candidate_proposer
+    - oracle_full_candidate_ranking
