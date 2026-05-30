@@ -1,0 +1,97 @@
+series_name,k,actual_candidate_count,policy_name,selected_model_at_k,rolling_mean_mae_at_k,test_mae_at_k,test_metric_role,top_epsilon_threshold,candidate_count_to_top_epsilon,policy_disagreement_rate
+0-4 yr,3,3,pareto_epsilon,no_observation_search_discovery,0.1575152537203454,0.091118122634469,posthoc_descriptive,0.120200235379189,5.0,0.25
+0-4 yr,3,3,weighted_score,no_observation_search_discovery,0.1575152537203454,0.091118122634469,posthoc_descriptive,0.120200235379189,5.0,0.25
+0-4 yr,3,3,hard_veto_decision_tree,no_observation_search_discovery,0.1575152537203454,0.091118122634469,posthoc_descriptive,0.120200235379189,5.0,0.25
+0-4 yr,3,3,random_order_baseline,deterministic_seir,0.2134826030141098,0.1178509205339041,posthoc_descriptive,0.120200235379189,5.0,0.25
+0-4 yr,5,5,pareto_epsilon,validation_only_structure_selection,0.1124130283910399,0.0884973970395101,posthoc_descriptive,0.120200235379189,5.0,0.0
+0-4 yr,5,5,weighted_score,validation_only_structure_selection,0.1124130283910399,0.0884973970395101,posthoc_descriptive,0.120200235379189,5.0,0.0
+0-4 yr,5,5,hard_veto_decision_tree,validation_only_structure_selection,0.1124130283910399,0.0884973970395101,posthoc_descriptive,0.120200235379189,5.0,0.0
+0-4 yr,5,5,random_order_baseline,validation_only_structure_selection,0.1124130283910399,0.0884973970395101,posthoc_descriptive,0.120200235379189,5.0,0.0
+0-4 yr,10,10,pareto_epsilon,constrained_structure_discovery,0.100200235379189,0.0884963717287904,posthoc_descriptive,0.120200235379189,5.0,0.25
+0-4 yr,10,10,weighted_score,constrained_structure_discovery,0.100200235379189,0.0884963717287904,posthoc_descriptive,0.120200235379189,5.0,0.25
+0-4 yr,10,10,hard_veto_decision_tree,constrained_structure_discovery,0.100200235379189,0.0884963717287904,posthoc_descriptive,0.120200235379189,5.0,0.25
+0-4 yr,10,10,random_order_baseline,lagged_ridge,0.1794378306878307,0.1022727272727272,posthoc_descriptive,0.120200235379189,5.0,0.25
+0-4 yr,15,15,pareto_epsilon,rolling_mean_2wk,0.1341137566137566,0.0954545454545454,posthoc_descriptive,0.120200235379189,5.0,0.5
+0-4 yr,15,15,weighted_score,constrained_structure_discovery,0.100200235379189,0.0884963717287904,posthoc_descriptive,0.120200235379189,5.0,0.5
+0-4 yr,15,15,hard_veto_decision_tree,constrained_structure_discovery,0.100200235379189,0.0884963717287904,posthoc_descriptive,0.120200235379189,5.0,0.5
+0-4 yr,15,15,random_order_baseline,lagged_ridge,0.1794378306878307,0.1022727272727272,posthoc_descriptive,0.120200235379189,5.0,0.5
+18-49 yr,3,3,pareto_epsilon,lagged_gradient_boosting,0.0533928571428571,0.05,posthoc_descriptive,0.0504497354497354,10.0,0.25
+18-49 yr,3,3,weighted_score,lagged_gradient_boosting,0.0533928571428571,0.05,posthoc_descriptive,0.0504497354497354,5.0,0.25
+18-49 yr,3,3,hard_veto_decision_tree,lagged_gradient_boosting,0.0533928571428571,0.05,posthoc_descriptive,0.0504497354497354,10.0,0.25
+18-49 yr,3,3,random_order_baseline,random_structure_discovery,0.0798423983654796,0.0485998952509874,posthoc_descriptive,0.0504497354497354,5.0,0.25
+18-49 yr,5,5,pareto_epsilon,lagged_gradient_boosting,0.0533928571428571,0.05,posthoc_descriptive,0.0504497354497354,10.0,0.5
+18-49 yr,5,5,weighted_score,validation_only_structure_selection,0.0391850575863337,0.0152322375910909,posthoc_descriptive,0.0504497354497354,5.0,0.5
+18-49 yr,5,5,hard_veto_decision_tree,lagged_gradient_boosting,0.0533928571428571,0.05,posthoc_descriptive,0.0504497354497354,10.0,0.5
+18-49 yr,5,5,random_order_baseline,validation_only_structure_selection,0.0391850575863337,0.0152322375910909,posthoc_descriptive,0.0504497354497354,5.0,0.5
+18-49 yr,10,10,pareto_epsilon,last_observed,0.0304497354497354,0.009090909090909,posthoc_descriptive,0.0504497354497354,10.0,0.25
+18-49 yr,10,10,weighted_score,last_observed,0.0304497354497354,0.009090909090909,posthoc_descriptive,0.0504497354497354,5.0,0.25
+18-49 yr,10,10,hard_veto_decision_tree,last_observed,0.0304497354497354,0.009090909090909,posthoc_descriptive,0.0504497354497354,10.0,0.25
+18-49 yr,10,10,random_order_baseline,validation_only_structure_selection,0.0391850575863337,0.0152322375910909,posthoc_descriptive,0.0504497354497354,5.0,0.25
+18-49 yr,15,15,pareto_epsilon,arima_auto_small,0.0304497354497354,0.009090909090909,posthoc_descriptive,0.0504497354497354,10.0,0.25
+18-49 yr,15,15,weighted_score,arima_auto_small,0.0304497354497354,0.009090909090909,posthoc_descriptive,0.0504497354497354,5.0,0.25
+18-49 yr,15,15,hard_veto_decision_tree,arima_auto_small,0.0304497354497354,0.009090909090909,posthoc_descriptive,0.0504497354497354,10.0,0.25
+18-49 yr,15,15,random_order_baseline,validation_only_structure_selection,0.0391850575863337,0.0152322375910909,posthoc_descriptive,0.0504497354497354,5.0,0.25
+5-17 yr,3,3,pareto_epsilon,probabilistic_seir,0.0429075072549911,0.0336992311315922,posthoc_descriptive,0.055319061537422304,3.0,0.25
+5-17 yr,3,3,weighted_score,probabilistic_seir,0.0429075072549911,0.0336992311315922,posthoc_descriptive,0.055319061537422304,3.0,0.25
+5-17 yr,3,3,hard_veto_decision_tree,probabilistic_seir,0.0429075072549911,0.0336992311315922,posthoc_descriptive,0.055319061537422304,3.0,0.25
+5-17 yr,3,3,random_order_baseline,validation_only_structure_selection,0.0483469157011416,0.0043767589616843,posthoc_descriptive,0.055319061537422304,3.0,0.25
+5-17 yr,5,5,pareto_epsilon,lagged_gradient_boosting,0.040542328042328,0.025,posthoc_descriptive,0.055319061537422304,3.0,0.5
+5-17 yr,5,5,weighted_score,no_stability_discovery,0.0353190615374223,0.0110056735296232,posthoc_descriptive,0.055319061537422304,3.0,0.5
+5-17 yr,5,5,hard_veto_decision_tree,lagged_gradient_boosting,0.040542328042328,0.025,posthoc_descriptive,0.055319061537422304,3.0,0.5
+5-17 yr,5,5,random_order_baseline,validation_only_structure_selection,0.0483469157011416,0.0043767589616843,posthoc_descriptive,0.055319061537422304,3.0,0.5
+5-17 yr,10,10,pareto_epsilon,rolling_mean_2wk,0.0359259259259259,0.0,posthoc_descriptive,0.055319061537422304,3.0,0.5
+5-17 yr,10,10,weighted_score,rolling_mean_2wk,0.0359259259259259,0.0,posthoc_descriptive,0.055319061537422304,3.0,0.5
+5-17 yr,10,10,hard_veto_decision_tree,lagged_gradient_boosting,0.040542328042328,0.025,posthoc_descriptive,0.055319061537422304,3.0,0.5
+5-17 yr,10,10,random_order_baseline,deterministic_seir,0.0799093755041065,0.0424762020230296,posthoc_descriptive,0.055319061537422304,3.0,0.5
+5-17 yr,15,15,pareto_epsilon,rolling_mean_2wk,0.0359259259259259,0.0,posthoc_descriptive,0.055319061537422304,3.0,0.5
+5-17 yr,15,15,weighted_score,rolling_mean_2wk,0.0359259259259259,0.0,posthoc_descriptive,0.055319061537422304,3.0,0.5
+5-17 yr,15,15,hard_veto_decision_tree,arima_auto_small,0.0375925925925925,0.0,posthoc_descriptive,0.055319061537422304,3.0,0.5
+5-17 yr,15,15,random_order_baseline,exhaustive_structure_discovery,0.0448183664615375,0.0110124009431363,posthoc_descriptive,0.055319061537422304,3.0,0.5
+50-64 yr,3,3,pareto_epsilon,random_structure_discovery,0.0540426925928833,0.0371606842439276,posthoc_descriptive,0.0727749982193454,3.0,0.25
+50-64 yr,3,3,weighted_score,random_structure_discovery,0.0540426925928833,0.0371606842439276,posthoc_descriptive,0.0727749982193454,3.0,0.25
+50-64 yr,3,3,hard_veto_decision_tree,random_structure_discovery,0.0540426925928833,0.0371606842439276,posthoc_descriptive,0.0727749982193454,3.0,0.25
+50-64 yr,3,3,random_order_baseline,lagged_gradient_boosting,0.1087698412698412,0.1431818181818181,posthoc_descriptive,0.0727749982193454,10.0,0.25
+50-64 yr,5,5,pareto_epsilon,random_structure_discovery,0.0540426925928833,0.0371606842439276,posthoc_descriptive,0.0727749982193454,3.0,0.5
+50-64 yr,5,5,weighted_score,random_structure_discovery,0.0540426925928833,0.0371606842439276,posthoc_descriptive,0.0727749982193454,3.0,0.5
+50-64 yr,5,5,hard_veto_decision_tree,deterministic_seir,0.0564049117960326,0.0380364180002214,posthoc_descriptive,0.0727749982193454,3.0,0.5
+50-64 yr,5,5,random_order_baseline,lagged_gradient_boosting,0.1087698412698412,0.1431818181818181,posthoc_descriptive,0.0727749982193454,10.0,0.5
+50-64 yr,10,10,pareto_epsilon,arima_auto_small,0.0612698412698412,0.1181818181818181,posthoc_descriptive,0.0727749982193454,3.0,0.25
+50-64 yr,10,10,weighted_score,arima_auto_small,0.0612698412698412,0.1181818181818181,posthoc_descriptive,0.0727749982193454,3.0,0.25
+50-64 yr,10,10,hard_veto_decision_tree,arima_auto_small,0.0612698412698412,0.1181818181818181,posthoc_descriptive,0.0727749982193454,3.0,0.25
+50-64 yr,10,10,random_order_baseline,delayed_observation_seir,0.0527749982193454,0.0379598606458947,posthoc_descriptive,0.0727749982193454,10.0,0.25
+50-64 yr,15,15,pareto_epsilon,arima_auto_small,0.0612698412698412,0.1181818181818181,posthoc_descriptive,0.0727749982193454,3.0,0.5
+50-64 yr,15,15,weighted_score,exhaustive_structure_discovery,0.0540422166483086,0.0371606795659373,posthoc_descriptive,0.0727749982193454,3.0,0.5
+50-64 yr,15,15,hard_veto_decision_tree,arima_auto_small,0.0612698412698412,0.1181818181818181,posthoc_descriptive,0.0727749982193454,3.0,0.5
+50-64 yr,15,15,random_order_baseline,delayed_observation_seir,0.0527749982193454,0.0379598606458947,posthoc_descriptive,0.0727749982193454,10.0,0.5
+>= 65 yr,3,3,pareto_epsilon,last_observed,0.2118518518518518,0.3272727272727272,posthoc_descriptive,0.1890159117505848,10.0,0.25
+>= 65 yr,3,3,weighted_score,last_observed,0.2118518518518518,0.3272727272727272,posthoc_descriptive,0.1890159117505848,10.0,0.25
+>= 65 yr,3,3,hard_veto_decision_tree,last_observed,0.2118518518518518,0.3272727272727272,posthoc_descriptive,0.1890159117505848,10.0,0.25
+>= 65 yr,3,3,random_order_baseline,no_observation_search_discovery,0.2320849287670753,0.1201751782469264,posthoc_descriptive,0.1890159117505848,10.0,0.25
+>= 65 yr,5,5,pareto_epsilon,last_observed,0.2118518518518518,0.3272727272727272,posthoc_descriptive,0.1890159117505848,10.0,0.25
+>= 65 yr,5,5,weighted_score,last_observed,0.2118518518518518,0.3272727272727272,posthoc_descriptive,0.1890159117505848,10.0,0.25
+>= 65 yr,5,5,hard_veto_decision_tree,last_observed,0.2118518518518518,0.3272727272727272,posthoc_descriptive,0.1890159117505848,10.0,0.25
+>= 65 yr,5,5,random_order_baseline,no_stability_discovery,0.1992541245289968,0.12184782843297,posthoc_descriptive,0.1890159117505848,10.0,0.25
+>= 65 yr,10,10,pareto_epsilon,exhaustive_structure_discovery,0.1690159117505848,0.1218893284577907,posthoc_descriptive,0.1890159117505848,10.0,0.0
+>= 65 yr,10,10,weighted_score,exhaustive_structure_discovery,0.1690159117505848,0.1218893284577907,posthoc_descriptive,0.1890159117505848,10.0,0.0
+>= 65 yr,10,10,hard_veto_decision_tree,exhaustive_structure_discovery,0.1690159117505848,0.1218893284577907,posthoc_descriptive,0.1890159117505848,10.0,0.0
+>= 65 yr,10,10,random_order_baseline,exhaustive_structure_discovery,0.1690159117505848,0.1218893284577907,posthoc_descriptive,0.1890159117505848,10.0,0.0
+>= 65 yr,15,15,pareto_epsilon,exhaustive_structure_discovery,0.1690159117505848,0.1218893284577907,posthoc_descriptive,0.1890159117505848,10.0,0.25
+>= 65 yr,15,15,weighted_score,exhaustive_structure_discovery,0.1690159117505848,0.1218893284577907,posthoc_descriptive,0.1890159117505848,10.0,0.25
+>= 65 yr,15,15,hard_veto_decision_tree,exhaustive_structure_discovery,0.1690159117505848,0.1218893284577907,posthoc_descriptive,0.1890159117505848,10.0,0.25
+>= 65 yr,15,15,random_order_baseline,arima_auto_small,0.2118518518518518,0.3272727272727272,posthoc_descriptive,0.1890159117505848,10.0,0.25
+Overall,3,3,pareto_epsilon,last_observed,0.0434920634920634,0.109090909090909,posthoc_descriptive,0.0634920634920634,3.0,0.25
+Overall,3,3,weighted_score,last_observed,0.0434920634920634,0.109090909090909,posthoc_descriptive,0.0634920634920634,3.0,0.25
+Overall,3,3,hard_veto_decision_tree,last_observed,0.0434920634920634,0.109090909090909,posthoc_descriptive,0.0634920634920634,3.0,0.25
+Overall,3,3,random_order_baseline,delayed_observation_seir,0.0814357127058704,0.0350764699201217,posthoc_descriptive,0.0634920634920634,,0.25
+Overall,5,5,pareto_epsilon,last_observed,0.0434920634920634,0.109090909090909,posthoc_descriptive,0.0634920634920634,3.0,0.25
+Overall,5,5,weighted_score,last_observed,0.0434920634920634,0.109090909090909,posthoc_descriptive,0.0634920634920634,3.0,0.25
+Overall,5,5,hard_veto_decision_tree,last_observed,0.0434920634920634,0.109090909090909,posthoc_descriptive,0.0634920634920634,3.0,0.25
+Overall,5,5,random_order_baseline,delayed_observation_seir,0.0814357127058704,0.0350764699201217,posthoc_descriptive,0.0634920634920634,,0.25
+Overall,10,10,pareto_epsilon,last_observed,0.0434920634920634,0.109090909090909,posthoc_descriptive,0.0634920634920634,3.0,0.25
+Overall,10,10,weighted_score,last_observed,0.0434920634920634,0.109090909090909,posthoc_descriptive,0.0634920634920634,3.0,0.25
+Overall,10,10,hard_veto_decision_tree,last_observed,0.0434920634920634,0.109090909090909,posthoc_descriptive,0.0634920634920634,3.0,0.25
+Overall,10,10,random_order_baseline,delayed_observation_seir,0.0814357127058704,0.0350764699201217,posthoc_descriptive,0.0634920634920634,,0.25
+Overall,15,15,pareto_epsilon,arima_auto_small,0.0434920634920634,0.109090909090909,posthoc_descriptive,0.0634920634920634,3.0,0.25
+Overall,15,15,weighted_score,arima_auto_small,0.0434920634920634,0.109090909090909,posthoc_descriptive,0.0634920634920634,3.0,0.25
+Overall,15,15,hard_veto_decision_tree,arima_auto_small,0.0434920634920634,0.109090909090909,posthoc_descriptive,0.0634920634920634,3.0,0.25
+Overall,15,15,random_order_baseline,delayed_observation_seir,0.0814357127058704,0.0350764699201217,posthoc_descriptive,0.0634920634920634,,0.25

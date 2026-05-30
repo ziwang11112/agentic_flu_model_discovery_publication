@@ -24,6 +24,22 @@ toy_tasks:
     - 1
     - 2
     - 3
+
+stage2:
+  budgets:
+    - 3
+    - 5
+    - 10
+    - 15
+  toy_scenarios:
+    - direct_signal
+    - lagged_signal_1
+    - lagged_signal_2
+    - mixture_signal
+    - noisy_lagged_signal
+  toy_seeds:
+    - 1
+    - 2
+    - 3
     - 4
     - 5
-

@@ -47,7 +47,8 @@ def build_policy_audit_figure(artifact_root: Path) -> None:
 
 def build_toy_recovery_figure(artifact_root: Path) -> None:
     toy = pd.read_csv(artifact_root / "toy_observation_recovery_summary.csv")
-    rates = toy.groupby("scenario_name")["recovered"].mean().sort_index()
+    recovered_col = "recovered" if "recovered" in toy.columns else "observation_label_recovered"
+    rates = toy.groupby("scenario_name")[recovered_col].mean().sort_index()
     fig, ax = plt.subplots(figsize=(7.2, 4.4))
     ax.bar(range(len(rates)), rates.to_numpy(), color="#009E73", edgecolor="#222222", linewidth=0.6)
     ax.set_xticks(range(len(rates)), rates.index, rotation=15, ha="right")
@@ -70,4 +71,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

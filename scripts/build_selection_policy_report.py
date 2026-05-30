@@ -51,6 +51,8 @@ def build_report(artifact_root: Path, report_path: Path) -> None:
     audit = _read_csv(artifact_root, "claim_audit_scores.csv")
     toy = _read_csv(artifact_root, "toy_observation_recovery_summary.csv")
     verified = _read_csv(artifact_root, "verified_candidates.csv")
+    negative = _read_csv(artifact_root, "verifier_negative_set.csv") if (artifact_root / "verifier_negative_set.csv").exists() else pd.DataFrame()
+    replay = _read_csv(artifact_root, "budgeted_replay_efficiency.csv") if (artifact_root / "budgeted_replay_efficiency.csv").exists() else pd.DataFrame()
 
     selected = recommendations.loc[
         :,
@@ -69,12 +71,33 @@ def build_report(artifact_root: Path, report_path: Path) -> None:
         ]
     )]
 
+    if {"observation_label_recovery_rate", "delay_label_recovery_rate", "mean_rolling_error"}.issubset(toy.columns):
+        toy_summary = (
+            toy.groupby("policy_name", as_index=False)
+            .agg(
+                observation_label_recovery_rate=("observation_label_recovery_rate", "first"),
+                delay_label_recovery_rate=("delay_label_recovery_rate", "first"),
+                mean_rolling_error=("mean_rolling_error", "first"),
+            )
+            .sort_values("policy_name")
+        )
+        toy_text = _markdown_table(
+            toy_summary,
+            ["policy_name", "observation_label_recovery_rate", "delay_label_recovery_rate", "mean_rolling_error"],
+            max_rows=10,
+        )
+    else:
+        toy_text = _markdown_table(
+            toy,
+            ["scenario_name", "seed", "true_observation_label", "selected_observation_label", "recovered"],
+        )
+
     lines = [
         "# Offline Selection Policy Evaluation",
         "",
         "This is a deterministic offline policy evaluation over compact time-series forecasting benchmark summaries.",
         "It does not call external LLM/API services, does not run new model experiments, and does not provide",
-        "biological protocols, intervention guidance, or medical recommendations.",
+        "intervention guidance or operational recommendations.",
         "",
         "## Scope",
         "",
@@ -99,14 +122,45 @@ def build_report(artifact_root: Path, report_path: Path) -> None:
         "",
         _markdown_table(selected, ["series_name", "policy_name", "selected_model_name", "rationale"], max_rows=24),
         "",
-        "## Deterministic Toy Observation Recovery",
+        "## Stage 2: Verifier Negative-Set Rejection",
+        "",
+        "Stage 2 adds a negative set of invalid or misleading candidate/evidence records. The verifier should",
+        "reject malformed records, duplicate identifiers, absolute artifact paths, posthoc test metrics used as",
+        "selection evidence, flagged rows used for positive claims, and invalid observation or delay labels.",
+        "",
+        _markdown_table(
+            negative,
+            ["case_id", "case_type", "rejected", "rejection_reasons", "rejection_rate"],
+            max_rows=20,
+        ) if not negative.empty else "_Stage 2 negative-set output not found._",
+        "",
+        "## Stage 2: Budgeted Candidate Replay",
+        "",
+        "The budgeted replay uses frozen compact rows only. Test MAE is retained only as a posthoc descriptive",
+        "column and is not used for selection. Candidate availability is simulated at fixed budgets per series.",
+        "",
+        _markdown_table(
+            replay.loc[replay["k"].isin([3, 10])] if not replay.empty else replay,
+            [
+                "series_name",
+                "k",
+                "policy_name",
+                "selected_model_at_k",
+                "rolling_mean_mae_at_k",
+                "candidate_count_to_top_epsilon",
+                "policy_disagreement_rate",
+            ],
+            max_rows=24,
+        ) if not replay.empty else "_Stage 2 budgeted replay output not found._",
+        "",
+        "## Stage 2: Generic Toy Observation-Label Recovery",
         "",
         "The toy task is generic numerical time-series logic only. It checks whether direct versus lagged",
-        "observation labels can be recovered from simple synthetic signals; it is not a biological simulation.",
+        "or mixture observation labels can be recovered from simple synthetic signals; it is not a domain mechanism simulation.",
         "",
-        f"Toy recovery rate: {run_summary['toy_recovery_rate']:.3f}.",
+        f"Stage 1 toy recovery rate: {run_summary.get('toy_recovery_rate')}.",
         "",
-        _markdown_table(toy, ["scenario_name", "seed", "true_observation_label", "selected_observation_label", "recovered"]),
+        toy_text,
         "",
         "## Verifier Summary",
         "",

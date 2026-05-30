@@ -30,6 +30,17 @@ ABLATION_MODELS = {
     "no_stability_discovery",
 }
 ENSEMBLE_MODELS = {"equal_weight_point_ensemble"}
+ALLOWED_OBSERVATION_LABELS = {
+    "",
+    "direct",
+    "lagged_1",
+    "lagged_2",
+    "mixture",
+    "I",
+    "H",
+    "I+H",
+    "delayed_I",
+}
 
 ALLOWED_MODELS_BY_FAMILY = {
     CandidateFamily.FORECASTING_BASELINE: FORECASTING_BASELINES,
@@ -107,6 +118,21 @@ def verify_candidate(
     if family is not None and candidate.model_name not in ALLOWED_MODELS_BY_FAMILY.get(family, set()):
         checks["family_valid"] = False
         reasons.append("model_name_not_allowed_for_family")
+
+    if candidate.observation_label is not None and str(candidate.observation_label) not in ALLOWED_OBSERVATION_LABELS:
+        checks["schema_valid"] = False
+        reasons.append("invalid_observation_label")
+
+    if candidate.delay_label is not None and str(candidate.delay_label).strip() != "":
+        try:
+            delay_value = float(candidate.delay_label)
+        except (TypeError, ValueError):
+            checks["schema_valid"] = False
+            reasons.append("invalid_delay_label")
+        else:
+            if delay_value < 0 or abs(delay_value - round(delay_value)) > 1.0e-9:
+                checks["schema_valid"] = False
+                reasons.append("invalid_delay_label")
 
     if _has_absolute_path(candidate.metadata):
         checks["artifact_safe"] = False

@@ -1,0 +1,8 @@
+case_id,case_type,valid,rejected,rejection_reasons,total_negative_cases,rejected_cases,rejection_rate
+missing_required_fields,candidate,False,True,missing_required_candidate_field;model_name_not_allowed_for_family,7,7,1.0
+duplicate_candidate_id,candidate,False,True,duplicate_candidate_id,7,7,1.0
+absolute_artifact_path,candidate,False,True,absolute_artifact_path_in_metadata,7,7,1.0
+invalid_observation_label,candidate,False,True,invalid_observation_label,7,7,1.0
+invalid_delay_label,candidate,False,True,invalid_delay_label,7,7,1.0
+selection_evidence_contains_test_metric,evidence,False,True,test_metric_in_selection_evidence,7,7,1.0
+flagged_row_supports_positive_claim,evidence,False,True,numerical_failure_cannot_support_positive_claim,7,7,1.0
