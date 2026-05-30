@@ -458,15 +458,54 @@ def run_structured_recovery_from_config(config: dict[str, Any], repo_root: Path)
         epsilon=float(policy_config.get("epsilon", 0.01)),
         seed=int(config.get("seed", 42)),
     )
-    _write_csv(summary, artifact_root / "synthetic_structured_recovery_summary.csv")
-    _write_csv(by_seed, artifact_root / "synthetic_structured_recovery_by_seed.csv")
-    _write_csv(budget_curve, artifact_root / "synthetic_structured_recovery_budget_curve.csv")
+
+    output_prefix = str(config.get("artifacts", {}).get("output_prefix", "synthetic_structured_recovery"))
+    compact_only = bool(config.get("artifacts", {}).get("compact_only", False))
+    if output_prefix == "synthetic_structured_recovery":
+        _write_csv(summary, artifact_root / "synthetic_structured_recovery_summary.csv")
+        _write_csv(by_seed, artifact_root / "synthetic_structured_recovery_by_seed.csv")
+        _write_csv(budget_curve, artifact_root / "synthetic_structured_recovery_budget_curve.csv")
+    else:
+        by_condition = (
+            by_seed.groupby(["task_name", "noise_level", "policy_name"], as_index=False)
+            .agg(
+                observation_label_recovery_rate=("observation_label_recovered", "mean"),
+                delay_label_recovery_rate=("delay_label_recovered", "mean"),
+                candidate_family_recovery_rate=("candidate_family_recovered", "mean"),
+                mean_rolling_error=("rolling_error", "mean"),
+                top_epsilon_hit_rate=("top_epsilon_hit", "mean"),
+                rows=("policy_name", "size"),
+            )
+            .sort_values(["task_name", "noise_level", "policy_name"])
+        )
+        noise_curve = (
+            by_seed.groupby(["policy_name", "noise_level"], as_index=False)
+            .agg(
+                observation_label_recovery_rate=("observation_label_recovered", "mean"),
+                delay_label_recovery_rate=("delay_label_recovered", "mean"),
+                candidate_family_recovery_rate=("candidate_family_recovered", "mean"),
+                mean_rolling_error=("rolling_error", "mean"),
+                top_epsilon_hit_rate=("top_epsilon_hit", "mean"),
+                rows=("policy_name", "size"),
+            )
+            .sort_values(["policy_name", "noise_level"])
+        )
+        _write_csv(summary, artifact_root / f"{output_prefix}_summary.csv")
+        _write_csv(by_condition, artifact_root / f"{output_prefix}_by_condition.csv")
+        _write_csv(budget_curve, artifact_root / f"{output_prefix}_budget_curve.csv")
+        _write_csv(noise_curve, artifact_root / f"{output_prefix}_noise_curve.csv")
+        if not compact_only:
+            _write_csv(by_seed, artifact_root / f"{output_prefix}_by_seed.csv")
+        run_summary["by_condition_rows"] = int(len(by_condition))
+        run_summary["noise_curve_rows"] = int(len(noise_curve))
 
     run_summary.update(
         {
             "artifact_root": repo_relative_path(artifact_root, repo_root),
             "config_scope": str(config.get("scope", "local_synthetic_structured_recovery")),
+            "output_prefix": output_prefix,
+            "compact_only": compact_only,
         }
     )
-    _write_json_lf(run_summary, artifact_root / "synthetic_structured_recovery_run_summary.json")
+    _write_json_lf(run_summary, artifact_root / f"{output_prefix}_run_summary.json")
     return run_summary

@@ -1,0 +1,7 @@
+policy_name,observation_label_recovery_rate,delay_label_recovery_rate,candidate_family_recovery_rate,mean_rolling_error,budget_to_recover_true_label,valid_proposal_rate,duplicate_proposal_rate,top_epsilon_hit_rate,claim_safety_violation_count
+deterministic_seed_proposer,0.82568,0.77824,0.82568,0.07022557682757839,4.8105965790571545,1.0,0.0,0.8728,0
+hard_veto_decision_tree,0.5596,0.548,0.5596,0.0978614254517902,3.4974818130945717,1.0,0.0,0.7068,0
+no_observation_label_baseline,0.2,0.4,0.2,0.12324014972295565,3.0,1.0,0.0,0.2924,0
+pareto_epsilon,0.74288,0.74704,0.74288,0.07211059625618287,4.8276687410244135,1.0,0.0,0.8504,0
+random_label_baseline,0.25968,0.35872,0.25968,0.1313002025579688,4.028723404255319,1.0,0.0,0.30192,0
+weighted_score,0.67808,0.628,0.67808,0.07348072689176387,4.816370723256821,1.0,0.0,0.74624,0

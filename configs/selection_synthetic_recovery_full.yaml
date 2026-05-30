@@ -1,0 +1,42 @@
+seed: 42
+scope: expanded_synthetic_structured_recovery_full
+
+artifacts:
+  root_dir: artifacts_selection_policy_eval_compact
+  output_prefix: synthetic_structured_recovery_full
+  compact_only: true
+  report: reports/selection_synthetic_recovery_full_report.md
+
+policy:
+  epsilon: 0.01
+
+api:
+  enabled: false
+
+synthetic_recovery:
+  tasks:
+    - direct_signal
+    - lagged_signal_1
+    - lagged_signal_2
+    - mixture_observation
+    - hidden_component_proxy
+  seeds: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100]
+  noise_levels:
+    - 0.0
+    - 0.025
+    - 0.05
+    - 0.10
+    - 0.15
+  budgets:
+    - 3
+    - 5
+    - 10
+    - 20
+    - 40
+  policies:
+    - pareto_epsilon
+    - weighted_score
+    - hard_veto_decision_tree
+    - deterministic_seed_proposer
+    - random_label_baseline
+    - no_observation_label_baseline
