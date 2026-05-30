@@ -260,6 +260,62 @@ tasks and is not used as a real-data forecasting-performance result.}
 \label{fig:synthetic-recovery-full-noise-budget}
 \end{figure}
 
+\subsection{Candidate execution and frozen replay}
+
+The Stage 6 candidate-execution evaluation tests proposal ordering under fixed
+candidate budgets. It contains \num{24000} synthetic execution rows and
+\num{64} frozen real-data replay rows. External API access is disabled in this
+evaluation; the API-like path is represented by the deterministic
+\texttt{mock\_api\_proposer}. The prompt audit has 46 rows and all pass the
+no-leakage checks.
+
+In synthetic execution, \texttt{mock\_api\_proposer} has observation-label
+recovery \num{0.9313}, delay-label recovery \num{0.9190}, and top-epsilon hit
+rate \num{1.0000}. The failure-guided proposer is similar
+(\num{0.9233}, \num{0.9113}, and \num{1.0000}). The deterministic seed
+proposer reaches \num{0.7863} observation recovery, \num{0.7278} delay
+recovery, and \num{0.8453} top-epsilon hit rate; the random candidate proposer
+is competitive at \num{0.8208}, \num{0.7943}, and \num{0.9045}. The
+no-observation-label baseline remains much weaker, with observation recovery
+\num{0.2000}, delay recovery \num{0.4000}, and top-epsilon hit rate
+\num{0.3210}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.92\textwidth]{figures/fig_api_synthetic_recovery_comparison.pdf}
+\caption{Stage 6 synthetic candidate execution over generic structured
+time-series toy tasks. The mock API proposer and failure-guided proposer reach
+high label recovery and top-epsilon rates under fixed budgets, while the
+observation-fixed baseline remains weaker. This figure supports
+proposal-ordering and budget-efficiency claims only; it is not real-world
+mechanism-discovery evidence.}
+\label{fig:api-synthetic-recovery-comparison}
+\end{figure}
+
+In frozen real-data replay, the mock API proposer reaches top-epsilon rate
+\num{1.0000} with mean rolling score \num{0.0851}. The oracle ranking also has
+top-epsilon rate \num{1.0000}, with mean rolling score \num{0.0830}. The
+random candidate proposer reaches \num{0.8125} and \num{0.0925}; the
+deterministic seed proposer reaches \num{0.7500} and \num{0.0949}. Held-out
+test MAE in this replay is post-hoc descriptive only and is not used for
+proposal ordering or selection.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/fig_api_candidate_execution_budget.pdf}
+\caption{Stage 6 budget curves for synthetic execution and frozen real-data
+replay. The real-data layer replays existing compact summary rows and performs
+no model refitting. Random ordering is competitive in some settings, so the
+supported claim is improved reliability and candidate-budget efficiency under
+the verifier, not universal dominance.}
+\label{fig:api-candidate-execution-budget}
+\end{figure}
+
+These results are best interpreted as evidence that verifier-gated proposal
+ordering can reach useful candidates quickly under the tested budgets. They do
+not show that API output improves real-world forecasts, because the Stage 6
+real-data layer is replay-only and the API path is disabled.
+
 \subsection{Compact multi-season robustness check}
 
 We include a compact season-separated appendix over six completed FluSurv-NET

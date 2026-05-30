@@ -67,6 +67,17 @@ toy observation-label recovery task is generic numerical validation only; it
 is a software check for policy logic rather than evidence of real-world
 mechanism discovery.
 
+\paragraph{Candidate execution replay is budget-efficiency evidence only.}
+The Stage 6 candidate-execution evaluation supports proposal ordering and
+candidate-budget efficiency claims only. Its synthetic layer uses generic toy
+time-series tasks. Its real-data layer is frozen replay over compact summary
+rows and does not perform new forecasting experiments or real-data model
+refitting. Test metrics in the replay tables are post-hoc descriptive only.
+The API path is disabled in the committed Stage 6 evaluation, so real API
+evidence remains limited to proposal-quality smoke testing. These results
+should not be described as improved forecasting performance, autonomous
+science, or real-world mechanism recovery.
+
 \paragraph{Synthetic structured recovery is software validation.}
 The final expanded structured recovery sweep uses generic toy time series with
 known direct, lagged, mixture, and proxy observation labels. These tasks help

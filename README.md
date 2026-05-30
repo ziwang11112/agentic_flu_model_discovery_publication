@@ -41,6 +41,8 @@ runs, LLM traces, smoke outputs, and large diagnostic artifact roots.
   is not evidence of real-world mechanism recovery.
 - The optional API-assisted proposal smoke is allowlist- and verifier-gated;
   it is proposal-quality evidence, not forecasting-performance evidence.
+- Stage 6 candidate execution/replay evaluates proposal ordering under fixed
+  budgets; its real-data layer is frozen replay only and does not refit models.
 - Numerical failure flags are retained for transparency and are not used to
   support positive claims.
 

@@ -171,6 +171,31 @@ and candidate-family recovery logic. They use no real FluSurv-NET data, are
 not real-data forecasting experiments, and are not evidence that the system
 recovers real-world epidemic mechanisms.
 
+\subsection{Verifier-gated candidate execution and replay}
+
+We additionally evaluate candidate proposal ordering under fixed budgets. This
+Stage 6 evaluation has two layers. The synthetic layer performs actual
+deterministic execution on the same generic structured time-series toy tasks
+used above. The real-data layer is replay-only over frozen compact FluSurv-NET
+summary rows and performs no model refitting.
+
+The committed evaluation disables external API access and uses a deterministic
+\texttt{mock\_api\_proposer}. It compares this proposer with a deterministic
+seed proposer, a random candidate proposer, a failure-guided proposer, a
+no-observation-label baseline, and an exhaustive oracle for the synthetic
+tasks. For frozen real-data replay, it compares the mock API proposer,
+deterministic seed proposer, random candidate proposer, and an oracle ranking
+over the existing compact candidate rows. Candidate budgets are \num{3},
+\num{5}, \num{10}, and \num{20}.
+
+No held-out test metrics are included in prompts or selection evidence. The
+prompt audit covers 46 prompt records and all pass: no prompt contains a test
+metric, test winner, or post-hoc metric. Held-out test MAE appears only in
+clearly labeled post-selection descriptive columns in the replay table. The
+outputs are compact CSV, JSON, and JSONL files under
+\texttt{artifacts\_api\_candidate\_execution\_compact/}; no real-data
+forecast traces, per-model metrics, or refit artifacts are generated.
+
 \subsection{Numerical diagnostics}
 
 The frozen benchmark retains all model-series rows for transparency, including
