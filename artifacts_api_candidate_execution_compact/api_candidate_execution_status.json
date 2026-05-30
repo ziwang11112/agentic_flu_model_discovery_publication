@@ -5,16 +5,17 @@
   "budgets": [
     3,
     5,
-    10
+    10,
+    20
   ],
   "external_api_used": false,
-  "prompt_audit_rows": 20,
-  "realdata_rows": 24,
+  "prompt_audit_rows": 46,
+  "realdata_rows": 64,
   "safe_prompt_passed": true,
   "selection_metric_sources": [
     "rolling_mean_mae"
   ],
-  "synthetic_rows": 216,
+  "synthetic_rows": 24000,
   "test_metric_usage": [
     "posthoc_descriptive_only"
   ]

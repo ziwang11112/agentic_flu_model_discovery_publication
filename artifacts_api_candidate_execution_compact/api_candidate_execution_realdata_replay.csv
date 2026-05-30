@@ -2,24 +2,64 @@ layer,series_name,proposer_type,budget,selected_model_at_k,best_rolling_score_af
 frozen_replay,Overall,mock_api_proposer,3,arima_auto_small,0.0434920634920634,0.109090909090909,3,3,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
 frozen_replay,Overall,mock_api_proposer,5,arima_auto_small,0.0434920634920634,0.109090909090909,3,4,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
 frozen_replay,Overall,mock_api_proposer,10,arima_auto_small,0.0434920634920634,0.109090909090909,3,4,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
+frozen_replay,Overall,mock_api_proposer,20,arima_auto_small,0.0434920634920634,0.109090909090909,3,4,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
 frozen_replay,Overall,deterministic_seed_proposer,3,arima_auto_small,0.0434920634920634,0.109090909090909,3,1,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
 frozen_replay,Overall,deterministic_seed_proposer,5,arima_auto_small,0.0434920634920634,0.109090909090909,3,2,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
 frozen_replay,Overall,deterministic_seed_proposer,10,arima_auto_small,0.0434920634920634,0.109090909090909,3,4,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
+frozen_replay,Overall,deterministic_seed_proposer,20,arima_auto_small,0.0434920634920634,0.109090909090909,3,4,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
 frozen_replay,Overall,random_candidate_proposer,3,delayed_observation_seir,0.0814357127058704,0.0350764699201217,10,3,0,1.0,0.0,0.0,0.0,False,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
 frozen_replay,Overall,random_candidate_proposer,5,delayed_observation_seir,0.0814357127058704,0.0350764699201217,10,3,0,1.0,0.0,0.0,0.0,False,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
 frozen_replay,Overall,random_candidate_proposer,10,arima_auto_small,0.0434920634920634,0.109090909090909,10,4,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
+frozen_replay,Overall,random_candidate_proposer,20,arima_auto_small,0.0434920634920634,0.109090909090909,10,4,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
 frozen_replay,Overall,oracle_full_candidate_ranking,3,arima_auto_small,0.0434920634920634,0.109090909090909,3,2,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
 frozen_replay,Overall,oracle_full_candidate_ranking,5,arima_auto_small,0.0434920634920634,0.109090909090909,3,3,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
 frozen_replay,Overall,oracle_full_candidate_ranking,10,arima_auto_small,0.0434920634920634,0.109090909090909,3,4,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
+frozen_replay,Overall,oracle_full_candidate_ranking,20,arima_auto_small,0.0434920634920634,0.109090909090909,3,4,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
 frozen_replay,0-4 yr,mock_api_proposer,3,constrained_structure_discovery,0.100200235379189,0.0884963717287904,3,3,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
 frozen_replay,0-4 yr,mock_api_proposer,5,constrained_structure_discovery,0.100200235379189,0.0884963717287904,3,4,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
 frozen_replay,0-4 yr,mock_api_proposer,10,constrained_structure_discovery,0.100200235379189,0.0884963717287904,3,4,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
+frozen_replay,0-4 yr,mock_api_proposer,20,constrained_structure_discovery,0.100200235379189,0.0884963717287904,3,4,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
 frozen_replay,0-4 yr,deterministic_seed_proposer,3,arima_auto_small,0.1416666666666667,0.0818181818181818,10,1,0,1.0,0.0,0.0,0.0,False,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
 frozen_replay,0-4 yr,deterministic_seed_proposer,5,arima_auto_small,0.1416666666666667,0.0818181818181818,10,2,0,1.0,0.0,0.0,0.0,False,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
 frozen_replay,0-4 yr,deterministic_seed_proposer,10,constrained_structure_discovery,0.100200235379189,0.0884963717287904,10,4,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
+frozen_replay,0-4 yr,deterministic_seed_proposer,20,constrained_structure_discovery,0.100200235379189,0.0884963717287904,10,4,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
 frozen_replay,0-4 yr,random_candidate_proposer,3,constrained_structure_discovery,0.100200235379189,0.0884963717287904,3,3,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
 frozen_replay,0-4 yr,random_candidate_proposer,5,constrained_structure_discovery,0.100200235379189,0.0884963717287904,3,4,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
 frozen_replay,0-4 yr,random_candidate_proposer,10,constrained_structure_discovery,0.100200235379189,0.0884963717287904,3,4,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
+frozen_replay,0-4 yr,random_candidate_proposer,20,constrained_structure_discovery,0.100200235379189,0.0884963717287904,3,4,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
 frozen_replay,0-4 yr,oracle_full_candidate_ranking,3,constrained_structure_discovery,0.100200235379189,0.0884963717287904,3,2,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
 frozen_replay,0-4 yr,oracle_full_candidate_ranking,5,constrained_structure_discovery,0.100200235379189,0.0884963717287904,3,3,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
 frozen_replay,0-4 yr,oracle_full_candidate_ranking,10,constrained_structure_discovery,0.100200235379189,0.0884963717287904,3,4,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
+frozen_replay,0-4 yr,oracle_full_candidate_ranking,20,constrained_structure_discovery,0.100200235379189,0.0884963717287904,3,4,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
+frozen_replay,18-49 yr,mock_api_proposer,3,arima_auto_small,0.0304497354497354,0.009090909090909,3,3,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
+frozen_replay,18-49 yr,mock_api_proposer,5,arima_auto_small,0.0304497354497354,0.009090909090909,3,4,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
+frozen_replay,18-49 yr,mock_api_proposer,10,arima_auto_small,0.0304497354497354,0.009090909090909,3,4,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
+frozen_replay,18-49 yr,mock_api_proposer,20,arima_auto_small,0.0304497354497354,0.009090909090909,3,4,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
+frozen_replay,18-49 yr,deterministic_seed_proposer,3,arima_auto_small,0.0304497354497354,0.009090909090909,3,1,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
+frozen_replay,18-49 yr,deterministic_seed_proposer,5,arima_auto_small,0.0304497354497354,0.009090909090909,3,2,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
+frozen_replay,18-49 yr,deterministic_seed_proposer,10,arima_auto_small,0.0304497354497354,0.009090909090909,3,4,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
+frozen_replay,18-49 yr,deterministic_seed_proposer,20,arima_auto_small,0.0304497354497354,0.009090909090909,3,4,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
+frozen_replay,18-49 yr,random_candidate_proposer,3,deterministic_seir,0.0734867207115275,0.0448469452587281,5,2,0,1.0,0.0,0.0,0.0,False,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
+frozen_replay,18-49 yr,random_candidate_proposer,5,arima_auto_small,0.0304497354497354,0.009090909090909,5,3,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
+frozen_replay,18-49 yr,random_candidate_proposer,10,arima_auto_small,0.0304497354497354,0.009090909090909,5,4,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
+frozen_replay,18-49 yr,random_candidate_proposer,20,arima_auto_small,0.0304497354497354,0.009090909090909,5,4,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
+frozen_replay,18-49 yr,oracle_full_candidate_ranking,3,arima_auto_small,0.0304497354497354,0.009090909090909,3,2,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
+frozen_replay,18-49 yr,oracle_full_candidate_ranking,5,arima_auto_small,0.0304497354497354,0.009090909090909,3,3,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
+frozen_replay,18-49 yr,oracle_full_candidate_ranking,10,arima_auto_small,0.0304497354497354,0.009090909090909,3,4,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
+frozen_replay,18-49 yr,oracle_full_candidate_ranking,20,arima_auto_small,0.0304497354497354,0.009090909090909,3,4,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
+frozen_replay,>=65 yr,mock_api_proposer,3,constrained_structure_discovery,0.1748237283686136,0.1218656648080898,3,3,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
+frozen_replay,>=65 yr,mock_api_proposer,5,constrained_structure_discovery,0.1748237283686136,0.1218656648080898,3,4,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
+frozen_replay,>=65 yr,mock_api_proposer,10,validation_only_structure_selection,0.1576655714557095,0.1222593384926004,3,4,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
+frozen_replay,>=65 yr,mock_api_proposer,20,validation_only_structure_selection,0.1576655714557095,0.1222593384926004,3,4,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
+frozen_replay,>=65 yr,deterministic_seed_proposer,3,arima_auto_small,0.2118518518518518,0.3272727272727272,10,1,0,1.0,0.0,0.0,0.0,False,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
+frozen_replay,>=65 yr,deterministic_seed_proposer,5,arima_auto_small,0.2118518518518518,0.3272727272727272,10,2,0,1.0,0.0,0.0,0.0,False,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
+frozen_replay,>=65 yr,deterministic_seed_proposer,10,validation_only_structure_selection,0.1576655714557095,0.1222593384926004,10,4,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
+frozen_replay,>=65 yr,deterministic_seed_proposer,20,validation_only_structure_selection,0.1576655714557095,0.1222593384926004,10,4,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
+frozen_replay,>=65 yr,random_candidate_proposer,3,constrained_structure_discovery,0.1748237283686136,0.1218656648080898,3,2,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
+frozen_replay,>=65 yr,random_candidate_proposer,5,constrained_structure_discovery,0.1748237283686136,0.1218656648080898,3,3,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
+frozen_replay,>=65 yr,random_candidate_proposer,10,validation_only_structure_selection,0.1576655714557095,0.1222593384926004,3,4,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
+frozen_replay,>=65 yr,random_candidate_proposer,20,validation_only_structure_selection,0.1576655714557095,0.1222593384926004,3,4,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
+frozen_replay,>=65 yr,oracle_full_candidate_ranking,3,validation_only_structure_selection,0.1576655714557095,0.1222593384926004,3,2,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
+frozen_replay,>=65 yr,oracle_full_candidate_ranking,5,validation_only_structure_selection,0.1576655714557095,0.1222593384926004,3,3,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
+frozen_replay,>=65 yr,oracle_full_candidate_ranking,10,validation_only_structure_selection,0.1576655714557095,0.1222593384926004,3,4,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
+frozen_replay,>=65 yr,oracle_full_candidate_ranking,20,validation_only_structure_selection,0.1576655714557095,0.1222593384926004,3,4,0,1.0,0.0,0.0,0.0,True,frozen_replay,rolling_mean_mae,posthoc_descriptive_only
