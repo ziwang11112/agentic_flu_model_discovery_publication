@@ -38,6 +38,7 @@ ALLOWED_OBSERVATION_LABELS = {
     "lagged_2",
     "mixture",
     "not_applicable",
+    "proxy",
     "I",
     "H",
     "I+H",

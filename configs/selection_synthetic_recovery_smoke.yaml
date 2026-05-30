@@ -1,0 +1,34 @@
+seed: 42
+scope: local_synthetic_structured_recovery_smoke
+
+artifacts:
+  root_dir: artifacts_selection_policy_eval_compact
+  report: reports/selection_synthetic_recovery_report.md
+
+policy:
+  epsilon: 0.01
+
+api:
+  enabled: false
+
+synthetic_recovery:
+  tasks:
+    - direct_signal
+    - lagged_signal_2
+  seeds:
+    - 1
+    - 2
+  noise_levels:
+    - 0.0
+    - 0.05
+  budgets:
+    - 3
+    - 5
+    - 10
+  policies:
+    - pareto_epsilon
+    - weighted_score
+    - hard_veto_decision_tree
+    - random_label_baseline
+    - no_observation_label_baseline
+    - deterministic_seed_proposer
