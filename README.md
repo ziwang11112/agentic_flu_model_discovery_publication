@@ -31,6 +31,8 @@ runs, LLM traces, smoke outputs, and large diagnostic artifact roots.
   selection.
 - The repository includes an offline verifier and selection-policy layer for
   claim-boundary auditing over frozen summary tables.
+- Synthetic structured recovery supports the observation-label and delay-label
+  selection logic under controlled toy time-series tasks.
 - Numerical failure flags are retained for transparency and are not used to
   support positive claims.
 
