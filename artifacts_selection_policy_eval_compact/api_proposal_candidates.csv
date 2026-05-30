@@ -1,0 +1,1 @@
+candidate_id,family,model_name,observation_label,delay_label,round_idx,proposer_name,rationale,expected_failure_mode,valid,vetoed,reasons,schema_valid,family_valid,leakage_safe,budget_safe,artifact_safe,claim_safe,duplicate,top_epsilon_any_series

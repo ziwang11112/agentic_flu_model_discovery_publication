@@ -1,0 +1,24 @@
+seed: 42
+
+data:
+  frozen_artifact_root: artifacts_discovery_ablation
+
+artifacts:
+  root_dir: artifacts_selection_policy_eval_compact
+  report: reports/api_proposal_evaluation.md
+
+policy:
+  epsilon: 0.02
+  max_candidates: 8
+
+api:
+  enabled: false
+  provider: openai_compatible
+  api_key_env: SELECTION_API_KEY
+  endpoint_env: SELECTION_API_ENDPOINT
+  model_env: SELECTION_API_MODEL
+  temperature: 0.0
+  max_tokens: 1200
+  max_candidates: 8
+  context_rows: 18
+  objective: propose a small diverse allowlisted set of candidate records for offline audit

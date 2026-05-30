@@ -1,0 +1,6 @@
+{
+  "api_run_status": "skipped",
+  "artifact_root": "artifacts_selection_policy_eval_compact",
+  "external_api_used": false,
+  "skip_reason": "api_disabled"
+}
