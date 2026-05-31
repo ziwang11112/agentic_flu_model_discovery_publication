@@ -34,16 +34,16 @@ autonomous-science claim, or real-world mechanism-discovery claim.
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | anthropic_claude | claude-sonnet-4-6 | anthropic_claude_iterative | 0.0000 |  | 1.0000 |  | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 |  |
 | anthropic_claude | claude-sonnet-4-6 | anthropic_claude_single_shot | 0.0000 |  | 1.0000 |  | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 |  |
-| deepseek | deepseek-v4-flash | deepseek_iterative | 0.2037 | 1.0000 | 0.7963 | 0.0000 | 0.0000 | 0.7037 | 0.4630 | 0.1667 | 0.2407 | 0.0763 |
-| deepseek | deepseek-v4-flash | deepseek_single_shot | 0.2222 |  | 1.0000 |  | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 |  |
+| deepseek | deepseek-v4-flash | deepseek_iterative | 0.9815 | 0.8365 | 0.0185 | 0.1635 | 0.0000 | 2.7222 | 1.7778 | 0.7963 | 0.8148 | 0.0807 |
+| deepseek | deepseek-v4-flash | deepseek_single_shot | 0.9815 | 0.9935 | 0.0556 | 0.0065 | 0.0000 | 3.7778 | 2.5556 | 1.7778 | 0.9444 | 0.0666 |
 | deterministic_baseline | deterministic | deterministic_seed_proposer | 1.0000 | 1.0000 | 0.0000 | 0.0000 | 0.0000 | 2.6667 | 1.9444 | 1.0000 | 0.7778 | 0.0813 |
 | deterministic_baseline | deterministic | failure_guided_proposer | 1.0000 | 1.0000 | 0.0000 | 0.0000 | 0.0000 | 2.7222 | 2.0556 | 1.1667 | 0.8333 | 0.0790 |
 | deterministic_baseline | deterministic | oracle_reference | 1.0000 | 1.0000 | 0.0000 | 0.0000 | 0.0000 | 3.0000 | 2.3889 | 1.5000 | 1.0000 | 0.0723 |
 | deterministic_baseline | deterministic | random_candidate_proposer | 1.0000 | 1.0000 | 0.0000 | 0.0000 | 0.0000 | 3.3333 | 2.3889 | 1.6111 | 0.7222 | 0.0829 |
 | google_gemini | gemini-2.5-flash | google_gemini_iterative | 0.0000 |  | 1.0000 |  | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 |  |
 | google_gemini | gemini-2.5-flash | google_gemini_single_shot | 0.0000 |  | 1.0000 |  | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 |  |
-| openai_gpt | gpt-5.4-mini | openai_gpt_iterative | 0.8148 | 0.9470 | 0.1852 | 0.0530 | 0.0000 | 2.2037 | 1.5926 | 0.6111 | 0.7593 | 0.0834 |
-| openai_gpt | gpt-5.4-mini | openai_gpt_single_shot | 1.0000 | 1.0000 | 0.0000 | 0.0000 | 0.0000 | 4.0000 | 2.7778 | 1.8889 | 0.8889 | 0.0753 |
+| openai_gpt | gpt-5.4-mini | openai_gpt_iterative | 1.0000 | 0.9444 | 0.0000 | 0.0556 | 0.0000 | 2.6667 | 1.8519 | 0.8704 | 0.7778 | 0.0819 |
+| openai_gpt | gpt-5.4-mini | openai_gpt_single_shot | 1.0000 | 1.0000 | 0.0000 | 0.0000 | 0.0000 | 4.0000 | 2.8333 | 2.0000 | 0.8333 | 0.0768 |
 
 ## Frozen Replay By Budget
 
@@ -92,32 +92,32 @@ _Showing 36 of 504 rows._
 
 | provider_name | proposer_type | series_name | between_repeat_jaccard_overlap | selected_model_agreement_rate | repeat_count |
 | --- | --- | --- | --- | --- | --- |
-| openai_gpt | openai_gpt_iterative | Overall | 0.7056 | 1.0000 | 3 |
-| openai_gpt | openai_gpt_single_shot | Overall | 1.0000 | 1.0000 | 3 |
+| openai_gpt | openai_gpt_iterative | Overall | 1.0000 | 1.0000 | 3 |
+| openai_gpt | openai_gpt_single_shot | Overall | 0.8667 | 1.0000 | 3 |
 | anthropic_claude | anthropic_claude_iterative | Overall | 1.0000 | 1.0000 | 3 |
 | anthropic_claude | anthropic_claude_single_shot | Overall | 1.0000 | 1.0000 | 3 |
 | google_gemini | google_gemini_iterative | Overall | 1.0000 | 1.0000 | 3 |
 | google_gemini | google_gemini_single_shot | Overall | 1.0000 | 1.0000 | 3 |
-| deepseek | deepseek_iterative | Overall | 0.1667 | 0.0000 | 3 |
-| deepseek | deepseek_single_shot | Overall | 1.0000 | 1.0000 | 3 |
+| deepseek | deepseek_iterative | Overall | 0.9167 | 1.0000 | 3 |
+| deepseek | deepseek_single_shot | Overall | 0.8667 | 1.0000 | 3 |
 | deterministic_baseline | deterministic_seed_proposer | Overall | 1.0000 | 1.0000 | 1 |
 | deterministic_baseline | random_candidate_proposer | Overall | 1.0000 | 1.0000 | 1 |
 | deterministic_baseline | failure_guided_proposer | Overall | 1.0000 | 1.0000 | 1 |
 | deterministic_baseline | oracle_reference | Overall | 1.0000 | 1.0000 | 1 |
-| openai_gpt | openai_gpt_iterative | 0-4 yr | 0.6667 | 0.3333 | 3 |
+| openai_gpt | openai_gpt_iterative | 0-4 yr | 0.7889 | 1.0000 | 3 |
 | openai_gpt | openai_gpt_single_shot | 0-4 yr | 1.0000 | 1.0000 | 3 |
 | anthropic_claude | anthropic_claude_iterative | 0-4 yr | 1.0000 | 1.0000 | 3 |
 | anthropic_claude | anthropic_claude_single_shot | 0-4 yr | 1.0000 | 1.0000 | 3 |
 | google_gemini | google_gemini_iterative | 0-4 yr | 1.0000 | 1.0000 | 3 |
 | google_gemini | google_gemini_single_shot | 0-4 yr | 1.0000 | 1.0000 | 3 |
-| deepseek | deepseek_iterative | 0-4 yr | 1.0000 | 1.0000 | 3 |
-| deepseek | deepseek_single_shot | 0-4 yr | 1.0000 | 1.0000 | 3 |
+| deepseek | deepseek_iterative | 0-4 yr | 0.9167 | 1.0000 | 3 |
+| deepseek | deepseek_single_shot | 0-4 yr | 0.8667 | 1.0000 | 3 |
 | deterministic_baseline | deterministic_seed_proposer | 0-4 yr | 1.0000 | 1.0000 | 1 |
 | deterministic_baseline | random_candidate_proposer | 0-4 yr | 1.0000 | 1.0000 | 1 |
 | deterministic_baseline | failure_guided_proposer | 0-4 yr | 1.0000 | 1.0000 | 1 |
 | deterministic_baseline | oracle_reference | 0-4 yr | 1.0000 | 1.0000 | 1 |
-| openai_gpt | openai_gpt_iterative | 5-17 yr | 0.9259 | 1.0000 | 3 |
-| openai_gpt | openai_gpt_single_shot | 5-17 yr | 0.8667 | 1.0000 | 3 |
+| openai_gpt | openai_gpt_iterative | 5-17 yr | 0.7889 | 1.0000 | 3 |
+| openai_gpt | openai_gpt_single_shot | 5-17 yr | 1.0000 | 1.0000 | 3 |
 | anthropic_claude | anthropic_claude_iterative | 5-17 yr | 1.0000 | 1.0000 | 3 |
 | anthropic_claude | anthropic_claude_single_shot | 5-17 yr | 1.0000 | 1.0000 | 3 |
 | google_gemini | google_gemini_iterative | 5-17 yr | 1.0000 | 1.0000 | 3 |
@@ -129,10 +129,10 @@ _Showing 30 of 72 rows._
 
 | provider_name | model_name | latency_seconds_mean | estimated_cost_usd_total | request_count |
 | --- | --- | --- | --- | --- |
-| anthropic_claude | claude-sonnet-4-6 | 0.3798 | 0 | 108 |
-| deepseek | deepseek-v4-flash | 9.2941 | 0 | 108 |
-| google_gemini | gemini-2.5-flash | 0.1806 | 0 | 108 |
-| openai_gpt | gpt-5.4-mini | 4.5876 | 0 | 108 |
+| anthropic_claude | claude-sonnet-4-6 | 0.2522 | 0 | 108 |
+| deepseek | deepseek-v4-flash | 10.4878 | 0 | 108 |
+| google_gemini | gemini-2.5-flash | 0.4842 | 0 | 108 |
+| openai_gpt | gpt-5.4-mini | 5.0960 | 0 | 108 |
 
 ## No-Leakage Audit
 

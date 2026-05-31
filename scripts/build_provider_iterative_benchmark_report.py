@@ -148,7 +148,8 @@ def build_report(artifact_root: Path, report_path: Path, write_figures: bool = T
         ]
     )
     report_path.parent.mkdir(parents=True, exist_ok=True)
-    report_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    with report_path.open("w", encoding="utf-8", newline="\n") as handle:
+        handle.write("\n".join(line.rstrip() for line in lines) + "\n")
     return figures
 
 

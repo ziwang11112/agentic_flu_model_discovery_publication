@@ -20,11 +20,192 @@ def _extract_json(text: str) -> Any:
     if stripped.startswith("```"):
         stripped = re.sub(r"^```(?:json)?\s*", "", stripped, flags=re.IGNORECASE)
         stripped = re.sub(r"\s*```$", "", stripped)
+    try:
+        return json.loads(stripped)
+    except json.JSONDecodeError:
+        pass
+
+    start = stripped.find("{")
+    if start < 0:
+        return json.loads(stripped)
+    depth = 0
+    in_string = False
+    escaped = False
+    for idx, char in enumerate(stripped[start:], start=start):
+        if in_string:
+            if escaped:
+                escaped = False
+            elif char == "\\":
+                escaped = True
+            elif char == '"':
+                in_string = False
+            continue
+        if char == '"':
+            in_string = True
+        elif char == "{":
+            depth += 1
+        elif char == "}":
+            depth -= 1
+            if depth == 0:
+                return json.loads(stripped[start : idx + 1])
     return json.loads(stripped)
 
 
 def _token_estimate(text: str) -> int:
     return max(1, int(len(text) / 4))
+
+
+def _max_tokens(provider_config: dict[str, Any], default: int = 3200) -> int:
+    return int(provider_config.get("max_tokens", provider_config.get("max_completion_tokens", default)))
+
+
+def _candidate_model_values(allowlist: ProposalAllowlist) -> list[str]:
+    values: list[str] = []
+    for family in allowlist.families:
+        values.extend(allowlist.models_by_family.get(family, ()))
+    return sorted(dict.fromkeys(values))
+
+
+def _candidate_schema(allowlist: ProposalAllowlist) -> dict[str, Any]:
+    provider_delay_labels = [label for label in allowlist.delay_labels if label != ""]
+    return {
+        "type": "object",
+        "additionalProperties": False,
+        "required": [
+            "candidate_id",
+            "family",
+            "model_name",
+            "observation_label",
+            "delay_label",
+            "intended_role",
+            "rationale",
+            "expected_failure_mode",
+            "paired_ablation_target",
+        ],
+        "properties": {
+            "candidate_id": {"type": "string"},
+            "family": {"type": "string", "enum": list(allowlist.families)},
+            "model_name": {"type": "string", "enum": _candidate_model_values(allowlist)},
+            "observation_label": {"type": "string", "enum": list(allowlist.observation_labels)},
+            "delay_label": {"type": "string", "enum": provider_delay_labels},
+            "intended_role": {
+                "type": "string",
+                "enum": ["accuracy", "rolling_stability", "parsimony", "observation_check", "ablation_check"],
+            },
+            "rationale": {"type": "string"},
+            "expected_failure_mode": {"type": "string"},
+            "paired_ablation_target": {"type": ["string", "null"]},
+            "responds_to_feedback": {"type": "array", "items": {"type": "string"}},
+        },
+    }
+
+
+def provider_json_schema(output_schema: dict[str, Any], allowlist: ProposalAllowlist) -> dict[str, Any]:
+    """Compile the internal task schema into provider-safe JSON Schema.
+
+    The internal schema includes local-only metadata used by tests and the
+    deterministic verifier. Provider APIs expect ordinary JSON Schema, so this
+    adapter layer keeps the wire schema small while preserving strict local
+    verification after parsing.
+    """
+
+    required = set(output_schema.get("required", ()))
+    is_refinement = "new_candidates" in required
+    candidate_key = "new_candidates" if is_refinement else "candidates"
+    summary_key = "refinement_summary" if is_refinement else "selection_notes"
+    task_enum = ["evidence_aware_refinement"] if is_refinement else ["initial_candidate_proposal"]
+    schema = {
+        "type": "object",
+        "additionalProperties": False,
+        "required": list(output_schema.get("required", [])),
+        "properties": {
+            "task_type": {"type": "string", "enum": task_enum},
+            "series_name": {"type": "string"},
+            "round_index": {"type": "integer"},
+            "proposer_label": {"type": "string"},
+            candidate_key: {
+                "type": "array",
+                "minItems": 1,
+                "items": _candidate_schema(allowlist),
+            },
+            summary_key: {
+                "type": "object",
+                "additionalProperties": {"type": "string"},
+            },
+        },
+    }
+    if is_refinement:
+        schema["properties"].pop("proposer_label", None)
+    return schema
+
+
+def _normalize_provider_payload(payload: Any) -> Any:
+    if not isinstance(payload, dict):
+        return payload
+    normalized = dict(payload)
+    for key in ("candidates", "new_candidates"):
+        candidates = normalized.get(key)
+        if not isinstance(candidates, list):
+            continue
+        normalized_candidates = []
+        for candidate in candidates:
+            if not isinstance(candidate, dict):
+                normalized_candidates.append(candidate)
+                continue
+            item = dict(candidate)
+            for label_key in ("observation_label", "delay_label"):
+                if item.get(label_key) in (None, ""):
+                    item[label_key] = "not_applicable"
+                else:
+                    item[label_key] = str(item[label_key])
+            normalized_candidates.append(item)
+        normalized[key] = normalized_candidates
+    return normalized
+
+
+def _sanitize_http_error(exc: urllib.error.HTTPError) -> str:
+    detail = ""
+    try:
+        raw = exc.read().decode("utf-8", errors="replace")
+        parsed = json.loads(raw)
+        if isinstance(parsed, dict):
+            error = parsed.get("error", parsed)
+            if isinstance(error, dict):
+                detail = str(error.get("message", error.get("type", "")))
+            else:
+                detail = str(error)
+        else:
+            detail = str(parsed)
+    except Exception:
+        detail = ""
+    detail = re.sub(r"(?i)(api[_-]?key|key)=([A-Za-z0-9_\-]+)", r"\1=<redacted>", detail)
+    lower = detail.lower()
+    if "credit balance" in lower or "billing" in lower or "quota" in lower:
+        detail = "account_or_billing_unavailable"
+    elif "api key" in lower or "apikey" in lower or "credential" in lower or "authentication" in lower:
+        detail = "credential_rejected"
+    return f"HTTPError:{exc.code}:{detail[:180]}" if detail else f"HTTPError:{exc.code}"
+
+
+def _gemini_legacy_schema(schema: Any) -> Any:
+    """Convert JSON Schema into Gemini legacy responseSchema's smaller subset."""
+
+    if isinstance(schema, list):
+        return [_gemini_legacy_schema(item) for item in schema]
+    if not isinstance(schema, dict):
+        return schema
+    converted: dict[str, Any] = {}
+    for key, value in schema.items():
+        if key == "additionalProperties":
+            continue
+        if key == "type" and isinstance(value, list):
+            non_null = [item for item in value if item != "null"]
+            converted["type"] = non_null[0] if non_null else "string"
+            if "null" in value:
+                converted["nullable"] = True
+            continue
+        converted[key] = _gemini_legacy_schema(value)
+    return converted
 
 
 @dataclass(frozen=True)
@@ -107,7 +288,7 @@ class BaseProviderAdapter:
     ) -> ProviderResponse:
         latency = time.perf_counter() - start_time
         try:
-            parsed = _extract_json(text)
+            parsed = _normalize_provider_payload(_extract_json(text))
             candidates = validate_agent_output(parsed, allowlist=allowlist)
             if not isinstance(candidates, tuple):
                 raise AgentOutputValidationError("provider response did not contain candidate records")
@@ -152,34 +333,52 @@ class OpenAIChatAdapter(BaseProviderAdapter):
         provider_config: dict[str, Any],
         allowlist: ProposalAllowlist,
     ) -> ProviderResponse:
-        del output_schema
         settings = self._settings(provider_config)
         if settings is None:
             return ProviderResponse(self.provider_name, "", "skipped", parse_error="credentials_or_model_missing")
         api_key, model, endpoint = settings
         user_prompt = str(task_payload.get("user_prompt", json.dumps(task_payload, sort_keys=True)))
+        wire_schema = provider_json_schema(output_schema, allowlist)
         body: dict[str, Any] = {
             "model": model,
             "messages": [{"role": "system", "content": system_prompt}, {"role": "user", "content": user_prompt}],
             "response_format": {"type": "json_object"},
         }
+        if self.provider_name == "openai_gpt":
+            body["response_format"] = {
+                "type": "json_schema",
+                "json_schema": {"name": "candidate_proposal_payload", "strict": True, "schema": wire_schema},
+            }
         if not model.startswith("gpt-5"):
             body["temperature"] = float(provider_config.get("temperature", 0.0))
         token_key = "max_completion_tokens" if model.startswith("gpt-5") else "max_tokens"
-        body[token_key] = int(provider_config.get("max_tokens", provider_config.get("max_completion_tokens", 1400)))
+        body[token_key] = _max_tokens(provider_config)
         start = time.perf_counter()
-        request = urllib.request.Request(
-            endpoint,
-            data=json.dumps(body).encode("utf-8"),
-            headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
-            method="POST",
-        )
         try:
-            with urllib.request.urlopen(request, timeout=int(provider_config.get("timeout_seconds", self.timeout_seconds))) as response:
-                payload = json.loads(response.read().decode("utf-8"))
-                request_id = (getattr(response, "headers", None) or {}).get("x-request-id")
-            text = str(payload["choices"][0]["message"]["content"])
+            payload, request_id = self._post_chat_completion(endpoint, api_key, body, provider_config)
+        except urllib.error.HTTPError:
+            body["response_format"] = {"type": "json_object"}
+            try:
+                payload, request_id = self._post_chat_completion(endpoint, api_key, body, provider_config)
+            except urllib.error.HTTPError as exc:
+                return ProviderResponse(
+                    self.provider_name,
+                    model,
+                    "request_failed",
+                    parse_error=_sanitize_http_error(exc),
+                    latency_seconds=time.perf_counter() - start,
+                )
+            except (urllib.error.URLError, KeyError, IndexError, TypeError, json.JSONDecodeError) as exc:
+                return ProviderResponse(self.provider_name, model, "request_failed", parse_error=exc.__class__.__name__, latency_seconds=time.perf_counter() - start)
         except (urllib.error.URLError, KeyError, IndexError, TypeError, json.JSONDecodeError) as exc:
+            return ProviderResponse(self.provider_name, model, "request_failed", parse_error=exc.__class__.__name__, latency_seconds=time.perf_counter() - start)
+        try:
+            message = payload["choices"][0]["message"]
+            text = message.get("content")
+            if not text and message.get("tool_calls"):
+                text = message["tool_calls"][0]["function"]["arguments"]
+            text = str(text)
+        except (KeyError, IndexError, TypeError) as exc:
             return ProviderResponse(self.provider_name, model, "request_failed", parse_error=exc.__class__.__name__, latency_seconds=time.perf_counter() - start)
         return self._parse_payload(
             text=text,
@@ -190,6 +389,24 @@ class OpenAIChatAdapter(BaseProviderAdapter):
             allowlist=allowlist,
             request_id=request_id,
         )
+
+    def _post_chat_completion(
+        self,
+        endpoint: str,
+        api_key: str,
+        body: dict[str, Any],
+        provider_config: dict[str, Any],
+    ) -> tuple[dict[str, Any], str | None]:
+        request = urllib.request.Request(
+            endpoint,
+            data=json.dumps(body).encode("utf-8"),
+            headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
+            method="POST",
+        )
+        with urllib.request.urlopen(request, timeout=int(provider_config.get("timeout_seconds", self.timeout_seconds))) as response:
+            payload = json.loads(response.read().decode("utf-8"))
+            request_id = (getattr(response, "headers", None) or {}).get("x-request-id")
+        return payload, request_id
 
 
 @dataclass(frozen=True)
@@ -223,9 +440,10 @@ class AnthropicAdapter(BaseProviderAdapter):
             return ProviderResponse(self.provider_name, "", "skipped", parse_error="credentials_or_model_missing")
         api_key, model, endpoint = settings
         user_prompt = str(task_payload.get("user_prompt", json.dumps(task_payload, sort_keys=True)))
+        wire_schema = provider_json_schema(output_schema, allowlist)
         body = {
             "model": model,
-            "max_tokens": int(provider_config.get("max_tokens", 1400)),
+            "max_tokens": _max_tokens(provider_config),
             "temperature": float(provider_config.get("temperature", 0.0)),
             "system": system_prompt,
             "messages": [{"role": "user", "content": user_prompt}],
@@ -233,7 +451,8 @@ class AnthropicAdapter(BaseProviderAdapter):
                 {
                     "name": "submit_candidates",
                     "description": "Submit the JSON candidate proposal payload.",
-                    "input_schema": output_schema,
+                    "input_schema": wire_schema,
+                    "strict": True,
                 }
             ],
             "tool_choice": {"type": "tool", "name": "submit_candidates"},
@@ -260,6 +479,14 @@ class AnthropicAdapter(BaseProviderAdapter):
             else:
                 text_items = [item.get("text", "") for item in content if isinstance(item, dict) and item.get("type") == "text"]
                 text = "\n".join(str(item) for item in text_items)
+        except urllib.error.HTTPError as exc:
+            return ProviderResponse(
+                self.provider_name,
+                model,
+                "request_failed",
+                parse_error=_sanitize_http_error(exc),
+                latency_seconds=time.perf_counter() - start,
+            )
         except (urllib.error.URLError, KeyError, TypeError, json.JSONDecodeError) as exc:
             return ProviderResponse(self.provider_name, model, "request_failed", parse_error=exc.__class__.__name__, latency_seconds=time.perf_counter() - start)
         return self._parse_payload(
@@ -298,29 +525,44 @@ class GeminiAdapter(BaseProviderAdapter):
         endpoint = endpoint_template.format(model=urllib.parse.quote(model, safe=""))
         separator = "&" if "?" in endpoint else "?"
         endpoint = f"{endpoint}{separator}key={urllib.parse.quote(api_key)}"
+        wire_schema = provider_json_schema(output_schema, allowlist)
         body = {
             "systemInstruction": {"parts": [{"text": system_prompt}]},
             "contents": [{"role": "user", "parts": [{"text": user_prompt}]}],
             "generationConfig": {
                 "temperature": float(provider_config.get("temperature", 0.0)),
-                "responseMimeType": "application/json",
-                "responseSchema": output_schema,
-                "maxOutputTokens": int(provider_config.get("max_tokens", 1400)),
+                "responseFormat": {"text": {"mimeType": "application/json", "schema": wire_schema}},
+                "maxOutputTokens": _max_tokens(provider_config),
             },
         }
         start = time.perf_counter()
-        request = urllib.request.Request(
-            endpoint,
-            data=json.dumps(body).encode("utf-8"),
-            headers={"Content-Type": "application/json"},
-            method="POST",
-        )
         try:
-            with urllib.request.urlopen(request, timeout=int(provider_config.get("timeout_seconds", self.timeout_seconds))) as response:
-                payload = json.loads(response.read().decode("utf-8"))
-                request_id = (getattr(response, "headers", None) or {}).get("x-request-id")
-            text = str(payload["candidates"][0]["content"]["parts"][0]["text"])
+            payload, request_id = self._post_gemini(endpoint, body, provider_config)
+        except urllib.error.HTTPError:
+            legacy_body = dict(body)
+            legacy_body["generationConfig"] = {
+                "temperature": float(provider_config.get("temperature", 0.0)),
+                "responseMimeType": "application/json",
+                "responseSchema": _gemini_legacy_schema(wire_schema),
+                "maxOutputTokens": _max_tokens(provider_config),
+            }
+            try:
+                payload, request_id = self._post_gemini(endpoint, legacy_body, provider_config)
+            except urllib.error.HTTPError as exc:
+                return ProviderResponse(
+                    self.provider_name,
+                    model,
+                    "request_failed",
+                    parse_error=_sanitize_http_error(exc),
+                    latency_seconds=time.perf_counter() - start,
+                )
+            except (urllib.error.URLError, KeyError, IndexError, TypeError, json.JSONDecodeError) as exc:
+                return ProviderResponse(self.provider_name, model, "request_failed", parse_error=exc.__class__.__name__, latency_seconds=time.perf_counter() - start)
         except (urllib.error.URLError, KeyError, IndexError, TypeError, json.JSONDecodeError) as exc:
+            return ProviderResponse(self.provider_name, model, "request_failed", parse_error=exc.__class__.__name__, latency_seconds=time.perf_counter() - start)
+        try:
+            text = str(payload["candidates"][0]["content"]["parts"][0]["text"])
+        except (KeyError, IndexError, TypeError) as exc:
             return ProviderResponse(self.provider_name, model, "request_failed", parse_error=exc.__class__.__name__, latency_seconds=time.perf_counter() - start)
         return self._parse_payload(
             text=text,
@@ -331,6 +573,23 @@ class GeminiAdapter(BaseProviderAdapter):
             allowlist=allowlist,
             request_id=request_id,
         )
+
+    def _post_gemini(
+        self,
+        endpoint: str,
+        body: dict[str, Any],
+        provider_config: dict[str, Any],
+    ) -> tuple[dict[str, Any], str | None]:
+        request = urllib.request.Request(
+            endpoint,
+            data=json.dumps(body).encode("utf-8"),
+            headers={"Content-Type": "application/json"},
+            method="POST",
+        )
+        with urllib.request.urlopen(request, timeout=int(provider_config.get("timeout_seconds", self.timeout_seconds))) as response:
+            payload = json.loads(response.read().decode("utf-8"))
+            request_id = (getattr(response, "headers", None) or {}).get("x-request-id")
+        return payload, request_id
 
 
 @dataclass(frozen=True)

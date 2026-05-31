@@ -56,21 +56,21 @@ google_gemini,gemini-2.5-flash,google_gemini_single_shot,Overall,2,9,,,,False,,r
 deepseek,deepseek-v4-flash,deepseek_iterative,Overall,0,3,arima_auto_small,0.0434920634920634,0.109090909090909,True,3.0,rolling_mean_mae,posthoc_descriptive_only
 deepseek,deepseek-v4-flash,deepseek_iterative,Overall,0,6,arima_auto_small,0.0434920634920634,0.109090909090909,True,3.0,rolling_mean_mae,posthoc_descriptive_only
 deepseek,deepseek-v4-flash,deepseek_iterative,Overall,0,9,arima_auto_small,0.0434920634920634,0.109090909090909,True,3.0,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_iterative,Overall,1,3,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_iterative,Overall,1,6,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_iterative,Overall,1,9,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_iterative,Overall,2,3,last_observed,0.0434920634920634,0.109090909090909,True,3.0,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_iterative,Overall,2,6,last_observed,0.0434920634920634,0.109090909090909,True,3.0,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_iterative,Overall,2,9,last_observed,0.0434920634920634,0.109090909090909,True,3.0,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,0,3,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,0,6,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,0,9,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,1,3,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,1,6,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,1,9,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,2,3,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,2,6,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,2,9,,,,False,,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_iterative,Overall,1,3,arima_auto_small,0.0434920634920634,0.109090909090909,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_iterative,Overall,1,6,arima_auto_small,0.0434920634920634,0.109090909090909,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_iterative,Overall,1,9,arima_auto_small,0.0434920634920634,0.109090909090909,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_iterative,Overall,2,3,arima_auto_small,0.0434920634920634,0.109090909090909,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_iterative,Overall,2,6,arima_auto_small,0.0434920634920634,0.109090909090909,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_iterative,Overall,2,9,arima_auto_small,0.0434920634920634,0.109090909090909,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,0,3,arima_auto_small,0.0434920634920634,0.109090909090909,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,0,6,arima_auto_small,0.0434920634920634,0.109090909090909,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,0,9,arima_auto_small,0.0434920634920634,0.109090909090909,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,1,3,arima_auto_small,0.0434920634920634,0.109090909090909,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,1,6,arima_auto_small,0.0434920634920634,0.109090909090909,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,1,9,arima_auto_small,0.0434920634920634,0.109090909090909,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,2,3,arima_auto_small,0.0434920634920634,0.109090909090909,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,2,6,arima_auto_small,0.0434920634920634,0.109090909090909,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,2,9,arima_auto_small,0.0434920634920634,0.109090909090909,True,3.0,rolling_mean_mae,posthoc_descriptive_only
 deterministic_baseline,deterministic,deterministic_seed_proposer,Overall,0,3,arima_auto_small,0.0434920634920634,0.109090909090909,True,3.0,rolling_mean_mae,posthoc_descriptive_only
 deterministic_baseline,deterministic,deterministic_seed_proposer,Overall,0,6,arima_auto_small,0.0434920634920634,0.109090909090909,True,3.0,rolling_mean_mae,posthoc_descriptive_only
 deterministic_baseline,deterministic,deterministic_seed_proposer,Overall,0,9,arima_auto_small,0.0434920634920634,0.109090909090909,True,3.0,rolling_mean_mae,posthoc_descriptive_only
@@ -86,9 +86,9 @@ deterministic_baseline,deterministic,oracle_reference,Overall,0,9,arima_auto_sma
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0-4 yr,0,3,arima_auto_small,0.1416666666666667,0.0818181818181818,False,6.0,rolling_mean_mae,posthoc_descriptive_only
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0-4 yr,0,6,constrained_structure_discovery,0.100200235379189,0.0884963717287904,True,6.0,rolling_mean_mae,posthoc_descriptive_only
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0-4 yr,0,9,constrained_structure_discovery,0.100200235379189,0.0884963717287904,True,6.0,rolling_mean_mae,posthoc_descriptive_only
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0-4 yr,1,3,arima_auto_small,0.1416666666666667,0.0818181818181818,False,,rolling_mean_mae,posthoc_descriptive_only
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0-4 yr,1,6,arima_auto_small,0.1416666666666667,0.0818181818181818,False,,rolling_mean_mae,posthoc_descriptive_only
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0-4 yr,1,9,arima_auto_small,0.1416666666666667,0.0818181818181818,False,,rolling_mean_mae,posthoc_descriptive_only
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0-4 yr,1,3,arima_auto_small,0.1416666666666667,0.0818181818181818,False,6.0,rolling_mean_mae,posthoc_descriptive_only
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0-4 yr,1,6,constrained_structure_discovery,0.100200235379189,0.0884963717287904,True,6.0,rolling_mean_mae,posthoc_descriptive_only
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0-4 yr,1,9,constrained_structure_discovery,0.100200235379189,0.0884963717287904,True,6.0,rolling_mean_mae,posthoc_descriptive_only
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0-4 yr,2,3,arima_auto_small,0.1416666666666667,0.0818181818181818,False,6.0,rolling_mean_mae,posthoc_descriptive_only
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0-4 yr,2,6,constrained_structure_discovery,0.100200235379189,0.0884963717287904,True,6.0,rolling_mean_mae,posthoc_descriptive_only
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0-4 yr,2,9,constrained_structure_discovery,0.100200235379189,0.0884963717287904,True,6.0,rolling_mean_mae,posthoc_descriptive_only
@@ -137,24 +137,24 @@ google_gemini,gemini-2.5-flash,google_gemini_single_shot,0-4 yr,1,9,,,,False,,ro
 google_gemini,gemini-2.5-flash,google_gemini_single_shot,0-4 yr,2,3,,,,False,,rolling_mean_mae,posthoc_descriptive_only
 google_gemini,gemini-2.5-flash,google_gemini_single_shot,0-4 yr,2,6,,,,False,,rolling_mean_mae,posthoc_descriptive_only
 google_gemini,gemini-2.5-flash,google_gemini_single_shot,0-4 yr,2,9,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,0,3,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,0,6,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,0,9,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,1,3,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,1,6,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,1,9,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,2,3,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,2,6,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,2,9,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,0,3,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,0,6,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,0,9,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,1,3,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,1,6,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,1,9,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,2,3,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,2,6,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,2,9,,,,False,,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,0,3,arima_auto_small,0.1416666666666667,0.0818181818181818,False,6.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,0,6,constrained_structure_discovery,0.100200235379189,0.0884963717287904,True,6.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,0,9,constrained_structure_discovery,0.100200235379189,0.0884963717287904,True,6.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,1,3,last_observed,0.1416666666666667,0.0818181818181818,False,6.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,1,6,constrained_structure_discovery,0.100200235379189,0.0884963717287904,True,6.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,1,9,constrained_structure_discovery,0.100200235379189,0.0884963717287904,True,6.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,2,3,arima_auto_small,0.1416666666666667,0.0818181818181818,False,6.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,2,6,constrained_structure_discovery,0.100200235379189,0.0884963717287904,True,6.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,2,9,constrained_structure_discovery,0.100200235379189,0.0884963717287904,True,6.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,0,3,arima_auto_small,0.1416666666666667,0.0818181818181818,False,6.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,0,6,constrained_structure_discovery,0.100200235379189,0.0884963717287904,True,6.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,0,9,constrained_structure_discovery,0.100200235379189,0.0884963717287904,True,6.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,1,3,arima_auto_small,0.1416666666666667,0.0818181818181818,False,6.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,1,6,constrained_structure_discovery,0.100200235379189,0.0884963717287904,True,6.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,1,9,constrained_structure_discovery,0.100200235379189,0.0884963717287904,True,6.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,2,3,arima_auto_small,0.1416666666666667,0.0818181818181818,False,6.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,2,6,constrained_structure_discovery,0.100200235379189,0.0884963717287904,True,6.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,2,9,constrained_structure_discovery,0.100200235379189,0.0884963717287904,True,6.0,rolling_mean_mae,posthoc_descriptive_only
 deterministic_baseline,deterministic,deterministic_seed_proposer,0-4 yr,0,3,arima_auto_small,0.1416666666666667,0.0818181818181818,False,6.0,rolling_mean_mae,posthoc_descriptive_only
 deterministic_baseline,deterministic,deterministic_seed_proposer,0-4 yr,0,6,constrained_structure_discovery,0.100200235379189,0.0884963717287904,True,6.0,rolling_mean_mae,posthoc_descriptive_only
 deterministic_baseline,deterministic,deterministic_seed_proposer,0-4 yr,0,9,constrained_structure_discovery,0.100200235379189,0.0884963717287904,True,6.0,rolling_mean_mae,posthoc_descriptive_only
@@ -221,24 +221,24 @@ google_gemini,gemini-2.5-flash,google_gemini_single_shot,5-17 yr,1,9,,,,False,,r
 google_gemini,gemini-2.5-flash,google_gemini_single_shot,5-17 yr,2,3,,,,False,,rolling_mean_mae,posthoc_descriptive_only
 google_gemini,gemini-2.5-flash,google_gemini_single_shot,5-17 yr,2,6,,,,False,,rolling_mean_mae,posthoc_descriptive_only
 google_gemini,gemini-2.5-flash,google_gemini_single_shot,5-17 yr,2,9,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,0,3,rolling_mean_4wk,0.040542328042328,0.025,True,3.0,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,0,6,rolling_mean_4wk,0.040542328042328,0.025,True,3.0,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,0,9,rolling_mean_4wk,0.040542328042328,0.025,True,3.0,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,1,3,rolling_mean_4wk,0.040542328042328,0.025,True,3.0,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,1,6,rolling_mean_4wk,0.040542328042328,0.025,True,3.0,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,1,9,rolling_mean_4wk,0.040542328042328,0.025,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,0,3,arima_auto_small,0.0375925925925925,0.0,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,0,6,arima_auto_small,0.0375925925925925,0.0,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,0,9,arima_auto_small,0.0375925925925925,0.0,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,1,3,last_observed,0.0375925925925925,0.0,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,1,6,arima_auto_small,0.0375925925925925,0.0,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,1,9,arima_auto_small,0.0375925925925925,0.0,True,3.0,rolling_mean_mae,posthoc_descriptive_only
 deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,2,3,arima_auto_small,0.0375925925925925,0.0,True,3.0,rolling_mean_mae,posthoc_descriptive_only
 deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,2,6,arima_auto_small,0.0375925925925925,0.0,True,3.0,rolling_mean_mae,posthoc_descriptive_only
 deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,2,9,arima_auto_small,0.0375925925925925,0.0,True,3.0,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,0,3,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,0,6,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,0,9,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,1,3,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,1,6,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,1,9,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,2,3,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,2,6,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,2,9,,,,False,,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,0,3,arima_auto_small,0.0375925925925925,0.0,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,0,6,arima_auto_small,0.0375925925925925,0.0,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,0,9,arima_auto_small,0.0375925925925925,0.0,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,1,3,exhaustive_structure_discovery,0.0448183664615375,0.0110124009431363,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,1,6,arima_auto_small,0.0375925925925925,0.0,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,1,9,arima_auto_small,0.0375925925925925,0.0,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,2,3,arima_auto_small,0.0375925925925925,0.0,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,2,6,arima_auto_small,0.0375925925925925,0.0,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,2,9,arima_auto_small,0.0375925925925925,0.0,True,3.0,rolling_mean_mae,posthoc_descriptive_only
 deterministic_baseline,deterministic,deterministic_seed_proposer,5-17 yr,0,3,arima_auto_small,0.0375925925925925,0.0,True,3.0,rolling_mean_mae,posthoc_descriptive_only
 deterministic_baseline,deterministic,deterministic_seed_proposer,5-17 yr,0,6,arima_auto_small,0.0375925925925925,0.0,True,3.0,rolling_mean_mae,posthoc_descriptive_only
 deterministic_baseline,deterministic,deterministic_seed_proposer,5-17 yr,0,9,arima_auto_small,0.0375925925925925,0.0,True,3.0,rolling_mean_mae,posthoc_descriptive_only
@@ -305,24 +305,24 @@ google_gemini,gemini-2.5-flash,google_gemini_single_shot,18-49 yr,1,9,,,,False,,
 google_gemini,gemini-2.5-flash,google_gemini_single_shot,18-49 yr,2,3,,,,False,,rolling_mean_mae,posthoc_descriptive_only
 google_gemini,gemini-2.5-flash,google_gemini_single_shot,18-49 yr,2,6,,,,False,,rolling_mean_mae,posthoc_descriptive_only
 google_gemini,gemini-2.5-flash,google_gemini_single_shot,18-49 yr,2,9,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,0,3,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,0,6,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,0,9,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,1,3,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,1,6,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,1,9,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,2,3,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,2,6,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,2,9,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,0,3,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,0,6,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,0,9,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,1,3,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,1,6,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,1,9,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,2,3,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,2,6,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,2,9,,,,False,,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,0,3,arima_auto_small,0.0304497354497354,0.009090909090909,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,0,6,arima_auto_small,0.0304497354497354,0.009090909090909,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,0,9,arima_auto_small,0.0304497354497354,0.009090909090909,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,1,3,arima_auto_small,0.0304497354497354,0.009090909090909,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,1,6,arima_auto_small,0.0304497354497354,0.009090909090909,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,1,9,arima_auto_small,0.0304497354497354,0.009090909090909,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,2,3,arima_auto_small,0.0304497354497354,0.009090909090909,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,2,6,arima_auto_small,0.0304497354497354,0.009090909090909,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,2,9,arima_auto_small,0.0304497354497354,0.009090909090909,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,0,3,arima_auto_small,0.0304497354497354,0.009090909090909,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,0,6,arima_auto_small,0.0304497354497354,0.009090909090909,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,0,9,arima_auto_small,0.0304497354497354,0.009090909090909,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,1,3,arima_auto_small,0.0304497354497354,0.009090909090909,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,1,6,arima_auto_small,0.0304497354497354,0.009090909090909,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,1,9,arima_auto_small,0.0304497354497354,0.009090909090909,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,2,3,arima_auto_small,0.0304497354497354,0.009090909090909,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,2,6,arima_auto_small,0.0304497354497354,0.009090909090909,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,2,9,arima_auto_small,0.0304497354497354,0.009090909090909,True,3.0,rolling_mean_mae,posthoc_descriptive_only
 deterministic_baseline,deterministic,deterministic_seed_proposer,18-49 yr,0,3,arima_auto_small,0.0304497354497354,0.009090909090909,True,3.0,rolling_mean_mae,posthoc_descriptive_only
 deterministic_baseline,deterministic,deterministic_seed_proposer,18-49 yr,0,6,arima_auto_small,0.0304497354497354,0.009090909090909,True,3.0,rolling_mean_mae,posthoc_descriptive_only
 deterministic_baseline,deterministic,deterministic_seed_proposer,18-49 yr,0,9,arima_auto_small,0.0304497354497354,0.009090909090909,True,3.0,rolling_mean_mae,posthoc_descriptive_only
@@ -339,8 +339,8 @@ openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,0,3,arima_auto_small,0.061
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,0,6,delayed_observation_seir,0.0527749982193454,0.0379598606458947,True,3.0,rolling_mean_mae,posthoc_descriptive_only
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,0,9,delayed_observation_seir,0.0527749982193454,0.0379598606458947,True,3.0,rolling_mean_mae,posthoc_descriptive_only
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,1,3,arima_auto_small,0.0612698412698412,0.1181818181818181,True,3.0,rolling_mean_mae,posthoc_descriptive_only
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,1,6,arima_auto_small,0.0612698412698412,0.1181818181818181,True,3.0,rolling_mean_mae,posthoc_descriptive_only
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,1,9,arima_auto_small,0.0612698412698412,0.1181818181818181,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,1,6,delayed_observation_seir,0.0527749982193454,0.0379598606458947,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,1,9,delayed_observation_seir,0.0527749982193454,0.0379598606458947,True,3.0,rolling_mean_mae,posthoc_descriptive_only
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,2,3,arima_auto_small,0.0612698412698412,0.1181818181818181,True,3.0,rolling_mean_mae,posthoc_descriptive_only
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,2,6,delayed_observation_seir,0.0527749982193454,0.0379598606458947,True,3.0,rolling_mean_mae,posthoc_descriptive_only
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,2,9,delayed_observation_seir,0.0527749982193454,0.0379598606458947,True,3.0,rolling_mean_mae,posthoc_descriptive_only
@@ -389,24 +389,24 @@ google_gemini,gemini-2.5-flash,google_gemini_single_shot,50-64 yr,1,9,,,,False,,
 google_gemini,gemini-2.5-flash,google_gemini_single_shot,50-64 yr,2,3,,,,False,,rolling_mean_mae,posthoc_descriptive_only
 google_gemini,gemini-2.5-flash,google_gemini_single_shot,50-64 yr,2,6,,,,False,,rolling_mean_mae,posthoc_descriptive_only
 google_gemini,gemini-2.5-flash,google_gemini_single_shot,50-64 yr,2,9,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,0,3,constrained_structure_discovery,0.0540426538599386,0.0371607159032478,True,3.0,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,0,6,constrained_structure_discovery,0.0540426538599386,0.0371607159032478,True,3.0,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,0,9,constrained_structure_discovery,0.0540426538599386,0.0371607159032478,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,0,3,arima_auto_small,0.0612698412698412,0.1181818181818181,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,0,6,exhaustive_structure_discovery,0.0540422166483086,0.0371606795659373,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,0,9,exhaustive_structure_discovery,0.0540422166483086,0.0371606795659373,True,3.0,rolling_mean_mae,posthoc_descriptive_only
 deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,1,3,deterministic_seir,0.0564049117960326,0.0380364180002214,True,3.0,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,1,6,deterministic_seir,0.0564049117960326,0.0380364180002214,True,3.0,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,1,9,deterministic_seir,0.0564049117960326,0.0380364180002214,True,3.0,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,2,3,constrained_structure_discovery,0.0540426538599386,0.0371607159032478,True,3.0,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,2,6,constrained_structure_discovery,0.0540426538599386,0.0371607159032478,True,3.0,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,2,9,constrained_structure_discovery,0.0540426538599386,0.0371607159032478,True,3.0,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,0,3,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,0,6,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,0,9,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,1,3,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,1,6,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,1,9,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,2,3,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,2,6,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,2,9,,,,False,,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,1,6,delayed_observation_seir,0.0527749982193454,0.0379598606458947,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,1,9,delayed_observation_seir,0.0527749982193454,0.0379598606458947,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,2,3,arima_auto_small,0.0612698412698412,0.1181818181818181,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,2,6,delayed_observation_seir,0.0527749982193454,0.0379598606458947,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,2,9,delayed_observation_seir,0.0527749982193454,0.0379598606458947,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,0,3,arima_auto_small,0.0612698412698412,0.1181818181818181,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,0,6,delayed_observation_seir,0.0527749982193454,0.0379598606458947,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,0,9,delayed_observation_seir,0.0527749982193454,0.0379598606458947,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,1,3,deterministic_seir,0.0564049117960326,0.0380364180002214,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,1,6,delayed_observation_seir,0.0527749982193454,0.0379598606458947,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,1,9,delayed_observation_seir,0.0527749982193454,0.0379598606458947,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,2,3,deterministic_seir,0.0564049117960326,0.0380364180002214,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,2,6,delayed_observation_seir,0.0527749982193454,0.0379598606458947,True,3.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,2,9,delayed_observation_seir,0.0527749982193454,0.0379598606458947,True,3.0,rolling_mean_mae,posthoc_descriptive_only
 deterministic_baseline,deterministic,deterministic_seed_proposer,50-64 yr,0,3,arima_auto_small,0.0612698412698412,0.1181818181818181,True,3.0,rolling_mean_mae,posthoc_descriptive_only
 deterministic_baseline,deterministic,deterministic_seed_proposer,50-64 yr,0,6,delayed_observation_seir,0.0527749982193454,0.0379598606458947,True,3.0,rolling_mean_mae,posthoc_descriptive_only
 deterministic_baseline,deterministic,deterministic_seed_proposer,50-64 yr,0,9,delayed_observation_seir,0.0527749982193454,0.0379598606458947,True,3.0,rolling_mean_mae,posthoc_descriptive_only
@@ -421,10 +421,10 @@ deterministic_baseline,deterministic,oracle_reference,50-64 yr,0,6,delayed_obser
 deterministic_baseline,deterministic,oracle_reference,50-64 yr,0,9,delayed_observation_seir,0.0527749982193454,0.0379598606458947,True,3.0,rolling_mean_mae,posthoc_descriptive_only
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,0,3,arima_auto_small,0.2118518518518518,0.3272727272727272,False,6.0,rolling_mean_mae,posthoc_descriptive_only
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,0,6,arima_auto_small,0.2118518518518518,0.3272727272727272,False,6.0,rolling_mean_mae,posthoc_descriptive_only
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,0,9,exhaustive_structure_discovery,0.1690159117505848,0.1218893284577907,True,6.0,rolling_mean_mae,posthoc_descriptive_only
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,0,9,arima_auto_small,0.2118518518518518,0.3272727272727272,False,6.0,rolling_mean_mae,posthoc_descriptive_only
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,1,3,arima_auto_small,0.2118518518518518,0.3272727272727272,False,6.0,rolling_mean_mae,posthoc_descriptive_only
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,1,6,arima_auto_small,0.2118518518518518,0.3272727272727272,False,6.0,rolling_mean_mae,posthoc_descriptive_only
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,1,9,exhaustive_structure_discovery,0.1690159117505848,0.1218893284577907,True,6.0,rolling_mean_mae,posthoc_descriptive_only
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,1,9,random_structure_discovery,0.1965252983704047,0.1518453927047748,False,6.0,rolling_mean_mae,posthoc_descriptive_only
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,2,3,arima_auto_small,0.2118518518518518,0.3272727272727272,False,6.0,rolling_mean_mae,posthoc_descriptive_only
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,2,6,arima_auto_small,0.2118518518518518,0.3272727272727272,False,6.0,rolling_mean_mae,posthoc_descriptive_only
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,2,9,arima_auto_small,0.2118518518518518,0.3272727272727272,False,6.0,rolling_mean_mae,posthoc_descriptive_only
@@ -436,7 +436,7 @@ openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,>= 65 yr,1,6,arima_auto_small,0.2
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,>= 65 yr,1,9,random_structure_discovery,0.1965252983704047,0.1518453927047748,False,6.0,rolling_mean_mae,posthoc_descriptive_only
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,>= 65 yr,2,3,arima_auto_small,0.2118518518518518,0.3272727272727272,False,6.0,rolling_mean_mae,posthoc_descriptive_only
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,>= 65 yr,2,6,arima_auto_small,0.2118518518518518,0.3272727272727272,False,6.0,rolling_mean_mae,posthoc_descriptive_only
-openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,>= 65 yr,2,9,exhaustive_structure_discovery,0.1690159117505848,0.1218893284577907,True,6.0,rolling_mean_mae,posthoc_descriptive_only
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,>= 65 yr,2,9,random_structure_discovery,0.1965252983704047,0.1518453927047748,False,6.0,rolling_mean_mae,posthoc_descriptive_only
 anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,>= 65 yr,0,3,,,,False,,rolling_mean_mae,posthoc_descriptive_only
 anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,>= 65 yr,0,6,,,,False,,rolling_mean_mae,posthoc_descriptive_only
 anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,>= 65 yr,0,9,,,,False,,rolling_mean_mae,posthoc_descriptive_only
@@ -473,21 +473,21 @@ google_gemini,gemini-2.5-flash,google_gemini_single_shot,>= 65 yr,1,9,,,,False,,
 google_gemini,gemini-2.5-flash,google_gemini_single_shot,>= 65 yr,2,3,,,,False,,rolling_mean_mae,posthoc_descriptive_only
 google_gemini,gemini-2.5-flash,google_gemini_single_shot,>= 65 yr,2,6,,,,False,,rolling_mean_mae,posthoc_descriptive_only
 google_gemini,gemini-2.5-flash,google_gemini_single_shot,>= 65 yr,2,9,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,0,3,arima_auto_small,0.2118518518518518,0.3272727272727272,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,0,6,arima_auto_small,0.2118518518518518,0.3272727272727272,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,0,9,arima_auto_small,0.2118518518518518,0.3272727272727272,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,1,3,deterministic_seir,0.2214527261276795,0.1196878756040543,False,3.0,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,1,6,deterministic_seir,0.2214527261276795,0.1196878756040543,False,3.0,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,1,9,deterministic_seir,0.2214527261276795,0.1196878756040543,False,3.0,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,2,3,last_observed,0.2118518518518518,0.3272727272727272,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,2,6,last_observed,0.2118518518518518,0.3272727272727272,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,2,9,last_observed,0.2118518518518518,0.3272727272727272,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,>= 65 yr,0,3,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,>= 65 yr,0,6,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,>= 65 yr,0,9,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,>= 65 yr,1,3,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,>= 65 yr,1,6,,,,False,,rolling_mean_mae,posthoc_descriptive_only
-deepseek,deepseek-v4-flash,deepseek_single_shot,>= 65 yr,1,9,,,,False,,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,0,3,arima_auto_small,0.2118518518518518,0.3272727272727272,False,6.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,0,6,arima_auto_small,0.2118518518518518,0.3272727272727272,False,6.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,0,9,exhaustive_structure_discovery,0.1690159117505848,0.1218893284577907,True,6.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,1,3,arima_auto_small,0.2118518518518518,0.3272727272727272,False,6.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,1,6,arima_auto_small,0.2118518518518518,0.3272727272727272,False,6.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,1,9,exhaustive_structure_discovery,0.1690159117505848,0.1218893284577907,True,6.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,2,3,arima_auto_small,0.2118518518518518,0.3272727272727272,False,6.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,2,6,arima_auto_small,0.2118518518518518,0.3272727272727272,False,6.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,2,9,exhaustive_structure_discovery,0.1690159117505848,0.1218893284577907,True,6.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,>= 65 yr,0,3,arima_auto_small,0.2118518518518518,0.3272727272727272,False,6.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,>= 65 yr,0,6,arima_auto_small,0.2118518518518518,0.3272727272727272,False,6.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,>= 65 yr,0,9,exhaustive_structure_discovery,0.1690159117505848,0.1218893284577907,True,6.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,>= 65 yr,1,3,arima_auto_small,0.2118518518518518,0.3272727272727272,False,6.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,>= 65 yr,1,6,arima_auto_small,0.2118518518518518,0.3272727272727272,False,6.0,rolling_mean_mae,posthoc_descriptive_only
+deepseek,deepseek-v4-flash,deepseek_single_shot,>= 65 yr,1,9,exhaustive_structure_discovery,0.1690159117505848,0.1218893284577907,True,6.0,rolling_mean_mae,posthoc_descriptive_only
 deepseek,deepseek-v4-flash,deepseek_single_shot,>= 65 yr,2,3,,,,False,,rolling_mean_mae,posthoc_descriptive_only
 deepseek,deepseek-v4-flash,deepseek_single_shot,>= 65 yr,2,6,,,,False,,rolling_mean_mae,posthoc_descriptive_only
 deepseek,deepseek-v4-flash,deepseek_single_shot,>= 65 yr,2,9,,,,False,,rolling_mean_mae,posthoc_descriptive_only

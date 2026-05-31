@@ -2,26 +2,29 @@ provider_name,model_name,proposer_type,series_name,repeat_idx,round_idx,candidat
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,Overall,0,1,Overall:openai_gpt_iterative:r1:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.0434920634920634,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,Overall,0,1,Overall:openai_gpt_iterative:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.1022089947089947,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,Overall,0,1,Overall:openai_gpt_iterative:r1:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.0434920634920634,True,False
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,Overall,0,3,Overall:openai_gpt_iterative:r3:0:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.0814357127058704,True,False
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,Overall,0,3,Overall:openai_gpt_iterative:r3:1:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.0820588425321457,True,False
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,Overall,0,3,Overall:openai_gpt_iterative:r3:2:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0888715971007055,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,Overall,0,2,Overall:openai_gpt_iterative:r2:0:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.0820588425321457,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,Overall,0,2,Overall:openai_gpt_iterative:r2:1:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.0814357127058704,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,Overall,0,2,Overall:openai_gpt_iterative:r2:2:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0888715971007055,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,Overall,0,3,Overall:openai_gpt_iterative:r3:0:validation_only_structure_selection,validation_only_structure_selection,ablation,delayed_I,2,0.0849143024498197,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,Overall,0,3,Overall:openai_gpt_iterative:r3:1:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.0888727874115738,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,Overall,0,3,Overall:openai_gpt_iterative:r3:2:no_observation_search_discovery,no_observation_search_discovery,ablation,I,0,0.0989187285988708,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,Overall,1,1,Overall:openai_gpt_iterative:r1:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.0434920634920634,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,Overall,1,1,Overall:openai_gpt_iterative:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.1022089947089947,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,Overall,1,1,Overall:openai_gpt_iterative:r1:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.0434920634920634,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,Overall,1,2,Overall:openai_gpt_iterative:r2:0:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.0820588425321457,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,Overall,1,2,Overall:openai_gpt_iterative:r2:1:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.0814357127058704,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,Overall,1,2,Overall:openai_gpt_iterative:r2:2:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0888715971007055,True,False
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,Overall,1,3,Overall:openai_gpt_iterative:r3:0:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0888715971007055,False,False
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,Overall,1,3,Overall:openai_gpt_iterative:r3:1:validation_only_structure_selection,validation_only_structure_selection,ablation,delayed_I,2,0.0849143024498197,True,False
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,Overall,1,3,Overall:openai_gpt_iterative:r3:2:random_structure_discovery,random_structure_discovery,ablation,I,0,0.088871950775121,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,Overall,1,3,Overall:openai_gpt_iterative:r3:0:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.0888727874115738,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,Overall,1,3,Overall:openai_gpt_iterative:r3:1:no_observation_search_discovery,no_observation_search_discovery,ablation,I,0,0.0989187285988708,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,Overall,1,3,Overall:openai_gpt_iterative:r3:2:validation_only_structure_selection,validation_only_structure_selection,ablation,delayed_I,2,0.0849143024498197,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,Overall,2,1,Overall:openai_gpt_iterative:r1:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.0434920634920634,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,Overall,2,1,Overall:openai_gpt_iterative:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.1022089947089947,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,Overall,2,1,Overall:openai_gpt_iterative:r1:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.0434920634920634,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,Overall,2,2,Overall:openai_gpt_iterative:r2:0:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.0820588425321457,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,Overall,2,2,Overall:openai_gpt_iterative:r2:1:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.0814357127058704,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,Overall,2,2,Overall:openai_gpt_iterative:r2:2:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0888715971007055,True,False
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,Overall,2,3,Overall:openai_gpt_iterative:r3:0:validation_only_structure_selection,validation_only_structure_selection,ablation,delayed_I,2,0.0849143024498197,True,False
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,Overall,2,3,Overall:openai_gpt_iterative:r3:1:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.0888727874115738,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,Overall,2,3,Overall:openai_gpt_iterative:r3:0:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.0888727874115738,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,Overall,2,3,Overall:openai_gpt_iterative:r3:1:validation_only_structure_selection,validation_only_structure_selection,ablation,delayed_I,2,0.0849143024498197,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,Overall,2,3,Overall:openai_gpt_iterative:r3:2:no_observation_search_discovery,no_observation_search_discovery,ablation,I,0,0.0989187285988708,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,Overall,0,1,Overall:openai_gpt_single_shot:r1:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.0434920634920634,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,Overall,0,1,Overall:openai_gpt_single_shot:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.1022089947089947,True,False
@@ -38,9 +41,9 @@ openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,Overall,1,1,Overall:openai_gpt_si
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,Overall,1,1,Overall:openai_gpt_single_shot:r1:3:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.0820588425321457,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,Overall,1,1,Overall:openai_gpt_single_shot:r1:4:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.0814357127058704,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,Overall,1,1,Overall:openai_gpt_single_shot:r1:5:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0888715971007055,True,False
-openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,Overall,1,1,Overall:openai_gpt_single_shot:r1:6:validation_only_structure_selection,validation_only_structure_selection,ablation,delayed_I,2,0.0849143024498197,True,False
-openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,Overall,1,1,Overall:openai_gpt_single_shot:r1:7:random_structure_discovery,random_structure_discovery,ablation,I,0,0.088871950775121,True,False
-openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,Overall,1,1,Overall:openai_gpt_single_shot:r1:8:no_observation_search_discovery,no_observation_search_discovery,ablation,I,0,0.0989187285988708,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,Overall,1,1,Overall:openai_gpt_single_shot:r1:6:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.0888727874115738,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,Overall,1,1,Overall:openai_gpt_single_shot:r1:7:no_observation_search_discovery,no_observation_search_discovery,ablation,I,0,0.0989187285988708,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,Overall,1,1,Overall:openai_gpt_single_shot:r1:8:validation_only_structure_selection,validation_only_structure_selection,ablation,delayed_I,2,0.0849143024498197,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,Overall,2,1,Overall:openai_gpt_single_shot:r1:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.0434920634920634,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,Overall,2,1,Overall:openai_gpt_single_shot:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.1022089947089947,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,Overall,2,1,Overall:openai_gpt_single_shot:r1:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.0434920634920634,True,False
@@ -50,12 +53,60 @@ openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,Overall,2,1,Overall:openai_gpt_si
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,Overall,2,1,Overall:openai_gpt_single_shot:r1:6:validation_only_structure_selection,validation_only_structure_selection,ablation,delayed_I,2,0.0849143024498197,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,Overall,2,1,Overall:openai_gpt_single_shot:r1:7:no_observation_search_discovery,no_observation_search_discovery,ablation,I,0,0.0989187285988708,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,Overall,2,1,Overall:openai_gpt_single_shot:r1:8:random_structure_discovery,random_structure_discovery,ablation,I,0,0.088871950775121,True,False
-deepseek,deepseek-v4-flash,deepseek_iterative,Overall,0,2,Overall:deepseek_iterative:r2:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.0434920634920634,True,False
-deepseek,deepseek-v4-flash,deepseek_iterative,Overall,0,2,Overall:deepseek_iterative:r2:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.1022089947089947,True,False
-deepseek,deepseek-v4-flash,deepseek_iterative,Overall,0,2,Overall:deepseek_iterative:r2:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.0434920634920634,True,False
-deepseek,deepseek-v4-flash,deepseek_iterative,Overall,2,2,Overall:deepseek_iterative:r2:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.0434920634920634,True,False
-deepseek,deepseek-v4-flash,deepseek_iterative,Overall,2,2,Overall:deepseek_iterative:r2:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.1022089947089947,True,False
-deepseek,deepseek-v4-flash,deepseek_iterative,Overall,2,2,Overall:deepseek_iterative:r2:2:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.0820588425321457,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,Overall,0,1,Overall:deepseek_iterative:r1:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.0434920634920634,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,Overall,0,1,Overall:deepseek_iterative:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.1022089947089947,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,Overall,0,1,Overall:deepseek_iterative:r1:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.0434920634920634,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,Overall,0,2,Overall:deepseek_iterative:r2:0:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.0820588425321457,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,Overall,0,2,Overall:deepseek_iterative:r2:1:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.0814357127058704,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,Overall,0,2,Overall:deepseek_iterative:r2:2:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0888715971007055,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,Overall,0,3,Overall:deepseek_iterative:r3:0:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0888715971007055,False,False
+deepseek,deepseek-v4-flash,deepseek_iterative,Overall,0,3,Overall:deepseek_iterative:r3:1:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.0888727874115738,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,Overall,0,3,Overall:deepseek_iterative:r3:2:no_observation_search_discovery,no_observation_search_discovery,ablation,I,0,0.0989187285988708,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,Overall,1,1,Overall:deepseek_iterative:r1:0:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.0434920634920634,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,Overall,1,1,Overall:deepseek_iterative:r1:1:last_observed,last_observed,forecasting_baseline,not_applicable,,0.0434920634920634,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,Overall,1,1,Overall:deepseek_iterative:r1:2:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.1022089947089947,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,Overall,1,2,Overall:deepseek_iterative:r2:0:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.0820588425321457,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,Overall,1,2,Overall:deepseek_iterative:r2:1:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.0814357127058704,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,Overall,1,2,Overall:deepseek_iterative:r2:2:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0888715971007055,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,Overall,1,3,Overall:deepseek_iterative:r3:0:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0888715971007055,False,False
+deepseek,deepseek-v4-flash,deepseek_iterative,Overall,1,3,Overall:deepseek_iterative:r3:1:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.0888727874115738,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,Overall,1,3,Overall:deepseek_iterative:r3:2:no_observation_search_discovery,no_observation_search_discovery,ablation,I,0,0.0989187285988708,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,Overall,2,1,Overall:deepseek_iterative:r1:0:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.0434920634920634,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,Overall,2,1,Overall:deepseek_iterative:r1:1:last_observed,last_observed,forecasting_baseline,not_applicable,,0.0434920634920634,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,Overall,2,1,Overall:deepseek_iterative:r1:2:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.1022089947089947,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,Overall,2,2,Overall:deepseek_iterative:r2:0:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.0820588425321457,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,Overall,2,2,Overall:deepseek_iterative:r2:1:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.0814357127058704,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,Overall,2,2,Overall:deepseek_iterative:r2:2:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0888715971007055,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,Overall,2,3,Overall:deepseek_iterative:r3:0:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0888715971007055,False,False
+deepseek,deepseek-v4-flash,deepseek_iterative,Overall,2,3,Overall:deepseek_iterative:r3:1:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0888715971007055,False,False
+deepseek,deepseek-v4-flash,deepseek_iterative,Overall,2,3,Overall:deepseek_iterative:r3:2:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.0888727874115738,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,0,1,Overall:deepseek_single_shot:r1:0:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.0434920634920634,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,0,1,Overall:deepseek_single_shot:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.1022089947089947,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,0,1,Overall:deepseek_single_shot:r1:2:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.0820588425321457,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,0,1,Overall:deepseek_single_shot:r1:3:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.0814357127058704,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,0,1,Overall:deepseek_single_shot:r1:4:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0888715971007055,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,0,1,Overall:deepseek_single_shot:r1:5:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.0888727874115738,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,0,1,Overall:deepseek_single_shot:r1:6:random_structure_discovery,random_structure_discovery,ablation,I,0,0.088871950775121,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,0,1,Overall:deepseek_single_shot:r1:7:validation_only_structure_selection,validation_only_structure_selection,ablation,delayed_I,2,0.0849143024498197,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,0,1,Overall:deepseek_single_shot:r1:8:no_observation_search_discovery,no_observation_search_discovery,ablation,I,0,0.0989187285988708,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,1,1,Overall:deepseek_single_shot:r1:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.0434920634920634,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,1,1,Overall:deepseek_single_shot:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.1022089947089947,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,1,1,Overall:deepseek_single_shot:r1:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.0434920634920634,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,1,1,Overall:deepseek_single_shot:r1:3:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.0820588425321457,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,1,1,Overall:deepseek_single_shot:r1:4:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.0814357127058704,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,1,1,Overall:deepseek_single_shot:r1:5:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0888715971007055,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,1,1,Overall:deepseek_single_shot:r1:6:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.0888727874115738,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,1,1,Overall:deepseek_single_shot:r1:7:no_observation_search_discovery,no_observation_search_discovery,ablation,I,0,0.0989187285988708,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,1,1,Overall:deepseek_single_shot:r1:8:random_structure_discovery,random_structure_discovery,ablation,I,0,0.088871950775121,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,2,1,Overall:deepseek_single_shot:r1:0:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.1022089947089947,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,2,1,Overall:deepseek_single_shot:r1:1:last_observed,last_observed,forecasting_baseline,not_applicable,,0.0434920634920634,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,2,1,Overall:deepseek_single_shot:r1:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.0434920634920634,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,2,1,Overall:deepseek_single_shot:r1:3:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.0820588425321457,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,2,1,Overall:deepseek_single_shot:r1:4:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.0814357127058704,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,2,1,Overall:deepseek_single_shot:r1:5:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0888715971007055,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,2,1,Overall:deepseek_single_shot:r1:6:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.0888727874115738,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,2,1,Overall:deepseek_single_shot:r1:7:no_observation_search_discovery,no_observation_search_discovery,ablation,I,0,0.0989187285988708,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,2,1,Overall:deepseek_single_shot:r1:8:random_structure_discovery,random_structure_discovery,ablation,I,0,0.088871950775121,True,False
 deterministic_baseline,deterministic,deterministic_seed_proposer,Overall,0,1,Overall:deterministic_seed_proposer:r1:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.0434920634920634,True,False
 deterministic_baseline,deterministic,deterministic_seed_proposer,Overall,0,1,Overall:deterministic_seed_proposer:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.1022089947089947,True,False
 deterministic_baseline,deterministic,deterministic_seed_proposer,Overall,0,1,Overall:deterministic_seed_proposer:r1:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.0434920634920634,True,False
@@ -98,15 +149,27 @@ openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0-4 yr,0,1,0-4 yr:openai_gpt_iterat
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0-4 yr,0,2,0-4 yr:openai_gpt_iterative:r2:0:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.2134826030141098,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0-4 yr,0,2,0-4 yr:openai_gpt_iterative:r2:1:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.2211046093356117,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0-4 yr,0,2,0-4 yr:openai_gpt_iterative:r2:2:constrained_structure_discovery,constrained_structure_discovery,structured_search,delayed_I,1,0.100200235379189,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0-4 yr,0,3,0-4 yr:openai_gpt_iterative:r3:0:constrained_structure_discovery,constrained_structure_discovery,structured_search,delayed_I,1,0.100200235379189,False,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0-4 yr,0,3,0-4 yr:openai_gpt_iterative:r3:1:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.1140895203142763,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0-4 yr,0,3,0-4 yr:openai_gpt_iterative:r3:2:validation_only_structure_selection,validation_only_structure_selection,ablation,delayed_I,1,0.1124130283910399,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0-4 yr,1,1,0-4 yr:openai_gpt_iterative:r1:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.1416666666666667,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0-4 yr,1,1,0-4 yr:openai_gpt_iterative:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.1794378306878307,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0-4 yr,1,1,0-4 yr:openai_gpt_iterative:r1:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.1416666666666667,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0-4 yr,1,2,0-4 yr:openai_gpt_iterative:r2:0:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.2134826030141098,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0-4 yr,1,2,0-4 yr:openai_gpt_iterative:r2:1:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.2211046093356117,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0-4 yr,1,2,0-4 yr:openai_gpt_iterative:r2:2:constrained_structure_discovery,constrained_structure_discovery,structured_search,delayed_I,1,0.100200235379189,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0-4 yr,1,3,0-4 yr:openai_gpt_iterative:r3:0:constrained_structure_discovery,constrained_structure_discovery,structured_search,delayed_I,1,0.100200235379189,False,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0-4 yr,1,3,0-4 yr:openai_gpt_iterative:r3:1:validation_only_structure_selection,validation_only_structure_selection,ablation,delayed_I,1,0.1124130283910399,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0-4 yr,1,3,0-4 yr:openai_gpt_iterative:r3:2:random_structure_discovery,random_structure_discovery,ablation,delayed_I,1,0.1006873358594265,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0-4 yr,2,1,0-4 yr:openai_gpt_iterative:r1:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.1416666666666667,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0-4 yr,2,1,0-4 yr:openai_gpt_iterative:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.1794378306878307,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0-4 yr,2,1,0-4 yr:openai_gpt_iterative:r1:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.1416666666666667,True,False
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0-4 yr,2,3,0-4 yr:openai_gpt_iterative:r3:0:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.2134826030141098,True,False
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0-4 yr,2,3,0-4 yr:openai_gpt_iterative:r3:1:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.2211046093356117,True,False
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0-4 yr,2,3,0-4 yr:openai_gpt_iterative:r3:2:constrained_structure_discovery,constrained_structure_discovery,structured_search,delayed_I,1,0.100200235379189,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0-4 yr,2,2,0-4 yr:openai_gpt_iterative:r2:0:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.2134826030141098,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0-4 yr,2,2,0-4 yr:openai_gpt_iterative:r2:1:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.2211046093356117,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0-4 yr,2,2,0-4 yr:openai_gpt_iterative:r2:2:constrained_structure_discovery,constrained_structure_discovery,structured_search,delayed_I,1,0.100200235379189,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0-4 yr,2,3,0-4 yr:openai_gpt_iterative:r3:0:validation_only_structure_selection,validation_only_structure_selection,ablation,delayed_I,1,0.1124130283910399,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0-4 yr,2,3,0-4 yr:openai_gpt_iterative:r3:1:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.1140895203142763,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0-4 yr,2,3,0-4 yr:openai_gpt_iterative:r3:2:no_observation_search_discovery,no_observation_search_discovery,ablation,I,0,0.1575152537203454,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,0-4 yr,0,1,0-4 yr:openai_gpt_single_shot:r1:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.1416666666666667,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,0-4 yr,0,1,0-4 yr:openai_gpt_single_shot:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.1794378306878307,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,0-4 yr,0,1,0-4 yr:openai_gpt_single_shot:r1:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.1416666666666667,True,False
@@ -134,6 +197,60 @@ openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,0-4 yr,2,1,0-4 yr:openai_gpt_sing
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,0-4 yr,2,1,0-4 yr:openai_gpt_single_shot:r1:6:validation_only_structure_selection,validation_only_structure_selection,ablation,delayed_I,1,0.1124130283910399,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,0-4 yr,2,1,0-4 yr:openai_gpt_single_shot:r1:7:no_observation_search_discovery,no_observation_search_discovery,ablation,I,0,0.1575152537203454,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,0-4 yr,2,1,0-4 yr:openai_gpt_single_shot:r1:8:random_structure_discovery,random_structure_discovery,ablation,delayed_I,1,0.1006873358594265,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,0,1,0-4 yr:deepseek_iterative:r1:0:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.1794378306878307,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,0,1,0-4 yr:deepseek_iterative:r1:1:last_observed,last_observed,forecasting_baseline,not_applicable,,0.1416666666666667,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,0,1,0-4 yr:deepseek_iterative:r1:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.1416666666666667,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,0,2,0-4 yr:deepseek_iterative:r2:0:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.2134826030141098,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,0,2,0-4 yr:deepseek_iterative:r2:1:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.2211046093356117,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,0,2,0-4 yr:deepseek_iterative:r2:2:constrained_structure_discovery,constrained_structure_discovery,structured_search,delayed_I,1,0.100200235379189,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,0,3,0-4 yr:deepseek_iterative:r3:0:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.1140895203142763,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,0,3,0-4 yr:deepseek_iterative:r3:1:constrained_structure_discovery,constrained_structure_discovery,structured_search,delayed_I,1,0.100200235379189,False,False
+deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,0,3,0-4 yr:deepseek_iterative:r3:2:constrained_structure_discovery,constrained_structure_discovery,structured_search,delayed_I,1,0.100200235379189,False,False
+deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,1,1,0-4 yr:deepseek_iterative:r1:0:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.1794378306878307,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,1,1,0-4 yr:deepseek_iterative:r1:1:last_observed,last_observed,forecasting_baseline,not_applicable,,0.1416666666666667,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,1,1,0-4 yr:deepseek_iterative:r1:2:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.2134826030141098,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,1,2,0-4 yr:deepseek_iterative:r2:0:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.1416666666666667,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,1,2,0-4 yr:deepseek_iterative:r2:1:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.2211046093356117,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,1,2,0-4 yr:deepseek_iterative:r2:2:constrained_structure_discovery,constrained_structure_discovery,structured_search,delayed_I,1,0.100200235379189,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,1,3,0-4 yr:deepseek_iterative:r3:0:constrained_structure_discovery,constrained_structure_discovery,structured_search,delayed_I,1,0.100200235379189,False,False
+deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,1,3,0-4 yr:deepseek_iterative:r3:1:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.1140895203142763,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,1,3,0-4 yr:deepseek_iterative:r3:2:random_structure_discovery,random_structure_discovery,ablation,delayed_I,1,0.1006873358594265,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,2,1,0-4 yr:deepseek_iterative:r1:0:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.1794378306878307,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,2,1,0-4 yr:deepseek_iterative:r1:1:last_observed,last_observed,forecasting_baseline,not_applicable,,0.1416666666666667,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,2,1,0-4 yr:deepseek_iterative:r1:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.1416666666666667,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,2,2,0-4 yr:deepseek_iterative:r2:0:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.2134826030141098,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,2,2,0-4 yr:deepseek_iterative:r2:1:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.2211046093356117,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,2,2,0-4 yr:deepseek_iterative:r2:2:constrained_structure_discovery,constrained_structure_discovery,structured_search,delayed_I,1,0.100200235379189,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,2,3,0-4 yr:deepseek_iterative:r3:0:constrained_structure_discovery,constrained_structure_discovery,structured_search,delayed_I,1,0.100200235379189,False,False
+deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,2,3,0-4 yr:deepseek_iterative:r3:1:constrained_structure_discovery,constrained_structure_discovery,structured_search,delayed_I,1,0.100200235379189,False,False
+deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,2,3,0-4 yr:deepseek_iterative:r3:2:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.1140895203142763,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,0,1,0-4 yr:deepseek_single_shot:r1:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.1416666666666667,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,0,1,0-4 yr:deepseek_single_shot:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.1794378306878307,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,0,1,0-4 yr:deepseek_single_shot:r1:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.1416666666666667,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,0,1,0-4 yr:deepseek_single_shot:r1:3:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.2134826030141098,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,0,1,0-4 yr:deepseek_single_shot:r1:4:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.2211046093356117,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,0,1,0-4 yr:deepseek_single_shot:r1:5:constrained_structure_discovery,constrained_structure_discovery,structured_search,delayed_I,1,0.100200235379189,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,0,1,0-4 yr:deepseek_single_shot:r1:6:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.1140895203142763,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,0,1,0-4 yr:deepseek_single_shot:r1:7:random_structure_discovery,random_structure_discovery,ablation,delayed_I,1,0.1006873358594265,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,0,1,0-4 yr:deepseek_single_shot:r1:8:validation_only_structure_selection,validation_only_structure_selection,ablation,delayed_I,1,0.1124130283910399,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,1,1,0-4 yr:deepseek_single_shot:r1:0:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.1794378306878307,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,1,1,0-4 yr:deepseek_single_shot:r1:1:last_observed,last_observed,forecasting_baseline,not_applicable,,0.1416666666666667,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,1,1,0-4 yr:deepseek_single_shot:r1:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.1416666666666667,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,1,1,0-4 yr:deepseek_single_shot:r1:3:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.2134826030141098,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,1,1,0-4 yr:deepseek_single_shot:r1:4:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.2211046093356117,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,1,1,0-4 yr:deepseek_single_shot:r1:5:constrained_structure_discovery,constrained_structure_discovery,structured_search,delayed_I,1,0.100200235379189,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,1,1,0-4 yr:deepseek_single_shot:r1:6:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.1140895203142763,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,1,1,0-4 yr:deepseek_single_shot:r1:7:random_structure_discovery,random_structure_discovery,ablation,delayed_I,1,0.1006873358594265,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,1,1,0-4 yr:deepseek_single_shot:r1:8:no_observation_search_discovery,no_observation_search_discovery,ablation,I,0,0.1575152537203454,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,2,1,0-4 yr:deepseek_single_shot:r1:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.1416666666666667,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,2,1,0-4 yr:deepseek_single_shot:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.1794378306878307,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,2,1,0-4 yr:deepseek_single_shot:r1:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.1416666666666667,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,2,1,0-4 yr:deepseek_single_shot:r1:3:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.2134826030141098,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,2,1,0-4 yr:deepseek_single_shot:r1:4:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.2211046093356117,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,2,1,0-4 yr:deepseek_single_shot:r1:5:constrained_structure_discovery,constrained_structure_discovery,structured_search,delayed_I,1,0.100200235379189,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,2,1,0-4 yr:deepseek_single_shot:r1:6:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.1140895203142763,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,2,1,0-4 yr:deepseek_single_shot:r1:7:random_structure_discovery,random_structure_discovery,ablation,delayed_I,1,0.1006873358594265,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,2,1,0-4 yr:deepseek_single_shot:r1:8:validation_only_structure_selection,validation_only_structure_selection,ablation,delayed_I,1,0.1124130283910399,True,False
 deterministic_baseline,deterministic,deterministic_seed_proposer,0-4 yr,0,1,0-4 yr:deterministic_seed_proposer:r1:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.1416666666666667,True,False
 deterministic_baseline,deterministic,deterministic_seed_proposer,0-4 yr,0,1,0-4 yr:deterministic_seed_proposer:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.1794378306878307,True,False
 deterministic_baseline,deterministic,deterministic_seed_proposer,0-4 yr,0,1,0-4 yr:deterministic_seed_proposer:r1:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.1416666666666667,True,False
@@ -176,17 +293,17 @@ openai_gpt,gpt-5.4-mini,openai_gpt_iterative,5-17 yr,0,1,5-17 yr:openai_gpt_iter
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,5-17 yr,0,2,5-17 yr:openai_gpt_iterative:r2:0:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.0799093755041065,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,5-17 yr,0,2,5-17 yr:openai_gpt_iterative:r2:1:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.0805869105650665,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,5-17 yr,0,2,5-17 yr:openai_gpt_iterative:r2:2:constrained_structure_discovery,constrained_structure_discovery,structured_search,delayed_I,1,0.0500154184526216,True,False
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,5-17 yr,0,3,5-17 yr:openai_gpt_iterative:r3:0:random_structure_discovery,random_structure_discovery,ablation,delayed_I,2,0.0504196746490553,True,False
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,5-17 yr,0,3,5-17 yr:openai_gpt_iterative:r3:1:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.0448183664615375,True,False
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,5-17 yr,0,3,5-17 yr:openai_gpt_iterative:r3:2:validation_only_structure_selection,validation_only_structure_selection,ablation,delayed_I,1,0.0483469157011416,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,5-17 yr,0,3,5-17 yr:openai_gpt_iterative:r3:0:constrained_structure_discovery,constrained_structure_discovery,structured_search,delayed_I,1,0.0500154184526216,False,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,5-17 yr,0,3,5-17 yr:openai_gpt_iterative:r3:1:validation_only_structure_selection,validation_only_structure_selection,ablation,delayed_I,1,0.0483469157011416,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,5-17 yr,0,3,5-17 yr:openai_gpt_iterative:r3:2:random_structure_discovery,random_structure_discovery,ablation,delayed_I,2,0.0504196746490553,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,5-17 yr,1,1,5-17 yr:openai_gpt_iterative:r1:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.0375925925925925,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,5-17 yr,1,1,5-17 yr:openai_gpt_iterative:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.040542328042328,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,5-17 yr,1,1,5-17 yr:openai_gpt_iterative:r1:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.0375925925925925,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,5-17 yr,1,2,5-17 yr:openai_gpt_iterative:r2:0:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.0799093755041065,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,5-17 yr,1,2,5-17 yr:openai_gpt_iterative:r2:1:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.0805869105650665,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,5-17 yr,1,2,5-17 yr:openai_gpt_iterative:r2:2:constrained_structure_discovery,constrained_structure_discovery,structured_search,delayed_I,1,0.0500154184526216,True,False
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,5-17 yr,1,3,5-17 yr:openai_gpt_iterative:r3:0:constrained_structure_discovery,constrained_structure_discovery,structured_search,delayed_I,1,0.0500154184526216,False,False
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,5-17 yr,1,3,5-17 yr:openai_gpt_iterative:r3:1:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.0448183664615375,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,5-17 yr,1,3,5-17 yr:openai_gpt_iterative:r3:0:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.0448183664615375,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,5-17 yr,1,3,5-17 yr:openai_gpt_iterative:r3:1:no_observation_search_discovery,no_observation_search_discovery,ablation,I,0,0.1018885105702366,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,5-17 yr,1,3,5-17 yr:openai_gpt_iterative:r3:2:validation_only_structure_selection,validation_only_structure_selection,ablation,delayed_I,1,0.0483469157011416,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,5-17 yr,2,1,5-17 yr:openai_gpt_iterative:r1:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.0375925925925925,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,5-17 yr,2,1,5-17 yr:openai_gpt_iterative:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.040542328042328,True,False
@@ -195,8 +312,8 @@ openai_gpt,gpt-5.4-mini,openai_gpt_iterative,5-17 yr,2,2,5-17 yr:openai_gpt_iter
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,5-17 yr,2,2,5-17 yr:openai_gpt_iterative:r2:1:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.0805869105650665,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,5-17 yr,2,2,5-17 yr:openai_gpt_iterative:r2:2:constrained_structure_discovery,constrained_structure_discovery,structured_search,delayed_I,1,0.0500154184526216,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,5-17 yr,2,3,5-17 yr:openai_gpt_iterative:r3:0:constrained_structure_discovery,constrained_structure_discovery,structured_search,delayed_I,1,0.0500154184526216,False,False
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,5-17 yr,2,3,5-17 yr:openai_gpt_iterative:r3:1:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.0448183664615375,True,False
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,5-17 yr,2,3,5-17 yr:openai_gpt_iterative:r3:2:validation_only_structure_selection,validation_only_structure_selection,ablation,delayed_I,1,0.0483469157011416,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,5-17 yr,2,3,5-17 yr:openai_gpt_iterative:r3:1:validation_only_structure_selection,validation_only_structure_selection,ablation,delayed_I,1,0.0483469157011416,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,5-17 yr,2,3,5-17 yr:openai_gpt_iterative:r3:2:no_observation_search_discovery,no_observation_search_discovery,ablation,I,0,0.1018885105702366,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,5-17 yr,0,1,5-17 yr:openai_gpt_single_shot:r1:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.0375925925925925,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,5-17 yr,0,1,5-17 yr:openai_gpt_single_shot:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.040542328042328,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,5-17 yr,0,1,5-17 yr:openai_gpt_single_shot:r1:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.0375925925925925,True,False
@@ -213,8 +330,8 @@ openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,5-17 yr,1,1,5-17 yr:openai_gpt_si
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,5-17 yr,1,1,5-17 yr:openai_gpt_single_shot:r1:4:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.0805869105650665,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,5-17 yr,1,1,5-17 yr:openai_gpt_single_shot:r1:5:constrained_structure_discovery,constrained_structure_discovery,structured_search,delayed_I,1,0.0500154184526216,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,5-17 yr,1,1,5-17 yr:openai_gpt_single_shot:r1:6:validation_only_structure_selection,validation_only_structure_selection,ablation,delayed_I,1,0.0483469157011416,True,False
-openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,5-17 yr,1,1,5-17 yr:openai_gpt_single_shot:r1:7:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.0448183664615375,True,False
-openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,5-17 yr,1,1,5-17 yr:openai_gpt_single_shot:r1:8:no_observation_search_discovery,no_observation_search_discovery,ablation,I,0,0.1018885105702366,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,5-17 yr,1,1,5-17 yr:openai_gpt_single_shot:r1:7:no_observation_search_discovery,no_observation_search_discovery,ablation,I,0,0.1018885105702366,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,5-17 yr,1,1,5-17 yr:openai_gpt_single_shot:r1:8:random_structure_discovery,random_structure_discovery,ablation,delayed_I,2,0.0504196746490553,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,5-17 yr,2,1,5-17 yr:openai_gpt_single_shot:r1:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.0375925925925925,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,5-17 yr,2,1,5-17 yr:openai_gpt_single_shot:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.040542328042328,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,5-17 yr,2,1,5-17 yr:openai_gpt_single_shot:r1:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.0375925925925925,True,False
@@ -222,17 +339,62 @@ openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,5-17 yr,2,1,5-17 yr:openai_gpt_si
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,5-17 yr,2,1,5-17 yr:openai_gpt_single_shot:r1:4:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.0805869105650665,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,5-17 yr,2,1,5-17 yr:openai_gpt_single_shot:r1:5:constrained_structure_discovery,constrained_structure_discovery,structured_search,delayed_I,1,0.0500154184526216,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,5-17 yr,2,1,5-17 yr:openai_gpt_single_shot:r1:6:validation_only_structure_selection,validation_only_structure_selection,ablation,delayed_I,1,0.0483469157011416,True,False
-openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,5-17 yr,2,1,5-17 yr:openai_gpt_single_shot:r1:7:no_observation_search_discovery,no_observation_search_discovery,ablation,I,0,0.1018885105702366,True,False
-openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,5-17 yr,2,1,5-17 yr:openai_gpt_single_shot:r1:8:random_structure_discovery,random_structure_discovery,ablation,delayed_I,2,0.0504196746490553,True,False
-deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,0,2,5-17 yr:deepseek_iterative:r2:0:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.040542328042328,True,False
-deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,0,2,5-17 yr:deepseek_iterative:r2:1:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.0799093755041065,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,5-17 yr,2,1,5-17 yr:openai_gpt_single_shot:r1:7:random_structure_discovery,random_structure_discovery,ablation,delayed_I,2,0.0504196746490553,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,5-17 yr,2,1,5-17 yr:openai_gpt_single_shot:r1:8:no_observation_search_discovery,no_observation_search_discovery,ablation,I,0,0.1018885105702366,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,0,1,5-17 yr:deepseek_iterative:r1:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.0375925925925925,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,0,1,5-17 yr:deepseek_iterative:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.040542328042328,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,0,1,5-17 yr:deepseek_iterative:r1:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.0375925925925925,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,0,2,5-17 yr:deepseek_iterative:r2:0:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.0799093755041065,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,0,2,5-17 yr:deepseek_iterative:r2:1:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.0805869105650665,True,False
 deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,0,2,5-17 yr:deepseek_iterative:r2:2:constrained_structure_discovery,constrained_structure_discovery,structured_search,delayed_I,1,0.0500154184526216,True,False
-deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,1,2,5-17 yr:deepseek_iterative:r2:0:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.040542328042328,True,False
-deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,1,2,5-17 yr:deepseek_iterative:r2:1:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.0799093755041065,True,False
-deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,1,2,5-17 yr:deepseek_iterative:r2:2:constrained_structure_discovery,constrained_structure_discovery,structured_search,delayed_I,1,0.0500154184526216,True,False
-deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,2,2,5-17 yr:deepseek_iterative:r2:0:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.0375925925925925,True,False
-deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,2,2,5-17 yr:deepseek_iterative:r2:1:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.0799093755041065,True,False
-deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,2,2,5-17 yr:deepseek_iterative:r2:2:validation_only_structure_selection,validation_only_structure_selection,ablation,delayed_I,1,0.0483469157011416,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,0,3,5-17 yr:deepseek_iterative:r3:0:constrained_structure_discovery,constrained_structure_discovery,structured_search,delayed_I,1,0.0500154184526216,False,False
+deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,0,3,5-17 yr:deepseek_iterative:r3:1:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.0448183664615375,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,0,3,5-17 yr:deepseek_iterative:r3:2:constrained_structure_discovery,constrained_structure_discovery,structured_search,delayed_I,1,0.0500154184526216,False,False
+deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,1,1,5-17 yr:deepseek_iterative:r1:0:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.040542328042328,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,1,1,5-17 yr:deepseek_iterative:r1:1:last_observed,last_observed,forecasting_baseline,not_applicable,,0.0375925925925925,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,1,1,5-17 yr:deepseek_iterative:r1:2:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.0799093755041065,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,1,2,5-17 yr:deepseek_iterative:r2:0:constrained_structure_discovery,constrained_structure_discovery,structured_search,delayed_I,1,0.0500154184526216,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,1,2,5-17 yr:deepseek_iterative:r2:1:constrained_structure_discovery,constrained_structure_discovery,structured_search,delayed_I,1,0.0500154184526216,False,False
+deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,1,2,5-17 yr:deepseek_iterative:r2:2:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.0448183664615375,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,1,3,5-17 yr:deepseek_iterative:r3:0:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.0375925925925925,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,1,3,5-17 yr:deepseek_iterative:r3:1:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.0805869105650665,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,1,3,5-17 yr:deepseek_iterative:r3:2:no_observation_search_discovery,no_observation_search_discovery,ablation,I,0,0.1018885105702366,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,2,1,5-17 yr:deepseek_iterative:r1:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.0375925925925925,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,2,1,5-17 yr:deepseek_iterative:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.040542328042328,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,2,1,5-17 yr:deepseek_iterative:r1:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.0375925925925925,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,2,2,5-17 yr:deepseek_iterative:r2:0:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.0799093755041065,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,2,2,5-17 yr:deepseek_iterative:r2:1:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.0805869105650665,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,2,2,5-17 yr:deepseek_iterative:r2:2:constrained_structure_discovery,constrained_structure_discovery,structured_search,delayed_I,1,0.0500154184526216,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,2,3,5-17 yr:deepseek_iterative:r3:0:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.0448183664615375,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,2,3,5-17 yr:deepseek_iterative:r3:1:constrained_structure_discovery,constrained_structure_discovery,structured_search,delayed_I,1,0.0500154184526216,False,False
+deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,2,3,5-17 yr:deepseek_iterative:r3:2:validation_only_structure_selection,validation_only_structure_selection,ablation,delayed_I,1,0.0483469157011416,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,0,1,5-17 yr:deepseek_single_shot:r1:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.0375925925925925,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,0,1,5-17 yr:deepseek_single_shot:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.040542328042328,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,0,1,5-17 yr:deepseek_single_shot:r1:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.0375925925925925,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,0,1,5-17 yr:deepseek_single_shot:r1:3:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.0799093755041065,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,0,1,5-17 yr:deepseek_single_shot:r1:4:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.0805869105650665,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,0,1,5-17 yr:deepseek_single_shot:r1:5:constrained_structure_discovery,constrained_structure_discovery,structured_search,delayed_I,1,0.0500154184526216,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,0,1,5-17 yr:deepseek_single_shot:r1:6:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.0448183664615375,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,0,1,5-17 yr:deepseek_single_shot:r1:7:random_structure_discovery,random_structure_discovery,ablation,delayed_I,2,0.0504196746490553,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,0,1,5-17 yr:deepseek_single_shot:r1:8:validation_only_structure_selection,validation_only_structure_selection,ablation,delayed_I,1,0.0483469157011416,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,1,1,5-17 yr:deepseek_single_shot:r1:0:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.0448183664615375,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,1,1,5-17 yr:deepseek_single_shot:r1:1:no_observation_search_discovery,no_observation_search_discovery,ablation,I,0,0.1018885105702366,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,1,1,5-17 yr:deepseek_single_shot:r1:2:random_structure_discovery,random_structure_discovery,ablation,delayed_I,2,0.0504196746490553,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,1,1,5-17 yr:deepseek_single_shot:r1:3:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.0375925925925925,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,1,1,5-17 yr:deepseek_single_shot:r1:4:last_observed,last_observed,forecasting_baseline,not_applicable,,0.0375925925925925,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,1,1,5-17 yr:deepseek_single_shot:r1:5:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.040542328042328,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,1,1,5-17 yr:deepseek_single_shot:r1:6:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.0805869105650665,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,1,1,5-17 yr:deepseek_single_shot:r1:7:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.0799093755041065,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,1,1,5-17 yr:deepseek_single_shot:r1:8:constrained_structure_discovery,constrained_structure_discovery,structured_search,delayed_I,1,0.0500154184526216,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,2,1,5-17 yr:deepseek_single_shot:r1:0:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.0375925925925925,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,2,1,5-17 yr:deepseek_single_shot:r1:1:last_observed,last_observed,forecasting_baseline,not_applicable,,0.0375925925925925,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,2,1,5-17 yr:deepseek_single_shot:r1:2:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.0799093755041065,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,2,1,5-17 yr:deepseek_single_shot:r1:3:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.0805869105650665,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,2,1,5-17 yr:deepseek_single_shot:r1:4:constrained_structure_discovery,constrained_structure_discovery,structured_search,delayed_I,1,0.0500154184526216,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,2,1,5-17 yr:deepseek_single_shot:r1:5:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.0448183664615375,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,2,1,5-17 yr:deepseek_single_shot:r1:6:no_observation_search_discovery,no_observation_search_discovery,ablation,I,0,0.1018885105702366,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,2,1,5-17 yr:deepseek_single_shot:r1:7:random_structure_discovery,random_structure_discovery,ablation,delayed_I,2,0.0504196746490553,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,2,1,5-17 yr:deepseek_single_shot:r1:8:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.040542328042328,True,False
 deterministic_baseline,deterministic,deterministic_seed_proposer,5-17 yr,0,1,5-17 yr:deterministic_seed_proposer:r1:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.0375925925925925,True,False
 deterministic_baseline,deterministic,deterministic_seed_proposer,5-17 yr,0,1,5-17 yr:deterministic_seed_proposer:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.040542328042328,True,False
 deterministic_baseline,deterministic,deterministic_seed_proposer,5-17 yr,0,1,5-17 yr:deterministic_seed_proposer:r1:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.0375925925925925,True,False
@@ -272,24 +434,30 @@ deterministic_baseline,deterministic,oracle_reference,5-17 yr,0,3,5-17 yr:oracle
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,18-49 yr,0,1,18-49 yr:openai_gpt_iterative:r1:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.0304497354497354,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,18-49 yr,0,1,18-49 yr:openai_gpt_iterative:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.0533928571428571,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,18-49 yr,0,1,18-49 yr:openai_gpt_iterative:r1:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.0304497354497354,True,False
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,18-49 yr,0,2,18-49 yr:openai_gpt_iterative:r2:0:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0787429435247173,True,False
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,18-49 yr,0,2,18-49 yr:openai_gpt_iterative:r2:1:validation_only_structure_selection,validation_only_structure_selection,ablation,I,0,0.0391850575863337,True,False
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,18-49 yr,0,2,18-49 yr:openai_gpt_iterative:r2:2:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.0787418202336159,True,False
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,18-49 yr,0,3,18-49 yr:openai_gpt_iterative:r3:0:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.0728272252849527,True,False
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,18-49 yr,0,3,18-49 yr:openai_gpt_iterative:r3:1:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.0734867207115275,True,True
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,18-49 yr,0,3,18-49 yr:openai_gpt_iterative:r3:2:no_observation_search_discovery,no_observation_search_discovery,ablation,I,0,0.0787422764073389,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,18-49 yr,0,2,18-49 yr:openai_gpt_iterative:r2:0:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.0728272252849527,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,18-49 yr,0,2,18-49 yr:openai_gpt_iterative:r2:1:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.0734867207115275,True,True
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,18-49 yr,0,2,18-49 yr:openai_gpt_iterative:r2:2:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0787429435247173,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,18-49 yr,0,3,18-49 yr:openai_gpt_iterative:r3:0:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.0787418202336159,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,18-49 yr,0,3,18-49 yr:openai_gpt_iterative:r3:1:no_observation_search_discovery,no_observation_search_discovery,ablation,I,0,0.0787422764073389,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,18-49 yr,0,3,18-49 yr:openai_gpt_iterative:r3:2:validation_only_structure_selection,validation_only_structure_selection,ablation,I,0,0.0391850575863337,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,18-49 yr,1,1,18-49 yr:openai_gpt_iterative:r1:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.0304497354497354,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,18-49 yr,1,1,18-49 yr:openai_gpt_iterative:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.0533928571428571,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,18-49 yr,1,1,18-49 yr:openai_gpt_iterative:r1:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.0304497354497354,True,False
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,18-49 yr,1,3,18-49 yr:openai_gpt_iterative:r3:0:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0787429435247173,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,18-49 yr,1,2,18-49 yr:openai_gpt_iterative:r2:0:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0787429435247173,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,18-49 yr,1,2,18-49 yr:openai_gpt_iterative:r2:1:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.0728272252849527,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,18-49 yr,1,2,18-49 yr:openai_gpt_iterative:r2:2:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.0734867207115275,True,True
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,18-49 yr,1,3,18-49 yr:openai_gpt_iterative:r3:0:no_observation_search_discovery,no_observation_search_discovery,ablation,I,0,0.0787422764073389,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,18-49 yr,1,3,18-49 yr:openai_gpt_iterative:r3:1:validation_only_structure_selection,validation_only_structure_selection,ablation,I,0,0.0391850575863337,True,False
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,18-49 yr,1,3,18-49 yr:openai_gpt_iterative:r3:2:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.0728272252849527,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,18-49 yr,1,3,18-49 yr:openai_gpt_iterative:r3:2:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.0787418202336159,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,18-49 yr,2,1,18-49 yr:openai_gpt_iterative:r1:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.0304497354497354,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,18-49 yr,2,1,18-49 yr:openai_gpt_iterative:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.0533928571428571,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,18-49 yr,2,1,18-49 yr:openai_gpt_iterative:r1:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.0304497354497354,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,18-49 yr,2,2,18-49 yr:openai_gpt_iterative:r2:0:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0787429435247173,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,18-49 yr,2,2,18-49 yr:openai_gpt_iterative:r2:1:validation_only_structure_selection,validation_only_structure_selection,ablation,I,0,0.0391850575863337,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,18-49 yr,2,2,18-49 yr:openai_gpt_iterative:r2:2:random_structure_discovery,random_structure_discovery,ablation,delayed_I,2,0.0798423983654796,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,18-49 yr,2,3,18-49 yr:openai_gpt_iterative:r3:0:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.0734867207115275,True,True
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,18-49 yr,2,3,18-49 yr:openai_gpt_iterative:r3:1:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.0728272252849527,True,False
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,18-49 yr,2,3,18-49 yr:openai_gpt_iterative:r3:2:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0787429435247173,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,18-49 yr,2,3,18-49 yr:openai_gpt_iterative:r3:2:no_observation_search_discovery,no_observation_search_discovery,ablation,I,0,0.0787422764073389,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,18-49 yr,0,1,18-49 yr:openai_gpt_single_shot:r1:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.0304497354497354,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,18-49 yr,0,1,18-49 yr:openai_gpt_single_shot:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.0533928571428571,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,18-49 yr,0,1,18-49 yr:openai_gpt_single_shot:r1:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.0304497354497354,True,False
@@ -315,8 +483,59 @@ openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,18-49 yr,2,1,18-49 yr:openai_gpt_
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,18-49 yr,2,1,18-49 yr:openai_gpt_single_shot:r1:4:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.0728272252849527,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,18-49 yr,2,1,18-49 yr:openai_gpt_single_shot:r1:5:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0787429435247173,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,18-49 yr,2,1,18-49 yr:openai_gpt_single_shot:r1:6:validation_only_structure_selection,validation_only_structure_selection,ablation,I,0,0.0391850575863337,True,False
-openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,18-49 yr,2,1,18-49 yr:openai_gpt_single_shot:r1:7:no_observation_search_discovery,no_observation_search_discovery,ablation,I,0,0.0787422764073389,True,False
-openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,18-49 yr,2,1,18-49 yr:openai_gpt_single_shot:r1:8:random_structure_discovery,random_structure_discovery,ablation,delayed_I,2,0.0798423983654796,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,18-49 yr,2,1,18-49 yr:openai_gpt_single_shot:r1:7:random_structure_discovery,random_structure_discovery,ablation,delayed_I,2,0.0798423983654796,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,18-49 yr,2,1,18-49 yr:openai_gpt_single_shot:r1:8:no_observation_search_discovery,no_observation_search_discovery,ablation,I,0,0.0787422764073389,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,0,2,18-49 yr:deepseek_iterative:r2:0:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.0304497354497354,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,0,2,18-49 yr:deepseek_iterative:r2:1:last_observed,last_observed,forecasting_baseline,not_applicable,,0.0304497354497354,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,0,2,18-49 yr:deepseek_iterative:r2:2:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.0533928571428571,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,0,3,18-49 yr:deepseek_iterative:r3:0:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.0734867207115275,True,True
+deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,0,3,18-49 yr:deepseek_iterative:r3:1:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.0728272252849527,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,0,3,18-49 yr:deepseek_iterative:r3:2:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0787429435247173,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,1,1,18-49 yr:deepseek_iterative:r1:0:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.0304497354497354,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,1,1,18-49 yr:deepseek_iterative:r1:1:last_observed,last_observed,forecasting_baseline,not_applicable,,0.0304497354497354,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,1,1,18-49 yr:deepseek_iterative:r1:2:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.0533928571428571,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,1,2,18-49 yr:deepseek_iterative:r2:0:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.0734867207115275,True,True
+deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,1,2,18-49 yr:deepseek_iterative:r2:1:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.0728272252849527,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,1,2,18-49 yr:deepseek_iterative:r2:2:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0787429435247173,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,1,3,18-49 yr:deepseek_iterative:r3:0:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0787429435247173,False,False
+deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,1,3,18-49 yr:deepseek_iterative:r3:1:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.0787418202336159,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,1,3,18-49 yr:deepseek_iterative:r3:2:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.0728272252849527,False,False
+deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,2,1,18-49 yr:deepseek_iterative:r1:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.0304497354497354,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,2,1,18-49 yr:deepseek_iterative:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.0533928571428571,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,2,1,18-49 yr:deepseek_iterative:r1:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.0304497354497354,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,2,2,18-49 yr:deepseek_iterative:r2:0:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.0734867207115275,True,True
+deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,2,2,18-49 yr:deepseek_iterative:r2:1:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.0728272252849527,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,2,2,18-49 yr:deepseek_iterative:r2:2:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0787429435247173,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,2,3,18-49 yr:deepseek_iterative:r3:0:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0787429435247173,False,False
+deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,2,3,18-49 yr:deepseek_iterative:r3:1:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0787429435247173,False,False
+deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,2,3,18-49 yr:deepseek_iterative:r3:2:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.0787418202336159,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,0,1,18-49 yr:deepseek_single_shot:r1:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.0304497354497354,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,0,1,18-49 yr:deepseek_single_shot:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.0533928571428571,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,0,1,18-49 yr:deepseek_single_shot:r1:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.0304497354497354,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,0,1,18-49 yr:deepseek_single_shot:r1:3:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.0734867207115275,True,True
+deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,0,1,18-49 yr:deepseek_single_shot:r1:4:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.0728272252849527,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,0,1,18-49 yr:deepseek_single_shot:r1:5:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0787429435247173,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,0,1,18-49 yr:deepseek_single_shot:r1:6:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.0787418202336159,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,0,1,18-49 yr:deepseek_single_shot:r1:7:no_observation_search_discovery,no_observation_search_discovery,ablation,I,0,0.0787422764073389,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,0,1,18-49 yr:deepseek_single_shot:r1:8:random_structure_discovery,random_structure_discovery,ablation,delayed_I,2,0.0798423983654796,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,1,1,18-49 yr:deepseek_single_shot:r1:0:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.0533928571428571,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,1,1,18-49 yr:deepseek_single_shot:r1:1:last_observed,last_observed,forecasting_baseline,not_applicable,,0.0304497354497354,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,1,1,18-49 yr:deepseek_single_shot:r1:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.0304497354497354,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,1,1,18-49 yr:deepseek_single_shot:r1:3:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.0734867207115275,True,True
+deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,1,1,18-49 yr:deepseek_single_shot:r1:4:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.0728272252849527,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,1,1,18-49 yr:deepseek_single_shot:r1:5:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0787429435247173,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,1,1,18-49 yr:deepseek_single_shot:r1:6:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.0787418202336159,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,1,1,18-49 yr:deepseek_single_shot:r1:7:no_observation_search_discovery,no_observation_search_discovery,ablation,I,0,0.0787422764073389,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,1,1,18-49 yr:deepseek_single_shot:r1:8:random_structure_discovery,random_structure_discovery,ablation,delayed_I,2,0.0798423983654796,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,2,1,18-49 yr:deepseek_single_shot:r1:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.0304497354497354,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,2,1,18-49 yr:deepseek_single_shot:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.0533928571428571,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,2,1,18-49 yr:deepseek_single_shot:r1:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.0304497354497354,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,2,1,18-49 yr:deepseek_single_shot:r1:3:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.0734867207115275,True,True
+deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,2,1,18-49 yr:deepseek_single_shot:r1:4:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.0728272252849527,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,2,1,18-49 yr:deepseek_single_shot:r1:5:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.0787418202336159,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,2,1,18-49 yr:deepseek_single_shot:r1:6:no_observation_search_discovery,no_observation_search_discovery,ablation,I,0,0.0787422764073389,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,2,1,18-49 yr:deepseek_single_shot:r1:7:random_structure_discovery,random_structure_discovery,ablation,delayed_I,2,0.0798423983654796,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,2,1,18-49 yr:deepseek_single_shot:r1:8:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0787429435247173,True,False
 deterministic_baseline,deterministic,deterministic_seed_proposer,18-49 yr,0,1,18-49 yr:deterministic_seed_proposer:r1:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.0304497354497354,True,False
 deterministic_baseline,deterministic,deterministic_seed_proposer,18-49 yr,0,1,18-49 yr:deterministic_seed_proposer:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.0533928571428571,True,False
 deterministic_baseline,deterministic,deterministic_seed_proposer,18-49 yr,0,1,18-49 yr:deterministic_seed_proposer:r1:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.0304497354497354,True,False
@@ -356,21 +575,30 @@ deterministic_baseline,deterministic,oracle_reference,18-49 yr,0,3,18-49 yr:orac
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,0,1,50-64 yr:openai_gpt_iterative:r1:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.0612698412698412,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,0,1,50-64 yr:openai_gpt_iterative:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.1087698412698412,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,0,1,50-64 yr:openai_gpt_iterative:r1:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.0612698412698412,True,False
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,0,3,50-64 yr:openai_gpt_iterative:r3:0:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.0564049117960326,True,False
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,0,3,50-64 yr:openai_gpt_iterative:r3:1:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.0527749982193454,True,False
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,0,3,50-64 yr:openai_gpt_iterative:r3:2:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0540426538599386,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,0,2,50-64 yr:openai_gpt_iterative:r2:0:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0540426538599386,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,0,2,50-64 yr:openai_gpt_iterative:r2:1:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.0527749982193454,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,0,2,50-64 yr:openai_gpt_iterative:r2:2:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.0564049117960326,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,0,3,50-64 yr:openai_gpt_iterative:r3:0:validation_only_structure_selection,validation_only_structure_selection,ablation,I,0,0.0831333544229542,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,0,3,50-64 yr:openai_gpt_iterative:r3:1:no_observation_search_discovery,no_observation_search_discovery,ablation,I,0,0.0557194610249131,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,0,3,50-64 yr:openai_gpt_iterative:r3:2:random_structure_discovery,random_structure_discovery,ablation,I,0,0.0540426925928833,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,1,1,50-64 yr:openai_gpt_iterative:r1:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.0612698412698412,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,1,1,50-64 yr:openai_gpt_iterative:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.1087698412698412,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,1,1,50-64 yr:openai_gpt_iterative:r1:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.0612698412698412,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,1,2,50-64 yr:openai_gpt_iterative:r2:0:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.0527749982193454,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,1,2,50-64 yr:openai_gpt_iterative:r2:1:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.0564049117960326,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,1,2,50-64 yr:openai_gpt_iterative:r2:2:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0540426538599386,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,1,3,50-64 yr:openai_gpt_iterative:r3:0:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0540426538599386,False,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,1,3,50-64 yr:openai_gpt_iterative:r3:1:validation_only_structure_selection,validation_only_structure_selection,ablation,I,0,0.0831333544229542,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,1,3,50-64 yr:openai_gpt_iterative:r3:2:random_structure_discovery,random_structure_discovery,ablation,I,0,0.0540426925928833,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,2,1,50-64 yr:openai_gpt_iterative:r1:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.0612698412698412,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,2,1,50-64 yr:openai_gpt_iterative:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.1087698412698412,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,2,1,50-64 yr:openai_gpt_iterative:r1:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.0612698412698412,True,False
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,2,2,50-64 yr:openai_gpt_iterative:r2:0:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0540426538599386,True,False
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,2,2,50-64 yr:openai_gpt_iterative:r2:1:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.0564049117960326,True,False
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,2,2,50-64 yr:openai_gpt_iterative:r2:2:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.0527749982193454,True,False
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,2,3,50-64 yr:openai_gpt_iterative:r3:0:validation_only_structure_selection,validation_only_structure_selection,ablation,I,0,0.0831333544229542,True,False
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,2,3,50-64 yr:openai_gpt_iterative:r3:1:no_observation_search_discovery,no_observation_search_discovery,ablation,I,0,0.0557194610249131,True,False
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,2,3,50-64 yr:openai_gpt_iterative:r3:2:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.0540422166483086,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,2,2,50-64 yr:openai_gpt_iterative:r2:0:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.0564049117960326,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,2,2,50-64 yr:openai_gpt_iterative:r2:1:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.0527749982193454,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,2,2,50-64 yr:openai_gpt_iterative:r2:2:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0540426538599386,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,2,3,50-64 yr:openai_gpt_iterative:r3:0:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0540426538599386,False,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,2,3,50-64 yr:openai_gpt_iterative:r3:1:validation_only_structure_selection,validation_only_structure_selection,ablation,I,0,0.0831333544229542,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,2,3,50-64 yr:openai_gpt_iterative:r3:2:random_structure_discovery,random_structure_discovery,ablation,I,0,0.0540426925928833,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,50-64 yr,0,1,50-64 yr:openai_gpt_single_shot:r1:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.0612698412698412,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,50-64 yr,0,1,50-64 yr:openai_gpt_single_shot:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.1087698412698412,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,50-64 yr,0,1,50-64 yr:openai_gpt_single_shot:r1:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.0612698412698412,True,False
@@ -398,15 +626,60 @@ openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,50-64 yr,2,1,50-64 yr:openai_gpt_
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,50-64 yr,2,1,50-64 yr:openai_gpt_single_shot:r1:6:validation_only_structure_selection,validation_only_structure_selection,ablation,I,0,0.0831333544229542,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,50-64 yr,2,1,50-64 yr:openai_gpt_single_shot:r1:7:no_observation_search_discovery,no_observation_search_discovery,ablation,I,0,0.0557194610249131,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,50-64 yr,2,1,50-64 yr:openai_gpt_single_shot:r1:8:random_structure_discovery,random_structure_discovery,ablation,I,0,0.0540426925928833,True,False
-deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,0,3,50-64 yr:deepseek_iterative:r3:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.0612698412698412,True,False
-deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,0,3,50-64 yr:deepseek_iterative:r3:1:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.0564049117960326,True,False
-deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,0,3,50-64 yr:deepseek_iterative:r3:2:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0540426538599386,True,False
-deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,1,3,50-64 yr:deepseek_iterative:r3:0:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.0612698412698412,True,False
-deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,1,3,50-64 yr:deepseek_iterative:r3:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.1087698412698412,True,False
-deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,1,3,50-64 yr:deepseek_iterative:r3:2:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.0564049117960326,True,False
-deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,2,3,50-64 yr:deepseek_iterative:r3:0:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.0612698412698412,True,False
-deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,2,3,50-64 yr:deepseek_iterative:r3:1:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.0564049117960326,True,False
-deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,2,3,50-64 yr:deepseek_iterative:r3:2:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0540426538599386,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,0,1,50-64 yr:deepseek_iterative:r1:0:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.0612698412698412,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,0,1,50-64 yr:deepseek_iterative:r1:1:last_observed,last_observed,forecasting_baseline,not_applicable,,0.0612698412698412,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,0,1,50-64 yr:deepseek_iterative:r1:2:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.1087698412698412,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,0,2,50-64 yr:deepseek_iterative:r2:0:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.0564049117960326,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,0,2,50-64 yr:deepseek_iterative:r2:1:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0540426538599386,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,0,2,50-64 yr:deepseek_iterative:r2:2:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.0540422166483086,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,0,3,50-64 yr:deepseek_iterative:r3:0:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0540426538599386,False,False
+deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,0,3,50-64 yr:deepseek_iterative:r3:1:random_structure_discovery,random_structure_discovery,ablation,I,0,0.0540426925928833,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,0,3,50-64 yr:deepseek_iterative:r3:2:no_observation_search_discovery,no_observation_search_discovery,ablation,I,0,0.0557194610249131,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,1,1,50-64 yr:deepseek_iterative:r1:0:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.1087698412698412,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,1,1,50-64 yr:deepseek_iterative:r1:1:last_observed,last_observed,forecasting_baseline,not_applicable,,0.0612698412698412,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,1,1,50-64 yr:deepseek_iterative:r1:2:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.0564049117960326,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,1,2,50-64 yr:deepseek_iterative:r2:0:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0540426538599386,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,1,2,50-64 yr:deepseek_iterative:r2:1:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.0540422166483086,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,1,2,50-64 yr:deepseek_iterative:r2:2:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.0527749982193454,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,1,3,50-64 yr:deepseek_iterative:r3:0:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0540426538599386,False,False
+deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,1,3,50-64 yr:deepseek_iterative:r3:1:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.0540422166483086,False,False
+deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,1,3,50-64 yr:deepseek_iterative:r3:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.0612698412698412,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,2,1,50-64 yr:deepseek_iterative:r1:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.0612698412698412,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,2,1,50-64 yr:deepseek_iterative:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.1087698412698412,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,2,1,50-64 yr:deepseek_iterative:r1:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.0612698412698412,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,2,2,50-64 yr:deepseek_iterative:r2:0:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.0564049117960326,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,2,2,50-64 yr:deepseek_iterative:r2:1:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.0527749982193454,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,2,2,50-64 yr:deepseek_iterative:r2:2:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0540426538599386,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,2,3,50-64 yr:deepseek_iterative:r3:0:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.0540422166483086,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,2,3,50-64 yr:deepseek_iterative:r3:1:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0540426538599386,False,False
+deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,2,3,50-64 yr:deepseek_iterative:r3:2:random_structure_discovery,random_structure_discovery,ablation,I,0,0.0540426925928833,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,0,1,50-64 yr:deepseek_single_shot:r1:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.0612698412698412,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,0,1,50-64 yr:deepseek_single_shot:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.1087698412698412,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,0,1,50-64 yr:deepseek_single_shot:r1:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.0612698412698412,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,0,1,50-64 yr:deepseek_single_shot:r1:3:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.0564049117960326,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,0,1,50-64 yr:deepseek_single_shot:r1:4:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.0527749982193454,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,0,1,50-64 yr:deepseek_single_shot:r1:5:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0540426538599386,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,0,1,50-64 yr:deepseek_single_shot:r1:6:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.0540422166483086,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,0,1,50-64 yr:deepseek_single_shot:r1:7:no_observation_search_discovery,no_observation_search_discovery,ablation,I,0,0.0557194610249131,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,0,1,50-64 yr:deepseek_single_shot:r1:8:random_structure_discovery,random_structure_discovery,ablation,I,0,0.0540426925928833,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,1,1,50-64 yr:deepseek_single_shot:r1:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.0612698412698412,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,1,1,50-64 yr:deepseek_single_shot:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.1087698412698412,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,1,1,50-64 yr:deepseek_single_shot:r1:2:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.0564049117960326,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,1,1,50-64 yr:deepseek_single_shot:r1:3:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.0527749982193454,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,1,1,50-64 yr:deepseek_single_shot:r1:4:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0540426538599386,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,1,1,50-64 yr:deepseek_single_shot:r1:5:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.0540422166483086,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,1,1,50-64 yr:deepseek_single_shot:r1:6:random_structure_discovery,random_structure_discovery,ablation,I,0,0.0540426925928833,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,1,1,50-64 yr:deepseek_single_shot:r1:7:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.0612698412698412,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,1,1,50-64 yr:deepseek_single_shot:r1:8:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.0564049117960326,False,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,2,1,50-64 yr:deepseek_single_shot:r1:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.0612698412698412,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,2,1,50-64 yr:deepseek_single_shot:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.1087698412698412,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,2,1,50-64 yr:deepseek_single_shot:r1:2:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.0564049117960326,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,2,1,50-64 yr:deepseek_single_shot:r1:3:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.0527749982193454,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,2,1,50-64 yr:deepseek_single_shot:r1:4:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.0540426538599386,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,2,1,50-64 yr:deepseek_single_shot:r1:5:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.0540422166483086,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,2,1,50-64 yr:deepseek_single_shot:r1:6:no_observation_search_discovery,no_observation_search_discovery,ablation,I,0,0.0557194610249131,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,2,1,50-64 yr:deepseek_single_shot:r1:7:random_structure_discovery,random_structure_discovery,ablation,I,0,0.0540426925928833,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,2,1,50-64 yr:deepseek_single_shot:r1:8:validation_only_structure_selection,validation_only_structure_selection,ablation,I,0,0.0831333544229542,True,False
 deterministic_baseline,deterministic,deterministic_seed_proposer,50-64 yr,0,1,50-64 yr:deterministic_seed_proposer:r1:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.0612698412698412,True,False
 deterministic_baseline,deterministic,deterministic_seed_proposer,50-64 yr,0,1,50-64 yr:deterministic_seed_proposer:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.1087698412698412,True,False
 deterministic_baseline,deterministic,deterministic_seed_proposer,50-64 yr,0,1,50-64 yr:deterministic_seed_proposer:r1:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.0612698412698412,True,False
@@ -450,8 +723,8 @@ openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,0,2,>= 65 yr:openai_gpt_it
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,0,2,>= 65 yr:openai_gpt_iterative:r2:1:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.221547799970161,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,0,2,>= 65 yr:openai_gpt_iterative:r2:2:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.1748237283686136,True,True
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,0,3,>= 65 yr:openai_gpt_iterative:r3:0:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.1748237283686136,False,True
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,0,3,>= 65 yr:openai_gpt_iterative:r3:1:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.1690159117505848,True,False
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,0,3,>= 65 yr:openai_gpt_iterative:r3:2:validation_only_structure_selection,validation_only_structure_selection,ablation,I,0,0.1576655714557095,True,True
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,0,3,>= 65 yr:openai_gpt_iterative:r3:1:validation_only_structure_selection,validation_only_structure_selection,ablation,I,0,0.1576655714557095,True,True
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,0,3,>= 65 yr:openai_gpt_iterative:r3:2:no_observation_search_discovery,no_observation_search_discovery,ablation,I,0,0.2320849287670753,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,1,1,>= 65 yr:openai_gpt_iterative:r1:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.2118518518518518,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,1,1,>= 65 yr:openai_gpt_iterative:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.3226455026455026,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,1,1,>= 65 yr:openai_gpt_iterative:r1:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.2118518518518518,True,False
@@ -459,17 +732,17 @@ openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,1,2,>= 65 yr:openai_gpt_it
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,1,2,>= 65 yr:openai_gpt_iterative:r2:1:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.221547799970161,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,1,2,>= 65 yr:openai_gpt_iterative:r2:2:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.1748237283686136,True,True
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,1,3,>= 65 yr:openai_gpt_iterative:r3:0:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.1748237283686136,False,True
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,1,3,>= 65 yr:openai_gpt_iterative:r3:1:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.1690159117505848,True,False
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,1,3,>= 65 yr:openai_gpt_iterative:r3:2:no_observation_search_discovery,no_observation_search_discovery,ablation,I,0,0.2320849287670753,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,1,3,>= 65 yr:openai_gpt_iterative:r3:1:random_structure_discovery,random_structure_discovery,ablation,delayed_I,1,0.1965252983704047,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,1,3,>= 65 yr:openai_gpt_iterative:r3:2:validation_only_structure_selection,validation_only_structure_selection,ablation,I,0,0.1576655714557095,True,True
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,2,1,>= 65 yr:openai_gpt_iterative:r1:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.2118518518518518,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,2,1,>= 65 yr:openai_gpt_iterative:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.3226455026455026,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,2,1,>= 65 yr:openai_gpt_iterative:r1:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.2118518518518518,True,False
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,2,2,>= 65 yr:openai_gpt_iterative:r2:0:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.2214527261276795,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,2,2,>= 65 yr:openai_gpt_iterative:r2:0:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.1748237283686136,True,True
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,2,2,>= 65 yr:openai_gpt_iterative:r2:1:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.221547799970161,True,False
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,2,2,>= 65 yr:openai_gpt_iterative:r2:2:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.1748237283686136,True,True
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,2,3,>= 65 yr:openai_gpt_iterative:r3:0:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.1748237283686136,False,True
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,2,2,>= 65 yr:openai_gpt_iterative:r2:2:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.2214527261276795,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,2,3,>= 65 yr:openai_gpt_iterative:r3:0:no_observation_search_discovery,no_observation_search_discovery,ablation,I,0,0.2320849287670753,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,2,3,>= 65 yr:openai_gpt_iterative:r3:1:validation_only_structure_selection,validation_only_structure_selection,ablation,I,0,0.1576655714557095,True,True
-openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,2,3,>= 65 yr:openai_gpt_iterative:r3:2:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.221547799970161,False,False
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,2,3,>= 65 yr:openai_gpt_iterative:r3:2:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.2214527261276795,False,False
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,>= 65 yr,0,1,>= 65 yr:openai_gpt_single_shot:r1:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.2118518518518518,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,>= 65 yr,0,1,>= 65 yr:openai_gpt_single_shot:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.3226455026455026,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,>= 65 yr,0,1,>= 65 yr:openai_gpt_single_shot:r1:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.2118518518518518,True,False
@@ -485,8 +758,8 @@ openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,>= 65 yr,1,1,>= 65 yr:openai_gpt_
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,>= 65 yr,1,1,>= 65 yr:openai_gpt_single_shot:r1:3:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.2214527261276795,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,>= 65 yr,1,1,>= 65 yr:openai_gpt_single_shot:r1:4:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.221547799970161,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,>= 65 yr,1,1,>= 65 yr:openai_gpt_single_shot:r1:5:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.1748237283686136,True,True
-openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,>= 65 yr,1,1,>= 65 yr:openai_gpt_single_shot:r1:6:no_observation_search_discovery,no_observation_search_discovery,ablation,I,0,0.2320849287670753,True,False
-openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,>= 65 yr,1,1,>= 65 yr:openai_gpt_single_shot:r1:7:validation_only_structure_selection,validation_only_structure_selection,ablation,I,0,0.1576655714557095,True,True
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,>= 65 yr,1,1,>= 65 yr:openai_gpt_single_shot:r1:6:validation_only_structure_selection,validation_only_structure_selection,ablation,I,0,0.1576655714557095,True,True
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,>= 65 yr,1,1,>= 65 yr:openai_gpt_single_shot:r1:7:no_observation_search_discovery,no_observation_search_discovery,ablation,I,0,0.2320849287670753,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,>= 65 yr,1,1,>= 65 yr:openai_gpt_single_shot:r1:8:random_structure_discovery,random_structure_discovery,ablation,delayed_I,1,0.1965252983704047,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,>= 65 yr,2,1,>= 65 yr:openai_gpt_single_shot:r1:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.2118518518518518,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,>= 65 yr,2,1,>= 65 yr:openai_gpt_single_shot:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.3226455026455026,True,False
@@ -494,18 +767,54 @@ openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,>= 65 yr,2,1,>= 65 yr:openai_gpt_
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,>= 65 yr,2,1,>= 65 yr:openai_gpt_single_shot:r1:3:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.2214527261276795,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,>= 65 yr,2,1,>= 65 yr:openai_gpt_single_shot:r1:4:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.221547799970161,True,False
 openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,>= 65 yr,2,1,>= 65 yr:openai_gpt_single_shot:r1:5:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.1748237283686136,True,True
-openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,>= 65 yr,2,1,>= 65 yr:openai_gpt_single_shot:r1:6:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.1690159117505848,True,False
-openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,>= 65 yr,2,1,>= 65 yr:openai_gpt_single_shot:r1:7:validation_only_structure_selection,validation_only_structure_selection,ablation,I,0,0.1576655714557095,True,True
-openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,>= 65 yr,2,1,>= 65 yr:openai_gpt_single_shot:r1:8:no_observation_search_discovery,no_observation_search_discovery,ablation,I,0,0.2320849287670753,True,False
-deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,0,3,>= 65 yr:deepseek_iterative:r3:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.2118518518518518,True,False
-deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,0,3,>= 65 yr:deepseek_iterative:r3:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.3226455026455026,True,False
-deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,0,3,>= 65 yr:deepseek_iterative:r3:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.2118518518518518,True,False
-deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,1,3,>= 65 yr:deepseek_iterative:r3:0:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.3226455026455026,True,False
-deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,1,3,>= 65 yr:deepseek_iterative:r3:1:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.2214527261276795,True,False
-deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,1,3,>= 65 yr:deepseek_iterative:r3:2:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.1748237283686136,True,True
-deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,2,3,>= 65 yr:deepseek_iterative:r3:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.2118518518518518,True,False
-deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,2,3,>= 65 yr:deepseek_iterative:r3:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.3226455026455026,True,False
-deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,2,3,>= 65 yr:deepseek_iterative:r3:2:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.2214527261276795,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,>= 65 yr,2,1,>= 65 yr:openai_gpt_single_shot:r1:6:validation_only_structure_selection,validation_only_structure_selection,ablation,I,0,0.1576655714557095,True,True
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,>= 65 yr,2,1,>= 65 yr:openai_gpt_single_shot:r1:7:no_observation_search_discovery,no_observation_search_discovery,ablation,I,0,0.2320849287670753,True,False
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,>= 65 yr,2,1,>= 65 yr:openai_gpt_single_shot:r1:8:random_structure_discovery,random_structure_discovery,ablation,delayed_I,1,0.1965252983704047,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,0,1,>= 65 yr:deepseek_iterative:r1:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.2118518518518518,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,0,1,>= 65 yr:deepseek_iterative:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.3226455026455026,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,0,1,>= 65 yr:deepseek_iterative:r1:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.2118518518518518,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,0,2,>= 65 yr:deepseek_iterative:r2:0:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.2214527261276795,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,0,2,>= 65 yr:deepseek_iterative:r2:1:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.221547799970161,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,0,2,>= 65 yr:deepseek_iterative:r2:2:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.1748237283686136,True,True
+deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,0,3,>= 65 yr:deepseek_iterative:r3:0:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.1748237283686136,False,True
+deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,0,3,>= 65 yr:deepseek_iterative:r3:1:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.1690159117505848,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,0,3,>= 65 yr:deepseek_iterative:r3:2:random_structure_discovery,random_structure_discovery,ablation,delayed_I,1,0.1965252983704047,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,1,1,>= 65 yr:deepseek_iterative:r1:0:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.2118518518518518,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,1,1,>= 65 yr:deepseek_iterative:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.3226455026455026,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,1,1,>= 65 yr:deepseek_iterative:r1:2:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.2214527261276795,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,1,2,>= 65 yr:deepseek_iterative:r2:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.2118518518518518,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,1,2,>= 65 yr:deepseek_iterative:r2:1:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.221547799970161,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,1,2,>= 65 yr:deepseek_iterative:r2:2:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.1748237283686136,True,True
+deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,1,3,>= 65 yr:deepseek_iterative:r3:0:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.2214527261276795,False,False
+deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,1,3,>= 65 yr:deepseek_iterative:r3:1:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.1748237283686136,False,True
+deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,1,3,>= 65 yr:deepseek_iterative:r3:2:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.1690159117505848,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,2,1,>= 65 yr:deepseek_iterative:r1:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.2118518518518518,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,2,1,>= 65 yr:deepseek_iterative:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.3226455026455026,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,2,1,>= 65 yr:deepseek_iterative:r1:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.2118518518518518,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,2,2,>= 65 yr:deepseek_iterative:r2:0:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.2214527261276795,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,2,2,>= 65 yr:deepseek_iterative:r2:1:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.221547799970161,True,False
+deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,2,2,>= 65 yr:deepseek_iterative:r2:2:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.1748237283686136,True,True
+deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,2,3,>= 65 yr:deepseek_iterative:r3:0:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.1748237283686136,False,True
+deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,2,3,>= 65 yr:deepseek_iterative:r3:1:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.1748237283686136,False,True
+deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,2,3,>= 65 yr:deepseek_iterative:r3:2:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.1690159117505848,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,>= 65 yr,0,1,>= 65 yr:deepseek_single_shot:r1:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.2118518518518518,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,>= 65 yr,0,1,>= 65 yr:deepseek_single_shot:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.3226455026455026,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,>= 65 yr,0,1,>= 65 yr:deepseek_single_shot:r1:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.2118518518518518,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,>= 65 yr,0,1,>= 65 yr:deepseek_single_shot:r1:3:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.2214527261276795,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,>= 65 yr,0,1,>= 65 yr:deepseek_single_shot:r1:4:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.221547799970161,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,>= 65 yr,0,1,>= 65 yr:deepseek_single_shot:r1:5:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.1748237283686136,True,True
+deepseek,deepseek-v4-flash,deepseek_single_shot,>= 65 yr,0,1,>= 65 yr:deepseek_single_shot:r1:6:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.1690159117505848,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,>= 65 yr,0,1,>= 65 yr:deepseek_single_shot:r1:7:random_structure_discovery,random_structure_discovery,ablation,delayed_I,1,0.1965252983704047,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,>= 65 yr,0,1,>= 65 yr:deepseek_single_shot:r1:8:validation_only_structure_selection,validation_only_structure_selection,ablation,I,0,0.1576655714557095,True,True
+deepseek,deepseek-v4-flash,deepseek_single_shot,>= 65 yr,1,1,>= 65 yr:deepseek_single_shot:r1:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.2118518518518518,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,>= 65 yr,1,1,>= 65 yr:deepseek_single_shot:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.3226455026455026,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,>= 65 yr,1,1,>= 65 yr:deepseek_single_shot:r1:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.2118518518518518,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,>= 65 yr,1,1,>= 65 yr:deepseek_single_shot:r1:3:deterministic_seir,deterministic_seir,mechanistic_baseline,not_applicable,,0.2214527261276795,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,>= 65 yr,1,1,>= 65 yr:deepseek_single_shot:r1:4:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,not_applicable,,0.221547799970161,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,>= 65 yr,1,1,>= 65 yr:deepseek_single_shot:r1:5:constrained_structure_discovery,constrained_structure_discovery,structured_search,I,0,0.1748237283686136,True,True
+deepseek,deepseek-v4-flash,deepseek_single_shot,>= 65 yr,1,1,>= 65 yr:deepseek_single_shot:r1:6:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,I,0,0.1690159117505848,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,>= 65 yr,1,1,>= 65 yr:deepseek_single_shot:r1:7:random_structure_discovery,random_structure_discovery,ablation,delayed_I,1,0.1965252983704047,True,False
+deepseek,deepseek-v4-flash,deepseek_single_shot,>= 65 yr,1,1,>= 65 yr:deepseek_single_shot:r1:8:no_observation_search_discovery,no_observation_search_discovery,ablation,I,0,0.2320849287670753,True,False
 deterministic_baseline,deterministic,deterministic_seed_proposer,>= 65 yr,0,1,>= 65 yr:deterministic_seed_proposer:r1:0:last_observed,last_observed,forecasting_baseline,not_applicable,,0.2118518518518518,True,False
 deterministic_baseline,deterministic,deterministic_seed_proposer,>= 65 yr,0,1,>= 65 yr:deterministic_seed_proposer:r1:1:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,not_applicable,,0.3226455026455026,True,False
 deterministic_baseline,deterministic,deterministic_seed_proposer,>= 65 yr,0,1,>= 65 yr:deterministic_seed_proposer:r1:2:arima_auto_small,arima_auto_small,forecasting_baseline,not_applicable,,0.2118518518518518,True,False

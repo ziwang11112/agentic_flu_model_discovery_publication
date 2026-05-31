@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 import json
+from io import BytesIO
+import urllib.error
 from dataclasses import dataclass
 from typing import Any
 
@@ -16,6 +18,7 @@ from src.selection.provider_adapters import (
     GeminiAdapter,
     MockProviderAdapter,
     OpenAIChatAdapter,
+    _sanitize_http_error,
 )
 
 
@@ -91,11 +94,18 @@ def test_openai_gpt5_payload_uses_max_completion_tokens(monkeypatch) -> None:
     assert response.schema_parse_success
     assert "max_completion_tokens" in captured["body"]
     assert "temperature" not in captured["body"]
+    assert captured["body"]["response_format"]["type"] == "json_schema"
+    schema = captured["body"]["response_format"]["json_schema"]["schema"]
+    assert "forbidden_extra_fields" not in json.dumps(schema)
+    assert schema["additionalProperties"] is False
 
 
 def test_deepseek_json_mode_response_parses(monkeypatch) -> None:
+    captured: dict[str, Any] = {}
+
     def fake_urlopen(request, timeout):
-        del request, timeout
+        del timeout
+        captured["body"] = json.loads(request.data.decode("utf-8"))
         return _FakeHTTPResponse({"choices": [{"message": {"content": json.dumps(example_initial_output())}}]})
 
     monkeypatch.setenv("DEEPSEEK_API_KEY", "test-key")
@@ -110,11 +120,15 @@ def test_deepseek_json_mode_response_parses(monkeypatch) -> None:
     )
 
     assert response.schema_parse_success
+    assert captured["body"]["response_format"] == {"type": "json_object"}
 
 
 def test_anthropic_tool_use_response_parses(monkeypatch) -> None:
+    captured: dict[str, Any] = {}
+
     def fake_urlopen(request, timeout):
-        del request, timeout
+        del timeout
+        captured["body"] = json.loads(request.data.decode("utf-8"))
         return _FakeHTTPResponse({"content": [{"type": "tool_use", "input": example_initial_output()}]})
 
     monkeypatch.setenv("ANTHROPIC_API_KEY", "test-key")
@@ -129,11 +143,17 @@ def test_anthropic_tool_use_response_parses(monkeypatch) -> None:
     )
 
     assert response.schema_parse_success
+    tool = captured["body"]["tools"][0]
+    assert tool["strict"] is True
+    assert "forbidden_extra_fields" not in json.dumps(tool["input_schema"])
 
 
 def test_gemini_structured_response_parses(monkeypatch) -> None:
+    captured: dict[str, Any] = {}
+
     def fake_urlopen(request, timeout):
-        del request, timeout
+        del timeout
+        captured["body"] = json.loads(request.data.decode("utf-8"))
         return _FakeHTTPResponse(
             {"candidates": [{"content": {"parts": [{"text": json.dumps(example_initial_output())}]}}]}
         )
@@ -150,6 +170,41 @@ def test_gemini_structured_response_parses(monkeypatch) -> None:
     )
 
     assert response.schema_parse_success
+    response_format = captured["body"]["generationConfig"]["responseFormat"]
+    assert response_format["text"]["mimeType"] == "application/json"
+    assert "forbidden_extra_fields" not in json.dumps(response_format["text"]["schema"])
+    delay_enum = response_format["text"]["schema"]["properties"]["candidates"]["items"]["properties"]["delay_label"]["enum"]
+    assert "" not in delay_enum
+
+
+def test_gemini_legacy_structured_response_fallback(monkeypatch) -> None:
+    calls: list[dict[str, Any]] = []
+
+    def fake_urlopen(request, timeout):
+        del timeout
+        body = json.loads(request.data.decode("utf-8"))
+        calls.append(body)
+        if len(calls) == 1:
+            raise urllib.error.HTTPError(request.full_url, 400, "bad schema envelope", hdrs=None, fp=None)
+        return _FakeHTTPResponse(
+            {"candidates": [{"content": {"parts": [{"text": json.dumps(example_initial_output())}]}}]}
+        )
+
+    monkeypatch.setenv("GEMINI_API_KEY", "test-key")
+    monkeypatch.setenv("GEMINI_MODEL", "gemini-test")
+    monkeypatch.setattr("urllib.request.urlopen", fake_urlopen)
+    response = GeminiAdapter().generate_candidates(
+        system_prompt="system",
+        task_payload={"user_prompt": "user"},
+        output_schema=agent_output_schema(AgentTaskType.INITIAL_CANDIDATE_PROPOSAL),
+        provider_config={},
+        allowlist=_allowlist(),
+    )
+
+    assert response.schema_parse_success
+    assert "responseFormat" in calls[0]["generationConfig"]
+    assert calls[1]["generationConfig"]["responseMimeType"] == "application/json"
+    assert "additionalProperties" not in json.dumps(calls[1]["generationConfig"]["responseSchema"])
 
 
 def test_malformed_json_and_out_of_allowlist_rejected() -> None:
@@ -174,3 +229,23 @@ def test_malformed_json_and_out_of_allowlist_rejected() -> None:
     )
     assert not response.schema_parse_success
     assert "outside allowlist" in response.parse_error
+
+
+def test_http_error_sanitizer_redacts_account_and_credential_details() -> None:
+    leaked = urllib.error.HTTPError(
+        "https://example.test",
+        403,
+        "Forbidden",
+        hdrs=None,
+        fp=BytesIO(b'{"error":{"message":"Your API key was reported as leaked. Please rotate it."}}'),
+    )
+    assert _sanitize_http_error(leaked) == "HTTPError:403:credential_rejected"
+
+    billing = urllib.error.HTTPError(
+        "https://example.test",
+        400,
+        "Bad Request",
+        hdrs=None,
+        fp=BytesIO(b'{"error":{"message":"Your credit balance is too low to access this API."}}'),
+    )
+    assert _sanitize_http_error(billing) == "HTTPError:400:account_or_billing_unavailable"
