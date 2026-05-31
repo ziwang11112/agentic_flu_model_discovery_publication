@@ -316,6 +316,52 @@ ordering can reach useful candidates quickly under the tested budgets. They do
 not show that API output improves real-world forecasts, because the Stage 6
 real-data layer is replay-only and the API path is disabled.
 
+\subsection{Bounded real-data candidate execution}
+
+Stage 7 adds a bounded real-data execution layer while preserving the same
+claim boundary. The evaluation executes allowlisted candidate models on the
+four selected FluSurv-NET series and then selects among available candidates
+using rolling evidence only. The no-leakage audit contains 52 rows, all of
+which pass; held-out test metrics remain post-hoc descriptive only.
+
+In bounded real-data execution, the deterministic seed proposer,
+failure-guided proposer, mock API proposer, and oracle reference each reach a
+top-epsilon hit rate of \num{1.00}. The random proposer is competitive but less
+stable, with top-epsilon hit rate \num{0.75}. Mean rolling scores are
+\num{0.0978} for deterministic seed, \num{0.0966} for failure-guided,
+\num{0.0978} for mock API, \num{0.0978} for oracle reference, and
+\num{0.1152} for random ordering.
+
+The repeated frozen replay component shows where proposal ordering matters
+most. The deterministic seed proposer struggles at small budgets for
+\texttt{0-4 yr} and \texttt{>=65 yr}, reaching top-epsilon in only one third
+of replay budget rows for those series. The failure-guided proposer and oracle
+reference generally reach top-epsilon at budget \num{3}, while random ordering
+is often competitive but has lower between-run stability. This supports
+proposal-ordering and candidate-budget-efficiency evidence, not
+forecasting-performance or state-of-the-art claims.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/fig_bounded_real_execution_budget.pdf}
+\caption{Stage 7 bounded real-data candidate execution under fixed candidate
+budgets. Candidate ordering is evaluated after executing only allowlisted
+repository models. The figure summarizes budget-efficiency evidence; it is not
+an operational forecasting benchmark and does not support a SOTA claim.}
+\label{fig:bounded-real-execution-budget}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{figures/fig_real_api_replay_stability.pdf}
+\caption{Stage 7 repeated frozen replay stability. The committed run disables
+real API access, so the API-like path is represented elsewhere by the mock
+proposer; this replay summarizes verifier-gated proposal ordering over compact
+frozen rows. The evidence is about proposal stability and top-epsilon access,
+not new model performance.}
+\label{fig:real-api-replay-stability}
+\end{figure}
+
 \subsection{Compact multi-season robustness check}
 
 We include a compact season-separated appendix over six completed FluSurv-NET

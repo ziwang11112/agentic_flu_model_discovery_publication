@@ -78,6 +78,18 @@ evidence remains limited to proposal-quality smoke testing. These results
 should not be described as improved forecasting performance, autonomous
 science, or real-world mechanism recovery.
 
+\paragraph{Bounded real candidate execution is not an operational benchmark.}
+The Stage 7 bounded execution evaluation uses reduced fitting and search
+budgets, a small set of selected series, and an explicit allowlist of
+repository models. It is useful for testing whether verifier-gated proposal
+ordering reaches good candidates under fixed budgets, but it is not a
+prospective or operational forecasting benchmark. Real API access is disabled
+in the committed Stage 7 evaluation; the \texttt{mock\_api\_proposer} is a
+structured stand-in, while real API evidence remains limited to the earlier
+proposal-quality smoke test. These results do not imply API autonomy, real
+mechanism discovery, FluSight leaderboard performance, or state-of-the-art
+forecasting performance.
+
 \paragraph{Synthetic structured recovery is software validation.}
 The final expanded structured recovery sweep uses generic toy time series with
 known direct, lagged, mixture, and proxy observation labels. These tasks help

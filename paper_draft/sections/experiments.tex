@@ -196,6 +196,37 @@ outputs are compact CSV, JSON, and JSONL files under
 \texttt{artifacts\_api\_candidate\_execution\_compact/}; no real-data
 forecast traces, per-model metrics, or refit artifacts are generated.
 
+\subsection{Bounded real-data candidate execution}
+
+Stage 7 extends the candidate-budget evaluation with bounded real-data
+execution. Both the smoke and evaluation configurations were run. The
+evaluation configuration covers the series \texttt{0-4 yr},
+\texttt{18-49 yr}, \texttt{Overall}, and \texttt{>=65 yr}; candidate budgets
+are \num{3}, \num{5}, and \num{10}. It compares a deterministic seed proposer,
+a random proposer, a failure-guided proposer, a \texttt{mock\_api\_proposer},
+and an oracle reference ranking. The committed evaluation keeps real API access
+disabled, so the API-like proposer is a structured stand-in rather than a real
+external proposal run.
+
+The bounded execution layer runs only allowlisted repository models:
+\texttt{last\_observed}, \texttt{rolling\_mean\_4wk},
+\texttt{arima\_auto\_small}, \texttt{deterministic\_seir},
+\texttt{delayed\_observation\_seir},
+\texttt{constrained\_structure\_discovery},
+\texttt{no\_observation\_search\_discovery}, and
+\texttt{validation\_only\_structure\_selection}. Across the evaluation
+configuration, this required 32 unique real-data model executions. Temporary
+per-model artifacts were written under a local temporary root, diagnostic plot
+writes were suppressed, compact metrics were extracted, and the temporary root
+was removed before committing. The final committed outputs are compact
+summaries under \texttt{artifacts\_real\_candidate\_execution\_compact/}. No
+frozen discovery-ablation artifacts were modified.
+
+The evaluation completed in approximately \num{383} seconds. As in Stage 6,
+selection uses rolling evidence only; held-out test MAE is retained only as a
+post-selection descriptive column. The no-leakage audit contains 52 rows and
+all rows pass.
+
 \subsection{Numerical diagnostics}
 
 The frozen benchmark retains all model-series rows for transparency, including
