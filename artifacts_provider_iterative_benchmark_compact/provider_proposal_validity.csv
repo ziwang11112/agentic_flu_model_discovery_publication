@@ -1,0 +1,13 @@
+provider_name,model_name,proposer_type,schema_parse_success_rate,valid_proposal_rate,out_of_allowlist_rejection_rate,duplicate_rate,claim_safety_violation_rate,family_diversity,observation_label_diversity,delay_label_diversity,top_epsilon_hit_rate,mean_best_rolling_score
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,0.0,,1.0,,0.0,0.0,0.0,0.0,0.0,
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,0.0,,1.0,,0.0,0.0,0.0,0.0,0.0,
+deepseek,deepseek-v4-flash,deepseek_iterative,0.2037037037037037,1.0,0.7962962962962963,0.0,0.0,0.7037037037037037,0.46296296296296297,0.16666666666666666,0.24074074074074073,0.07631058754187772
+deepseek,deepseek-v4-flash,deepseek_single_shot,0.2222222222222222,,1.0,,0.0,0.0,0.0,0.0,0.0,
+deterministic_baseline,deterministic,deterministic_seed_proposer,1.0,1.0,0.0,0.0,0.0,2.6666666666666665,1.9444444444444444,1.0,0.7777777777777778,0.08131773065615883
+deterministic_baseline,deterministic,failure_guided_proposer,1.0,1.0,0.0,0.0,0.0,2.7222222222222223,2.0555555555555554,1.1666666666666667,0.8333333333333334,0.07901404002907673
+deterministic_baseline,deterministic,oracle_reference,1.0,1.0,0.0,0.0,0.0,3.0,2.388888888888889,1.5,1.0,0.07225425614725174
+deterministic_baseline,deterministic,random_candidate_proposer,1.0,1.0,0.0,0.0,0.0,3.3333333333333335,2.388888888888889,1.6111111111111112,0.7222222222222222,0.0829444240616352
+google_gemini,gemini-2.5-flash,google_gemini_iterative,0.0,,1.0,,0.0,0.0,0.0,0.0,0.0,
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,0.0,,1.0,,0.0,0.0,0.0,0.0,0.0,
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0.8148148148148148,0.9469696969696969,0.18518518518518517,0.053030303030303025,0.0,2.2037037037037037,1.5925925925925926,0.6111111111111112,0.7592592592592593,0.08335831590163527
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,1.0,1.0,0.0,0.0,0.0,4.0,2.7777777777777777,1.8888888888888888,0.8888888888888888,0.07531085466056507

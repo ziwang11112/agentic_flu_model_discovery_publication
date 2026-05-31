@@ -1,0 +1,145 @@
+provider_name,proposer_type,series_name,repeat_idx,proposal_quality_only,budget_efficiency_only,not_forecasting_performance_claim,not_sota_claim,not_autonomous_science_claim,not_mechanism_recovery_claim,claim_audit_passed
+openai_gpt,openai_gpt_iterative,Overall,0,True,True,True,True,True,True,True
+openai_gpt,openai_gpt_iterative,Overall,1,True,True,True,True,True,True,True
+openai_gpt,openai_gpt_iterative,Overall,2,True,True,True,True,True,True,True
+openai_gpt,openai_gpt_single_shot,Overall,0,True,True,True,True,True,True,True
+openai_gpt,openai_gpt_single_shot,Overall,1,True,True,True,True,True,True,True
+openai_gpt,openai_gpt_single_shot,Overall,2,True,True,True,True,True,True,True
+anthropic_claude,anthropic_claude_iterative,Overall,0,True,True,True,True,True,True,True
+anthropic_claude,anthropic_claude_iterative,Overall,1,True,True,True,True,True,True,True
+anthropic_claude,anthropic_claude_iterative,Overall,2,True,True,True,True,True,True,True
+anthropic_claude,anthropic_claude_single_shot,Overall,0,True,True,True,True,True,True,True
+anthropic_claude,anthropic_claude_single_shot,Overall,1,True,True,True,True,True,True,True
+anthropic_claude,anthropic_claude_single_shot,Overall,2,True,True,True,True,True,True,True
+google_gemini,google_gemini_iterative,Overall,0,True,True,True,True,True,True,True
+google_gemini,google_gemini_iterative,Overall,1,True,True,True,True,True,True,True
+google_gemini,google_gemini_iterative,Overall,2,True,True,True,True,True,True,True
+google_gemini,google_gemini_single_shot,Overall,0,True,True,True,True,True,True,True
+google_gemini,google_gemini_single_shot,Overall,1,True,True,True,True,True,True,True
+google_gemini,google_gemini_single_shot,Overall,2,True,True,True,True,True,True,True
+deepseek,deepseek_iterative,Overall,0,True,True,True,True,True,True,True
+deepseek,deepseek_iterative,Overall,1,True,True,True,True,True,True,True
+deepseek,deepseek_iterative,Overall,2,True,True,True,True,True,True,True
+deepseek,deepseek_single_shot,Overall,0,True,True,True,True,True,True,True
+deepseek,deepseek_single_shot,Overall,1,True,True,True,True,True,True,True
+deepseek,deepseek_single_shot,Overall,2,True,True,True,True,True,True,True
+openai_gpt,openai_gpt_iterative,0-4 yr,0,True,True,True,True,True,True,True
+openai_gpt,openai_gpt_iterative,0-4 yr,1,True,True,True,True,True,True,True
+openai_gpt,openai_gpt_iterative,0-4 yr,2,True,True,True,True,True,True,True
+openai_gpt,openai_gpt_single_shot,0-4 yr,0,True,True,True,True,True,True,True
+openai_gpt,openai_gpt_single_shot,0-4 yr,1,True,True,True,True,True,True,True
+openai_gpt,openai_gpt_single_shot,0-4 yr,2,True,True,True,True,True,True,True
+anthropic_claude,anthropic_claude_iterative,0-4 yr,0,True,True,True,True,True,True,True
+anthropic_claude,anthropic_claude_iterative,0-4 yr,1,True,True,True,True,True,True,True
+anthropic_claude,anthropic_claude_iterative,0-4 yr,2,True,True,True,True,True,True,True
+anthropic_claude,anthropic_claude_single_shot,0-4 yr,0,True,True,True,True,True,True,True
+anthropic_claude,anthropic_claude_single_shot,0-4 yr,1,True,True,True,True,True,True,True
+anthropic_claude,anthropic_claude_single_shot,0-4 yr,2,True,True,True,True,True,True,True
+google_gemini,google_gemini_iterative,0-4 yr,0,True,True,True,True,True,True,True
+google_gemini,google_gemini_iterative,0-4 yr,1,True,True,True,True,True,True,True
+google_gemini,google_gemini_iterative,0-4 yr,2,True,True,True,True,True,True,True
+google_gemini,google_gemini_single_shot,0-4 yr,0,True,True,True,True,True,True,True
+google_gemini,google_gemini_single_shot,0-4 yr,1,True,True,True,True,True,True,True
+google_gemini,google_gemini_single_shot,0-4 yr,2,True,True,True,True,True,True,True
+deepseek,deepseek_iterative,0-4 yr,0,True,True,True,True,True,True,True
+deepseek,deepseek_iterative,0-4 yr,1,True,True,True,True,True,True,True
+deepseek,deepseek_iterative,0-4 yr,2,True,True,True,True,True,True,True
+deepseek,deepseek_single_shot,0-4 yr,0,True,True,True,True,True,True,True
+deepseek,deepseek_single_shot,0-4 yr,1,True,True,True,True,True,True,True
+deepseek,deepseek_single_shot,0-4 yr,2,True,True,True,True,True,True,True
+openai_gpt,openai_gpt_iterative,5-17 yr,0,True,True,True,True,True,True,True
+openai_gpt,openai_gpt_iterative,5-17 yr,1,True,True,True,True,True,True,True
+openai_gpt,openai_gpt_iterative,5-17 yr,2,True,True,True,True,True,True,True
+openai_gpt,openai_gpt_single_shot,5-17 yr,0,True,True,True,True,True,True,True
+openai_gpt,openai_gpt_single_shot,5-17 yr,1,True,True,True,True,True,True,True
+openai_gpt,openai_gpt_single_shot,5-17 yr,2,True,True,True,True,True,True,True
+anthropic_claude,anthropic_claude_iterative,5-17 yr,0,True,True,True,True,True,True,True
+anthropic_claude,anthropic_claude_iterative,5-17 yr,1,True,True,True,True,True,True,True
+anthropic_claude,anthropic_claude_iterative,5-17 yr,2,True,True,True,True,True,True,True
+anthropic_claude,anthropic_claude_single_shot,5-17 yr,0,True,True,True,True,True,True,True
+anthropic_claude,anthropic_claude_single_shot,5-17 yr,1,True,True,True,True,True,True,True
+anthropic_claude,anthropic_claude_single_shot,5-17 yr,2,True,True,True,True,True,True,True
+google_gemini,google_gemini_iterative,5-17 yr,0,True,True,True,True,True,True,True
+google_gemini,google_gemini_iterative,5-17 yr,1,True,True,True,True,True,True,True
+google_gemini,google_gemini_iterative,5-17 yr,2,True,True,True,True,True,True,True
+google_gemini,google_gemini_single_shot,5-17 yr,0,True,True,True,True,True,True,True
+google_gemini,google_gemini_single_shot,5-17 yr,1,True,True,True,True,True,True,True
+google_gemini,google_gemini_single_shot,5-17 yr,2,True,True,True,True,True,True,True
+deepseek,deepseek_iterative,5-17 yr,0,True,True,True,True,True,True,True
+deepseek,deepseek_iterative,5-17 yr,1,True,True,True,True,True,True,True
+deepseek,deepseek_iterative,5-17 yr,2,True,True,True,True,True,True,True
+deepseek,deepseek_single_shot,5-17 yr,0,True,True,True,True,True,True,True
+deepseek,deepseek_single_shot,5-17 yr,1,True,True,True,True,True,True,True
+deepseek,deepseek_single_shot,5-17 yr,2,True,True,True,True,True,True,True
+openai_gpt,openai_gpt_iterative,18-49 yr,0,True,True,True,True,True,True,True
+openai_gpt,openai_gpt_iterative,18-49 yr,1,True,True,True,True,True,True,True
+openai_gpt,openai_gpt_iterative,18-49 yr,2,True,True,True,True,True,True,True
+openai_gpt,openai_gpt_single_shot,18-49 yr,0,True,True,True,True,True,True,True
+openai_gpt,openai_gpt_single_shot,18-49 yr,1,True,True,True,True,True,True,True
+openai_gpt,openai_gpt_single_shot,18-49 yr,2,True,True,True,True,True,True,True
+anthropic_claude,anthropic_claude_iterative,18-49 yr,0,True,True,True,True,True,True,True
+anthropic_claude,anthropic_claude_iterative,18-49 yr,1,True,True,True,True,True,True,True
+anthropic_claude,anthropic_claude_iterative,18-49 yr,2,True,True,True,True,True,True,True
+anthropic_claude,anthropic_claude_single_shot,18-49 yr,0,True,True,True,True,True,True,True
+anthropic_claude,anthropic_claude_single_shot,18-49 yr,1,True,True,True,True,True,True,True
+anthropic_claude,anthropic_claude_single_shot,18-49 yr,2,True,True,True,True,True,True,True
+google_gemini,google_gemini_iterative,18-49 yr,0,True,True,True,True,True,True,True
+google_gemini,google_gemini_iterative,18-49 yr,1,True,True,True,True,True,True,True
+google_gemini,google_gemini_iterative,18-49 yr,2,True,True,True,True,True,True,True
+google_gemini,google_gemini_single_shot,18-49 yr,0,True,True,True,True,True,True,True
+google_gemini,google_gemini_single_shot,18-49 yr,1,True,True,True,True,True,True,True
+google_gemini,google_gemini_single_shot,18-49 yr,2,True,True,True,True,True,True,True
+deepseek,deepseek_iterative,18-49 yr,0,True,True,True,True,True,True,True
+deepseek,deepseek_iterative,18-49 yr,1,True,True,True,True,True,True,True
+deepseek,deepseek_iterative,18-49 yr,2,True,True,True,True,True,True,True
+deepseek,deepseek_single_shot,18-49 yr,0,True,True,True,True,True,True,True
+deepseek,deepseek_single_shot,18-49 yr,1,True,True,True,True,True,True,True
+deepseek,deepseek_single_shot,18-49 yr,2,True,True,True,True,True,True,True
+openai_gpt,openai_gpt_iterative,50-64 yr,0,True,True,True,True,True,True,True
+openai_gpt,openai_gpt_iterative,50-64 yr,1,True,True,True,True,True,True,True
+openai_gpt,openai_gpt_iterative,50-64 yr,2,True,True,True,True,True,True,True
+openai_gpt,openai_gpt_single_shot,50-64 yr,0,True,True,True,True,True,True,True
+openai_gpt,openai_gpt_single_shot,50-64 yr,1,True,True,True,True,True,True,True
+openai_gpt,openai_gpt_single_shot,50-64 yr,2,True,True,True,True,True,True,True
+anthropic_claude,anthropic_claude_iterative,50-64 yr,0,True,True,True,True,True,True,True
+anthropic_claude,anthropic_claude_iterative,50-64 yr,1,True,True,True,True,True,True,True
+anthropic_claude,anthropic_claude_iterative,50-64 yr,2,True,True,True,True,True,True,True
+anthropic_claude,anthropic_claude_single_shot,50-64 yr,0,True,True,True,True,True,True,True
+anthropic_claude,anthropic_claude_single_shot,50-64 yr,1,True,True,True,True,True,True,True
+anthropic_claude,anthropic_claude_single_shot,50-64 yr,2,True,True,True,True,True,True,True
+google_gemini,google_gemini_iterative,50-64 yr,0,True,True,True,True,True,True,True
+google_gemini,google_gemini_iterative,50-64 yr,1,True,True,True,True,True,True,True
+google_gemini,google_gemini_iterative,50-64 yr,2,True,True,True,True,True,True,True
+google_gemini,google_gemini_single_shot,50-64 yr,0,True,True,True,True,True,True,True
+google_gemini,google_gemini_single_shot,50-64 yr,1,True,True,True,True,True,True,True
+google_gemini,google_gemini_single_shot,50-64 yr,2,True,True,True,True,True,True,True
+deepseek,deepseek_iterative,50-64 yr,0,True,True,True,True,True,True,True
+deepseek,deepseek_iterative,50-64 yr,1,True,True,True,True,True,True,True
+deepseek,deepseek_iterative,50-64 yr,2,True,True,True,True,True,True,True
+deepseek,deepseek_single_shot,50-64 yr,0,True,True,True,True,True,True,True
+deepseek,deepseek_single_shot,50-64 yr,1,True,True,True,True,True,True,True
+deepseek,deepseek_single_shot,50-64 yr,2,True,True,True,True,True,True,True
+openai_gpt,openai_gpt_iterative,>= 65 yr,0,True,True,True,True,True,True,True
+openai_gpt,openai_gpt_iterative,>= 65 yr,1,True,True,True,True,True,True,True
+openai_gpt,openai_gpt_iterative,>= 65 yr,2,True,True,True,True,True,True,True
+openai_gpt,openai_gpt_single_shot,>= 65 yr,0,True,True,True,True,True,True,True
+openai_gpt,openai_gpt_single_shot,>= 65 yr,1,True,True,True,True,True,True,True
+openai_gpt,openai_gpt_single_shot,>= 65 yr,2,True,True,True,True,True,True,True
+anthropic_claude,anthropic_claude_iterative,>= 65 yr,0,True,True,True,True,True,True,True
+anthropic_claude,anthropic_claude_iterative,>= 65 yr,1,True,True,True,True,True,True,True
+anthropic_claude,anthropic_claude_iterative,>= 65 yr,2,True,True,True,True,True,True,True
+anthropic_claude,anthropic_claude_single_shot,>= 65 yr,0,True,True,True,True,True,True,True
+anthropic_claude,anthropic_claude_single_shot,>= 65 yr,1,True,True,True,True,True,True,True
+anthropic_claude,anthropic_claude_single_shot,>= 65 yr,2,True,True,True,True,True,True,True
+google_gemini,google_gemini_iterative,>= 65 yr,0,True,True,True,True,True,True,True
+google_gemini,google_gemini_iterative,>= 65 yr,1,True,True,True,True,True,True,True
+google_gemini,google_gemini_iterative,>= 65 yr,2,True,True,True,True,True,True,True
+google_gemini,google_gemini_single_shot,>= 65 yr,0,True,True,True,True,True,True,True
+google_gemini,google_gemini_single_shot,>= 65 yr,1,True,True,True,True,True,True,True
+google_gemini,google_gemini_single_shot,>= 65 yr,2,True,True,True,True,True,True,True
+deepseek,deepseek_iterative,>= 65 yr,0,True,True,True,True,True,True,True
+deepseek,deepseek_iterative,>= 65 yr,1,True,True,True,True,True,True,True
+deepseek,deepseek_iterative,>= 65 yr,2,True,True,True,True,True,True,True
+deepseek,deepseek_single_shot,>= 65 yr,0,True,True,True,True,True,True,True
+deepseek,deepseek_single_shot,>= 65 yr,1,True,True,True,True,True,True,True
+deepseek,deepseek_single_shot,>= 65 yr,2,True,True,True,True,True,True,True

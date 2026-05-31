@@ -1,0 +1,73 @@
+provider_name,proposer_type,series_name,between_repeat_jaccard_overlap,selected_model_agreement_rate,repeat_count
+openai_gpt,openai_gpt_iterative,Overall,0.7055555555555554,1.0,3
+openai_gpt,openai_gpt_single_shot,Overall,1.0,1.0,3
+anthropic_claude,anthropic_claude_iterative,Overall,1.0,1.0,3
+anthropic_claude,anthropic_claude_single_shot,Overall,1.0,1.0,3
+google_gemini,google_gemini_iterative,Overall,1.0,1.0,3
+google_gemini,google_gemini_single_shot,Overall,1.0,1.0,3
+deepseek,deepseek_iterative,Overall,0.16666666666666666,0.0,3
+deepseek,deepseek_single_shot,Overall,1.0,1.0,3
+deterministic_baseline,deterministic_seed_proposer,Overall,1.0,1.0,1
+deterministic_baseline,random_candidate_proposer,Overall,1.0,1.0,1
+deterministic_baseline,failure_guided_proposer,Overall,1.0,1.0,1
+deterministic_baseline,oracle_reference,Overall,1.0,1.0,1
+openai_gpt,openai_gpt_iterative,0-4 yr,0.6666666666666666,0.3333333333333333,3
+openai_gpt,openai_gpt_single_shot,0-4 yr,1.0,1.0,3
+anthropic_claude,anthropic_claude_iterative,0-4 yr,1.0,1.0,3
+anthropic_claude,anthropic_claude_single_shot,0-4 yr,1.0,1.0,3
+google_gemini,google_gemini_iterative,0-4 yr,1.0,1.0,3
+google_gemini,google_gemini_single_shot,0-4 yr,1.0,1.0,3
+deepseek,deepseek_iterative,0-4 yr,1.0,1.0,3
+deepseek,deepseek_single_shot,0-4 yr,1.0,1.0,3
+deterministic_baseline,deterministic_seed_proposer,0-4 yr,1.0,1.0,1
+deterministic_baseline,random_candidate_proposer,0-4 yr,1.0,1.0,1
+deterministic_baseline,failure_guided_proposer,0-4 yr,1.0,1.0,1
+deterministic_baseline,oracle_reference,0-4 yr,1.0,1.0,1
+openai_gpt,openai_gpt_iterative,5-17 yr,0.9259259259259259,1.0,3
+openai_gpt,openai_gpt_single_shot,5-17 yr,0.8666666666666667,1.0,3
+anthropic_claude,anthropic_claude_iterative,5-17 yr,1.0,1.0,3
+anthropic_claude,anthropic_claude_single_shot,5-17 yr,1.0,1.0,3
+google_gemini,google_gemini_iterative,5-17 yr,1.0,1.0,3
+google_gemini,google_gemini_single_shot,5-17 yr,1.0,1.0,3
+deepseek,deepseek_iterative,5-17 yr,0.4666666666666666,0.3333333333333333,3
+deepseek,deepseek_single_shot,5-17 yr,1.0,1.0,3
+deterministic_baseline,deterministic_seed_proposer,5-17 yr,1.0,1.0,1
+deterministic_baseline,random_candidate_proposer,5-17 yr,1.0,1.0,1
+deterministic_baseline,failure_guided_proposer,5-17 yr,1.0,1.0,1
+deterministic_baseline,oracle_reference,5-17 yr,1.0,1.0,1
+openai_gpt,openai_gpt_iterative,18-49 yr,0.6825396825396824,1.0,3
+openai_gpt,openai_gpt_single_shot,18-49 yr,1.0,1.0,3
+anthropic_claude,anthropic_claude_iterative,18-49 yr,1.0,1.0,3
+anthropic_claude,anthropic_claude_single_shot,18-49 yr,1.0,1.0,3
+google_gemini,google_gemini_iterative,18-49 yr,1.0,1.0,3
+google_gemini,google_gemini_single_shot,18-49 yr,1.0,1.0,3
+deepseek,deepseek_iterative,18-49 yr,1.0,1.0,3
+deepseek,deepseek_single_shot,18-49 yr,1.0,1.0,3
+deterministic_baseline,deterministic_seed_proposer,18-49 yr,1.0,1.0,1
+deterministic_baseline,random_candidate_proposer,18-49 yr,1.0,1.0,1
+deterministic_baseline,failure_guided_proposer,18-49 yr,1.0,1.0,1
+deterministic_baseline,oracle_reference,18-49 yr,1.0,1.0,1
+openai_gpt,openai_gpt_iterative,50-64 yr,0.49999999999999994,0.3333333333333333,3
+openai_gpt,openai_gpt_single_shot,50-64 yr,1.0,1.0,3
+anthropic_claude,anthropic_claude_iterative,50-64 yr,1.0,1.0,3
+anthropic_claude,anthropic_claude_single_shot,50-64 yr,1.0,1.0,3
+google_gemini,google_gemini_iterative,50-64 yr,1.0,1.0,3
+google_gemini,google_gemini_single_shot,50-64 yr,1.0,1.0,3
+deepseek,deepseek_iterative,50-64 yr,0.39999999999999997,0.3333333333333333,3
+deepseek,deepseek_single_shot,50-64 yr,1.0,1.0,3
+deterministic_baseline,deterministic_seed_proposer,50-64 yr,1.0,1.0,1
+deterministic_baseline,random_candidate_proposer,50-64 yr,1.0,1.0,1
+deterministic_baseline,failure_guided_proposer,50-64 yr,1.0,1.0,1
+deterministic_baseline,oracle_reference,50-64 yr,1.0,1.0,1
+openai_gpt,openai_gpt_iterative,>= 65 yr,0.773148148148148,0.3333333333333333,3
+openai_gpt,openai_gpt_single_shot,>= 65 yr,0.8666666666666667,0.3333333333333333,3
+anthropic_claude,anthropic_claude_iterative,>= 65 yr,1.0,1.0,3
+anthropic_claude,anthropic_claude_single_shot,>= 65 yr,1.0,1.0,3
+google_gemini,google_gemini_iterative,>= 65 yr,1.0,1.0,3
+google_gemini,google_gemini_single_shot,>= 65 yr,1.0,1.0,3
+deepseek,deepseek_iterative,>= 65 yr,0.39999999999999997,0.0,3
+deepseek,deepseek_single_shot,>= 65 yr,1.0,1.0,3
+deterministic_baseline,deterministic_seed_proposer,>= 65 yr,1.0,1.0,1
+deterministic_baseline,random_candidate_proposer,>= 65 yr,1.0,1.0,1
+deterministic_baseline,failure_guided_proposer,>= 65 yr,1.0,1.0,1
+deterministic_baseline,oracle_reference,>= 65 yr,1.0,1.0,1

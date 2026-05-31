@@ -1,0 +1,505 @@
+provider_name,model_name,proposer_type,series_name,repeat_idx,round_idx,schema_parse_success,valid_proposal_rate,duplicate_rate,new_useful_candidate_rate,out_of_allowlist_rejection_rate,claim_safety_violation_rate,family_diversity,observation_label_diversity,delay_label_diversity,top_epsilon_hit_by_round,best_rolling_score_by_round,selected_model_by_round,parse_error
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,Overall,0,1,True,1.0,0.0,0.6666666666666666,0.0,0.0,1,1,0,True,0.0434920634920634,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,Overall,0,2,False,,,,1.0,0.0,1,1,0,True,0.0434920634920634,arima_auto_small,AgentOutputValidationError:candidate missing required fields: delay_label
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,Overall,0,3,True,1.0,0.0,0.0,0.0,0.0,3,2,1,True,0.0434920634920634,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,Overall,1,1,True,1.0,0.0,0.6666666666666666,0.0,0.0,1,1,0,True,0.0434920634920634,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,Overall,1,2,True,1.0,0.0,0.0,0.0,0.0,3,2,1,True,0.0434920634920634,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,Overall,1,3,True,0.6666666666666666,0.3333333333333333,0.0,0.0,0.0,4,3,2,True,0.0434920634920634,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,Overall,2,1,True,1.0,0.0,0.6666666666666666,0.0,0.0,1,1,0,True,0.0434920634920634,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,Overall,2,2,True,1.0,0.0,0.0,0.0,0.0,3,2,1,True,0.0434920634920634,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,Overall,2,3,True,1.0,0.0,0.0,0.0,0.0,4,3,2,True,0.0434920634920634,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,Overall,0,1,True,1.0,0.0,0.2222222222222222,0.0,0.0,4,3,2,True,0.0434920634920634,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,Overall,0,2,True,,,,,0.0,4,3,2,True,0.0434920634920634,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,Overall,0,3,True,,,,,0.0,4,3,2,True,0.0434920634920634,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,Overall,1,1,True,1.0,0.0,0.2222222222222222,0.0,0.0,4,3,2,True,0.0434920634920634,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,Overall,1,2,True,,,,,0.0,4,3,2,True,0.0434920634920634,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,Overall,1,3,True,,,,,0.0,4,3,2,True,0.0434920634920634,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,Overall,2,1,True,1.0,0.0,0.2222222222222222,0.0,0.0,4,3,2,True,0.0434920634920634,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,Overall,2,2,True,,,,,0.0,4,3,2,True,0.0434920634920634,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,Overall,2,3,True,,,,,0.0,4,3,2,True,0.0434920634920634,arima_auto_small,
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,Overall,0,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,Overall,0,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,Overall,0,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,Overall,1,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,Overall,1,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,Overall,1,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,Overall,2,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,Overall,2,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,Overall,2,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,Overall,0,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,Overall,0,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,Overall,0,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,Overall,1,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,Overall,1,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,Overall,1,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,Overall,2,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,Overall,2,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,Overall,2,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,Overall,0,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,Overall,0,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,Overall,0,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,Overall,1,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,Overall,1,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,Overall,1,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,Overall,2,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,Overall,2,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,Overall,2,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,Overall,0,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,Overall,0,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,Overall,0,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,Overall,1,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,Overall,1,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,Overall,1,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,Overall,2,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,Overall,2,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,Overall,2,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+deepseek,deepseek-v4-flash,deepseek_iterative,Overall,0,1,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Expecting value: line 1 column 1 (char 0)
+deepseek,deepseek-v4-flash,deepseek_iterative,Overall,0,2,True,1.0,0.0,0.6666666666666666,0.0,0.0,1,1,0,True,0.0434920634920634,arima_auto_small,
+deepseek,deepseek-v4-flash,deepseek_iterative,Overall,0,3,False,,,,1.0,0.0,1,1,0,True,0.0434920634920634,arima_auto_small,JSONDecodeError:Expecting property name enclosed in double quotes: line 52 column 28 (char 2122)
+deepseek,deepseek-v4-flash,deepseek_iterative,Overall,1,1,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Unterminated string starting at: line 44 column 7 (char 1654)
+deepseek,deepseek-v4-flash,deepseek_iterative,Overall,1,2,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Unterminated string starting at: line 33 column 7 (char 1064)
+deepseek,deepseek-v4-flash,deepseek_iterative,Overall,1,3,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Unterminated string starting at: line 88 column 22 (char 3591)
+deepseek,deepseek-v4-flash,deepseek_iterative,Overall,2,1,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Expecting property name enclosed in double quotes: line 36 column 46 (char 1178)
+deepseek,deepseek-v4-flash,deepseek_iterative,Overall,2,2,True,1.0,0.0,0.3333333333333333,0.0,0.0,2,1,0,True,0.0434920634920634,last_observed,
+deepseek,deepseek-v4-flash,deepseek_iterative,Overall,2,3,False,,,,1.0,0.0,2,1,0,True,0.0434920634920634,last_observed,JSONDecodeError:Unterminated string starting at: line 14 column 32 (char 607)
+deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,0,1,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Unterminated string starting at: line 48 column 7 (char 1575)
+deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,0,2,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Unterminated string starting at: line 47 column 22 (char 1520)
+deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,0,3,False,,,,1.0,0.0,0,0,0,False,,,"JSONDecodeError:Expecting ',' delimiter: line 86 column 6 (char 3348)"
+deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,1,1,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Unterminated string starting at: line 45 column 20 (char 1400)
+deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,1,2,True,,,,,0.0,0,0,0,False,,,
+deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,1,3,False,,,,1.0,0.0,0,0,0,False,,,"JSONDecodeError:Expecting ',' delimiter: line 92 column 72 (char 3563)"
+deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,2,1,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Expecting property name enclosed in double quotes: line 41 column 37 (char 1329)
+deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,2,2,True,,,,,0.0,0,0,0,False,,,
+deepseek,deepseek-v4-flash,deepseek_single_shot,Overall,2,3,True,,,,,0.0,0,0,0,False,,,
+deterministic_baseline,deterministic,deterministic_seed_proposer,Overall,0,1,True,1.0,0.0,0.6666666666666666,0.0,0.0,1,1,0,True,0.0434920634920634,arima_auto_small,
+deterministic_baseline,deterministic,deterministic_seed_proposer,Overall,0,2,True,1.0,0.0,0.0,0.0,0.0,3,2,1,True,0.0434920634920634,arima_auto_small,
+deterministic_baseline,deterministic,deterministic_seed_proposer,Overall,0,3,True,1.0,0.0,0.0,0.0,0.0,4,3,2,True,0.0434920634920634,arima_auto_small,
+deterministic_baseline,deterministic,random_candidate_proposer,Overall,0,1,True,1.0,0.0,0.0,0.0,0.0,3,2,1,False,0.0814357127058704,delayed_observation_seir,
+deterministic_baseline,deterministic,random_candidate_proposer,Overall,0,2,True,1.0,0.0,0.3333333333333333,0.0,0.0,4,2,1,True,0.0434920634920634,last_observed,
+deterministic_baseline,deterministic,random_candidate_proposer,Overall,0,3,True,1.0,0.0,0.3333333333333333,0.0,0.0,4,3,2,True,0.0434920634920634,arima_auto_small,
+deterministic_baseline,deterministic,failure_guided_proposer,Overall,0,1,True,1.0,0.0,0.6666666666666666,0.0,0.0,1,1,0,True,0.0434920634920634,arima_auto_small,
+deterministic_baseline,deterministic,failure_guided_proposer,Overall,0,2,True,1.0,0.0,0.0,0.0,0.0,3,2,1,True,0.0434920634920634,arima_auto_small,
+deterministic_baseline,deterministic,failure_guided_proposer,Overall,0,3,True,1.0,0.0,0.0,0.0,0.0,4,3,2,True,0.0434920634920634,arima_auto_small,
+deterministic_baseline,deterministic,oracle_reference,Overall,0,1,True,1.0,0.0,0.6666666666666666,0.0,0.0,2,1,0,True,0.0434920634920634,arima_auto_small,
+deterministic_baseline,deterministic,oracle_reference,Overall,0,2,True,1.0,0.0,0.0,0.0,0.0,4,3,2,True,0.0434920634920634,arima_auto_small,
+deterministic_baseline,deterministic,oracle_reference,Overall,0,3,True,1.0,0.0,0.0,0.0,0.0,4,3,2,True,0.0434920634920634,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0-4 yr,0,1,True,1.0,0.0,0.0,0.0,0.0,1,1,0,False,0.1416666666666667,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0-4 yr,0,2,True,1.0,0.0,0.3333333333333333,0.0,0.0,3,2,1,True,0.100200235379189,constrained_structure_discovery,
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0-4 yr,0,3,False,,,,1.0,0.0,3,2,1,True,0.100200235379189,constrained_structure_discovery,AgentOutputValidationError:candidate missing required fields: delay_label
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0-4 yr,1,1,True,1.0,0.0,0.0,0.0,0.0,1,1,0,False,0.1416666666666667,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0-4 yr,1,2,False,,,,1.0,0.0,1,1,0,False,0.1416666666666667,arima_auto_small,AgentOutputValidationError:candidate missing required fields: delay_label
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0-4 yr,1,3,False,,,,1.0,0.0,1,1,0,False,0.1416666666666667,arima_auto_small,AgentOutputValidationError:candidate missing required fields: delay_label
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0-4 yr,2,1,True,1.0,0.0,0.0,0.0,0.0,1,1,0,False,0.1416666666666667,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0-4 yr,2,2,False,,,,1.0,0.0,1,1,0,False,0.1416666666666667,arima_auto_small,AgentOutputValidationError:candidate missing required fields: delay_label
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,0-4 yr,2,3,True,1.0,0.0,0.3333333333333333,0.0,0.0,3,2,1,True,0.100200235379189,constrained_structure_discovery,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,0-4 yr,0,1,True,1.0,0.0,0.2222222222222222,0.0,0.0,4,3,2,True,0.100200235379189,constrained_structure_discovery,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,0-4 yr,0,2,True,,,,,0.0,4,3,2,True,0.100200235379189,constrained_structure_discovery,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,0-4 yr,0,3,True,,,,,0.0,4,3,2,True,0.100200235379189,constrained_structure_discovery,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,0-4 yr,1,1,True,1.0,0.0,0.2222222222222222,0.0,0.0,4,3,2,True,0.100200235379189,constrained_structure_discovery,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,0-4 yr,1,2,True,,,,,0.0,4,3,2,True,0.100200235379189,constrained_structure_discovery,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,0-4 yr,1,3,True,,,,,0.0,4,3,2,True,0.100200235379189,constrained_structure_discovery,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,0-4 yr,2,1,True,1.0,0.0,0.2222222222222222,0.0,0.0,4,3,2,True,0.100200235379189,constrained_structure_discovery,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,0-4 yr,2,2,True,,,,,0.0,4,3,2,True,0.100200235379189,constrained_structure_discovery,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,0-4 yr,2,3,True,,,,,0.0,4,3,2,True,0.100200235379189,constrained_structure_discovery,
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,0-4 yr,0,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,0-4 yr,0,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,0-4 yr,0,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,0-4 yr,1,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,0-4 yr,1,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,0-4 yr,1,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,0-4 yr,2,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,0-4 yr,2,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,0-4 yr,2,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,0-4 yr,0,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,0-4 yr,0,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,0-4 yr,0,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,0-4 yr,1,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,0-4 yr,1,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,0-4 yr,1,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,0-4 yr,2,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,0-4 yr,2,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,0-4 yr,2,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,0-4 yr,0,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,0-4 yr,0,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,0-4 yr,0,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,0-4 yr,1,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,0-4 yr,1,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,0-4 yr,1,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,0-4 yr,2,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,0-4 yr,2,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,0-4 yr,2,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,0-4 yr,0,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,0-4 yr,0,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,0-4 yr,0,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,0-4 yr,1,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,0-4 yr,1,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,0-4 yr,1,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,0-4 yr,2,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,0-4 yr,2,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,0-4 yr,2,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,0,1,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Unterminated string starting at: line 15 column 7 (char 435)
+deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,0,2,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Expecting value: line 64 column 19 (char 2321)
+deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,0,3,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Unterminated string starting at: line 68 column 7 (char 2335)
+deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,1,1,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Unterminated string starting at: line 34 column 7 (char 1089)
+deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,1,2,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Expecting value: line 65 column 27 (char 2212)
+deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,1,3,False,,,,1.0,0.0,0,0,0,False,,,AgentOutputValidationError:candidate missing required fields: delay_label
+deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,2,1,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Expecting property name enclosed in double quotes: line 101 column 62 (char 3760)
+deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,2,2,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Unterminated string starting at: line 51 column 23 (char 1868)
+deepseek,deepseek-v4-flash,deepseek_iterative,0-4 yr,2,3,False,,,,1.0,0.0,0,0,0,False,,,AgentOutputValidationError:candidate missing required fields: delay_label
+deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,0,1,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Unterminated string starting at: line 43 column 7 (char 1383)
+deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,0,2,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Unterminated string starting at: line 96 column 24 (char 3487)
+deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,0,3,True,,,,,0.0,0,0,0,False,,,
+deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,1,1,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Expecting value: line 1 column 1 (char 0)
+deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,1,2,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Unterminated string starting at: line 52 column 7 (char 1862)
+deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,1,3,True,,,,,0.0,0,0,0,False,,,
+deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,2,1,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Expecting property name enclosed in double quotes: line 57 column 61 (char 2077)
+deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,2,2,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Unterminated string starting at: line 30 column 28 (char 1078)
+deepseek,deepseek-v4-flash,deepseek_single_shot,0-4 yr,2,3,True,,,,,0.0,0,0,0,False,,,
+deterministic_baseline,deterministic,deterministic_seed_proposer,0-4 yr,0,1,True,1.0,0.0,0.0,0.0,0.0,1,1,0,False,0.1416666666666667,arima_auto_small,
+deterministic_baseline,deterministic,deterministic_seed_proposer,0-4 yr,0,2,True,1.0,0.0,0.3333333333333333,0.0,0.0,3,2,1,True,0.100200235379189,constrained_structure_discovery,
+deterministic_baseline,deterministic,deterministic_seed_proposer,0-4 yr,0,3,True,1.0,0.0,0.3333333333333333,0.0,0.0,4,3,2,True,0.100200235379189,constrained_structure_discovery,
+deterministic_baseline,deterministic,random_candidate_proposer,0-4 yr,0,1,True,1.0,0.0,0.3333333333333333,0.0,0.0,3,2,1,True,0.100200235379189,constrained_structure_discovery,
+deterministic_baseline,deterministic,random_candidate_proposer,0-4 yr,0,2,True,1.0,0.0,0.0,0.0,0.0,4,3,2,True,0.100200235379189,constrained_structure_discovery,
+deterministic_baseline,deterministic,random_candidate_proposer,0-4 yr,0,3,True,1.0,0.0,0.3333333333333333,0.0,0.0,4,3,2,True,0.100200235379189,constrained_structure_discovery,
+deterministic_baseline,deterministic,failure_guided_proposer,0-4 yr,0,1,True,1.0,0.0,0.6666666666666666,0.0,0.0,2,2,2,True,0.100200235379189,constrained_structure_discovery,
+deterministic_baseline,deterministic,failure_guided_proposer,0-4 yr,0,2,True,1.0,0.0,0.0,0.0,0.0,3,3,2,True,0.100200235379189,constrained_structure_discovery,
+deterministic_baseline,deterministic,failure_guided_proposer,0-4 yr,0,3,True,1.0,0.0,0.0,0.0,0.0,4,3,2,True,0.100200235379189,constrained_structure_discovery,
+deterministic_baseline,deterministic,oracle_reference,0-4 yr,0,1,True,1.0,0.0,0.6666666666666666,0.0,0.0,2,1,1,True,0.100200235379189,constrained_structure_discovery,
+deterministic_baseline,deterministic,oracle_reference,0-4 yr,0,2,True,1.0,0.0,0.0,0.0,0.0,3,3,2,True,0.100200235379189,constrained_structure_discovery,
+deterministic_baseline,deterministic,oracle_reference,0-4 yr,0,3,True,1.0,0.0,0.0,0.0,0.0,4,3,2,True,0.100200235379189,constrained_structure_discovery,
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,5-17 yr,0,1,True,1.0,0.0,1.0,0.0,0.0,1,1,0,True,0.0375925925925925,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,5-17 yr,0,2,True,1.0,0.0,0.0,0.0,0.0,3,2,1,True,0.0375925925925925,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,5-17 yr,0,3,True,1.0,0.0,0.3333333333333333,0.0,0.0,4,3,3,True,0.0375925925925925,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,5-17 yr,1,1,True,1.0,0.0,1.0,0.0,0.0,1,1,0,True,0.0375925925925925,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,5-17 yr,1,2,True,1.0,0.0,0.0,0.0,0.0,3,2,1,True,0.0375925925925925,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,5-17 yr,1,3,True,0.6666666666666666,0.3333333333333333,0.3333333333333333,0.0,0.0,4,3,2,True,0.0375925925925925,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,5-17 yr,2,1,True,1.0,0.0,1.0,0.0,0.0,1,1,0,True,0.0375925925925925,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,5-17 yr,2,2,True,1.0,0.0,0.0,0.0,0.0,3,2,1,True,0.0375925925925925,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,5-17 yr,2,3,True,0.6666666666666666,0.3333333333333333,0.3333333333333333,0.0,0.0,4,3,2,True,0.0375925925925925,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,5-17 yr,0,1,True,1.0,0.0,0.3333333333333333,0.0,0.0,4,3,3,True,0.0375925925925925,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,5-17 yr,0,2,True,,,,,0.0,4,3,3,True,0.0375925925925925,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,5-17 yr,0,3,True,,,,,0.0,4,3,3,True,0.0375925925925925,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,5-17 yr,1,1,True,1.0,0.0,0.4444444444444444,0.0,0.0,4,3,2,True,0.0375925925925925,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,5-17 yr,1,2,True,,,,,0.0,4,3,2,True,0.0375925925925925,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,5-17 yr,1,3,True,,,,,0.0,4,3,2,True,0.0375925925925925,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,5-17 yr,2,1,True,1.0,0.0,0.3333333333333333,0.0,0.0,4,3,3,True,0.0375925925925925,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,5-17 yr,2,2,True,,,,,0.0,4,3,3,True,0.0375925925925925,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,5-17 yr,2,3,True,,,,,0.0,4,3,3,True,0.0375925925925925,arima_auto_small,
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,5-17 yr,0,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,5-17 yr,0,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,5-17 yr,0,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,5-17 yr,1,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,5-17 yr,1,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,5-17 yr,1,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,5-17 yr,2,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,5-17 yr,2,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,5-17 yr,2,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,5-17 yr,0,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,5-17 yr,0,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,5-17 yr,0,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,5-17 yr,1,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,5-17 yr,1,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,5-17 yr,1,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,5-17 yr,2,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,5-17 yr,2,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,5-17 yr,2,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,5-17 yr,0,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,5-17 yr,0,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,5-17 yr,0,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,5-17 yr,1,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,5-17 yr,1,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,5-17 yr,1,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,5-17 yr,2,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,5-17 yr,2,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,5-17 yr,2,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,5-17 yr,0,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,5-17 yr,0,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,5-17 yr,0,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,5-17 yr,1,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,5-17 yr,1,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,5-17 yr,1,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,5-17 yr,2,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,5-17 yr,2,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,5-17 yr,2,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,0,1,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Expecting value: line 1 column 1 (char 0)
+deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,0,2,True,1.0,0.0,0.3333333333333333,0.0,0.0,3,2,1,True,0.040542328042328,rolling_mean_4wk,
+deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,0,3,False,,,,1.0,0.0,3,2,1,True,0.040542328042328,rolling_mean_4wk,AgentOutputValidationError:candidate missing required fields: delay_label
+deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,1,1,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Unterminated string starting at: line 58 column 24 (char 2009)
+deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,1,2,True,1.0,0.0,0.3333333333333333,0.0,0.0,3,2,1,True,0.040542328042328,rolling_mean_4wk,
+deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,1,3,False,,,,1.0,0.0,3,2,1,True,0.040542328042328,rolling_mean_4wk,JSONDecodeError:Unterminated string starting at: line 27 column 22 (char 1003)
+deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,2,1,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Expecting value: line 1 column 1 (char 0)
+deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,2,2,True,1.0,0.0,0.3333333333333333,0.0,0.0,3,2,1,True,0.0375925925925925,arima_auto_small,
+deepseek,deepseek-v4-flash,deepseek_iterative,5-17 yr,2,3,False,,,,1.0,0.0,3,2,1,True,0.0375925925925925,arima_auto_small,AgentOutputValidationError:candidate missing required fields: delay_label
+deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,0,1,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Unterminated string starting at: line 30 column 7 (char 971)
+deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,0,2,True,,,,,0.0,0,0,0,False,,,
+deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,0,3,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Unterminated string starting at: line 64 column 20 (char 2333)
+deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,1,1,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Expecting value: line 1 column 1 (char 0)
+deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,1,2,True,,,,,0.0,0,0,0,False,,,
+deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,1,3,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Unterminated string starting at: line 53 column 7 (char 1952)
+deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,2,1,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Expecting value: line 61 column 7 (char 2221)
+deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,2,2,False,,,,1.0,0.0,0,0,0,False,,,AgentOutputValidationError:candidate missing required fields: delay_label
+deepseek,deepseek-v4-flash,deepseek_single_shot,5-17 yr,2,3,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Unterminated string starting at: line 86 column 7 (char 2946)
+deterministic_baseline,deterministic,deterministic_seed_proposer,5-17 yr,0,1,True,1.0,0.0,1.0,0.0,0.0,1,1,0,True,0.0375925925925925,arima_auto_small,
+deterministic_baseline,deterministic,deterministic_seed_proposer,5-17 yr,0,2,True,1.0,0.0,0.0,0.0,0.0,3,2,1,True,0.0375925925925925,arima_auto_small,
+deterministic_baseline,deterministic,deterministic_seed_proposer,5-17 yr,0,3,True,1.0,0.0,0.0,0.0,0.0,4,3,3,True,0.0375925925925925,arima_auto_small,
+deterministic_baseline,deterministic,random_candidate_proposer,5-17 yr,0,1,True,1.0,0.0,0.0,0.0,0.0,1,2,3,False,0.0483469157011416,validation_only_structure_selection,
+deterministic_baseline,deterministic,random_candidate_proposer,5-17 yr,0,2,True,1.0,0.0,0.3333333333333333,0.0,0.0,3,3,3,True,0.0448183664615375,exhaustive_structure_discovery,
+deterministic_baseline,deterministic,random_candidate_proposer,5-17 yr,0,3,True,1.0,0.0,0.6666666666666666,0.0,0.0,4,3,3,True,0.0375925925925925,arima_auto_small,
+deterministic_baseline,deterministic,failure_guided_proposer,5-17 yr,0,1,True,1.0,0.0,1.0,0.0,0.0,1,1,0,True,0.0375925925925925,arima_auto_small,
+deterministic_baseline,deterministic,failure_guided_proposer,5-17 yr,0,2,True,1.0,0.0,0.0,0.0,0.0,3,2,1,True,0.0375925925925925,arima_auto_small,
+deterministic_baseline,deterministic,failure_guided_proposer,5-17 yr,0,3,True,1.0,0.0,0.0,0.0,0.0,4,3,3,True,0.0375925925925925,arima_auto_small,
+deterministic_baseline,deterministic,oracle_reference,5-17 yr,0,1,True,1.0,0.0,1.0,0.0,0.0,1,1,0,True,0.0375925925925925,arima_auto_small,
+deterministic_baseline,deterministic,oracle_reference,5-17 yr,0,2,True,1.0,0.0,0.3333333333333333,0.0,0.0,3,3,2,True,0.0375925925925925,arima_auto_small,
+deterministic_baseline,deterministic,oracle_reference,5-17 yr,0,3,True,1.0,0.0,0.0,0.0,0.0,4,3,3,True,0.0375925925925925,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,18-49 yr,0,1,True,1.0,0.0,0.6666666666666666,0.0,0.0,1,1,0,True,0.0304497354497354,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,18-49 yr,0,2,True,1.0,0.0,0.3333333333333333,0.0,0.0,3,2,1,True,0.0304497354497354,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,18-49 yr,0,3,True,1.0,0.0,0.0,0.0,0.0,4,2,1,True,0.0304497354497354,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,18-49 yr,1,1,True,1.0,0.0,0.6666666666666666,0.0,0.0,1,1,0,True,0.0304497354497354,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,18-49 yr,1,2,False,,,,1.0,0.0,1,1,0,True,0.0304497354497354,arima_auto_small,AgentOutputValidationError:candidate missing required fields: delay_label
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,18-49 yr,1,3,True,1.0,0.0,0.3333333333333333,0.0,0.0,4,2,1,True,0.0304497354497354,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,18-49 yr,2,1,True,1.0,0.0,0.6666666666666666,0.0,0.0,1,1,0,True,0.0304497354497354,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,18-49 yr,2,2,False,,,,1.0,0.0,1,1,0,True,0.0304497354497354,arima_auto_small,AgentOutputValidationError:candidate missing required fields: delay_label
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,18-49 yr,2,3,True,1.0,0.0,0.0,0.0,0.0,3,2,1,True,0.0304497354497354,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,18-49 yr,0,1,True,1.0,0.0,0.3333333333333333,0.0,0.0,4,3,2,True,0.0304497354497354,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,18-49 yr,0,2,True,,,,,0.0,4,3,2,True,0.0304497354497354,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,18-49 yr,0,3,True,,,,,0.0,4,3,2,True,0.0304497354497354,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,18-49 yr,1,1,True,1.0,0.0,0.3333333333333333,0.0,0.0,4,3,2,True,0.0304497354497354,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,18-49 yr,1,2,True,,,,,0.0,4,3,2,True,0.0304497354497354,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,18-49 yr,1,3,True,,,,,0.0,4,3,2,True,0.0304497354497354,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,18-49 yr,2,1,True,1.0,0.0,0.3333333333333333,0.0,0.0,4,3,2,True,0.0304497354497354,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,18-49 yr,2,2,True,,,,,0.0,4,3,2,True,0.0304497354497354,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,18-49 yr,2,3,True,,,,,0.0,4,3,2,True,0.0304497354497354,arima_auto_small,
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,18-49 yr,0,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,18-49 yr,0,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,18-49 yr,0,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,18-49 yr,1,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,18-49 yr,1,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,18-49 yr,1,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,18-49 yr,2,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,18-49 yr,2,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,18-49 yr,2,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,18-49 yr,0,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,18-49 yr,0,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,18-49 yr,0,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,18-49 yr,1,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,18-49 yr,1,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,18-49 yr,1,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,18-49 yr,2,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,18-49 yr,2,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,18-49 yr,2,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,18-49 yr,0,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,18-49 yr,0,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,18-49 yr,0,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,18-49 yr,1,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,18-49 yr,1,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,18-49 yr,1,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,18-49 yr,2,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,18-49 yr,2,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,18-49 yr,2,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,18-49 yr,0,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,18-49 yr,0,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,18-49 yr,0,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,18-49 yr,1,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,18-49 yr,1,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,18-49 yr,1,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,18-49 yr,2,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,18-49 yr,2,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,18-49 yr,2,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,0,1,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Expecting property name enclosed in double quotes: line 85 column 54 (char 3389)
+deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,0,2,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Unterminated string starting at: line 58 column 17 (char 2182)
+deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,0,3,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Unterminated string starting at: line 41 column 24 (char 1363)
+deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,1,1,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Unterminated string starting at: line 56 column 7 (char 1964)
+deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,1,2,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Expecting value: line 1 column 1 (char 0)
+deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,1,3,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Expecting value: line 60 column 7 (char 1990)
+deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,2,1,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Expecting value: line 1 column 1 (char 0)
+deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,2,2,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Unterminated string starting at: line 19 column 21 (char 569)
+deepseek,deepseek-v4-flash,deepseek_iterative,18-49 yr,2,3,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Expecting property name enclosed in double quotes: line 86 column 55 (char 3327)
+deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,0,1,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Unterminated string starting at: line 81 column 17 (char 2740)
+deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,0,2,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Unterminated string starting at: line 74 column 17 (char 2958)
+deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,0,3,True,,,,,0.0,0,0,0,False,,,
+deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,1,1,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Unterminated string starting at: line 32 column 21 (char 1037)
+deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,1,2,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Expecting property name enclosed in double quotes: line 61 column 6 (char 2434)
+deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,1,3,True,,,,,0.0,0,0,0,False,,,
+deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,2,1,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Expecting value: line 78 column 21 (char 2748)
+deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,2,2,False,,,,1.0,0.0,0,0,0,False,,,"JSONDecodeError:Expecting ',' delimiter: line 80 column 37 (char 2729)"
+deepseek,deepseek-v4-flash,deepseek_single_shot,18-49 yr,2,3,True,,,,,0.0,0,0,0,False,,,
+deterministic_baseline,deterministic,deterministic_seed_proposer,18-49 yr,0,1,True,1.0,0.0,0.6666666666666666,0.0,0.0,1,1,0,True,0.0304497354497354,arima_auto_small,
+deterministic_baseline,deterministic,deterministic_seed_proposer,18-49 yr,0,2,True,1.0,0.0,0.0,0.0,0.0,3,2,1,True,0.0304497354497354,arima_auto_small,
+deterministic_baseline,deterministic,deterministic_seed_proposer,18-49 yr,0,3,True,1.0,0.0,0.3333333333333333,0.0,0.0,4,3,2,True,0.0304497354497354,arima_auto_small,
+deterministic_baseline,deterministic,random_candidate_proposer,18-49 yr,0,1,True,1.0,0.0,0.0,0.0,0.0,2,3,2,False,0.0787418202336159,exhaustive_structure_discovery,
+deterministic_baseline,deterministic,random_candidate_proposer,18-49 yr,0,2,True,1.0,0.0,0.6666666666666666,0.0,0.0,3,3,2,True,0.0304497354497354,arima_auto_small,
+deterministic_baseline,deterministic,random_candidate_proposer,18-49 yr,0,3,True,1.0,0.0,0.0,0.0,0.0,4,3,2,True,0.0304497354497354,arima_auto_small,
+deterministic_baseline,deterministic,failure_guided_proposer,18-49 yr,0,1,True,1.0,0.0,0.6666666666666666,0.0,0.0,1,1,0,True,0.0304497354497354,arima_auto_small,
+deterministic_baseline,deterministic,failure_guided_proposer,18-49 yr,0,2,True,1.0,0.0,0.3333333333333333,0.0,0.0,3,2,1,True,0.0304497354497354,arima_auto_small,
+deterministic_baseline,deterministic,failure_guided_proposer,18-49 yr,0,3,True,1.0,0.0,0.0,0.0,0.0,4,3,2,True,0.0304497354497354,arima_auto_small,
+deterministic_baseline,deterministic,oracle_reference,18-49 yr,0,1,True,1.0,0.0,1.0,0.0,0.0,2,2,1,True,0.0304497354497354,arima_auto_small,
+deterministic_baseline,deterministic,oracle_reference,18-49 yr,0,2,True,1.0,0.0,0.0,0.0,0.0,3,2,1,True,0.0304497354497354,arima_auto_small,
+deterministic_baseline,deterministic,oracle_reference,18-49 yr,0,3,True,1.0,0.0,0.0,0.0,0.0,4,3,2,True,0.0304497354497354,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,0,1,True,1.0,0.0,0.6666666666666666,0.0,0.0,1,1,0,True,0.0612698412698412,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,0,2,False,,,,1.0,0.0,1,1,0,True,0.0612698412698412,arima_auto_small,AgentOutputValidationError:candidate missing required fields: delay_label
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,0,3,True,1.0,0.0,1.0,0.0,0.0,3,2,1,True,0.0527749982193454,delayed_observation_seir,
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,1,1,True,1.0,0.0,0.6666666666666666,0.0,0.0,1,1,0,True,0.0612698412698412,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,1,2,False,,,,1.0,0.0,1,1,0,True,0.0612698412698412,arima_auto_small,AgentOutputValidationError:candidate missing required fields: delay_label
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,1,3,False,,,,1.0,0.0,1,1,0,True,0.0612698412698412,arima_auto_small,AgentOutputValidationError:candidate missing required fields: delay_label
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,2,1,True,1.0,0.0,0.6666666666666666,0.0,0.0,1,1,0,True,0.0612698412698412,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,2,2,True,1.0,0.0,1.0,0.0,0.0,3,2,1,True,0.0527749982193454,delayed_observation_seir,
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,50-64 yr,2,3,True,1.0,0.0,0.6666666666666666,0.0,0.0,4,2,1,True,0.0527749982193454,delayed_observation_seir,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,50-64 yr,0,1,True,1.0,0.0,0.7777777777777778,0.0,0.0,4,2,1,True,0.0527749982193454,delayed_observation_seir,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,50-64 yr,0,2,True,,,,,0.0,4,2,1,True,0.0527749982193454,delayed_observation_seir,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,50-64 yr,0,3,True,,,,,0.0,4,2,1,True,0.0527749982193454,delayed_observation_seir,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,50-64 yr,1,1,True,1.0,0.0,0.7777777777777778,0.0,0.0,4,2,1,True,0.0527749982193454,delayed_observation_seir,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,50-64 yr,1,2,True,,,,,0.0,4,2,1,True,0.0527749982193454,delayed_observation_seir,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,50-64 yr,1,3,True,,,,,0.0,4,2,1,True,0.0527749982193454,delayed_observation_seir,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,50-64 yr,2,1,True,1.0,0.0,0.7777777777777778,0.0,0.0,4,2,1,True,0.0527749982193454,delayed_observation_seir,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,50-64 yr,2,2,True,,,,,0.0,4,2,1,True,0.0527749982193454,delayed_observation_seir,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,50-64 yr,2,3,True,,,,,0.0,4,2,1,True,0.0527749982193454,delayed_observation_seir,
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,50-64 yr,0,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,50-64 yr,0,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,50-64 yr,0,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,50-64 yr,1,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,50-64 yr,1,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,50-64 yr,1,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,50-64 yr,2,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,50-64 yr,2,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,50-64 yr,2,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,50-64 yr,0,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,50-64 yr,0,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,50-64 yr,0,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,50-64 yr,1,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,50-64 yr,1,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,50-64 yr,1,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,50-64 yr,2,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,50-64 yr,2,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,50-64 yr,2,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,50-64 yr,0,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,50-64 yr,0,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,50-64 yr,0,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,50-64 yr,1,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,50-64 yr,1,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,50-64 yr,1,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,50-64 yr,2,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,50-64 yr,2,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,50-64 yr,2,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,50-64 yr,0,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,50-64 yr,0,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,50-64 yr,0,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,50-64 yr,1,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,50-64 yr,1,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,50-64 yr,1,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,50-64 yr,2,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,50-64 yr,2,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,50-64 yr,2,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,0,1,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Expecting property name enclosed in double quotes: line 59 column 38 (char 1932)
+deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,0,2,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Unterminated string starting at: line 70 column 20 (char 2471)
+deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,0,3,True,1.0,0.0,1.0,0.0,0.0,3,2,1,True,0.0540426538599386,constrained_structure_discovery,
+deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,1,1,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Unterminated string starting at: line 79 column 24 (char 2572)
+deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,1,2,False,,,,1.0,0.0,0,0,0,False,,,"JSONDecodeError:Expecting ',' delimiter: line 74 column 75 (char 2627)"
+deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,1,3,True,1.0,0.0,0.6666666666666666,0.0,0.0,2,1,0,True,0.0564049117960326,deterministic_seir,
+deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,2,1,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Unterminated string starting at: line 70 column 7 (char 2298)
+deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,2,2,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Unterminated string starting at: line 44 column 7 (char 1581)
+deepseek,deepseek-v4-flash,deepseek_iterative,50-64 yr,2,3,True,1.0,0.0,1.0,0.0,0.0,3,2,1,True,0.0540426538599386,constrained_structure_discovery,
+deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,0,1,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Unterminated string starting at: line 101 column 7 (char 3608)
+deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,0,2,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Unterminated string starting at: line 64 column 21 (char 2166)
+deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,0,3,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Unterminated string starting at: line 22 column 7 (char 722)
+deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,1,1,False,,,,1.0,0.0,0,0,0,False,,,"JSONDecodeError:Expecting ',' delimiter: line 27 column 66 (char 887)"
+deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,1,2,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Unterminated string starting at: line 92 column 33 (char 3751)
+deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,1,3,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Expecting value: line 1 column 1 (char 0)
+deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,2,1,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Unterminated string starting at: line 55 column 7 (char 1788)
+deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,2,2,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Unterminated string starting at: line 64 column 7 (char 1804)
+deepseek,deepseek-v4-flash,deepseek_single_shot,50-64 yr,2,3,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Expecting property name enclosed in double quotes: line 84 column 34 (char 3014)
+deterministic_baseline,deterministic,deterministic_seed_proposer,50-64 yr,0,1,True,1.0,0.0,0.6666666666666666,0.0,0.0,1,1,0,True,0.0612698412698412,arima_auto_small,
+deterministic_baseline,deterministic,deterministic_seed_proposer,50-64 yr,0,2,True,1.0,0.0,1.0,0.0,0.0,3,2,1,True,0.0527749982193454,delayed_observation_seir,
+deterministic_baseline,deterministic,deterministic_seed_proposer,50-64 yr,0,3,True,1.0,0.0,0.6666666666666666,0.0,0.0,4,2,1,True,0.0527749982193454,delayed_observation_seir,
+deterministic_baseline,deterministic,random_candidate_proposer,50-64 yr,0,1,True,1.0,0.0,0.3333333333333333,0.0,0.0,3,2,1,True,0.0540426538599386,constrained_structure_discovery,
+deterministic_baseline,deterministic,random_candidate_proposer,50-64 yr,0,2,True,1.0,0.0,1.0,0.0,0.0,4,2,1,True,0.0540426538599386,constrained_structure_discovery,
+deterministic_baseline,deterministic,random_candidate_proposer,50-64 yr,0,3,True,1.0,0.0,1.0,0.0,0.0,4,2,1,True,0.0527749982193454,delayed_observation_seir,
+deterministic_baseline,deterministic,failure_guided_proposer,50-64 yr,0,1,True,1.0,0.0,0.6666666666666666,0.0,0.0,1,1,0,True,0.0612698412698412,arima_auto_small,
+deterministic_baseline,deterministic,failure_guided_proposer,50-64 yr,0,2,True,1.0,0.0,0.6666666666666666,0.0,0.0,3,2,1,True,0.0527749982193454,delayed_observation_seir,
+deterministic_baseline,deterministic,failure_guided_proposer,50-64 yr,0,3,True,1.0,0.0,1.0,0.0,0.0,4,2,1,True,0.0527749982193454,delayed_observation_seir,
+deterministic_baseline,deterministic,oracle_reference,50-64 yr,0,1,True,1.0,0.0,1.0,0.0,0.0,3,2,1,True,0.0527749982193454,delayed_observation_seir,
+deterministic_baseline,deterministic,oracle_reference,50-64 yr,0,2,True,1.0,0.0,1.0,0.0,0.0,3,2,1,True,0.0527749982193454,delayed_observation_seir,
+deterministic_baseline,deterministic,oracle_reference,50-64 yr,0,3,True,1.0,0.0,0.6666666666666666,0.0,0.0,4,2,1,True,0.0527749982193454,delayed_observation_seir,
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,0,1,True,1.0,0.0,0.0,0.0,0.0,1,1,0,False,0.2118518518518518,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,0,2,True,1.0,0.0,0.3333333333333333,0.0,0.0,3,2,1,False,0.2118518518518518,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,0,3,True,0.6666666666666666,0.3333333333333333,0.6666666666666666,0.0,0.0,4,2,1,True,0.1690159117505848,exhaustive_structure_discovery,
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,1,1,True,1.0,0.0,0.0,0.0,0.0,1,1,0,False,0.2118518518518518,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,1,2,True,1.0,0.0,0.3333333333333333,0.0,0.0,3,2,1,False,0.2118518518518518,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,1,3,True,0.6666666666666666,0.3333333333333333,0.3333333333333333,0.0,0.0,4,2,1,True,0.1690159117505848,exhaustive_structure_discovery,
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,2,1,True,1.0,0.0,0.0,0.0,0.0,1,1,0,False,0.2118518518518518,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,2,2,True,1.0,0.0,0.3333333333333333,0.0,0.0,3,2,1,False,0.2118518518518518,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_iterative,>= 65 yr,2,3,True,0.3333333333333333,0.6666666666666666,0.3333333333333333,0.0,0.0,4,2,1,False,0.2118518518518518,arima_auto_small,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,>= 65 yr,0,1,True,1.0,0.0,0.2222222222222222,0.0,0.0,4,3,2,False,0.1965252983704047,random_structure_discovery,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,>= 65 yr,0,2,True,,,,,0.0,4,3,2,False,0.1965252983704047,random_structure_discovery,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,>= 65 yr,0,3,True,,,,,0.0,4,3,2,False,0.1965252983704047,random_structure_discovery,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,>= 65 yr,1,1,True,1.0,0.0,0.2222222222222222,0.0,0.0,4,3,2,False,0.1965252983704047,random_structure_discovery,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,>= 65 yr,1,2,True,,,,,0.0,4,3,2,False,0.1965252983704047,random_structure_discovery,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,>= 65 yr,1,3,True,,,,,0.0,4,3,2,False,0.1965252983704047,random_structure_discovery,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,>= 65 yr,2,1,True,1.0,0.0,0.3333333333333333,0.0,0.0,4,2,1,True,0.1690159117505848,exhaustive_structure_discovery,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,>= 65 yr,2,2,True,,,,,0.0,4,2,1,True,0.1690159117505848,exhaustive_structure_discovery,
+openai_gpt,gpt-5.4-mini,openai_gpt_single_shot,>= 65 yr,2,3,True,,,,,0.0,4,2,1,True,0.1690159117505848,exhaustive_structure_discovery,
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,>= 65 yr,0,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,>= 65 yr,0,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,>= 65 yr,0,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,>= 65 yr,1,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,>= 65 yr,1,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,>= 65 yr,1,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,>= 65 yr,2,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,>= 65 yr,2,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_iterative,>= 65 yr,2,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,>= 65 yr,0,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,>= 65 yr,0,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,>= 65 yr,0,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,>= 65 yr,1,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,>= 65 yr,1,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,>= 65 yr,1,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,>= 65 yr,2,1,False,,,,1.0,0.0,0,0,0,False,,,URLError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,>= 65 yr,2,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+anthropic_claude,claude-sonnet-4-6,anthropic_claude_single_shot,>= 65 yr,2,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,>= 65 yr,0,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,>= 65 yr,0,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,>= 65 yr,0,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,>= 65 yr,1,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,>= 65 yr,1,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,>= 65 yr,1,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,>= 65 yr,2,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,>= 65 yr,2,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_iterative,>= 65 yr,2,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,>= 65 yr,0,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,>= 65 yr,0,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,>= 65 yr,0,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,>= 65 yr,1,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,>= 65 yr,1,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,>= 65 yr,1,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,>= 65 yr,2,1,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,>= 65 yr,2,2,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+google_gemini,gemini-2.5-flash,google_gemini_single_shot,>= 65 yr,2,3,False,,,,1.0,0.0,0,0,0,False,,,HTTPError
+deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,0,1,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Unterminated string starting at: line 48 column 22 (char 1544)
+deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,0,2,False,,,,1.0,0.0,0,0,0,False,,,URLError
+deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,0,3,True,1.0,0.0,0.0,0.0,0.0,1,1,0,False,0.2118518518518518,arima_auto_small,
+deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,1,1,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Unterminated string starting at: line 63 column 7 (char 2251)
+deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,1,2,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Unterminated string starting at: line 106 column 25 (char 4294)
+deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,1,3,True,1.0,0.0,0.3333333333333333,0.0,0.0,3,2,1,False,0.2214527261276795,deterministic_seir,
+deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,2,1,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Expecting value: line 1 column 1 (char 0)
+deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,2,2,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Expecting property name enclosed in double quotes: line 88 column 28 (char 3326)
+deepseek,deepseek-v4-flash,deepseek_iterative,>= 65 yr,2,3,True,1.0,0.0,0.0,0.0,0.0,2,1,0,False,0.2118518518518518,last_observed,
+deepseek,deepseek-v4-flash,deepseek_single_shot,>= 65 yr,0,1,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Unterminated string starting at: line 69 column 32 (char 2407)
+deepseek,deepseek-v4-flash,deepseek_single_shot,>= 65 yr,0,2,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Expecting value: line 1 column 1 (char 0)
+deepseek,deepseek-v4-flash,deepseek_single_shot,>= 65 yr,0,3,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Unterminated string starting at: line 72 column 7 (char 2631)
+deepseek,deepseek-v4-flash,deepseek_single_shot,>= 65 yr,1,1,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Expecting value: line 1 column 1 (char 0)
+deepseek,deepseek-v4-flash,deepseek_single_shot,>= 65 yr,1,2,True,,,,,0.0,0,0,0,False,,,
+deepseek,deepseek-v4-flash,deepseek_single_shot,>= 65 yr,1,3,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Expecting value: line 41 column 20 (char 1237)
+deepseek,deepseek-v4-flash,deepseek_single_shot,>= 65 yr,2,1,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Expecting property name enclosed in double quotes: line 19 column 40 (char 604)
+deepseek,deepseek-v4-flash,deepseek_single_shot,>= 65 yr,2,2,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Unterminated string starting at: line 67 column 7 (char 2204)
+deepseek,deepseek-v4-flash,deepseek_single_shot,>= 65 yr,2,3,False,,,,1.0,0.0,0,0,0,False,,,JSONDecodeError:Unterminated string starting at: line 100 column 7 (char 3891)
+deterministic_baseline,deterministic,deterministic_seed_proposer,>= 65 yr,0,1,True,1.0,0.0,0.0,0.0,0.0,1,1,0,False,0.2118518518518518,arima_auto_small,
+deterministic_baseline,deterministic,deterministic_seed_proposer,>= 65 yr,0,2,True,1.0,0.0,0.3333333333333333,0.0,0.0,3,2,1,False,0.2118518518518518,arima_auto_small,
+deterministic_baseline,deterministic,deterministic_seed_proposer,>= 65 yr,0,3,True,1.0,0.0,0.3333333333333333,0.0,0.0,4,3,2,False,0.1965252983704047,random_structure_discovery,
+deterministic_baseline,deterministic,random_candidate_proposer,>= 65 yr,0,1,True,1.0,0.0,0.0,0.0,0.0,2,1,0,False,0.2118518518518518,last_observed,
+deterministic_baseline,deterministic,random_candidate_proposer,>= 65 yr,0,2,True,1.0,0.0,0.6666666666666666,0.0,0.0,4,2,1,False,0.2118518518518518,last_observed,
+deterministic_baseline,deterministic,random_candidate_proposer,>= 65 yr,0,3,True,1.0,0.0,0.3333333333333333,0.0,0.0,4,2,1,True,0.1690159117505848,exhaustive_structure_discovery,
+deterministic_baseline,deterministic,failure_guided_proposer,>= 65 yr,0,1,True,1.0,0.0,0.0,0.0,0.0,1,1,0,False,0.2118518518518518,arima_auto_small,
+deterministic_baseline,deterministic,failure_guided_proposer,>= 65 yr,0,2,True,1.0,0.0,0.3333333333333333,0.0,0.0,3,2,1,False,0.2118518518518518,arima_auto_small,
+deterministic_baseline,deterministic,failure_guided_proposer,>= 65 yr,0,3,True,1.0,0.0,0.3333333333333333,0.0,0.0,4,3,2,False,0.1965252983704047,random_structure_discovery,
+deterministic_baseline,deterministic,oracle_reference,>= 65 yr,0,1,True,1.0,0.0,0.3333333333333333,0.0,0.0,2,3,2,True,0.1690159117505848,exhaustive_structure_discovery,
+deterministic_baseline,deterministic,oracle_reference,>= 65 yr,0,2,True,1.0,0.0,0.0,0.0,0.0,3,3,2,True,0.1690159117505848,exhaustive_structure_discovery,
+deterministic_baseline,deterministic,oracle_reference,>= 65 yr,0,3,True,1.0,0.0,0.0,0.0,0.0,3,3,2,True,0.1690159117505848,exhaustive_structure_discovery,

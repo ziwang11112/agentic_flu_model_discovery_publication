@@ -1,0 +1,35 @@
+{
+  "artifact_root": "artifacts_provider_iterative_benchmark_compact",
+  "audit_rows": 504,
+  "bounded_execution_run": false,
+  "budgets": [
+    3,
+    6,
+    9
+  ],
+  "by_round_rows": 504,
+  "candidate_rows": 542,
+  "candidates_per_round": 3,
+  "claim_audit_passed": true,
+  "frozen_artifact_root": "artifacts_discovery_ablation",
+  "proposal_validity_rows": 12,
+  "provider_status_rows": 4,
+  "real_provider_count": 4,
+  "repeats": 3,
+  "replay_rows": 504,
+  "require_min_real_providers": 2,
+  "rounds": 3,
+  "runtime_seconds": 1560.0927510999609,
+  "safe_audit_passed": true,
+  "selection_metric_source": "rolling_mean_mae",
+  "series": [
+    "Overall",
+    "0-4 yr",
+    "5-17 yr",
+    "18-49 yr",
+    "50-64 yr",
+    ">= 65 yr"
+  ],
+  "sufficient_real_providers_for_cross_provider_evidence": true,
+  "test_metric_usage": "posthoc_descriptive_only"
+}

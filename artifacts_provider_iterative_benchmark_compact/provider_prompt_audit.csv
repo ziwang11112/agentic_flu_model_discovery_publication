@@ -1,0 +1,505 @@
+provider_name,model_name,repeat_idx,series_name,proposer_type,round_idx,prompt_contains_test_metric,prompt_contains_test_winner,prompt_contains_test_rank,prompt_contains_posthoc_metric,feedback_contains_test_metric,selection_uses_test_metric,posthoc_test_metric_only,safe_prompt_passed,safe_feedback_passed,safe_selection_passed,allowlist_hash
+openai_gpt,gpt-5.4-mini,0,Overall,openai_gpt_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,0,Overall,openai_gpt_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,0,Overall,openai_gpt_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,1,Overall,openai_gpt_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,1,Overall,openai_gpt_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,1,Overall,openai_gpt_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,2,Overall,openai_gpt_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,2,Overall,openai_gpt_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,2,Overall,openai_gpt_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,0,Overall,openai_gpt_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,0,Overall,openai_gpt_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,0,Overall,openai_gpt_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,1,Overall,openai_gpt_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,1,Overall,openai_gpt_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,1,Overall,openai_gpt_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,2,Overall,openai_gpt_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,2,Overall,openai_gpt_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,2,Overall,openai_gpt_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,0,Overall,anthropic_claude_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,0,Overall,anthropic_claude_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,0,Overall,anthropic_claude_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,1,Overall,anthropic_claude_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,1,Overall,anthropic_claude_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,1,Overall,anthropic_claude_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,2,Overall,anthropic_claude_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,2,Overall,anthropic_claude_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,2,Overall,anthropic_claude_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,0,Overall,anthropic_claude_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,0,Overall,anthropic_claude_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,0,Overall,anthropic_claude_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,1,Overall,anthropic_claude_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,1,Overall,anthropic_claude_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,1,Overall,anthropic_claude_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,2,Overall,anthropic_claude_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,2,Overall,anthropic_claude_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,2,Overall,anthropic_claude_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,0,Overall,google_gemini_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,0,Overall,google_gemini_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,0,Overall,google_gemini_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,1,Overall,google_gemini_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,1,Overall,google_gemini_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,1,Overall,google_gemini_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,2,Overall,google_gemini_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,2,Overall,google_gemini_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,2,Overall,google_gemini_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,0,Overall,google_gemini_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,0,Overall,google_gemini_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,0,Overall,google_gemini_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,1,Overall,google_gemini_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,1,Overall,google_gemini_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,1,Overall,google_gemini_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,2,Overall,google_gemini_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,2,Overall,google_gemini_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,2,Overall,google_gemini_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,0,Overall,deepseek_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,0,Overall,deepseek_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,0,Overall,deepseek_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,1,Overall,deepseek_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,1,Overall,deepseek_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,1,Overall,deepseek_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,2,Overall,deepseek_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,2,Overall,deepseek_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,2,Overall,deepseek_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,0,Overall,deepseek_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,0,Overall,deepseek_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,0,Overall,deepseek_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,1,Overall,deepseek_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,1,Overall,deepseek_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,1,Overall,deepseek_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,2,Overall,deepseek_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,2,Overall,deepseek_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,2,Overall,deepseek_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,Overall,deterministic_seed_proposer,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,Overall,deterministic_seed_proposer,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,Overall,deterministic_seed_proposer,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,Overall,random_candidate_proposer,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,Overall,random_candidate_proposer,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,Overall,random_candidate_proposer,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,Overall,failure_guided_proposer,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,Overall,failure_guided_proposer,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,Overall,failure_guided_proposer,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,Overall,oracle_reference,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,Overall,oracle_reference,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,Overall,oracle_reference,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,0,0-4 yr,openai_gpt_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,0,0-4 yr,openai_gpt_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,0,0-4 yr,openai_gpt_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,1,0-4 yr,openai_gpt_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,1,0-4 yr,openai_gpt_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,1,0-4 yr,openai_gpt_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,2,0-4 yr,openai_gpt_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,2,0-4 yr,openai_gpt_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,2,0-4 yr,openai_gpt_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,0,0-4 yr,openai_gpt_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,0,0-4 yr,openai_gpt_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,0,0-4 yr,openai_gpt_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,1,0-4 yr,openai_gpt_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,1,0-4 yr,openai_gpt_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,1,0-4 yr,openai_gpt_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,2,0-4 yr,openai_gpt_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,2,0-4 yr,openai_gpt_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,2,0-4 yr,openai_gpt_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,0,0-4 yr,anthropic_claude_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,0,0-4 yr,anthropic_claude_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,0,0-4 yr,anthropic_claude_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,1,0-4 yr,anthropic_claude_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,1,0-4 yr,anthropic_claude_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,1,0-4 yr,anthropic_claude_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,2,0-4 yr,anthropic_claude_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,2,0-4 yr,anthropic_claude_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,2,0-4 yr,anthropic_claude_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,0,0-4 yr,anthropic_claude_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,0,0-4 yr,anthropic_claude_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,0,0-4 yr,anthropic_claude_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,1,0-4 yr,anthropic_claude_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,1,0-4 yr,anthropic_claude_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,1,0-4 yr,anthropic_claude_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,2,0-4 yr,anthropic_claude_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,2,0-4 yr,anthropic_claude_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,2,0-4 yr,anthropic_claude_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,0,0-4 yr,google_gemini_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,0,0-4 yr,google_gemini_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,0,0-4 yr,google_gemini_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,1,0-4 yr,google_gemini_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,1,0-4 yr,google_gemini_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,1,0-4 yr,google_gemini_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,2,0-4 yr,google_gemini_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,2,0-4 yr,google_gemini_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,2,0-4 yr,google_gemini_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,0,0-4 yr,google_gemini_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,0,0-4 yr,google_gemini_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,0,0-4 yr,google_gemini_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,1,0-4 yr,google_gemini_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,1,0-4 yr,google_gemini_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,1,0-4 yr,google_gemini_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,2,0-4 yr,google_gemini_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,2,0-4 yr,google_gemini_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,2,0-4 yr,google_gemini_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,0,0-4 yr,deepseek_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,0,0-4 yr,deepseek_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,0,0-4 yr,deepseek_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,1,0-4 yr,deepseek_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,1,0-4 yr,deepseek_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,1,0-4 yr,deepseek_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,2,0-4 yr,deepseek_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,2,0-4 yr,deepseek_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,2,0-4 yr,deepseek_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,0,0-4 yr,deepseek_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,0,0-4 yr,deepseek_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,0,0-4 yr,deepseek_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,1,0-4 yr,deepseek_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,1,0-4 yr,deepseek_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,1,0-4 yr,deepseek_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,2,0-4 yr,deepseek_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,2,0-4 yr,deepseek_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,2,0-4 yr,deepseek_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,0-4 yr,deterministic_seed_proposer,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,0-4 yr,deterministic_seed_proposer,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,0-4 yr,deterministic_seed_proposer,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,0-4 yr,random_candidate_proposer,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,0-4 yr,random_candidate_proposer,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,0-4 yr,random_candidate_proposer,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,0-4 yr,failure_guided_proposer,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,0-4 yr,failure_guided_proposer,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,0-4 yr,failure_guided_proposer,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,0-4 yr,oracle_reference,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,0-4 yr,oracle_reference,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,0-4 yr,oracle_reference,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,0,5-17 yr,openai_gpt_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,0,5-17 yr,openai_gpt_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,0,5-17 yr,openai_gpt_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,1,5-17 yr,openai_gpt_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,1,5-17 yr,openai_gpt_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,1,5-17 yr,openai_gpt_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,2,5-17 yr,openai_gpt_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,2,5-17 yr,openai_gpt_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,2,5-17 yr,openai_gpt_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,0,5-17 yr,openai_gpt_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,0,5-17 yr,openai_gpt_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,0,5-17 yr,openai_gpt_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,1,5-17 yr,openai_gpt_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,1,5-17 yr,openai_gpt_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,1,5-17 yr,openai_gpt_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,2,5-17 yr,openai_gpt_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,2,5-17 yr,openai_gpt_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,2,5-17 yr,openai_gpt_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,0,5-17 yr,anthropic_claude_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,0,5-17 yr,anthropic_claude_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,0,5-17 yr,anthropic_claude_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,1,5-17 yr,anthropic_claude_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,1,5-17 yr,anthropic_claude_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,1,5-17 yr,anthropic_claude_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,2,5-17 yr,anthropic_claude_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,2,5-17 yr,anthropic_claude_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,2,5-17 yr,anthropic_claude_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,0,5-17 yr,anthropic_claude_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,0,5-17 yr,anthropic_claude_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,0,5-17 yr,anthropic_claude_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,1,5-17 yr,anthropic_claude_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,1,5-17 yr,anthropic_claude_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,1,5-17 yr,anthropic_claude_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,2,5-17 yr,anthropic_claude_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,2,5-17 yr,anthropic_claude_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,2,5-17 yr,anthropic_claude_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,0,5-17 yr,google_gemini_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,0,5-17 yr,google_gemini_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,0,5-17 yr,google_gemini_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,1,5-17 yr,google_gemini_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,1,5-17 yr,google_gemini_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,1,5-17 yr,google_gemini_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,2,5-17 yr,google_gemini_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,2,5-17 yr,google_gemini_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,2,5-17 yr,google_gemini_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,0,5-17 yr,google_gemini_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,0,5-17 yr,google_gemini_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,0,5-17 yr,google_gemini_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,1,5-17 yr,google_gemini_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,1,5-17 yr,google_gemini_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,1,5-17 yr,google_gemini_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,2,5-17 yr,google_gemini_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,2,5-17 yr,google_gemini_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,2,5-17 yr,google_gemini_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,0,5-17 yr,deepseek_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,0,5-17 yr,deepseek_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,0,5-17 yr,deepseek_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,1,5-17 yr,deepseek_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,1,5-17 yr,deepseek_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,1,5-17 yr,deepseek_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,2,5-17 yr,deepseek_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,2,5-17 yr,deepseek_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,2,5-17 yr,deepseek_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,0,5-17 yr,deepseek_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,0,5-17 yr,deepseek_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,0,5-17 yr,deepseek_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,1,5-17 yr,deepseek_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,1,5-17 yr,deepseek_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,1,5-17 yr,deepseek_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,2,5-17 yr,deepseek_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,2,5-17 yr,deepseek_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,2,5-17 yr,deepseek_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,5-17 yr,deterministic_seed_proposer,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,5-17 yr,deterministic_seed_proposer,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,5-17 yr,deterministic_seed_proposer,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,5-17 yr,random_candidate_proposer,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,5-17 yr,random_candidate_proposer,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,5-17 yr,random_candidate_proposer,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,5-17 yr,failure_guided_proposer,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,5-17 yr,failure_guided_proposer,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,5-17 yr,failure_guided_proposer,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,5-17 yr,oracle_reference,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,5-17 yr,oracle_reference,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,5-17 yr,oracle_reference,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,0,18-49 yr,openai_gpt_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,0,18-49 yr,openai_gpt_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,0,18-49 yr,openai_gpt_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,1,18-49 yr,openai_gpt_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,1,18-49 yr,openai_gpt_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,1,18-49 yr,openai_gpt_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,2,18-49 yr,openai_gpt_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,2,18-49 yr,openai_gpt_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,2,18-49 yr,openai_gpt_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,0,18-49 yr,openai_gpt_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,0,18-49 yr,openai_gpt_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,0,18-49 yr,openai_gpt_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,1,18-49 yr,openai_gpt_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,1,18-49 yr,openai_gpt_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,1,18-49 yr,openai_gpt_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,2,18-49 yr,openai_gpt_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,2,18-49 yr,openai_gpt_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,2,18-49 yr,openai_gpt_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,0,18-49 yr,anthropic_claude_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,0,18-49 yr,anthropic_claude_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,0,18-49 yr,anthropic_claude_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,1,18-49 yr,anthropic_claude_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,1,18-49 yr,anthropic_claude_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,1,18-49 yr,anthropic_claude_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,2,18-49 yr,anthropic_claude_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,2,18-49 yr,anthropic_claude_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,2,18-49 yr,anthropic_claude_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,0,18-49 yr,anthropic_claude_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,0,18-49 yr,anthropic_claude_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,0,18-49 yr,anthropic_claude_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,1,18-49 yr,anthropic_claude_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,1,18-49 yr,anthropic_claude_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,1,18-49 yr,anthropic_claude_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,2,18-49 yr,anthropic_claude_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,2,18-49 yr,anthropic_claude_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,2,18-49 yr,anthropic_claude_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,0,18-49 yr,google_gemini_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,0,18-49 yr,google_gemini_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,0,18-49 yr,google_gemini_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,1,18-49 yr,google_gemini_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,1,18-49 yr,google_gemini_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,1,18-49 yr,google_gemini_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,2,18-49 yr,google_gemini_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,2,18-49 yr,google_gemini_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,2,18-49 yr,google_gemini_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,0,18-49 yr,google_gemini_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,0,18-49 yr,google_gemini_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,0,18-49 yr,google_gemini_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,1,18-49 yr,google_gemini_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,1,18-49 yr,google_gemini_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,1,18-49 yr,google_gemini_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,2,18-49 yr,google_gemini_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,2,18-49 yr,google_gemini_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,2,18-49 yr,google_gemini_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,0,18-49 yr,deepseek_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,0,18-49 yr,deepseek_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,0,18-49 yr,deepseek_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,1,18-49 yr,deepseek_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,1,18-49 yr,deepseek_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,1,18-49 yr,deepseek_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,2,18-49 yr,deepseek_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,2,18-49 yr,deepseek_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,2,18-49 yr,deepseek_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,0,18-49 yr,deepseek_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,0,18-49 yr,deepseek_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,0,18-49 yr,deepseek_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,1,18-49 yr,deepseek_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,1,18-49 yr,deepseek_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,1,18-49 yr,deepseek_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,2,18-49 yr,deepseek_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,2,18-49 yr,deepseek_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,2,18-49 yr,deepseek_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,18-49 yr,deterministic_seed_proposer,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,18-49 yr,deterministic_seed_proposer,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,18-49 yr,deterministic_seed_proposer,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,18-49 yr,random_candidate_proposer,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,18-49 yr,random_candidate_proposer,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,18-49 yr,random_candidate_proposer,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,18-49 yr,failure_guided_proposer,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,18-49 yr,failure_guided_proposer,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,18-49 yr,failure_guided_proposer,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,18-49 yr,oracle_reference,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,18-49 yr,oracle_reference,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,18-49 yr,oracle_reference,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,0,50-64 yr,openai_gpt_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,0,50-64 yr,openai_gpt_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,0,50-64 yr,openai_gpt_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,1,50-64 yr,openai_gpt_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,1,50-64 yr,openai_gpt_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,1,50-64 yr,openai_gpt_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,2,50-64 yr,openai_gpt_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,2,50-64 yr,openai_gpt_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,2,50-64 yr,openai_gpt_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,0,50-64 yr,openai_gpt_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,0,50-64 yr,openai_gpt_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,0,50-64 yr,openai_gpt_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,1,50-64 yr,openai_gpt_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,1,50-64 yr,openai_gpt_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,1,50-64 yr,openai_gpt_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,2,50-64 yr,openai_gpt_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,2,50-64 yr,openai_gpt_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,2,50-64 yr,openai_gpt_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,0,50-64 yr,anthropic_claude_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,0,50-64 yr,anthropic_claude_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,0,50-64 yr,anthropic_claude_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,1,50-64 yr,anthropic_claude_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,1,50-64 yr,anthropic_claude_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,1,50-64 yr,anthropic_claude_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,2,50-64 yr,anthropic_claude_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,2,50-64 yr,anthropic_claude_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,2,50-64 yr,anthropic_claude_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,0,50-64 yr,anthropic_claude_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,0,50-64 yr,anthropic_claude_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,0,50-64 yr,anthropic_claude_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,1,50-64 yr,anthropic_claude_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,1,50-64 yr,anthropic_claude_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,1,50-64 yr,anthropic_claude_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,2,50-64 yr,anthropic_claude_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,2,50-64 yr,anthropic_claude_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,2,50-64 yr,anthropic_claude_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,0,50-64 yr,google_gemini_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,0,50-64 yr,google_gemini_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,0,50-64 yr,google_gemini_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,1,50-64 yr,google_gemini_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,1,50-64 yr,google_gemini_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,1,50-64 yr,google_gemini_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,2,50-64 yr,google_gemini_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,2,50-64 yr,google_gemini_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,2,50-64 yr,google_gemini_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,0,50-64 yr,google_gemini_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,0,50-64 yr,google_gemini_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,0,50-64 yr,google_gemini_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,1,50-64 yr,google_gemini_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,1,50-64 yr,google_gemini_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,1,50-64 yr,google_gemini_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,2,50-64 yr,google_gemini_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,2,50-64 yr,google_gemini_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,2,50-64 yr,google_gemini_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,0,50-64 yr,deepseek_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,0,50-64 yr,deepseek_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,0,50-64 yr,deepseek_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,1,50-64 yr,deepseek_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,1,50-64 yr,deepseek_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,1,50-64 yr,deepseek_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,2,50-64 yr,deepseek_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,2,50-64 yr,deepseek_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,2,50-64 yr,deepseek_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,0,50-64 yr,deepseek_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,0,50-64 yr,deepseek_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,0,50-64 yr,deepseek_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,1,50-64 yr,deepseek_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,1,50-64 yr,deepseek_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,1,50-64 yr,deepseek_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,2,50-64 yr,deepseek_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,2,50-64 yr,deepseek_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,2,50-64 yr,deepseek_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,50-64 yr,deterministic_seed_proposer,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,50-64 yr,deterministic_seed_proposer,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,50-64 yr,deterministic_seed_proposer,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,50-64 yr,random_candidate_proposer,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,50-64 yr,random_candidate_proposer,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,50-64 yr,random_candidate_proposer,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,50-64 yr,failure_guided_proposer,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,50-64 yr,failure_guided_proposer,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,50-64 yr,failure_guided_proposer,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,50-64 yr,oracle_reference,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,50-64 yr,oracle_reference,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,50-64 yr,oracle_reference,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,0,>= 65 yr,openai_gpt_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,0,>= 65 yr,openai_gpt_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,0,>= 65 yr,openai_gpt_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,1,>= 65 yr,openai_gpt_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,1,>= 65 yr,openai_gpt_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,1,>= 65 yr,openai_gpt_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,2,>= 65 yr,openai_gpt_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,2,>= 65 yr,openai_gpt_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,2,>= 65 yr,openai_gpt_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,0,>= 65 yr,openai_gpt_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,0,>= 65 yr,openai_gpt_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,0,>= 65 yr,openai_gpt_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,1,>= 65 yr,openai_gpt_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,1,>= 65 yr,openai_gpt_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,1,>= 65 yr,openai_gpt_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,2,>= 65 yr,openai_gpt_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,2,>= 65 yr,openai_gpt_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+openai_gpt,gpt-5.4-mini,2,>= 65 yr,openai_gpt_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,0,>= 65 yr,anthropic_claude_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,0,>= 65 yr,anthropic_claude_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,0,>= 65 yr,anthropic_claude_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,1,>= 65 yr,anthropic_claude_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,1,>= 65 yr,anthropic_claude_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,1,>= 65 yr,anthropic_claude_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,2,>= 65 yr,anthropic_claude_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,2,>= 65 yr,anthropic_claude_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,2,>= 65 yr,anthropic_claude_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,0,>= 65 yr,anthropic_claude_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,0,>= 65 yr,anthropic_claude_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,0,>= 65 yr,anthropic_claude_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,1,>= 65 yr,anthropic_claude_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,1,>= 65 yr,anthropic_claude_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,1,>= 65 yr,anthropic_claude_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,2,>= 65 yr,anthropic_claude_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,2,>= 65 yr,anthropic_claude_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+anthropic_claude,claude-sonnet-4-6,2,>= 65 yr,anthropic_claude_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,0,>= 65 yr,google_gemini_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,0,>= 65 yr,google_gemini_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,0,>= 65 yr,google_gemini_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,1,>= 65 yr,google_gemini_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,1,>= 65 yr,google_gemini_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,1,>= 65 yr,google_gemini_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,2,>= 65 yr,google_gemini_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,2,>= 65 yr,google_gemini_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,2,>= 65 yr,google_gemini_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,0,>= 65 yr,google_gemini_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,0,>= 65 yr,google_gemini_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,0,>= 65 yr,google_gemini_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,1,>= 65 yr,google_gemini_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,1,>= 65 yr,google_gemini_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,1,>= 65 yr,google_gemini_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,2,>= 65 yr,google_gemini_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,2,>= 65 yr,google_gemini_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+google_gemini,gemini-2.5-flash,2,>= 65 yr,google_gemini_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,0,>= 65 yr,deepseek_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,0,>= 65 yr,deepseek_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,0,>= 65 yr,deepseek_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,1,>= 65 yr,deepseek_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,1,>= 65 yr,deepseek_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,1,>= 65 yr,deepseek_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,2,>= 65 yr,deepseek_iterative,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,2,>= 65 yr,deepseek_iterative,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,2,>= 65 yr,deepseek_iterative,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,0,>= 65 yr,deepseek_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,0,>= 65 yr,deepseek_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,0,>= 65 yr,deepseek_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,1,>= 65 yr,deepseek_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,1,>= 65 yr,deepseek_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,1,>= 65 yr,deepseek_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,2,>= 65 yr,deepseek_single_shot,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,2,>= 65 yr,deepseek_single_shot,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deepseek,deepseek-v4-flash,2,>= 65 yr,deepseek_single_shot,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,>= 65 yr,deterministic_seed_proposer,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,>= 65 yr,deterministic_seed_proposer,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,>= 65 yr,deterministic_seed_proposer,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,>= 65 yr,random_candidate_proposer,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,>= 65 yr,random_candidate_proposer,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,>= 65 yr,random_candidate_proposer,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,>= 65 yr,failure_guided_proposer,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,>= 65 yr,failure_guided_proposer,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,>= 65 yr,failure_guided_proposer,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,>= 65 yr,oracle_reference,1,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,>= 65 yr,oracle_reference,2,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
+deterministic_baseline,deterministic,0,>= 65 yr,oracle_reference,3,False,False,False,False,False,False,True,True,True,True,d9d74325ea4070ea
