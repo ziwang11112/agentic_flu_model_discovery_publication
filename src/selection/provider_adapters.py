@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import http.client
 import os
 import re
 import time
@@ -13,6 +14,14 @@ from typing import Any, Protocol
 from src.selection.agent_output_schema import AgentOutputValidationError, validate_agent_output
 from src.selection.proposal_prompts import ProposalAllowlist
 from src.selection.schema import CandidateSpec
+
+
+PROVIDER_TRANSPORT_ERRORS = (
+    urllib.error.URLError,
+    TimeoutError,
+    OSError,
+    http.client.HTTPException,
+)
 
 
 def _extract_json(text: str) -> Any:
@@ -388,9 +397,9 @@ class OpenAIChatAdapter(BaseProviderAdapter):
                     parse_error=_sanitize_http_error(exc),
                     latency_seconds=time.perf_counter() - start,
                 )
-            except (urllib.error.URLError, KeyError, IndexError, TypeError, json.JSONDecodeError) as exc:
+            except (*PROVIDER_TRANSPORT_ERRORS, KeyError, IndexError, TypeError, json.JSONDecodeError) as exc:
                 return ProviderResponse(self.provider_name, model, "request_failed", parse_error=exc.__class__.__name__, latency_seconds=time.perf_counter() - start)
-        except (urllib.error.URLError, KeyError, IndexError, TypeError, json.JSONDecodeError) as exc:
+        except (*PROVIDER_TRANSPORT_ERRORS, KeyError, IndexError, TypeError, json.JSONDecodeError) as exc:
             return ProviderResponse(self.provider_name, model, "request_failed", parse_error=exc.__class__.__name__, latency_seconds=time.perf_counter() - start)
         try:
             message = payload["choices"][0]["message"]
@@ -507,7 +516,7 @@ class AnthropicAdapter(BaseProviderAdapter):
                 parse_error=_sanitize_http_error(exc),
                 latency_seconds=time.perf_counter() - start,
             )
-        except (urllib.error.URLError, KeyError, TypeError, json.JSONDecodeError) as exc:
+        except (*PROVIDER_TRANSPORT_ERRORS, KeyError, TypeError, json.JSONDecodeError) as exc:
             return ProviderResponse(self.provider_name, model, "request_failed", parse_error=exc.__class__.__name__, latency_seconds=time.perf_counter() - start)
         return self._parse_payload(
             text=text,
@@ -576,9 +585,9 @@ class GeminiAdapter(BaseProviderAdapter):
                     parse_error=_sanitize_http_error(exc),
                     latency_seconds=time.perf_counter() - start,
                 )
-            except (urllib.error.URLError, KeyError, IndexError, TypeError, json.JSONDecodeError) as exc:
+            except (*PROVIDER_TRANSPORT_ERRORS, KeyError, IndexError, TypeError, json.JSONDecodeError) as exc:
                 return ProviderResponse(self.provider_name, model, "request_failed", parse_error=exc.__class__.__name__, latency_seconds=time.perf_counter() - start)
-        except (urllib.error.URLError, KeyError, IndexError, TypeError, json.JSONDecodeError) as exc:
+        except (*PROVIDER_TRANSPORT_ERRORS, KeyError, IndexError, TypeError, json.JSONDecodeError) as exc:
             return ProviderResponse(self.provider_name, model, "request_failed", parse_error=exc.__class__.__name__, latency_seconds=time.perf_counter() - start)
         try:
             text = str(payload["candidates"][0]["content"]["parts"][0]["text"])

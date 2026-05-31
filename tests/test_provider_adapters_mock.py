@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import http.client
 from io import BytesIO
 import urllib.error
 from dataclasses import dataclass
@@ -252,3 +253,23 @@ def test_http_error_sanitizer_redacts_account_and_credential_details() -> None:
         fp=BytesIO(b'{"error":{"message":"Your credit balance is too low to access this API."}}'),
     )
     assert _sanitize_http_error(billing) == "HTTPError:400:account_or_billing_unavailable"
+
+
+def test_provider_transport_disconnect_is_recorded_not_raised(monkeypatch) -> None:
+    def fake_urlopen(request, timeout):
+        del request, timeout
+        raise http.client.RemoteDisconnected("closed")
+
+    monkeypatch.setenv("GEMINI_API_KEY", "test-key")
+    monkeypatch.setenv("GEMINI_MODEL", "gemini-test")
+    monkeypatch.setattr("urllib.request.urlopen", fake_urlopen)
+    response = GeminiAdapter().generate_candidates(
+        system_prompt="system",
+        task_payload={"user_prompt": "user"},
+        output_schema=agent_output_schema(AgentTaskType.INITIAL_CANDIDATE_PROPOSAL),
+        provider_config={},
+        allowlist=_allowlist(),
+    )
+
+    assert response.raw_status == "request_failed"
+    assert response.parse_error == "RemoteDisconnected"
