@@ -61,6 +61,10 @@ artifacts_iterative_agent_loop_compact/**
 !artifacts_iterative_agent_loop_compact/*.csv
 !artifacts_iterative_agent_loop_compact/*.json
 !artifacts_iterative_agent_loop_compact/*.jsonl
+!artifacts_provider_iterative_benchmark_compact/
+artifacts_provider_iterative_benchmark_compact/**
+!artifacts_provider_iterative_benchmark_compact/*.csv
+!artifacts_provider_iterative_benchmark_compact/*.json
 
 # Paper build byproducts
 paper_draft/*.aux

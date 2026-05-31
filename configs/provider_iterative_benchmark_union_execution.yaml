@@ -1,0 +1,52 @@
+seed: 42
+scope: provider_iterative_benchmark_union_execution
+
+artifacts:
+  root_dir: artifacts_provider_iterative_benchmark_compact
+
+data:
+  frozen_artifact_root: artifacts_discovery_ablation
+
+provider_settings:
+  providers:
+    - name: openai_gpt
+    - name: anthropic_claude
+    - name: google_gemini
+    - name: deepseek
+
+allow_provider_skip: true
+require_min_real_providers: 2
+
+series:
+  - Overall
+  - 0-4 yr
+  - 18-49 yr
+  - ">=65 yr"
+
+repeats: 3
+rounds: 3
+candidates_per_round: 3
+budgets:
+  - 3
+  - 6
+  - 9
+
+frozen_replay: true
+bounded_execution: true
+execute_union_only: true
+include_baseline_proposers: true
+
+policy:
+  epsilon: 0.01
+
+candidate_allowlist:
+  - last_observed
+  - rolling_mean_4wk
+  - arima_auto_small
+  - deterministic_seir
+  - delayed_observation_seir
+  - constrained_structure_discovery
+  - no_observation_search_discovery
+  - validation_only_structure_selection
+  - random_structure_discovery
+  - exhaustive_structure_discovery
