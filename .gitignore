@@ -20,6 +20,7 @@ venv/
 .codex_*
 *_partial.csv
 *.log
+configs/*.local.yaml
 
 # OS/editor
 .DS_Store
@@ -45,6 +46,16 @@ artifacts_selection_policy_eval_compact/**
 !artifacts_selection_policy_eval_compact/*.json
 !artifacts_selection_policy_eval_compact/*.jsonl
 !artifacts_selection_policy_eval_compact/*.md
+!artifacts_api_candidate_execution_compact/
+artifacts_api_candidate_execution_compact/**
+!artifacts_api_candidate_execution_compact/*.csv
+!artifacts_api_candidate_execution_compact/*.json
+!artifacts_api_candidate_execution_compact/*.jsonl
+!artifacts_real_candidate_execution_compact/
+artifacts_real_candidate_execution_compact/**
+!artifacts_real_candidate_execution_compact/*.csv
+!artifacts_real_candidate_execution_compact/*.json
+!artifacts_real_candidate_execution_compact/*.md
 
 # Paper build byproducts
 paper_draft/*.aux

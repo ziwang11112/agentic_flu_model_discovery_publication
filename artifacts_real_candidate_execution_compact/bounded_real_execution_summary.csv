@@ -1,0 +1,6 @@
+proposer_type,top_epsilon_hit_rate,mean_rolling_score,mean_post_selection_test_mae,mean_budget_to_top_epsilon,candidate_failure_rate,valid_proposal_rate,duplicate_rate,out_of_allowlist_rejection_rate,claim_safety_violation_rate
+deterministic_seed_proposer,1.0,0.09779761904761906,0.1318181818181818,3.0,0.0,1.0,0.0,0.0,0.0
+failure_guided_proposer,1.0,0.09660331365456286,0.1325423141240975,3.0,0.0,1.0,0.0,0.0,0.0
+mock_api_proposer,1.0,0.09779761904761906,0.1318181818181818,3.0,0.0,1.0,0.0,0.0,0.0
+oracle_full_candidate_ranking,1.0,0.09779761904761906,0.1318181818181818,3.0,0.0,1.0,0.0,0.0,0.0
+random_candidate_proposer,0.75,0.11517113095238096,0.1293560606060606,5.25,0.0,1.0,0.0,0.0,0.0

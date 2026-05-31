@@ -1,0 +1,138 @@
+seed: 42
+scope: real_candidate_execution_eval
+
+artifacts:
+  root_dir: artifacts_real_candidate_execution_compact
+
+data:
+  raw_csv: FluSurveillance_Custom_Download_Data.csv
+  frozen_artifact_root: artifacts_discovery_ablation
+  include_age_robustness: true
+  season_mode: pooled
+  seasons: []
+  age_groups:
+    - 0-4 yr
+    - 18-49 yr
+    - Overall
+    - ">= 65 yr"
+
+api:
+  enabled: false
+  use_mock: true
+
+policy:
+  epsilon: 0.01
+
+budgets:
+  - 3
+  - 5
+  - 10
+
+replay_candidate_allowlist:
+  - last_observed
+  - rolling_mean_4wk
+  - arima_auto_small
+  - deterministic_seir
+  - delayed_observation_seir
+  - constrained_structure_discovery
+  - no_observation_search_discovery
+  - validation_only_structure_selection
+  - random_structure_discovery
+  - exhaustive_structure_discovery
+
+execution_candidate_allowlist:
+  - last_observed
+  - rolling_mean_4wk
+  - arima_auto_small
+  - deterministic_seir
+  - delayed_observation_seir
+  - constrained_structure_discovery
+  - no_observation_search_discovery
+  - validation_only_structure_selection
+
+repeated_replay:
+  series:
+    - Overall
+    - 0-4 yr
+    - 18-49 yr
+    - ">=65 yr"
+  repeats: 5
+  proposers:
+    - deterministic_seed_proposer
+    - random_candidate_proposer
+    - failure_guided_proposer
+    - oracle_full_candidate_ranking
+    - real_api_proposer
+
+actual_execution:
+  enabled: true
+  temp_root: .codex_real_candidate_execution_tmp/eval
+  keep_temp_artifacts: false
+  series:
+    - 0-4 yr
+    - 18-49 yr
+    - Overall
+    - ">=65 yr"
+  proposers:
+    - deterministic_seed_proposer
+    - random_candidate_proposer
+    - failure_guided_proposer
+    - mock_api_proposer
+    - oracle_full_candidate_ranking
+
+fitting:
+  n_restarts: 1
+  rolling_n_restarts: 0
+  maxiter: 25
+  negative_penalty: 10000.0
+  mass_penalty: 10000.0
+  prior_weight: 0.001
+  laplace_draws: 10
+  uncertainty_method: bootstrap
+  bootstrap_draws: 6
+  bootstrap_n_restarts: 0
+  calibrate_intervals: false
+  interval_calibration_method: conformal
+  calibration_draws: 4
+  calibration_scale_min: 0.25
+  calibration_scale_max: 1.25
+  calibration_scale_grid_size: 11
+
+uncertainty:
+  conformal:
+    enabled: false
+
+evaluation:
+  horizons:
+    - 1
+    - 2
+
+discovery:
+  beam_width: 2
+  max_rounds: 2
+  patience: 1
+  rolling_horizons:
+    - 1
+  multi_split_blocks: 2
+  random_candidate_budget: 4
+  random_repeats: 1
+  exhaustive_max_candidates: 8
+  allow_truncated_exhaustive: true
+  score_param_weight: 0.01
+  score_compartment_weight: 0.02
+  score_fractional_weight: 0.015
+  score_observation_weight: 0.005
+  score_delay_weight: 0.005
+  score_h_observation_weight: 0.005
+  score_recurrence_weight: 0.01
+  score_stability_weight: 0.2
+  score_multi_split_std_weight: 0.5
+  raw_l2_weight: 0.0005
+  seasonality_l2_weight: 0.005
+  rho_l2_weight: 0.002
+  init_l2_weight: 0.002
+  fractional_alpha_weight: 0.002
+  use_age_prior: true
+  age_prior_simple_bonus: 0.01
+  age_prior_recurrence_bonus: 0.01
+  age_prior_fractional_bonus: 0.005
