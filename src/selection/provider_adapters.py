@@ -112,8 +112,31 @@ def provider_json_schema(output_schema: dict[str, Any], allowlist: ProposalAllow
     required = set(output_schema.get("required", ()))
     is_refinement = "new_candidates" in required
     candidate_key = "new_candidates" if is_refinement else "candidates"
-    summary_key = "refinement_summary" if is_refinement else "selection_notes"
     task_enum = ["evidence_aware_refinement"] if is_refinement else ["initial_candidate_proposal"]
+    if is_refinement:
+        summary_key = "refinement_summary"
+        summary_schema = {
+            "type": "object",
+            "additionalProperties": False,
+            "required": ["what_changed_from_previous_round", "why_these_candidates_now", "claim_boundary"],
+            "properties": {
+                "what_changed_from_previous_round": {"type": "string"},
+                "why_these_candidates_now": {"type": "string"},
+                "claim_boundary": {"type": "string"},
+            },
+        }
+    else:
+        summary_key = "selection_notes"
+        summary_schema = {
+            "type": "object",
+            "additionalProperties": False,
+            "required": ["diversity_strategy", "budget_strategy", "claim_boundary"],
+            "properties": {
+                "diversity_strategy": {"type": "string"},
+                "budget_strategy": {"type": "string"},
+                "claim_boundary": {"type": "string"},
+            },
+        }
     schema = {
         "type": "object",
         "additionalProperties": False,
@@ -128,10 +151,7 @@ def provider_json_schema(output_schema: dict[str, Any], allowlist: ProposalAllow
                 "minItems": 1,
                 "items": _candidate_schema(allowlist),
             },
-            summary_key: {
-                "type": "object",
-                "additionalProperties": {"type": "string"},
-            },
+            summary_key: summary_schema,
         },
     }
     if is_refinement:

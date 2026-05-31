@@ -146,6 +146,9 @@ def test_anthropic_tool_use_response_parses(monkeypatch) -> None:
     tool = captured["body"]["tools"][0]
     assert tool["strict"] is True
     assert "forbidden_extra_fields" not in json.dumps(tool["input_schema"])
+    notes_schema = tool["input_schema"]["properties"]["selection_notes"]
+    assert notes_schema["additionalProperties"] is False
+    assert set(notes_schema["required"]) == {"diversity_strategy", "budget_strategy", "claim_boundary"}
 
 
 def test_gemini_structured_response_parses(monkeypatch) -> None:

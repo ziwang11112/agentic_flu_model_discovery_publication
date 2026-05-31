@@ -1,5 +1,5 @@
 provider_name,model_name,latency_seconds_mean,estimated_cost_usd_total,request_count
-anthropic_claude,claude-sonnet-4-6,0.25222298333688675,0,108
-deepseek,deepseek-v4-flash,10.487773608337632,0,108
-google_gemini,gemini-2.5-flash,0.4842441249994509,0,108
-openai_gpt,gpt-5.4-mini,5.095963920363122,0,108
+anthropic_claude,claude-sonnet-4-6,24.6845453444435,0,108
+deepseek,deepseek-v4-flash,10.772728764813143,0,108
+google_gemini,gemini-2.5-flash,0.6281103944369264,0,108
+openai_gpt,gpt-5.4-mini,5.129424539817221,0,108

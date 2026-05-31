@@ -32,18 +32,18 @@ autonomous-science claim, or real-world mechanism-discovery claim.
 
 | provider_name | model_name | proposer_type | schema_parse_success_rate | valid_proposal_rate | out_of_allowlist_rejection_rate | duplicate_rate | claim_safety_violation_rate | family_diversity | observation_label_diversity | delay_label_diversity | top_epsilon_hit_rate | mean_best_rolling_score |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| anthropic_claude | claude-sonnet-4-6 | anthropic_claude_iterative | 0.0000 |  | 1.0000 |  | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 |  |
-| anthropic_claude | claude-sonnet-4-6 | anthropic_claude_single_shot | 0.0000 |  | 1.0000 |  | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 |  |
-| deepseek | deepseek-v4-flash | deepseek_iterative | 0.9815 | 0.8365 | 0.0185 | 0.1635 | 0.0000 | 2.7222 | 1.7778 | 0.7963 | 0.8148 | 0.0807 |
-| deepseek | deepseek-v4-flash | deepseek_single_shot | 0.9815 | 0.9935 | 0.0556 | 0.0065 | 0.0000 | 3.7778 | 2.5556 | 1.7778 | 0.9444 | 0.0666 |
+| anthropic_claude | claude-sonnet-4-6 | anthropic_claude_iterative | 1.0000 | 0.8025 | 0.0000 | 0.1975 | 0.0000 | 2.5741 | 1.6852 | 0.6852 | 0.7778 | 0.0822 |
+| anthropic_claude | claude-sonnet-4-6 | anthropic_claude_single_shot | 1.0000 | 0.9074 | 0.0000 | 0.0926 | 0.0000 | 4.0000 | 2.5000 | 1.5000 | 0.8333 | 0.0794 |
+| deepseek | deepseek-v4-flash | deepseek_iterative | 1.0000 | 0.8148 | 0.0000 | 0.1852 | 0.0000 | 2.7407 | 1.8333 | 0.8333 | 0.8148 | 0.0801 |
+| deepseek | deepseek-v4-flash | deepseek_single_shot | 0.9630 | 1.0000 | 0.1111 | 0.0000 | 0.0000 | 3.5556 | 2.4444 | 1.7222 | 0.8889 | 0.0674 |
 | deterministic_baseline | deterministic | deterministic_seed_proposer | 1.0000 | 1.0000 | 0.0000 | 0.0000 | 0.0000 | 2.6667 | 1.9444 | 1.0000 | 0.7778 | 0.0813 |
 | deterministic_baseline | deterministic | failure_guided_proposer | 1.0000 | 1.0000 | 0.0000 | 0.0000 | 0.0000 | 2.7222 | 2.0556 | 1.1667 | 0.8333 | 0.0790 |
 | deterministic_baseline | deterministic | oracle_reference | 1.0000 | 1.0000 | 0.0000 | 0.0000 | 0.0000 | 3.0000 | 2.3889 | 1.5000 | 1.0000 | 0.0723 |
 | deterministic_baseline | deterministic | random_candidate_proposer | 1.0000 | 1.0000 | 0.0000 | 0.0000 | 0.0000 | 3.3333 | 2.3889 | 1.6111 | 0.7222 | 0.0829 |
 | google_gemini | gemini-2.5-flash | google_gemini_iterative | 0.0000 |  | 1.0000 |  | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 |  |
 | google_gemini | gemini-2.5-flash | google_gemini_single_shot | 0.0000 |  | 1.0000 |  | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 |  |
-| openai_gpt | gpt-5.4-mini | openai_gpt_iterative | 1.0000 | 0.9444 | 0.0000 | 0.0556 | 0.0000 | 2.6667 | 1.8519 | 0.8704 | 0.7778 | 0.0819 |
-| openai_gpt | gpt-5.4-mini | openai_gpt_single_shot | 1.0000 | 1.0000 | 0.0000 | 0.0000 | 0.0000 | 4.0000 | 2.8333 | 2.0000 | 0.8333 | 0.0768 |
+| openai_gpt | gpt-5.4-mini | openai_gpt_iterative | 1.0000 | 0.9074 | 0.0000 | 0.0926 | 0.0000 | 2.6667 | 1.8148 | 0.8333 | 0.7963 | 0.0814 |
+| openai_gpt | gpt-5.4-mini | openai_gpt_single_shot | 0.9815 | 1.0000 | 0.0526 | 0.0000 | 0.0000 | 4.0000 | 2.7778 | 1.9444 | 0.8889 | 0.0753 |
 
 ## Frozen Replay By Budget
 
@@ -67,24 +67,24 @@ autonomous-science claim, or real-world mechanism-discovery claim.
 | openai_gpt | gpt-5.4-mini | openai_gpt_single_shot | Overall | 2 | 3 | arima_auto_small | 0.0435 | 0.1091 | True | 3.0000 | rolling_mean_mae | posthoc_descriptive_only |
 | openai_gpt | gpt-5.4-mini | openai_gpt_single_shot | Overall | 2 | 6 | arima_auto_small | 0.0435 | 0.1091 | True | 3.0000 | rolling_mean_mae | posthoc_descriptive_only |
 | openai_gpt | gpt-5.4-mini | openai_gpt_single_shot | Overall | 2 | 9 | arima_auto_small | 0.0435 | 0.1091 | True | 3.0000 | rolling_mean_mae | posthoc_descriptive_only |
-| anthropic_claude | claude-sonnet-4-6 | anthropic_claude_iterative | Overall | 0 | 3 |  |  |  | False |  | rolling_mean_mae | posthoc_descriptive_only |
-| anthropic_claude | claude-sonnet-4-6 | anthropic_claude_iterative | Overall | 0 | 6 |  |  |  | False |  | rolling_mean_mae | posthoc_descriptive_only |
-| anthropic_claude | claude-sonnet-4-6 | anthropic_claude_iterative | Overall | 0 | 9 |  |  |  | False |  | rolling_mean_mae | posthoc_descriptive_only |
-| anthropic_claude | claude-sonnet-4-6 | anthropic_claude_iterative | Overall | 1 | 3 |  |  |  | False |  | rolling_mean_mae | posthoc_descriptive_only |
-| anthropic_claude | claude-sonnet-4-6 | anthropic_claude_iterative | Overall | 1 | 6 |  |  |  | False |  | rolling_mean_mae | posthoc_descriptive_only |
-| anthropic_claude | claude-sonnet-4-6 | anthropic_claude_iterative | Overall | 1 | 9 |  |  |  | False |  | rolling_mean_mae | posthoc_descriptive_only |
-| anthropic_claude | claude-sonnet-4-6 | anthropic_claude_iterative | Overall | 2 | 3 |  |  |  | False |  | rolling_mean_mae | posthoc_descriptive_only |
-| anthropic_claude | claude-sonnet-4-6 | anthropic_claude_iterative | Overall | 2 | 6 |  |  |  | False |  | rolling_mean_mae | posthoc_descriptive_only |
-| anthropic_claude | claude-sonnet-4-6 | anthropic_claude_iterative | Overall | 2 | 9 |  |  |  | False |  | rolling_mean_mae | posthoc_descriptive_only |
-| anthropic_claude | claude-sonnet-4-6 | anthropic_claude_single_shot | Overall | 0 | 3 |  |  |  | False |  | rolling_mean_mae | posthoc_descriptive_only |
-| anthropic_claude | claude-sonnet-4-6 | anthropic_claude_single_shot | Overall | 0 | 6 |  |  |  | False |  | rolling_mean_mae | posthoc_descriptive_only |
-| anthropic_claude | claude-sonnet-4-6 | anthropic_claude_single_shot | Overall | 0 | 9 |  |  |  | False |  | rolling_mean_mae | posthoc_descriptive_only |
-| anthropic_claude | claude-sonnet-4-6 | anthropic_claude_single_shot | Overall | 1 | 3 |  |  |  | False |  | rolling_mean_mae | posthoc_descriptive_only |
-| anthropic_claude | claude-sonnet-4-6 | anthropic_claude_single_shot | Overall | 1 | 6 |  |  |  | False |  | rolling_mean_mae | posthoc_descriptive_only |
-| anthropic_claude | claude-sonnet-4-6 | anthropic_claude_single_shot | Overall | 1 | 9 |  |  |  | False |  | rolling_mean_mae | posthoc_descriptive_only |
-| anthropic_claude | claude-sonnet-4-6 | anthropic_claude_single_shot | Overall | 2 | 3 |  |  |  | False |  | rolling_mean_mae | posthoc_descriptive_only |
-| anthropic_claude | claude-sonnet-4-6 | anthropic_claude_single_shot | Overall | 2 | 6 |  |  |  | False |  | rolling_mean_mae | posthoc_descriptive_only |
-| anthropic_claude | claude-sonnet-4-6 | anthropic_claude_single_shot | Overall | 2 | 9 |  |  |  | False |  | rolling_mean_mae | posthoc_descriptive_only |
+| anthropic_claude | claude-sonnet-4-6 | anthropic_claude_iterative | Overall | 0 | 3 | arima_auto_small | 0.0435 | 0.1091 | True | 3.0000 | rolling_mean_mae | posthoc_descriptive_only |
+| anthropic_claude | claude-sonnet-4-6 | anthropic_claude_iterative | Overall | 0 | 6 | arima_auto_small | 0.0435 | 0.1091 | True | 3.0000 | rolling_mean_mae | posthoc_descriptive_only |
+| anthropic_claude | claude-sonnet-4-6 | anthropic_claude_iterative | Overall | 0 | 9 | arima_auto_small | 0.0435 | 0.1091 | True | 3.0000 | rolling_mean_mae | posthoc_descriptive_only |
+| anthropic_claude | claude-sonnet-4-6 | anthropic_claude_iterative | Overall | 1 | 3 | arima_auto_small | 0.0435 | 0.1091 | True | 3.0000 | rolling_mean_mae | posthoc_descriptive_only |
+| anthropic_claude | claude-sonnet-4-6 | anthropic_claude_iterative | Overall | 1 | 6 | arima_auto_small | 0.0435 | 0.1091 | True | 3.0000 | rolling_mean_mae | posthoc_descriptive_only |
+| anthropic_claude | claude-sonnet-4-6 | anthropic_claude_iterative | Overall | 1 | 9 | arima_auto_small | 0.0435 | 0.1091 | True | 3.0000 | rolling_mean_mae | posthoc_descriptive_only |
+| anthropic_claude | claude-sonnet-4-6 | anthropic_claude_iterative | Overall | 2 | 3 | arima_auto_small | 0.0435 | 0.1091 | True | 3.0000 | rolling_mean_mae | posthoc_descriptive_only |
+| anthropic_claude | claude-sonnet-4-6 | anthropic_claude_iterative | Overall | 2 | 6 | arima_auto_small | 0.0435 | 0.1091 | True | 3.0000 | rolling_mean_mae | posthoc_descriptive_only |
+| anthropic_claude | claude-sonnet-4-6 | anthropic_claude_iterative | Overall | 2 | 9 | arima_auto_small | 0.0435 | 0.1091 | True | 3.0000 | rolling_mean_mae | posthoc_descriptive_only |
+| anthropic_claude | claude-sonnet-4-6 | anthropic_claude_single_shot | Overall | 0 | 3 | arima_auto_small | 0.0435 | 0.1091 | True | 3.0000 | rolling_mean_mae | posthoc_descriptive_only |
+| anthropic_claude | claude-sonnet-4-6 | anthropic_claude_single_shot | Overall | 0 | 6 | arima_auto_small | 0.0435 | 0.1091 | True | 3.0000 | rolling_mean_mae | posthoc_descriptive_only |
+| anthropic_claude | claude-sonnet-4-6 | anthropic_claude_single_shot | Overall | 0 | 9 | arima_auto_small | 0.0435 | 0.1091 | True | 3.0000 | rolling_mean_mae | posthoc_descriptive_only |
+| anthropic_claude | claude-sonnet-4-6 | anthropic_claude_single_shot | Overall | 1 | 3 | arima_auto_small | 0.0435 | 0.1091 | True | 3.0000 | rolling_mean_mae | posthoc_descriptive_only |
+| anthropic_claude | claude-sonnet-4-6 | anthropic_claude_single_shot | Overall | 1 | 6 | arima_auto_small | 0.0435 | 0.1091 | True | 3.0000 | rolling_mean_mae | posthoc_descriptive_only |
+| anthropic_claude | claude-sonnet-4-6 | anthropic_claude_single_shot | Overall | 1 | 9 | arima_auto_small | 0.0435 | 0.1091 | True | 3.0000 | rolling_mean_mae | posthoc_descriptive_only |
+| anthropic_claude | claude-sonnet-4-6 | anthropic_claude_single_shot | Overall | 2 | 3 | arima_auto_small | 0.0435 | 0.1091 | True | 3.0000 | rolling_mean_mae | posthoc_descriptive_only |
+| anthropic_claude | claude-sonnet-4-6 | anthropic_claude_single_shot | Overall | 2 | 6 | arima_auto_small | 0.0435 | 0.1091 | True | 3.0000 | rolling_mean_mae | posthoc_descriptive_only |
+| anthropic_claude | claude-sonnet-4-6 | anthropic_claude_single_shot | Overall | 2 | 9 | arima_auto_small | 0.0435 | 0.1091 | True | 3.0000 | rolling_mean_mae | posthoc_descriptive_only |
 
 _Showing 36 of 504 rows._
 
@@ -92,33 +92,33 @@ _Showing 36 of 504 rows._
 
 | provider_name | proposer_type | series_name | between_repeat_jaccard_overlap | selected_model_agreement_rate | repeat_count |
 | --- | --- | --- | --- | --- | --- |
-| openai_gpt | openai_gpt_iterative | Overall | 1.0000 | 1.0000 | 3 |
-| openai_gpt | openai_gpt_single_shot | Overall | 0.8667 | 1.0000 | 3 |
+| openai_gpt | openai_gpt_iterative | Overall | 0.8667 | 1.0000 | 3 |
+| openai_gpt | openai_gpt_single_shot | Overall | 1.0000 | 1.0000 | 3 |
 | anthropic_claude | anthropic_claude_iterative | Overall | 1.0000 | 1.0000 | 3 |
-| anthropic_claude | anthropic_claude_single_shot | Overall | 1.0000 | 1.0000 | 3 |
+| anthropic_claude | anthropic_claude_single_shot | Overall | 0.9259 | 1.0000 | 3 |
 | google_gemini | google_gemini_iterative | Overall | 1.0000 | 1.0000 | 3 |
 | google_gemini | google_gemini_single_shot | Overall | 1.0000 | 1.0000 | 3 |
-| deepseek | deepseek_iterative | Overall | 0.9167 | 1.0000 | 3 |
+| deepseek | deepseek_iterative | Overall | 0.7685 | 1.0000 | 3 |
 | deepseek | deepseek_single_shot | Overall | 0.8667 | 1.0000 | 3 |
 | deterministic_baseline | deterministic_seed_proposer | Overall | 1.0000 | 1.0000 | 1 |
 | deterministic_baseline | random_candidate_proposer | Overall | 1.0000 | 1.0000 | 1 |
 | deterministic_baseline | failure_guided_proposer | Overall | 1.0000 | 1.0000 | 1 |
 | deterministic_baseline | oracle_reference | Overall | 1.0000 | 1.0000 | 1 |
-| openai_gpt | openai_gpt_iterative | 0-4 yr | 0.7889 | 1.0000 | 3 |
+| openai_gpt | openai_gpt_iterative | 0-4 yr | 0.8519 | 1.0000 | 3 |
 | openai_gpt | openai_gpt_single_shot | 0-4 yr | 1.0000 | 1.0000 | 3 |
-| anthropic_claude | anthropic_claude_iterative | 0-4 yr | 1.0000 | 1.0000 | 3 |
+| anthropic_claude | anthropic_claude_iterative | 0-4 yr | 0.9167 | 1.0000 | 3 |
 | anthropic_claude | anthropic_claude_single_shot | 0-4 yr | 1.0000 | 1.0000 | 3 |
 | google_gemini | google_gemini_iterative | 0-4 yr | 1.0000 | 1.0000 | 3 |
 | google_gemini | google_gemini_single_shot | 0-4 yr | 1.0000 | 1.0000 | 3 |
-| deepseek | deepseek_iterative | 0-4 yr | 0.9167 | 1.0000 | 3 |
+| deepseek | deepseek_iterative | 0-4 yr | 1.0000 | 1.0000 | 3 |
 | deepseek | deepseek_single_shot | 0-4 yr | 0.8667 | 1.0000 | 3 |
 | deterministic_baseline | deterministic_seed_proposer | 0-4 yr | 1.0000 | 1.0000 | 1 |
 | deterministic_baseline | random_candidate_proposer | 0-4 yr | 1.0000 | 1.0000 | 1 |
 | deterministic_baseline | failure_guided_proposer | 0-4 yr | 1.0000 | 1.0000 | 1 |
 | deterministic_baseline | oracle_reference | 0-4 yr | 1.0000 | 1.0000 | 1 |
-| openai_gpt | openai_gpt_iterative | 5-17 yr | 0.7889 | 1.0000 | 3 |
+| openai_gpt | openai_gpt_iterative | 5-17 yr | 0.8519 | 1.0000 | 3 |
 | openai_gpt | openai_gpt_single_shot | 5-17 yr | 1.0000 | 1.0000 | 3 |
-| anthropic_claude | anthropic_claude_iterative | 5-17 yr | 1.0000 | 1.0000 | 3 |
+| anthropic_claude | anthropic_claude_iterative | 5-17 yr | 0.9167 | 1.0000 | 3 |
 | anthropic_claude | anthropic_claude_single_shot | 5-17 yr | 1.0000 | 1.0000 | 3 |
 | google_gemini | google_gemini_iterative | 5-17 yr | 1.0000 | 1.0000 | 3 |
 | google_gemini | google_gemini_single_shot | 5-17 yr | 1.0000 | 1.0000 | 3 |
@@ -129,10 +129,10 @@ _Showing 30 of 72 rows._
 
 | provider_name | model_name | latency_seconds_mean | estimated_cost_usd_total | request_count |
 | --- | --- | --- | --- | --- |
-| anthropic_claude | claude-sonnet-4-6 | 0.2522 | 0 | 108 |
-| deepseek | deepseek-v4-flash | 10.4878 | 0 | 108 |
-| google_gemini | gemini-2.5-flash | 0.4842 | 0 | 108 |
-| openai_gpt | gpt-5.4-mini | 5.0960 | 0 | 108 |
+| anthropic_claude | claude-sonnet-4-6 | 24.6845 | 0 | 108 |
+| deepseek | deepseek-v4-flash | 10.7727 | 0 | 108 |
+| google_gemini | gemini-2.5-flash | 0.6281 | 0 | 108 |
+| openai_gpt | gpt-5.4-mini | 5.1294 | 0 | 108 |
 
 ## No-Leakage Audit
 

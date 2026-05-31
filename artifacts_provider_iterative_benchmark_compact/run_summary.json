@@ -8,7 +8,7 @@
     9
   ],
   "by_round_rows": 504,
-  "candidate_rows": 851,
+  "candidate_rows": 1169,
   "candidates_per_round": 3,
   "claim_audit_passed": true,
   "frozen_artifact_root": "artifacts_discovery_ablation",
@@ -19,7 +19,7 @@
   "replay_rows": 504,
   "require_min_real_providers": 2,
   "rounds": 3,
-  "runtime_seconds": 1762.9356181999901,
+  "runtime_seconds": 4451.617789900047,
   "safe_audit_passed": true,
   "selection_metric_source": "rolling_mean_mae",
   "series": [
