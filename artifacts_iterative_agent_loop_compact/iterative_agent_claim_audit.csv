@@ -1,0 +1,13 @@
+series_name,proposer_type,proposal_quality_only,budget_efficiency_only,not_forecasting_performance_claim,not_sota_claim,not_autonomous_science_claim,not_mechanism_recovery_claim,claim_audit_passed
+0-4 yr,mock_api_iterative,True,True,True,True,True,True,True
+0-4 yr,mock_api_single_shot,True,True,True,True,True,True,True
+0-4 yr,failure_guided_proposer,True,True,True,True,True,True,True
+0-4 yr,random_candidate_proposer,True,True,True,True,True,True,True
+0-4 yr,deterministic_seed_proposer,True,True,True,True,True,True,True
+0-4 yr,oracle_reference,True,True,True,True,True,True,True
+18-49 yr,mock_api_iterative,True,True,True,True,True,True,True
+18-49 yr,mock_api_single_shot,True,True,True,True,True,True,True
+18-49 yr,failure_guided_proposer,True,True,True,True,True,True,True
+18-49 yr,random_candidate_proposer,True,True,True,True,True,True,True
+18-49 yr,deterministic_seed_proposer,True,True,True,True,True,True,True
+18-49 yr,oracle_reference,True,True,True,True,True,True,True

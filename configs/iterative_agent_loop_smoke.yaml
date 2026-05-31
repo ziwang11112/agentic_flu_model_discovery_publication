@@ -1,0 +1,43 @@
+seed: 42
+scope: iterative_agent_loop_smoke
+
+artifacts:
+  root_dir: artifacts_iterative_agent_loop_compact
+
+data:
+  frozen_artifact_root: artifacts_discovery_ablation
+
+api:
+  enabled: false
+  use_mock: true
+
+policy:
+  epsilon: 0.01
+
+series:
+  - 0-4 yr
+
+rounds: 2
+candidates_per_round: 2
+budgets:
+  - 2
+  - 4
+replay_only: true
+
+proposers:
+  - mock_api_iterative
+  - mock_api_single_shot
+  - random_candidate_proposer
+  - deterministic_seed_proposer
+
+candidate_allowlist:
+  - last_observed
+  - rolling_mean_4wk
+  - arima_auto_small
+  - deterministic_seir
+  - delayed_observation_seir
+  - constrained_structure_discovery
+  - no_observation_search_discovery
+  - validation_only_structure_selection
+  - random_structure_discovery
+  - exhaustive_structure_discovery

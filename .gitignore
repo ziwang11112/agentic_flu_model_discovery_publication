@@ -56,6 +56,11 @@ artifacts_real_candidate_execution_compact/**
 !artifacts_real_candidate_execution_compact/*.csv
 !artifacts_real_candidate_execution_compact/*.json
 !artifacts_real_candidate_execution_compact/*.md
+!artifacts_iterative_agent_loop_compact/
+artifacts_iterative_agent_loop_compact/**
+!artifacts_iterative_agent_loop_compact/*.csv
+!artifacts_iterative_agent_loop_compact/*.json
+!artifacts_iterative_agent_loop_compact/*.jsonl
 
 # Paper build byproducts
 paper_draft/*.aux
