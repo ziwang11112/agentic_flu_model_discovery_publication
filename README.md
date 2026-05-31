@@ -18,6 +18,7 @@ discovery-ablation evidence package used by the paper draft:
 - compact multi-season robustness appendix
 - synthetic structured recovery validation
 - optional API-assisted structured proposal smoke outputs
+- four-provider verifier-gated structured proposer benchmark
 - paper-ready compact result CSVs
 - paper figures and LaTeX draft
 
@@ -41,6 +42,10 @@ runs, LLM traces, smoke outputs, and large diagnostic artifact roots.
   is not evidence of real-world mechanism recovery.
 - The optional API-assisted proposal smoke is allowlist- and verifier-gated;
   it is proposal-quality evidence, not forecasting-performance evidence.
+- The four-provider proposer benchmark evaluates OpenAI, Claude, Gemini, and
+  DeepSeek after Gemini structured-output integration hardening; it compares
+  proposal validity, diversity, and frozen replay budget efficiency, not
+  provider forecasting superiority.
 - Stage 6 candidate execution/replay evaluates proposal ordering under fixed
   budgets; its real-data layer is frozen replay only and does not refit models.
 - Stage 7 adds bounded real-data candidate execution with compact outputs and

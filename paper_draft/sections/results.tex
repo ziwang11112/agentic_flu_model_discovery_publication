@@ -362,6 +362,76 @@ not new model performance.}
 \label{fig:real-api-replay-stability}
 \end{figure}
 
+\subsection{Cross-provider verifier-gated proposer benchmark}
+
+Stage 9 evaluates four real provider families as structured proposers under
+the same verifier-gated protocol. All four providers enter the comparison
+after Gemini structured-output integration hardening. Table~\ref{tab:provider-stage9}
+reports schema parse success, verifier-valid proposal rate, and frozen replay
+top-epsilon hit rate from
+\texttt{artifacts\_provider\_iterative\_benchmark\_compact/provider\_proposal\_validity.csv}.
+These are proposal-quality and replay budget-efficiency metrics, not
+forecasting-performance results.
+
+\begin{table}[H]
+\centering
+\small
+\caption{Stage 9 cross-provider structured proposer results. All provider
+outputs are JSON or structured-output parsed, allowlisted, verifier-checked,
+and audited before replay. Top-epsilon hit is computed in frozen replay over
+compact summaries.}
+\label{tab:provider-stage9}
+\begin{tabular}{lccc}
+\toprule
+Provider and mode & Schema parse & Valid proposals & Top-epsilon hit \\
+\midrule
+OpenAI iterative & \num{1.0000} & \num{0.9136} & \num{0.7778} \\
+OpenAI single-shot & \num{1.0000} & \num{1.0000} & \num{0.8333} \\
+Claude iterative & \num{1.0000} & \num{0.7901} & \num{0.7407} \\
+Claude single-shot & \num{1.0000} & \num{0.8951} & \num{0.8333} \\
+DeepSeek iterative & \num{1.0000} & \num{0.8519} & \num{0.8333} \\
+DeepSeek single-shot & \num{1.0000} & \num{1.0000} & \num{0.9444} \\
+Gemini iterative & \num{1.0000} & \num{0.7716} & \num{0.7778} \\
+Gemini single-shot & \num{1.0000} & \num{0.9938} & \num{0.8333} \\
+\midrule
+Deterministic seed & \num{1.0000} & \num{1.0000} & \num{0.7778} \\
+Failure-guided & \num{1.0000} & \num{1.0000} & \num{0.8333} \\
+Random & \num{1.0000} & \num{1.0000} & \num{0.7222} \\
+Oracle reference & \num{1.0000} & \num{1.0000} & \num{1.0000} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The stabilized four-provider run shows that the shared protocol can compare
+provider families without allowing any provider to generate executable model
+code or access held-out test evidence. Single-shot modes often match or
+outperform iterative modes in this bounded allowlist setting: DeepSeek
+single-shot reaches top-epsilon hit \num{0.9444}, while OpenAI, Claude, and
+Gemini single-shot each reach \num{0.8333}. Iterative feedback is therefore a
+constrained refinement protocol, but it is not automatically superior when the
+candidate space is small and explicit. Failure-guided deterministic ordering
+remains competitive at \num{0.8333}, random reaches \num{0.7222}, and the
+oracle reference is \num{1.0000}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/fig_provider_validity_diversity.pdf}
+\caption{Stage 9 provider proposal validity and diversity under the shared
+allowlist, verifier, and no-leakage protocol. The figure compares providers
+only as structured candidate proposers; it is not a provider forecasting
+leaderboard.}
+\label{fig:provider-validity-diversity}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/fig_provider_budget_efficiency.pdf}
+\caption{Stage 9 frozen replay budget efficiency for provider and baseline
+proposal orderings. The replay uses compact frozen summaries and supports
+proposal-ordering evidence only, not new forecasting-performance claims.}
+\label{fig:provider-budget-efficiency}
+\end{figure}
+
 \subsection{Compact multi-season robustness check}
 
 We include a compact season-separated appendix over six completed FluSurv-NET

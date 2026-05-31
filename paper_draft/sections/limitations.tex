@@ -90,6 +90,20 @@ proposal-quality smoke test. These results do not imply API autonomy, real
 mechanism discovery, FluSight leaderboard performance, or state-of-the-art
 forecasting performance.
 
+\paragraph{Cross-provider proposer results depend on adapters and schemas.}
+The Stage 9 cross-provider benchmark evaluates OpenAI, Claude, Gemini, and
+DeepSeek as constrained structured proposers, not as forecasting systems,
+clinical decision providers, or autonomous scientific agents. Results depend
+on provider adapters, structured-output schemas, token budgets, prompt
+compaction, and API behavior at the time of the run. Gemini required
+provider-native structured-output integration and compact schema-guided
+prompting before entering the same verifier-gated comparison. The reported
+metrics support proposal-quality and frozen-replay budget-efficiency
+comparisons only; they do not imply provider superiority for forecasting,
+medical recommendations, FluSight performance, real-world mechanism recovery,
+or state-of-the-art results. Iterative feedback is also not automatically
+better than single-shot proposal under a small explicit allowlist.
+
 \paragraph{Synthetic structured recovery is software validation.}
 The final expanded structured recovery sweep uses generic toy time series with
 known direct, lagged, mixture, and proxy observation labels. These tasks help

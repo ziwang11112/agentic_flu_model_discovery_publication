@@ -227,6 +227,32 @@ selection uses rolling evidence only; held-out test MAE is retained only as a
 post-selection descriptive column. The no-leakage audit contains 52 rows and
 all rows pass.
 
+\subsection{Cross-provider verifier-gated proposer benchmark}
+
+Stage 9 evaluates OpenAI/GPT, Anthropic/Claude, Google/Gemini, and DeepSeek
+as constrained structured candidate proposers under the same prompt-task
+protocol, candidate allowlist, verifier, and no-leakage audit. The providers
+receive only series metadata, the explicit candidate allowlist, candidate
+budgets, and non-test verifier or replay feedback. They do not receive
+held-out test metrics, test winners, test ranks, paper recommendations derived
+from test evidence, or post-selection comparisons.
+
+Provider outputs are parsed as JSON or provider-native structured outputs and
+converted into the shared candidate schema before use. The Gemini adapter uses
+a provider-native structured-output path with compact schema-guided prompting
+after integration hardening, so all four provider families enter the same
+verifier-gated comparison. No provider can generate model code, change the
+candidate allowlist, or directly execute forecasts. Every proposed candidate
+is checked by the deterministic allowlist, verifier, no-leakage audit, and
+claim-safety audit before frozen replay.
+
+The committed benchmark covers the six FluSurv-NET series, three repeats,
+three proposal rounds, three candidates per round, and budgets \num{3},
+\num{6}, and \num{9}. It compares iterative and single-shot provider modes
+with deterministic seed, random, failure-guided, and oracle-reference
+orderings. The real-data layer is frozen replay over compact summaries; no new
+real-data model refitting is performed.
+
 \subsection{Numerical diagnostics}
 
 The frozen benchmark retains all model-series rows for transparency, including
