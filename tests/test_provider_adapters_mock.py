@@ -10,6 +10,7 @@ from typing import Any
 import pytest
 
 from src.selection.agent_output_schema import agent_output_schema
+from src.selection.agent_prompt_templates import build_agent_task_prompt, example_initial_context
 from src.selection.agent_prompt_templates import example_initial_output
 from src.selection.agent_tasks import AgentTaskType
 from src.selection.proposal_prompts import proposal_allowlist_from_config
@@ -174,10 +175,11 @@ def test_gemini_structured_response_parses(monkeypatch) -> None:
     )
 
     assert response.schema_parse_success
-    response_format = captured["body"]["generationConfig"]["responseFormat"]
-    assert response_format["text"]["mimeType"] == "application/json"
-    assert "forbidden_extra_fields" not in json.dumps(response_format["text"]["schema"])
-    delay_enum = response_format["text"]["schema"]["properties"]["candidates"]["items"]["properties"]["delay_label"]["enum"]
+    generation_config = captured["body"]["generationConfig"]
+    assert generation_config["responseMimeType"] == "application/json"
+    assert generation_config["maxOutputTokens"] == 8192
+    assert "forbidden_extra_fields" not in json.dumps(generation_config["responseSchema"])
+    delay_enum = generation_config["responseSchema"]["properties"]["candidates"]["items"]["properties"]["delay_label"]["enum"]
     assert "" not in delay_enum
 
 
@@ -206,9 +208,37 @@ def test_gemini_legacy_structured_response_fallback(monkeypatch) -> None:
     )
 
     assert response.schema_parse_success
-    assert "responseFormat" in calls[0]["generationConfig"]
-    assert calls[1]["generationConfig"]["responseMimeType"] == "application/json"
-    assert "additionalProperties" not in json.dumps(calls[1]["generationConfig"]["responseSchema"])
+    assert calls[0]["generationConfig"]["responseMimeType"] == "application/json"
+    assert "responseFormat" in calls[1]["generationConfig"]
+
+
+def test_gemini_prompt_omits_duplicate_schema_when_native_schema_is_used(monkeypatch) -> None:
+    captured: dict[str, Any] = {}
+
+    def fake_urlopen(request, timeout):
+        del timeout
+        captured["body"] = json.loads(request.data.decode("utf-8"))
+        return _FakeHTTPResponse(
+            {"candidates": [{"content": {"parts": [{"text": json.dumps(example_initial_output())}]}}]}
+        )
+
+    prompt = build_agent_task_prompt(AgentTaskType.INITIAL_CANDIDATE_PROPOSAL, context=example_initial_context(), allowlist=_allowlist())
+    assert "output_json_schema" in prompt.user_prompt
+    monkeypatch.setenv("GEMINI_API_KEY", "test-key")
+    monkeypatch.setenv("GEMINI_MODEL", "gemini-test")
+    monkeypatch.setattr("urllib.request.urlopen", fake_urlopen)
+    response = GeminiAdapter().generate_candidates(
+        system_prompt=prompt.system_prompt,
+        task_payload={"user_prompt": prompt.user_prompt},
+        output_schema=agent_output_schema(AgentTaskType.INITIAL_CANDIDATE_PROPOSAL),
+        provider_config={},
+        allowlist=_allowlist(),
+    )
+
+    assert response.schema_parse_success
+    sent_prompt = captured["body"]["contents"][0]["parts"][0]["text"]
+    assert "output_json_schema" not in sent_prompt
+    assert "schema_delivery" in sent_prompt
 
 
 def test_malformed_json_and_out_of_allowlist_rejected() -> None:

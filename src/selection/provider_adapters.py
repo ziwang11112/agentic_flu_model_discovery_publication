@@ -68,6 +68,35 @@ def _max_tokens(provider_config: dict[str, Any], default: int = 3200) -> int:
     return int(provider_config.get("max_tokens", provider_config.get("max_completion_tokens", default)))
 
 
+def _schema_guided_user_prompt(user_prompt: str) -> str:
+    """Remove duplicated schema text when the provider receives a native schema."""
+
+    marker = "{"
+    start = user_prompt.find(marker)
+    if start < 0:
+        return user_prompt
+    try:
+        payload = json.loads(user_prompt[start:])
+    except json.JSONDecodeError:
+        return user_prompt
+    if not isinstance(payload, dict):
+        return user_prompt
+    payload.pop("output_json_schema", None)
+    payload["schema_delivery"] = "Use the provider response schema supplied outside this prompt."
+    payload["brevity_rules"] = [
+        "Keep rationale fields under 12 words.",
+        "Keep expected_failure_mode fields under 10 words.",
+        "Return compact strings only; no markdown or explanatory prose.",
+    ]
+    return "\n".join(
+        [
+            "TASK: Complete the structured candidate-proposal task below.",
+            "Return JSON only using the provider response schema.",
+            json.dumps(payload, indent=2, sort_keys=True),
+        ]
+    )
+
+
 def _candidate_model_values(allowlist: ProposalAllowlist) -> list[str]:
     values: list[str] = []
     for family in allowlist.families:
@@ -550,7 +579,7 @@ class GeminiAdapter(BaseProviderAdapter):
         if settings is None:
             return ProviderResponse(self.provider_name, "", "skipped", parse_error="credentials_or_model_missing")
         api_key, model, endpoint_template = settings
-        user_prompt = str(task_payload.get("user_prompt", json.dumps(task_payload, sort_keys=True)))
+        user_prompt = _schema_guided_user_prompt(str(task_payload.get("user_prompt", json.dumps(task_payload, sort_keys=True))))
         endpoint = endpoint_template.format(model=urllib.parse.quote(model, safe=""))
         separator = "&" if "?" in endpoint else "?"
         endpoint = f"{endpoint}{separator}key={urllib.parse.quote(api_key)}"
@@ -560,8 +589,9 @@ class GeminiAdapter(BaseProviderAdapter):
             "contents": [{"role": "user", "parts": [{"text": user_prompt}]}],
             "generationConfig": {
                 "temperature": float(provider_config.get("temperature", 0.0)),
-                "responseFormat": {"text": {"mimeType": "application/json", "schema": wire_schema}},
-                "maxOutputTokens": _max_tokens(provider_config),
+                "responseMimeType": "application/json",
+                "responseSchema": _gemini_legacy_schema(wire_schema),
+                "maxOutputTokens": _max_tokens(provider_config, default=8192),
             },
         }
         start = time.perf_counter()
@@ -571,9 +601,8 @@ class GeminiAdapter(BaseProviderAdapter):
             legacy_body = dict(body)
             legacy_body["generationConfig"] = {
                 "temperature": float(provider_config.get("temperature", 0.0)),
-                "responseMimeType": "application/json",
-                "responseSchema": _gemini_legacy_schema(wire_schema),
-                "maxOutputTokens": _max_tokens(provider_config),
+                "responseFormat": {"text": {"mimeType": "application/json", "schema": wire_schema}},
+                "maxOutputTokens": _max_tokens(provider_config, default=8192),
             }
             try:
                 payload, request_id = self._post_gemini(endpoint, legacy_body, provider_config)
