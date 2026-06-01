@@ -18,7 +18,7 @@
   detect-all=true
 }
 
-\title{Verifier-Gated Evidence-Aware Model Selection\\for Partially Observed Influenza Forecasting}
+\title{Verifier-Gated Cross-Family Model Selection\\Under Partial Observation}
 \author{}
 \date{\today}
 
@@ -27,24 +27,27 @@
 \maketitle
 
 \begin{abstract}
-Partially observed forecasting requires choosing among simple statistical
-baselines, hand-specified mechanistic models, structured search candidates,
-and ablations without leaking held-out evidence or overstating what the
-results support. We present a verifier-gated, evidence-aware, cross-family
-model-selection framework that represents proposals as structured candidate
-records, checks them with hard allowlist and no-leakage rules, applies
-interchangeable policies, and audits claim boundaries. The framework studies
-agreement and disagreement across model families, proposers, policies, and
-evidence modes. Synthetic structured recovery tests validate observation-label
-and delay-label selection logic; candidate-budget replay and bounded execution
-evaluate proposal ordering; and a four-provider benchmark compares OpenAI,
-Claude, Gemini, and DeepSeek only as constrained structured proposers.
-FluSurv-NET hospitalization forecasting is the real-data case study. The
+Partial observation makes forecasting model recommendation difficult: a series
+may favor simple statistical baselines, hand-specified mechanistic models,
+structured search candidates, or ablations depending on how the observed
+quantity relates to latent dynamics. We present a verifier-gated, evidence-aware
+cross-family model-selection framework that represents proposals as structured
+candidate records, checks them with allowlist and no-leakage guards, selects
+with interchangeable policies, and audits claim boundaries. The language-model
+component, when used, is a constrained agentic proposer protocol: providers
+receive task schemas, non-test context, verifier feedback, and JSON output
+requirements, but cannot generate executable model code or access held-out test
+metrics. We validate the framework with synthetic structured recovery tasks for
+observation-label and delay-label recovery, candidate-budget execution and
+frozen/bounded real-data replay, and a four-provider proposer benchmark over
+OpenAI, Claude, Gemini, and DeepSeek under the same verifier protocol.
+FluSurv-NET hospitalization forecasting serves as the real-data case study. The
 evidence supports age-aware and objective-aware recommendation rather than a
-single global winner, with the strongest observation-aware discovery signal in
-the pediatric \texttt{0-4 yr} series and mixed multi-season robustness. The
-paper does not claim state-of-the-art forecasting, autonomous science, or
-real-world mechanism recovery.
+single global winner: the strongest observation-aware discovery signal appears
+for pediatric \texttt{0-4 yr}, while adult strata often favor simpler baselines
+and multi-season robustness is mixed. The paper does not claim
+state-of-the-art forecasting, autonomous science, or real-world mechanism
+recovery.
 \end{abstract}
 
 \tableofcontents
