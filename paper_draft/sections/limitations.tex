@@ -68,31 +68,28 @@ is a software check for policy logic rather than evidence of real-world
 mechanism discovery.
 
 \paragraph{Candidate execution replay is budget-efficiency evidence only.}
-The Stage 6 candidate-execution evaluation supports proposal ordering and
-candidate-budget efficiency claims only. Its synthetic layer uses generic toy
-time-series tasks. Its real-data layer is frozen replay over compact summary
-rows and does not perform new forecasting experiments or real-data model
-refitting. Test metrics in the replay tables are post-hoc descriptive only.
-The API path is disabled in the committed Stage 6 evaluation, so real API
-evidence remains limited to proposal-quality smoke testing. These results
+The candidate-execution and replay evaluations support proposal ordering and
+candidate-budget efficiency claims only. The synthetic layer uses generic toy
+time-series tasks. The real-data replay layer uses compact summary rows and
+does not perform new forecasting experiments or real-data model refitting.
+Test metrics in replay tables are post-hoc descriptive only. These results
 should not be described as improved forecasting performance, autonomous
 science, or real-world mechanism recovery.
 
 \paragraph{Bounded real candidate execution is not an operational benchmark.}
-The Stage 7 bounded execution evaluation uses reduced fitting and search
-budgets, a small set of selected series, and an explicit allowlist of
-repository models. It is useful for testing whether verifier-gated proposal
-ordering reaches good candidates under fixed budgets, but it is not a
-prospective or operational forecasting benchmark. Real API access is disabled
-in the committed Stage 7 evaluation; the \texttt{mock\_api\_proposer} is a
-structured stand-in, while real API evidence remains limited to the earlier
-proposal-quality smoke test. These results do not imply API autonomy, real
-mechanism discovery, FluSight leaderboard performance, or state-of-the-art
-forecasting performance.
+The bounded execution evaluation uses reduced fitting and search budgets, a
+small set of selected series, and an explicit allowlist of repository models.
+It is useful for testing whether verifier-gated proposal ordering reaches good
+candidates under fixed budgets, but it is not a prospective or operational
+forecasting benchmark. The committed bounded execution uses a
+\texttt{mock\_api\_proposer}; real API evidence is evaluated separately as
+proposal-quality and frozen-replay evidence. These results do not imply API
+autonomy, real mechanism discovery, FluSight leaderboard performance, or
+state-of-the-art forecasting performance.
 
 \paragraph{Cross-provider proposer results depend on adapters and schemas.}
-The Stage 9 cross-provider benchmark evaluates OpenAI, Claude, Gemini, and
-DeepSeek as constrained structured proposers, not as forecasting systems,
+The cross-provider benchmark evaluates OpenAI, Claude, Gemini, and DeepSeek as
+constrained structured proposers, not as forecasting systems,
 clinical decision providers, or autonomous scientific agents. Results depend
 on provider adapters, structured-output schemas, token budgets, prompt
 compaction, and API behavior at the time of the run. Gemini required

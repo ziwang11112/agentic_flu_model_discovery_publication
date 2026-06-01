@@ -1,29 +1,243 @@
 \section{Results}
 
-\subsection{Main empirical takeaway}
+\subsection{Overview}
 
-The frozen discovery-ablation package does not support a claim that one model
-dominates every stratum. Instead, it supports a more conservative and more
-useful conclusion: model choice is age-dependent and objective-dependent.
-Observation-aware constrained discovery is most compelling for the pediatric
-\texttt{0-4 yr} series, while adult strata often favor simple forecasting
-baselines or hand-specified epidemic models.
+The results answer five questions about credible recommendation under partial
+observation. RQ1 asks whether verifier and claim-boundary checks prevent
+leakage-prone or claim-unsafe evidence from supporting recommendations. RQ2
+tests whether the selection logic can recover known observation and delay
+labels in controlled structured time-series tasks. RQ3 evaluates whether
+candidate orderings reach useful candidates under fixed budgets in synthetic
+execution, frozen replay, and bounded real-data execution. RQ4 compares real
+LLM provider families only as constrained structured proposers. RQ5 returns to
+the FluSurv-NET case study and asks what the evidence supports about
+age-specific, objective-specific model recommendation.
 
-\subsection{No single global winner}
+\subsection{RQ1: Verifier and claim-boundary auditing}
 
-Table~\ref{tab:frozen-recommendations} summarizes the paper-ready
-recommendation table derived from
-\texttt{artifacts\_discovery\_ablation/paper\_recommendation\_table.csv}. The
-table reports both held-out test and rolling-origin winners because these
-objectives do not always agree.
+The offline verifier rejects the full negative set of malformed or unsafe
+records, giving rejection rate \num{1.0}. Rejected cases include missing
+required fields, duplicate candidate identifiers, absolute artifact paths,
+selection evidence that incorrectly includes held-out test metrics,
+numerically flagged rows used as positive evidence, and invalid observation or
+delay labels. The same audit labels the frozen evidence as supporting no
+single global winner, group-specific signals, simple-baseline competitiveness,
+post-hoc comparisons not being selection evidence, and flagged numerical rows
+being descriptive only.
+
+The claim-boundary auditor rejects global-winner, state-of-the-art,
+flagged-row-positive, autonomous-science, and real-world mechanism-recovery
+claims. Held-out test metrics appear only as post-hoc descriptive fields after
+selection. This first result is a software and evidence-provenance result: it
+does not improve forecasts by itself, but it determines which downstream
+recommendations are admissible.
+
+The optional API-assisted proposal smoke test is consistent with this
+boundary. It produced 10 allowlisted candidate records with verifier validity
+\num{1.0}, duplicate rate \num{0.0}, four model-family categories, two
+observation-label categories, and no claim-safety violations. The smoke test
+is proposal-quality evidence only: API outputs are parsed as JSON,
+allowlisted, and verifier-checked before use, and no API output generates or
+executes model code.
+
+\subsection{RQ2: Synthetic structured recovery}
+
+The expanded synthetic structured recovery sweep evaluates controlled
+structured time-series tasks with known direct, lagged, mixture, and proxy
+observation labels. It uses 100 seeds, five noise levels, five candidate
+budgets, and \num{75000} policy-condition rows before aggregation. These tasks
+are generic software validation for observation-label and delay-label
+selection logic; they are not real-world mechanism-discovery evidence.
+
+In the full sweep, \texttt{pareto\_epsilon} recovers the observation label at
+rate \num{0.7429}, the delay label at rate \num{0.7470}, and reaches
+top-epsilon hit rate \num{0.8504}. The random-label baseline has
+observation-label recovery \num{0.2597}, while the no-observation-label
+baseline has observation-label recovery \num{0.2000}. At noise level
+\num{0.10}, \texttt{pareto\_epsilon} observation-label recovery remains
+\num{0.6800}. Its budget curve rises from \num{0.5720} at budget \num{3} to
+\num{0.8356} at budget \num{10} and remains at that level for larger budgets.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.92\textwidth]{figures/fig_synthetic_recovery_full_policy_comparison.pdf}
+\caption{Expanded synthetic structured recovery over generic time-series toy
+tasks. The figure summarizes observation-label, delay-label, and top-epsilon
+hit rates for deterministic selection policies and baselines. These tasks are
+software validation for selection logic, not evidence of real-world mechanism
+recovery.}
+\label{fig:synthetic-recovery-full-policy}
+\end{figure}
+
+Pareto-epsilon and deterministic seed policies substantially outperform random
+and observation-fixed baselines, but Pareto is not universally best. The
+deterministic seed proposer has observation-label recovery \num{0.8257},
+higher than \texttt{pareto\_epsilon} in this controlled sweep. The strongest
+synthetic evidence is in \texttt{lagged\_signal\_1} and
+\texttt{lagged\_signal\_2}, where policies that can choose lagged observation
+labels outperform the no-observation-label baseline. Mixture and proxy tasks
+remain harder.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/fig_synthetic_recovery_full_noise_budget.pdf}
+\caption{Noise and budget sensitivity in the expanded synthetic structured
+recovery sweep. The curves show observation-label recovery under increasing
+noise and candidate budget. This is a local software check over generic toy
+tasks and is not used as a real-data forecasting-performance result.}
+\label{fig:synthetic-recovery-full-noise-budget}
+\end{figure}
+
+\subsection{RQ3: Candidate-budget execution and bounded real-data execution}
+
+Candidate-budget evaluation asks whether proposer orderings expose useful
+candidates quickly. In synthetic execution, the mock API proposer has
+observation-label recovery \num{0.9313}, delay-label recovery \num{0.9190},
+and top-epsilon hit rate \num{1.0000}. The failure-guided proposer is similar
+(\num{0.9233}, \num{0.9113}, and \num{1.0000}). The deterministic seed
+proposer reaches \num{0.7863} observation recovery, \num{0.7278} delay
+recovery, and \num{0.8453} top-epsilon hit rate; the random candidate proposer
+is competitive at \num{0.8208}, \num{0.7943}, and \num{0.9045}. The
+no-observation-label baseline remains much weaker, with observation recovery
+\num{0.2000}, delay recovery \num{0.4000}, and top-epsilon hit rate
+\num{0.3210}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.92\textwidth]{figures/fig_api_synthetic_recovery_comparison.pdf}
+\caption{Candidate execution over generic structured time-series toy tasks.
+The mock API proposer and failure-guided proposer reach high label recovery
+and top-epsilon rates under fixed budgets, while the observation-fixed
+baseline remains weaker. This supports proposal-ordering and budget-efficiency
+claims only.}
+\label{fig:api-synthetic-recovery-comparison}
+\end{figure}
+
+Frozen real-data replay uses compact summary rows without refitting models.
+In this replay, the mock API proposer reaches top-epsilon rate \num{1.0000}
+with mean rolling score \num{0.0851}. The oracle ranking also has
+top-epsilon rate \num{1.0000}, with mean rolling score \num{0.0830}. The
+random candidate proposer reaches \num{0.8125} and \num{0.0925}; the
+deterministic seed proposer reaches \num{0.7500} and \num{0.0949}. The prompt
+audit has 46 rows and all pass; held-out test MAE is post-hoc descriptive
+only.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/fig_api_candidate_execution_budget.pdf}
+\caption{Budget curves for synthetic execution and frozen real-data replay.
+The real-data replay layer uses existing compact summary rows and performs no
+model refitting. Random ordering is competitive in some settings, so the
+supported claim is reliability and candidate-budget efficiency under the
+verifier, not universal dominance.}
+\label{fig:api-candidate-execution-budget}
+\end{figure}
+
+The bounded real-data execution layer executes allowlisted candidate models on
+\texttt{0-4 yr}, \texttt{18-49 yr}, \texttt{Overall}, and \texttt{>=65 yr}
+using reduced fitting and search budgets. It required 32 unique real-data
+model executions. The deterministic seed proposer, failure-guided proposer,
+mock API proposer, and oracle reference each reach top-epsilon hit rate
+\num{1.00}; the random proposer reaches \num{0.75}. Mean rolling scores are
+\num{0.0978} for deterministic seed, \num{0.0966} for failure-guided,
+\num{0.0978} for mock API, \num{0.0978} for oracle reference, and
+\num{0.1152} for random ordering. The no-leakage audit contains 52 rows and
+all pass; test metrics remain post-hoc descriptive only.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/fig_bounded_real_execution_budget.pdf}
+\caption{Bounded real-data candidate execution under fixed candidate budgets.
+Candidate ordering is evaluated after executing only allowlisted repository
+models. The figure summarizes budget-efficiency evidence; it is not an
+operational forecasting benchmark and does not support a state-of-the-art
+claim.}
+\label{fig:bounded-real-execution-budget}
+\end{figure}
+
+\subsection{RQ4: Cross-provider constrained proposer benchmark}
+
+The cross-provider benchmark evaluates OpenAI/GPT, Anthropic/Claude,
+Google/Gemini, and DeepSeek as structured candidate proposers under the same
+prompt-task protocol, allowlist, verifier, and no-leakage audit. All four
+providers enter the comparison after Gemini structured-output integration
+hardening. Table~\ref{tab:provider-stage9} reports schema parse success,
+verifier-valid proposal rate, and frozen replay top-epsilon hit rate. These
+are proposal-quality and replay budget-efficiency metrics, not
+forecasting-performance results.
+
+\begin{table}[H]
+\centering
+\small
+\caption{Cross-provider structured proposer results. All provider outputs are
+JSON or structured-output parsed, allowlisted, verifier-checked, and audited
+before replay. Top-epsilon hit is computed in frozen replay over compact
+summaries.}
+\label{tab:provider-stage9}
+\begin{tabular}{lccc}
+\toprule
+Provider and mode & Schema parse & Valid proposals & Top-epsilon hit \\
+\midrule
+OpenAI iterative & \num{1.0000} & \num{0.9136} & \num{0.7778} \\
+OpenAI single-shot & \num{1.0000} & \num{1.0000} & \num{0.8333} \\
+Claude iterative & \num{1.0000} & \num{0.7901} & \num{0.7407} \\
+Claude single-shot & \num{1.0000} & \num{0.8951} & \num{0.8333} \\
+DeepSeek iterative & \num{1.0000} & \num{0.8519} & \num{0.8333} \\
+DeepSeek single-shot & \num{1.0000} & \num{1.0000} & \num{0.9444} \\
+Gemini iterative & \num{1.0000} & \num{0.7716} & \num{0.7778} \\
+Gemini single-shot & \num{1.0000} & \num{0.9938} & \num{0.8333} \\
+\midrule
+Deterministic seed & \num{1.0000} & \num{1.0000} & \num{0.7778} \\
+Failure-guided & \num{1.0000} & \num{1.0000} & \num{0.8333} \\
+Random & \num{1.0000} & \num{1.0000} & \num{0.7222} \\
+Oracle reference & \num{1.0000} & \num{1.0000} & \num{1.0000} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The stabilized four-provider run shows that the same constrained protocol can
+compare provider families without giving any provider access to held-out test
+evidence or executable model-code pathways. Single-shot modes often match or
+outperform iterative modes in this bounded allowlist setting: DeepSeek
+single-shot reaches top-epsilon hit \num{0.9444}, while OpenAI, Claude, and
+Gemini single-shot each reach \num{0.8333}. Iterative feedback is therefore a
+constrained refinement protocol, but it is not automatically superior when the
+candidate space is small and explicit. Failure-guided deterministic ordering
+remains competitive at \num{0.8333}, random reaches \num{0.7222}, and the
+oracle reference is \num{1.0000}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/fig_provider_validity_diversity.pdf}
+\caption{Provider proposal validity and diversity under the shared allowlist,
+verifier, and no-leakage protocol. The figure compares providers only as
+structured candidate proposers; it is not a provider forecasting leaderboard.}
+\label{fig:provider-validity-diversity}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/fig_provider_budget_efficiency.pdf}
+\caption{Frozen replay budget efficiency for provider and baseline proposal
+orderings. The replay uses compact frozen summaries and supports
+proposal-ordering evidence only, not new forecasting-performance claims.}
+\label{fig:provider-budget-efficiency}
+\end{figure}
+
+\subsection{RQ5: FluSurv-NET case study and multi-season robustness}
+
+The FluSurv-NET case study supports age-aware and objective-aware
+recommendation rather than a single global winner. Table~\ref{tab:frozen-recommendations}
+summarizes the frozen recommendation table derived from
+\texttt{artifacts\_discovery\_ablation/paper\_recommendation\_table.csv}.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figures/fig1_recommendation_map.pdf}
 \caption{Age- and objective-aware model recommendations from the frozen
 discovery-ablation run. Different age strata favor different model families
-and different evaluation objectives. The figure therefore supports
-objective-aware recommendation rather than a single global winner claim.}
+and different evaluation objectives. The figure supports objective-aware
+recommendation rather than a single global winner claim.}
 \label{fig:recommendation-map}
 \end{figure}
 
@@ -64,53 +278,22 @@ stability preferred & \texttt{fractional\_seir} &
 \end{tabularx}
 \end{table}
 
-As an unfiltered descriptive average across the six frozen series,
-\texttt{constrained\_structure\_discovery} has the lowest mean test MAE
-(\num{0.0561}), followed closely by
-\texttt{validation\_only\_structure\_selection} (\num{0.0562}). This aggregate
-is not used as a global-win claim because some rows are numerically flagged
-and because series-level winners differ. For example, the \texttt{Overall}
-held-out split favors \texttt{delayed\_observation\_seir}, while
-\texttt{18-49 yr} favors \texttt{arima\_auto\_small} under both test and
-rolling-origin metrics.
-
-\subsection{Pediatric 0-4 yr is the strongest positive discovery finding}
-
-The clearest positive discovery result is the pediatric \texttt{0-4 yr}
-series. The benchmark recommends
+The clearest positive observation-aware discovery result is the pediatric
+\texttt{0-4 yr} series. The benchmark recommends
 \texttt{constrained\_structure\_discovery} as the stability-preferred model,
-and the rolling-origin winner is also
-\texttt{constrained\_structure\_discovery}. The selected structure is
-\texttt{SEIRS} with a delayed infectious observation map
-\texttt{delayed\_I} and delay 1.
-
-This is the strongest setting for the observation-aware discovery story
-because the selected delayed-observation structure is not merely a more complex
-variant of a manual SEIR baseline: it is selected by the constrained grammar
-and remains favorable under rolling-origin evaluation. The paired
-rolling-origin comparison further supports this interpretation. Against the
-observation-fixed ablation, constrained discovery reduces rolling absolute
-error by \num{0.0564} on average for \texttt{0-4 yr}, with a bootstrap
-95\% confidence interval from \num{0.0173} to \num{0.1082}.
-
-\subsection{Observation-search ablation evidence}
-
-Figure~\ref{fig:observation-search-impact} and
-Table~\ref{tab:observation-search-impact} compare
-\texttt{constrained\_structure\_discovery} with
-\texttt{no\_observation\_search\_discovery}. Positive deltas mean the
-observation-fixed ablation has higher error, so constrained discovery is
-better. The full table is
-\texttt{artifacts\_discovery\_ablation/observation\_search\_impact\_table.csv}.
+and the rolling-origin winner is also constrained discovery. The selected
+structure is \texttt{SEIRS} with delayed infectious observation
+\texttt{delayed\_I} and delay 1. Against the observation-fixed ablation,
+constrained discovery reduces rolling absolute error by \num{0.0564} on
+average for \texttt{0-4 yr}, with a bootstrap 95\% confidence interval from
+\num{0.0173} to \num{0.1082}.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.98\textwidth]{figures/fig2_observation_search_impact.pdf}
 \caption{Impact of observation-map search. Positive values mean that the
 observation-fixed ablation has higher error than constrained discovery. The
-clearest positive signal is in the pediatric strata, especially
-\texttt{0-4 yr}, where observation-aware constrained discovery selects a
-delayed infectious observation map and improves rolling-origin stability.}
+clearest positive signal is in pediatric strata, especially \texttt{0-4 yr}.}
 \label{fig:observation-search-impact}
 \end{figure}
 
@@ -136,325 +319,37 @@ Overall & \num{0.0333} & \num{0.0100} & \texttt{I} & \texttt{I} \\
 \end{tabular}
 \end{table}
 
-The observation-search effect is therefore not uniform. In several adult
-series, both constrained and fixed-observation searches select \texttt{I},
-producing little or no difference. In pediatric strata, especially
-\texttt{0-4 yr}, allowing the search to choose delayed infectious observation
-materially improves rolling-origin stability.
-
-\subsection{Adult strata remain competitive for simple and manual baselines}
-
-The adult groups are important negative evidence against overclaiming. The
-\texttt{18-49 yr} series is best served by \texttt{arima\_auto\_small} in both
-the held-out test split and rolling-origin evaluation. In paired rolling-origin
-comparison, \texttt{arima\_auto\_small} has lower rolling absolute error than
-constrained discovery for \texttt{18-49 yr}, with mean difference
-\num{-0.0487} and a 95\% interval from \num{-0.0641} to \num{-0.0323}. On the
-\texttt{Overall} series, \texttt{arima\_auto\_small} is also stronger by
-rolling-origin MAE, while \texttt{delayed\_observation\_seir} is the best
-held-out test model.
-
-These results are useful because they show that the benchmark is not tuned to
-force a discovery win. The discovery machinery identifies useful structure in
-selected strata, but it also exposes cases where simple forecasting or manual
-epidemic baselines are sufficient.
+Adult strata are important negative evidence against overclaiming. The
+\texttt{18-49 yr} series is best served by \texttt{arima\_auto\_small} in
+both the held-out test split and rolling-origin evaluation. In paired
+rolling-origin comparison, \texttt{arima\_auto\_small} has lower rolling
+absolute error than constrained discovery for \texttt{18-49 yr}, with mean
+difference \num{-0.0487} and a 95\% interval from \num{-0.0641} to
+\num{-0.0323}. The \texttt{Overall}, \texttt{50-64 yr}, and
+\texttt{>= 65 yr} strata also illustrate objective dependence: fixed test and
+rolling-origin winners do not always agree.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figures/fig4_paired_rolling_forest.pdf}
 \caption{Post-hoc paired rolling-origin comparisons against constrained
-discovery. Points show the mean rolling absolute-error difference
-(\emph{challenger minus constrained discovery}) and intervals show bootstrap
-95\% confidence intervals after aligning forecasts by series, horizon, and
-target week. Positive values favor constrained discovery; negative values
-favor the challenger. These comparisons summarize evidence after model
-selection and are not used for model selection.}
+discovery. Positive values favor constrained discovery; negative values favor
+the challenger. These comparisons summarize evidence after model selection
+and are not used for model selection.}
 \label{fig:paired-rolling-forest}
 \end{figure}
 
-\subsection{Objective-dependent recommendations}
-
-Several series have different test and rolling winners. The \texttt{50-64 yr}
-series has \texttt{validation\_only\_structure\_selection} as the best test
-model, but \texttt{delayed\_observation\_seir} as the best rolling-origin
-model. The \texttt{>= 65 yr} series has \texttt{fractional\_seir} as the best
-test model and \texttt{validation\_only\_structure\_selection} as the best
-rolling model. The \texttt{Overall} series similarly splits between
-\texttt{delayed\_observation\_seir} on test MAE and
-\texttt{arima\_auto\_small} on rolling-origin MAE.
-
-The appropriate paper claim is therefore objective-aware and age-aware:
-recommendations should state whether the priority is a fixed held-out split,
-rolling-origin stability, or interpretability. The frozen artifacts support
-this policy framing more strongly than a single leaderboard winner.
-
-\subsection{Offline verifier and selection-policy audit}
-
-The offline selection-policy audit provides a software check on the frozen
-summary evidence rather than a new forecasting result. The verifier negative
-set has rejection rate \num{1.0}, rejecting malformed candidate records,
-duplicate identifiers, absolute artifact paths, test metrics used as
-selection evidence, numerically flagged rows used as positive evidence, and
-invalid observation or delay labels. The claim-boundary audit labels the
-evidence as supporting no single global winner and group-specific signals,
-while rejecting global-winner, state-of-the-art, and flagged-row-positive
-claims. Budgeted replay is descriptive over frozen compact rows only:
-held-out test MAE is carried only as a post-hoc descriptive column and is not
-used by the policies. The toy observation-label recovery task is a generic
-software check over simple numerical time series, not evidence of real-world
-mechanism recovery.
-
-The optional API-assisted proposal smoke test evaluates proposal quality only.
-In that smoke run, the structured proposer produced 10 allowlisted candidate
-records with verifier validity \num{1.0}, duplicate rate \num{0.0}, four
-model-family categories, two observation-label categories, and no
-claim-safety violations. These records were parsed as JSON and checked by the
-same verifier before use. They were not executed as model code, did not run
-new forecasts, and should not be interpreted as forecasting-performance
-evidence.
-
-\subsection{Synthetic structured recovery}
-
-The expanded synthetic structured recovery sweep is the final synthetic
-validation result. It evaluates whether the offline policy layer can recover
-known labels in controlled structured time-series toy tasks over 100 seeds,
-five noise levels, and five candidate budgets. This is not a new real-data
-forecasting experiment and is not mechanism-discovery evidence. In the full
-sweep, \texttt{pareto\_epsilon} recovers the observation label at rate
-\num{0.7429}, the delay label at rate \num{0.7470}, and reaches a
-top-epsilon hit rate of \num{0.8504}. The corresponding random-label baseline
-has observation-label recovery \num{0.2597}, while the
-no-observation-label baseline has observation-label recovery \num{0.2000}.
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.92\textwidth]{figures/fig_synthetic_recovery_full_policy_comparison.pdf}
-\caption{Expanded synthetic structured recovery over generic time-series toy
-tasks. The figure summarizes observation-label, delay-label, and top-epsilon
-hit rates for deterministic selection policies and baselines. These tasks are
-software validation for selection logic, not evidence of real-world mechanism
-recovery.}
-\label{fig:synthetic-recovery-full-policy}
-\end{figure}
-
-Pareto-epsilon and deterministic seed policies substantially outperform random
-and observation-fixed baselines; Pareto is not universally best. The
-deterministic seed proposer has observation-label recovery \num{0.8257},
-higher than \texttt{pareto\_epsilon} in this controlled sweep. At noise level
-\num{0.10}, \texttt{pareto\_epsilon} observation-label recovery remains
-\num{0.6800}. Its budget curve rises from \num{0.5720} at budget \num{3} to
-\num{0.8356} at budget \num{10} and remains at that level for larger budgets.
-The strongest synthetic evidence is in the lagged tasks
-\texttt{lagged\_signal\_1} and \texttt{lagged\_signal\_2}, where policies
-that can choose lagged observation labels outperform the no-observation-label
-baseline. Mixture and proxy tasks remain harder, especially for the hard-veto
-decision tree and weighted scoring variants.
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth]{figures/fig_synthetic_recovery_full_noise_budget.pdf}
-\caption{Noise and budget sensitivity in the expanded synthetic structured
-recovery sweep. The curves show observation-label recovery under increasing
-noise and candidate budget. This is a local software check over generic toy
-tasks and is not used as a real-data forecasting-performance result.}
-\label{fig:synthetic-recovery-full-noise-budget}
-\end{figure}
-
-\subsection{Candidate execution and frozen replay}
-
-The Stage 6 candidate-execution evaluation tests proposal ordering under fixed
-candidate budgets. It contains \num{24000} synthetic execution rows and
-\num{64} frozen real-data replay rows. External API access is disabled in this
-evaluation; the API-like path is represented by the deterministic
-\texttt{mock\_api\_proposer}. The prompt audit has 46 rows and all pass the
-no-leakage checks.
-
-In synthetic execution, \texttt{mock\_api\_proposer} has observation-label
-recovery \num{0.9313}, delay-label recovery \num{0.9190}, and top-epsilon hit
-rate \num{1.0000}. The failure-guided proposer is similar
-(\num{0.9233}, \num{0.9113}, and \num{1.0000}). The deterministic seed
-proposer reaches \num{0.7863} observation recovery, \num{0.7278} delay
-recovery, and \num{0.8453} top-epsilon hit rate; the random candidate proposer
-is competitive at \num{0.8208}, \num{0.7943}, and \num{0.9045}. The
-no-observation-label baseline remains much weaker, with observation recovery
-\num{0.2000}, delay recovery \num{0.4000}, and top-epsilon hit rate
-\num{0.3210}.
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.92\textwidth]{figures/fig_api_synthetic_recovery_comparison.pdf}
-\caption{Stage 6 synthetic candidate execution over generic structured
-time-series toy tasks. The mock API proposer and failure-guided proposer reach
-high label recovery and top-epsilon rates under fixed budgets, while the
-observation-fixed baseline remains weaker. This figure supports
-proposal-ordering and budget-efficiency claims only; it is not real-world
-mechanism-discovery evidence.}
-\label{fig:api-synthetic-recovery-comparison}
-\end{figure}
-
-In frozen real-data replay, the mock API proposer reaches top-epsilon rate
-\num{1.0000} with mean rolling score \num{0.0851}. The oracle ranking also has
-top-epsilon rate \num{1.0000}, with mean rolling score \num{0.0830}. The
-random candidate proposer reaches \num{0.8125} and \num{0.0925}; the
-deterministic seed proposer reaches \num{0.7500} and \num{0.0949}. Held-out
-test MAE in this replay is post-hoc descriptive only and is not used for
-proposal ordering or selection.
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth]{figures/fig_api_candidate_execution_budget.pdf}
-\caption{Stage 6 budget curves for synthetic execution and frozen real-data
-replay. The real-data layer replays existing compact summary rows and performs
-no model refitting. Random ordering is competitive in some settings, so the
-supported claim is improved reliability and candidate-budget efficiency under
-the verifier, not universal dominance.}
-\label{fig:api-candidate-execution-budget}
-\end{figure}
-
-These results are best interpreted as evidence that verifier-gated proposal
-ordering can reach useful candidates quickly under the tested budgets. They do
-not show that API output improves real-world forecasts, because the Stage 6
-real-data layer is replay-only and the API path is disabled.
-
-\subsection{Bounded real-data candidate execution}
-
-Stage 7 adds a bounded real-data execution layer while preserving the same
-claim boundary. The evaluation executes allowlisted candidate models on the
-four selected FluSurv-NET series and then selects among available candidates
-using rolling evidence only. The no-leakage audit contains 52 rows, all of
-which pass; held-out test metrics remain post-hoc descriptive only.
-
-In bounded real-data execution, the deterministic seed proposer,
-failure-guided proposer, mock API proposer, and oracle reference each reach a
-top-epsilon hit rate of \num{1.00}. The random proposer is competitive but less
-stable, with top-epsilon hit rate \num{0.75}. Mean rolling scores are
-\num{0.0978} for deterministic seed, \num{0.0966} for failure-guided,
-\num{0.0978} for mock API, \num{0.0978} for oracle reference, and
-\num{0.1152} for random ordering.
-
-The repeated frozen replay component shows where proposal ordering matters
-most. The deterministic seed proposer struggles at small budgets for
-\texttt{0-4 yr} and \texttt{>=65 yr}, reaching top-epsilon in only one third
-of replay budget rows for those series. The failure-guided proposer and oracle
-reference generally reach top-epsilon at budget \num{3}, while random ordering
-is often competitive but has lower between-run stability. This supports
-proposal-ordering and candidate-budget-efficiency evidence, not
-forecasting-performance or state-of-the-art claims.
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth]{figures/fig_bounded_real_execution_budget.pdf}
-\caption{Stage 7 bounded real-data candidate execution under fixed candidate
-budgets. Candidate ordering is evaluated after executing only allowlisted
-repository models. The figure summarizes budget-efficiency evidence; it is not
-an operational forecasting benchmark and does not support a SOTA claim.}
-\label{fig:bounded-real-execution-budget}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.9\textwidth]{figures/fig_real_api_replay_stability.pdf}
-\caption{Stage 7 repeated frozen replay stability. The committed run disables
-real API access, so the API-like path is represented elsewhere by the mock
-proposer; this replay summarizes verifier-gated proposal ordering over compact
-frozen rows. The evidence is about proposal stability and top-epsilon access,
-not new model performance.}
-\label{fig:real-api-replay-stability}
-\end{figure}
-
-\subsection{Cross-provider verifier-gated proposer benchmark}
-
-Stage 9 evaluates four real provider families as structured proposers under
-the same verifier-gated protocol. All four providers enter the comparison
-after Gemini structured-output integration hardening. Table~\ref{tab:provider-stage9}
-reports schema parse success, verifier-valid proposal rate, and frozen replay
-top-epsilon hit rate from
-\texttt{artifacts\_provider\_iterative\_benchmark\_compact/provider\_proposal\_validity.csv}.
-These are proposal-quality and replay budget-efficiency metrics, not
-forecasting-performance results.
-
-\begin{table}[H]
-\centering
-\small
-\caption{Stage 9 cross-provider structured proposer results. All provider
-outputs are JSON or structured-output parsed, allowlisted, verifier-checked,
-and audited before replay. Top-epsilon hit is computed in frozen replay over
-compact summaries.}
-\label{tab:provider-stage9}
-\begin{tabular}{lccc}
-\toprule
-Provider and mode & Schema parse & Valid proposals & Top-epsilon hit \\
-\midrule
-OpenAI iterative & \num{1.0000} & \num{0.9136} & \num{0.7778} \\
-OpenAI single-shot & \num{1.0000} & \num{1.0000} & \num{0.8333} \\
-Claude iterative & \num{1.0000} & \num{0.7901} & \num{0.7407} \\
-Claude single-shot & \num{1.0000} & \num{0.8951} & \num{0.8333} \\
-DeepSeek iterative & \num{1.0000} & \num{0.8519} & \num{0.8333} \\
-DeepSeek single-shot & \num{1.0000} & \num{1.0000} & \num{0.9444} \\
-Gemini iterative & \num{1.0000} & \num{0.7716} & \num{0.7778} \\
-Gemini single-shot & \num{1.0000} & \num{0.9938} & \num{0.8333} \\
-\midrule
-Deterministic seed & \num{1.0000} & \num{1.0000} & \num{0.7778} \\
-Failure-guided & \num{1.0000} & \num{1.0000} & \num{0.8333} \\
-Random & \num{1.0000} & \num{1.0000} & \num{0.7222} \\
-Oracle reference & \num{1.0000} & \num{1.0000} & \num{1.0000} \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-The stabilized four-provider run shows that the shared protocol can compare
-provider families without allowing any provider to generate executable model
-code or access held-out test evidence. Single-shot modes often match or
-outperform iterative modes in this bounded allowlist setting: DeepSeek
-single-shot reaches top-epsilon hit \num{0.9444}, while OpenAI, Claude, and
-Gemini single-shot each reach \num{0.8333}. Iterative feedback is therefore a
-constrained refinement protocol, but it is not automatically superior when the
-candidate space is small and explicit. Failure-guided deterministic ordering
-remains competitive at \num{0.8333}, random reaches \num{0.7222}, and the
-oracle reference is \num{1.0000}.
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth]{figures/fig_provider_validity_diversity.pdf}
-\caption{Stage 9 provider proposal validity and diversity under the shared
-allowlist, verifier, and no-leakage protocol. The figure compares providers
-only as structured candidate proposers; it is not a provider forecasting
-leaderboard.}
-\label{fig:provider-validity-diversity}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth]{figures/fig_provider_budget_efficiency.pdf}
-\caption{Stage 9 frozen replay budget efficiency for provider and baseline
-proposal orderings. The replay uses compact frozen summaries and supports
-proposal-ordering evidence only, not new forecasting-performance claims.}
-\label{fig:provider-budget-efficiency}
-\end{figure}
-
-\subsection{Compact multi-season robustness check}
-
-We include a compact season-separated appendix over six completed FluSurv-NET
-seasons. This appendix evaluates each season as an independent within-season
-trajectory, uses a reduced budget, and is not a previous-season-to-future-season
-transfer-forecasting experiment. Its pediatric results are mixed across
-seasons: the \texttt{0-4 yr} observation-aware signal from the frozen main
-benchmark is not uniformly repeated under this reduced robustness setting. We
-therefore treat the frozen discovery-ablation benchmark as the clearest
-evidence for the \texttt{0-4 yr} delayed-observation finding and use the
-multi-season appendix as a robustness caveat rather than as a stronger global
-claim.
-
-\subsection{Numerical failure audit}
+Finally, the compact multi-season appendix evaluates six completed
+FluSurv-NET seasons as independent within-season trajectories. Its pediatric
+results are mixed across seasons: the \texttt{0-4 yr} observation-aware signal
+from the frozen benchmark is not uniformly repeated under the reduced
+robustness budget. We therefore treat the frozen discovery-ablation benchmark
+as the clearest evidence for the \texttt{0-4 yr} delayed-observation finding
+and use the multi-season check as a robustness caveat rather than as a
+stronger global claim.
 
 The frozen summary retains numerical diagnostics for every model-series row.
-There are 11 flagged rows among 108 model-series evaluations. The most common
-flagged model is \texttt{hospitalized\_seihr}, with five flagged series. The
-flagged rows are listed in
-\texttt{artifacts\_discovery\_ablation/numerical\_failure\_summary.csv} and
-summarized in \texttt{reports/numerical\_failure\_audit.md}.
-
-Models flagged for numerical instability are retained for transparency but are
-not used to support positive claims. This is particularly relevant for any
-interpretation involving the flagged \texttt{>= 65 yr} constrained-discovery
-row.
+There are 11 flagged rows among 108 model-series evaluations. These rows are
+retained for transparency but are not used to support positive claims,
+especially for interpretations involving the flagged \texttt{>= 65 yr}
+constrained-discovery row.

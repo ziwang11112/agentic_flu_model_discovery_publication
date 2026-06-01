@@ -174,7 +174,7 @@ recovers real-world epidemic mechanisms.
 \subsection{Verifier-gated candidate execution and replay}
 
 We additionally evaluate candidate proposal ordering under fixed budgets. This
-Stage 6 evaluation has two layers. The synthetic layer performs actual
+evaluation has two layers. The synthetic layer performs actual
 deterministic execution on the same generic structured time-series toy tasks
 used above. The real-data layer is replay-only over frozen compact FluSurv-NET
 summary rows and performs no model refitting.
@@ -198,8 +198,9 @@ forecast traces, per-model metrics, or refit artifacts are generated.
 
 \subsection{Bounded real-data candidate execution}
 
-Stage 7 extends the candidate-budget evaluation with bounded real-data
-execution. Both the smoke and evaluation configurations were run. The
+The bounded real-data execution study extends the candidate-budget evaluation
+from frozen replay to a small allowlisted execution set. Both the smoke and
+evaluation configurations were run. The
 evaluation configuration covers the series \texttt{0-4 yr},
 \texttt{18-49 yr}, \texttt{Overall}, and \texttt{>=65 yr}; candidate budgets
 are \num{3}, \num{5}, and \num{10}. It compares a deterministic seed proposer,
@@ -222,15 +223,17 @@ was removed before committing. The final committed outputs are compact
 summaries under \texttt{artifacts\_real\_candidate\_execution\_compact/}. No
 frozen discovery-ablation artifacts were modified.
 
-The evaluation completed in approximately \num{383} seconds. As in Stage 6,
+The evaluation completed in approximately \num{383} seconds. As in the
+replay-only candidate-budget evaluation,
 selection uses rolling evidence only; held-out test MAE is retained only as a
 post-selection descriptive column. The no-leakage audit contains 52 rows and
 all rows pass.
 
 \subsection{Cross-provider verifier-gated proposer benchmark}
 
-Stage 9 evaluates OpenAI/GPT, Anthropic/Claude, Google/Gemini, and DeepSeek
-as constrained structured candidate proposers under the same prompt-task
+The cross-provider benchmark evaluates OpenAI/GPT, Anthropic/Claude,
+Google/Gemini, and DeepSeek as constrained structured candidate proposers
+under the same prompt-task
 protocol, candidate allowlist, verifier, and no-leakage audit. The providers
 receive only series metadata, the explicit candidate allowlist, candidate
 budgets, and non-test verifier or replay feedback. They do not receive

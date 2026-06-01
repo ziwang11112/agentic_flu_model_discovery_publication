@@ -27,22 +27,24 @@
 \maketitle
 
 \begin{abstract}
-Partially observed infectious-disease forecasting requires choosing among
-simple statistical baselines, hand-specified mechanistic models, and structured
-search candidates without leaking held-out evidence or overstating what the
-results support. We present a verifier-gated, evidence-aware selection
-framework that converts frozen time-series benchmark summaries into
-cross-family candidate records, checks them with hard safety and provenance
-rules, applies interchangeable deterministic selection policies, and audits
-the resulting claim boundaries. FluSurv-NET hospitalization forecasting is the
-real-data case study: the frozen benchmark compares forecasting baselines,
-manual epidemic baselines, constrained observation-aware discovery, and
-same-grammar ablations. The evidence supports age-aware and objective-aware
-selection rather than a single global winner. Additional software evaluations
-show that the verifier rejects malformed or claim-unsafe records, an optional
-API proposer can produce allowlisted verifier-safe proposals in a small smoke
-test, and synthetic structured toy tasks validate observation-label and
-delay-label recovery logic without claiming real-world mechanism discovery.
+Partially observed forecasting requires choosing among simple statistical
+baselines, hand-specified mechanistic models, structured search candidates,
+and ablations without leaking held-out evidence or overstating what the
+results support. We present a verifier-gated, evidence-aware, cross-family
+model-selection framework that represents proposals as structured candidate
+records, checks them with hard allowlist and no-leakage rules, applies
+interchangeable policies, and audits claim boundaries. The framework studies
+agreement and disagreement across model families, proposers, policies, and
+evidence modes. Synthetic structured recovery tests validate observation-label
+and delay-label selection logic; candidate-budget replay and bounded execution
+evaluate proposal ordering; and a four-provider benchmark compares OpenAI,
+Claude, Gemini, and DeepSeek only as constrained structured proposers.
+FluSurv-NET hospitalization forecasting is the real-data case study. The
+evidence supports age-aware and objective-aware recommendation rather than a
+single global winner, with the strongest observation-aware discovery signal in
+the pediatric \texttt{0-4 yr} series and mixed multi-season robustness. The
+paper does not claim state-of-the-art forecasting, autonomous science, or
+real-world mechanism recovery.
 \end{abstract}
 
 \tableofcontents

@@ -1,8 +1,9 @@
 # agentic_flu_model_discovery_publication
 
 Clean publication package for verifier-gated, evidence-aware cross-family
-model selection for partially observed influenza hospitalization-rate
-forecasting.
+model selection under partial observation. The paper asks how agreement and
+disagreement across model families, proposers, policies, and evidence modes
+can produce no-leakage, claim-bounded forecasting recommendations.
 
 This repository is derived from the full research/archive repository
 `ziwang11112/agentic_flu_model_discovery`, but it does not inherit the old Git
@@ -10,6 +11,7 @@ history or old exploratory artifact blobs. It preserves the frozen
 discovery-ablation evidence package used by the paper draft:
 
 - verifier-gated candidate proposal, selection, and claim-boundary auditing
+- constrained agentic proposer protocol with allowlists and JSON outputs
 - opt-in forecasting baselines
 - hand-specified epidemic baselines
 - constrained observation-aware structure discovery
@@ -37,6 +39,9 @@ runs, LLM traces, smoke outputs, and large diagnostic artifact roots.
   selection.
 - The repository includes an offline verifier and selection-policy layer for
   claim-boundary auditing over frozen summary tables.
+- The framework compares deterministic, random, failure-guided, mock/API, and
+  oracle proposal orderings through verifier-gated replay or bounded
+  execution, while keeping held-out test metrics post-hoc only.
 - The expanded synthetic structured recovery sweep supports observation-label
   and delay-label selection logic under controlled toy time-series tasks; it
   is not evidence of real-world mechanism recovery.
@@ -46,10 +51,10 @@ runs, LLM traces, smoke outputs, and large diagnostic artifact roots.
   DeepSeek after Gemini structured-output integration hardening; it compares
   proposal validity, diversity, and frozen replay budget efficiency, not
   provider forecasting superiority.
-- Stage 6 candidate execution/replay evaluates proposal ordering under fixed
-  budgets; its real-data layer is frozen replay only and does not refit models.
-- Stage 7 adds bounded real-data candidate execution with compact outputs and
-  no mutation of the frozen discovery-ablation artifacts.
+- Candidate execution/replay evaluates proposal ordering under fixed budgets;
+  its replay layer uses frozen compact summaries and does not refit models.
+- Bounded real-data candidate execution uses compact outputs and does not
+  mutate the frozen discovery-ablation artifacts.
 - Numerical failure flags are retained for transparency and are not used to
   support positive claims.
 
