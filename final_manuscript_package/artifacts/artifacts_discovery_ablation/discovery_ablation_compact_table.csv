@@ -1,0 +1,37 @@
+series_name,model_name,test_mae,rolling_mean_mae,discovery_structure_name,discovery_fractional,discovery_observation_map,discovery_delay_weeks,numerical_failure_flag
+Overall,constrained_structure_discovery,0.0369673461326827,0.0888715971007055,SIR,False,I,0.0,False
+Overall,random_structure_discovery,0.0369672691499873,0.088871950775121,SIR,False,I,0.0,False
+Overall,exhaustive_structure_discovery,0.0369672002584754,0.0888727874115738,SIR,False,I,0.0,False
+Overall,validation_only_structure_selection,0.0748445210679491,0.0849143024498197,SEIRS,True,delayed_I,2.0,False
+Overall,no_observation_search_discovery,0.0702528646201435,0.0989187285988708,SEIRS,True,I,0.0,False
+Overall,no_stability_discovery,0.0369672655147238,0.0888715335286709,SIR,False,I,0.0,False
+0-4 yr,constrained_structure_discovery,0.0884963717287904,0.100200235379189,SEIRS,True,delayed_I,1.0,False
+0-4 yr,random_structure_discovery,0.0884966975923978,0.1006873358594265,SEIRS,True,delayed_I,1.0,False
+0-4 yr,exhaustive_structure_discovery,0.091118122954874,0.1140895203142763,SEIRS,False,I,0.0,False
+0-4 yr,validation_only_structure_selection,0.0884973970395101,0.1124130283910399,SEIRS,True,delayed_I,1.0,False
+0-4 yr,no_observation_search_discovery,0.091118122634469,0.1575152537203454,SEIRS,False,I,0.0,False
+0-4 yr,no_stability_discovery,0.0911295415172329,0.1187121761351911,SEIRS,False,delayed_I,2.0,False
+5-17 yr,constrained_structure_discovery,0.0043724261113881,0.0500154184526216,SEIRS,False,delayed_I,1.0,False
+5-17 yr,random_structure_discovery,0.0074295607826122,0.0504196746490553,SEIRS,False,delayed_I,2.0,False
+5-17 yr,exhaustive_structure_discovery,0.0110124009431363,0.0448183664615375,SEIRS,True,I,0.0,False
+5-17 yr,validation_only_structure_selection,0.0043767589616843,0.0483469157011416,SEIRS,False,delayed_I,1.0,False
+5-17 yr,no_observation_search_discovery,0.0534253378929867,0.1018885105702366,SIR,False,I,0.0,False
+5-17 yr,no_stability_discovery,0.0110056735296232,0.0353190615374223,SEIRS,True,I,0.0,False
+18-49 yr,constrained_structure_discovery,0.0480175345095416,0.0787429435247173,SIR,False,I,0.0,False
+18-49 yr,random_structure_discovery,0.0485998952509874,0.0798423983654796,SIR,False,delayed_I,2.0,False
+18-49 yr,exhaustive_structure_discovery,0.0480173269033753,0.0787418202336159,SIR,False,I,0.0,False
+18-49 yr,validation_only_structure_selection,0.0152322375910909,0.0391850575863337,SEIRS,True,I,0.0,False
+18-49 yr,no_observation_search_discovery,0.0480174730738215,0.0787422764073389,SIR,False,I,0.0,False
+18-49 yr,no_stability_discovery,0.0480170126779231,0.0787409196935992,SIR,False,I,0.0,False
+50-64 yr,constrained_structure_discovery,0.0371607159032478,0.0540426538599386,SIR,False,I,0.0,False
+50-64 yr,random_structure_discovery,0.0371606842439276,0.0540426925928833,SIR,False,I,0.0,False
+50-64 yr,exhaustive_structure_discovery,0.0371606795659373,0.0540422166483086,SIR,False,I,0.0,False
+50-64 yr,validation_only_structure_selection,0.0321208559675813,0.0831333544229542,SEIRS,True,I,0.0,False
+50-64 yr,no_observation_search_discovery,0.0370094064638786,0.0557194610249131,SEIR,False,I,0.0,False
+50-64 yr,no_stability_discovery,0.0371606803968233,0.054042754528754,SIR,False,I,0.0,False
+>= 65 yr,constrained_structure_discovery,0.1218656648080898,0.1748237283686136,SEIRS,True,I,0.0,True
+>= 65 yr,random_structure_discovery,0.1518453927047748,0.1965252983704047,SEIRS,True,delayed_I,1.0,False
+>= 65 yr,exhaustive_structure_discovery,0.1218893284577907,0.1690159117505848,SEIRS,True,I,0.0,False
+>= 65 yr,validation_only_structure_selection,0.1222593384926004,0.1576655714557095,SEIRS,True,I,0.0,True
+>= 65 yr,no_observation_search_discovery,0.1201751782469264,0.2320849287670753,SIR,False,I,0.0,False
+>= 65 yr,no_stability_discovery,0.12184782843297,0.1992541245289968,SEIRS,True,I,0.0,False

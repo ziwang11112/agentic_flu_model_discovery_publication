@@ -1,0 +1,307 @@
+\section{Method}
+
+\subsection{Framework objective}
+
+The method combines a forecasting benchmark, a verifier-gated candidate
+proposal protocol, deterministic policy selection, and claim-boundary auditing.
+The benchmark supplies evidence for weekly hospitalization-rate forecasting
+under a common data-processing, fitting, and evaluation protocol. The
+selection framework then turns candidates and compact evidence summaries into
+auditable recommendations. The objective is threefold:
+\begin{enumerate}[leftmargin=1.5em]
+\item compare forecasting baselines, hand-specified mechanistic models,
+structured-search candidates, and ablations under a shared evidence protocol;
+\item decide which recommendations are credible when model families, proposer
+orders, and evidence modes agree or disagree; and
+\item prevent leakage and overclaiming by separating selection evidence,
+post-hoc test evidence, verifier checks, and claim-boundary labels.
+\end{enumerate}
+
+All model selection and hyperparameter selection use only training,
+validation, or rolling-validation evidence. Held-out test metrics are computed
+only after the model family, structure, or baseline configuration has been
+selected.
+
+\subsection{Formal framework}
+
+Let $y_{1:T}$ denote a univariate forecasting series. We use a chronological
+split into training, validation, and held-out test windows,
+$\mathcal{I}_{\mathrm{tr}}$, $\mathcal{I}_{\mathrm{val}}$, and
+$\mathcal{I}_{\mathrm{test}}$. Candidate selection may use only evidence from
+$\mathcal{I}_{\mathrm{tr}}$ and $\mathcal{I}_{\mathrm{val}}$, including
+rolling-validation summaries when available. Held-out test evidence is
+computed only after selection.
+
+The candidate space is cross-family:
+\[
+\mathcal{C} =
+\mathcal{C}_{\mathrm{forecast}} \cup
+\mathcal{C}_{\mathrm{mech}} \cup
+\mathcal{C}_{\mathrm{search}} \cup
+\mathcal{C}_{\mathrm{ablation}} .
+\]
+A candidate record is represented as
+\[
+c = (\mathrm{family}, \mathrm{model\_name}, \mathrm{observation\_label},
+\mathrm{delay\_label}, \mathrm{rationale}),
+\]
+with metadata such as proposer name, round index, expected failure mode, and
+paired ablation target. At proposal round $r$, a proposer $\pi_\theta$
+receives a no-leakage context $q_r$ and a remaining budget $B_r$, and emits at
+most $b$ candidates:
+\[
+\pi_\theta(q_r, B_r) \rightarrow
+\{c_{r,1}, \ldots, c_{r,b}\}.
+\]
+The proposer may be deterministic, random, failure-guided, mock API-assisted,
+or a real API provider. In all cases, the output is advisory until it passes
+the verifier.
+
+The verifier is a conjunction of hard checks:
+\[
+V(c, q_r) =
+V_{\mathrm{schema}} \wedge
+V_{\mathrm{allowlist}} \wedge
+V_{\mathrm{obs}} \wedge
+V_{\mathrm{budget}} \wedge
+V_{\mathrm{noLeak}} \wedge
+V_{\mathrm{claim}} .
+\]
+These checks reject malformed records, duplicate identifiers, out-of-allowlist
+families or models, incompatible observation or delay labels, budget
+violations, absolute artifact paths, held-out test metrics in selection
+evidence, and numerically flagged rows used to support positive claims.
+
+For a verified candidate $c$, the selection evidence is
+\[
+E_{\mathrm{sel}}(c) =
+(\mathrm{val\_mae}, \mathrm{rolling\_mae},
+\mathrm{complexity}, \mathrm{numerical\_risk}, \mathrm{family}) .
+\]
+When validation MAE is unavailable in a compact replay table, the policy uses
+rolling evidence and records that limitation. The held-out test evidence
+$E_{\mathrm{test}}(c^\star)$ is attached only after a candidate $c^\star$ has
+been selected and is labeled post-hoc descriptive.
+
+The main policy, \texttt{pareto\_epsilon}, filters unsafe candidates and forms
+an epsilon Pareto frontier over the selection objectives. Candidate $a$
+epsilon-dominates candidate $b$ when it is no worse by more than $\epsilon$ on
+each minimized objective and strictly better on at least one objective. Ties
+are broken deterministically by numerical risk, rolling error, complexity, and
+candidate identifier. For a budgeted ordering $c_1,\ldots,c_k$, define
+\[
+\operatorname{hit}_{\epsilon}(k) =
+\begin{cases}
+1, & \text{if any candidate among } c_1,\ldots,c_k
+\text{ is within the top-epsilon reference set},\\
+0, & \text{otherwise},
+\end{cases}
+\]
+and let
+\[
+B_{\epsilon} = \min\{k : \operatorname{hit}_{\epsilon}(k)=1\}
+\]
+when such a $k$ exists. We also report deterministic weighted scoring and a
+hard-veto decision tree as ablation policies.
+
+Finally, the claim auditor maps evidence into allowed and rejected claims:
+\[
+A(\mathrm{evidence}) \rightarrow
+(\mathrm{allowed\_claims}, \mathrm{rejected\_claims}, \mathrm{caveats}).
+\]
+This step records whether evidence supports group-specific signals, no single
+global winner, or proposal-quality claims, and rejects claims such as
+state-of-the-art forecasting, autonomous science, real-world mechanism
+recovery, or using flagged rows as positive evidence.
+
+\subsection{Verifier-gated selection layer}
+
+The selection layer separates proposal, verification, evidence attachment,
+policy selection, and claim-boundary auditing. Candidate records use a fixed
+schema with a model family, model name, observation label, delay label,
+proposal rationale, and metadata. The model-family space is cross-family:
+forecasting baselines, hand-specified mechanistic baselines, structured search
+models, ablation models, and ensembles.
+
+The hard verifier rejects malformed records, duplicate identifiers, absolute
+artifact paths, invalid family/model combinations, invalid observation or
+delay labels, test metrics used as selection evidence, and numerically flagged
+rows used to support positive claims. API-assisted proposal, when enabled, is
+restricted to JSON output from an explicit allowlist and cannot generate model
+code or execute candidate definitions. The default selection evaluations are
+offline and deterministic.
+
+The main policy is \texttt{pareto\_epsilon}, which filters unsafe candidates
+and selects from an epsilon Pareto frontier over available selection evidence,
+rolling-origin error, complexity, and numerical risk. We also report a
+deterministic weighted-score policy as an ablation and a hard-veto decision
+tree that prioritizes safety, simple baseline sufficiency, and
+observation-label evidence. The claim-boundary auditor records whether the
+evidence supports cautious statements such as group-specific signal and no
+single global winner, and rejects statements such as global structured-search
+superiority, state-of-the-art forecasting, or using flagged rows as positive
+evidence.
+
+\subsection{Constrained agentic proposer protocol}
+
+The language-model component, when enabled, is a constrained agentic proposer
+rather than a free-form scientist. The protocol is defined by four prompt-task
+contracts, documented in \texttt{reports/agent\_prompt\_protocol.md}.
+\begin{description}[leftmargin=1.5em]
+\item[Task A: Initial candidate proposal] asks for a small, diverse,
+allowlisted set of candidates for the next evaluation round.
+\item[Task B: Evidence-aware refinement] provides verifier feedback,
+accepted candidates, duplicate candidates, non-test rolling or validation
+evidence, and remaining budget, then asks for refined candidates.
+\item[Task C: Failure diagnosis or ablation request] converts non-test
+failure evidence into an allowlisted ablation request.
+\item[Task D: Claim-boundary summary] summarizes deterministic audit labels
+without expanding the allowed claims.
+\end{description}
+
+Allowed prompt context includes the series name, candidate allowlist, budget,
+round index, previous verifier rejection reasons, accepted candidates,
+duplicate candidates, family diversity so far, observation labels already
+tried, non-test rolling or validation evidence, numerical-risk warnings, and
+remaining budget. Forbidden fields include held-out test MAE or RMSE, test
+winners, test ranks, post-selection test comparisons, and paper
+recommendations derived from test evidence. Provider outputs must be JSON or
+provider-native structured outputs that match the shared schema; unknown model
+names, executable-code fields, unsupported families, and claim-expanding
+summaries are rejected before replay or execution.
+
+\subsection{Data processing and series construction}
+
+The raw FluSurv-NET CSV is read with \texttt{skiprows=2} to discard metadata
+lines above the table. Rows with missing \texttt{WEEK} or \texttt{YEAR.1} are
+removed, the remaining rows are sorted chronologically by year and week, and a
+continuous integer time index is created. The primary series is the
+\emph{Entire Network} / \emph{Overall} weekly hospitalization rate. The frozen
+run also evaluates five age-stratified series:
+\texttt{0--4 yr}, \texttt{5--17 yr}, \texttt{18--49 yr},
+\texttt{50--64 yr}, and \texttt{$\geq$65 yr}.
+
+\subsection{Forecasting baselines}
+
+The discovery-ablation configuration adds opt-in non-epidemic forecasting
+baselines. Persistence and rolling-mean baselines test whether recent observed
+rates are already sufficient. For horizon $h$, the persistence baseline is
+\[
+\hat{y}_{T+h} = y_T,
+\]
+and a rolling mean with window $w$ is
+\[
+\hat{y}_{T+h} =
+\frac{1}{w}\sum_{j=0}^{w-1} y_{T-j}.
+\]
+\texttt{arima\_auto\_small} chooses among a small fixed set of ARIMA orders by
+validation MAE and then refits on train-plus-validation for test forecasting.
+\texttt{lagged\_ridge} and \texttt{lagged\_gradient\_boosting} use lagged
+observations, linear time, and seasonal sine/cosine features with recursive
+multi-step forecasts. These baselines are opt-in; the historical default
+benchmark remains the original six epidemic model families.
+
+\subsection{Manual epidemic baselines}
+
+The hand-specified epidemic baselines include deterministic SEIR,
+probabilistic SEIR, hospitalized SEIHR, delayed-observation SEIR, and
+fractional SEIR variants. All epidemic states are normalized, and fitting uses
+explicit penalties for negative states and approximate mass-conservation
+violations. The delayed-observation SEIR baseline selects its delay using
+validation evidence only.
+
+\subsection{Constrained structure discovery}
+
+The discovery module searches over a bounded grammar rather than arbitrary
+symbolic dynamics. A structure specification contains:
+\begin{itemize}[leftmargin=1.5em]
+\item a compartment template from
+\{\texttt{SIR}, \texttt{SEIR}, \texttt{SEIRS}, \texttt{SEIHR}, \texttt{SEIAR}\},
+\item a fractional on/off flag,
+\item an observation map from
+\{\texttt{I}, \texttt{H}, \texttt{I+H}, \texttt{delayed\_I}\}, and
+\item a delay parameter in $\{0,1,2,3\}$ when the observation map is
+\texttt{delayed\_I}.
+\end{itemize}
+
+The grammar templates are bounded SIR, SEIR, SEIRS, SEIHR, and SEIAR
+state-space families. Let $x_t$ denote the latent state vector. Observations
+are modeled as a scaled and noisy view of one allowed latent component or
+component combination:
+\[
+y_t = \rho\, g_o(x_{t-d}) + \epsilon_t,
+\]
+where $g_o \in \{I_t, H_t, I_t + H_t, I_{t-d}\}$ when the required
+compartments exist, $d$ is the allowed delay, and $\rho$ is a scale parameter.
+The notation is intentionally schematic: the repository implements bounded
+templates and validity checks rather than unrestricted equation generation.
+
+Validity rules enforce that infection originates from $S$, infectious-like
+states eventually reach recovery, no isolated compartments exist, and
+observation semantics are compatible with the latent template. For example,
+\texttt{obs=H} and \texttt{obs=I+H} require an $H$ compartment, while
+\texttt{obs=delayed\_I} requires an $I$ compartment and a valid delay.
+
+\subsection{Discovery score policies and ablations}
+
+The constrained discovery model uses a stability-aware score that combines
+multi-split validation error, rolling-origin stability, complexity penalties,
+and the configured age prior. The frozen ablation package compares this search
+against five same-grammar alternatives:
+\[
+\begin{aligned}
+S_{\mathrm{stable}} &=
+\overline{\mathrm{MAE}}_{\mathrm{multi\ split}} +
+P_{\mathrm{multi\ split}} +
+P_{\mathrm{stability}} +
+P_{\mathrm{complexity}} +
+P_{\mathrm{age}},\\
+S_{\mathrm{validation}} &= \mathrm{MAE}_{\mathrm{val}},\\
+S_{\mathrm{no\ stability}} &=
+\overline{\mathrm{MAE}}_{\mathrm{multi\ split}} +
+P_{\mathrm{multi\ split}} +
+P_{\mathrm{complexity}} +
+P_{\mathrm{age}}.
+\end{aligned}
+\]
+\begin{itemize}[leftmargin=1.5em]
+\item \texttt{random\_structure\_discovery}, which evaluates a seeded random
+candidate budget;
+\item \texttt{exhaustive\_structure\_discovery}, which evaluates the valid
+grammar universe subject to an explicit candidate guard;
+\item \texttt{validation\_only\_structure\_selection}, whose score is exactly
+validation MAE;
+\item \texttt{no\_observation\_search\_discovery}, which restricts the
+candidate universe to \texttt{obs=I}; and
+\item \texttt{no\_stability\_discovery}, which removes the rolling stability
+penalty from the score while retaining other terms.
+\end{itemize}
+
+All discovery leaderboards include score-policy audit columns so that the
+selected structure can be traced back to the evidence and penalties used.
+
+\subsection{Synthetic structured recovery tasks}
+
+The synthetic recovery tasks are generic structured time-series tests, not
+domain simulations. They create a latent signal $z_t$, an auxiliary proxy
+$u_t$, and observations with known labels:
+\[
+\begin{aligned}
+\mathrm{direct}: \quad & y_t = z_t + \epsilon_t,\\
+\mathrm{lagged}(d): \quad & y_t = z_{t-d} + \epsilon_t,\quad d\in\{1,2\},\\
+\mathrm{mixture}: \quad & y_t = \alpha z_t + (1-\alpha)u_t + \epsilon_t,\\
+\mathrm{proxy}: \quad & y_t = u_t + \epsilon_t.
+\end{aligned}
+\]
+The task is to recover observation labels, delay labels, and useful candidate
+families under fixed candidate budgets. These tasks validate software logic
+for partial-observation candidate selection; they do not establish real-world
+mechanism recovery.
+
+\subsection{Post-hoc paired rolling comparison}
+
+After model selection is fixed, the analysis aligns rolling-origin forecasts
+by series, horizon, and target week. For each challenger and the constrained
+discovery reference, it reports paired mean absolute-error differences,
+bootstrap confidence intervals, and reference win rates. These paired
+comparisons summarize post-hoc evidence and are not used for model selection.

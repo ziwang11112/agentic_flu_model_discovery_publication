@@ -1,0 +1,5 @@
+provider_name,model_name,available,ran,skip_reason
+openai_gpt,gpt-5.4-mini,True,True,
+anthropic_claude,claude-sonnet-4-6,True,True,
+google_gemini,gemini-2.5-flash,True,True,
+deepseek,deepseek-v4-flash,True,True,

@@ -1,0 +1,109 @@
+series_name,candidate_id,model_name,family,rolling_mean_mae,num_free_params,numerical_failure_flag,on_pareto_frontier
+0-4 yr,0_4_yr:arima_auto_small,arima_auto_small,forecasting_baseline,0.1416666666666667,0.0,False,True
+0-4 yr,0_4_yr:constrained_structure_discovery,constrained_structure_discovery,structured_search,0.100200235379189,10.0,False,False
+0-4 yr,0_4_yr:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,0.2211046093356117,8.0,False,False
+0-4 yr,0_4_yr:deterministic_seir,deterministic_seir,mechanistic_baseline,0.2134826030141098,8.0,False,False
+0-4 yr,0_4_yr:equal_weight_point_ensemble,equal_weight_point_ensemble,ensemble,0.1504969019875459,0.0,False,True
+0-4 yr,0_4_yr:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,0.1140895203142763,9.0,False,True
+0-4 yr,0_4_yr:fractional_seir,fractional_seir,mechanistic_baseline,0.2178698705056177,9.0,False,False
+0-4 yr,0_4_yr:hospitalized_seihr,hospitalized_seihr,mechanistic_baseline,0.2117238318423371,11.0,True,False
+0-4 yr,0_4_yr:lagged_gradient_boosting,lagged_gradient_boosting,forecasting_baseline,0.1794378306878307,0.0,False,False
+0-4 yr,0_4_yr:lagged_ridge,lagged_ridge,forecasting_baseline,0.1794378306878307,0.0,False,False
+0-4 yr,0_4_yr:last_observed,last_observed,forecasting_baseline,0.1416666666666667,0.0,False,True
+0-4 yr,0_4_yr:no_observation_search_discovery,no_observation_search_discovery,ablation,0.1575152537203454,9.0,False,False
+0-4 yr,0_4_yr:no_stability_discovery,no_stability_discovery,ablation,0.1187121761351911,9.0,False,False
+0-4 yr,0_4_yr:probabilistic_seir,probabilistic_seir,mechanistic_baseline,0.1884846951841359,9.0,False,False
+0-4 yr,0_4_yr:random_structure_discovery,random_structure_discovery,ablation,0.1006873358594265,10.0,False,False
+0-4 yr,0_4_yr:rolling_mean_2wk,rolling_mean_2wk,forecasting_baseline,0.1341137566137566,0.0,False,True
+0-4 yr,0_4_yr:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,0.1794378306878307,0.0,False,False
+0-4 yr,0_4_yr:validation_only_structure_selection,validation_only_structure_selection,ablation,0.1124130283910399,10.0,False,False
+18-49 yr,18_49_yr:arima_auto_small,arima_auto_small,forecasting_baseline,0.0304497354497354,0.0,False,True
+18-49 yr,18_49_yr:constrained_structure_discovery,constrained_structure_discovery,structured_search,0.0787429435247173,6.0,False,False
+18-49 yr,18_49_yr:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,0.0728272252849527,8.0,False,False
+18-49 yr,18_49_yr:deterministic_seir,deterministic_seir,mechanistic_baseline,0.0734867207115275,8.0,True,False
+18-49 yr,18_49_yr:equal_weight_point_ensemble,equal_weight_point_ensemble,ensemble,0.0536725514816459,0.0,False,False
+18-49 yr,18_49_yr:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,0.0787418202336159,6.0,False,False
+18-49 yr,18_49_yr:fractional_seir,fractional_seir,mechanistic_baseline,0.0996051281525248,9.0,True,False
+18-49 yr,18_49_yr:hospitalized_seihr,hospitalized_seihr,mechanistic_baseline,0.0746322970087163,11.0,True,False
+18-49 yr,18_49_yr:lagged_gradient_boosting,lagged_gradient_boosting,forecasting_baseline,0.0533928571428571,0.0,False,False
+18-49 yr,18_49_yr:lagged_ridge,lagged_ridge,forecasting_baseline,0.0533928571428571,0.0,False,False
+18-49 yr,18_49_yr:last_observed,last_observed,forecasting_baseline,0.0304497354497354,0.0,False,True
+18-49 yr,18_49_yr:no_observation_search_discovery,no_observation_search_discovery,ablation,0.0787422764073389,6.0,False,False
+18-49 yr,18_49_yr:no_stability_discovery,no_stability_discovery,ablation,0.0787409196935992,6.0,False,False
+18-49 yr,18_49_yr:probabilistic_seir,probabilistic_seir,mechanistic_baseline,0.0808356180704669,9.0,False,False
+18-49 yr,18_49_yr:random_structure_discovery,random_structure_discovery,ablation,0.0798423983654796,6.0,False,False
+18-49 yr,18_49_yr:rolling_mean_2wk,rolling_mean_2wk,forecasting_baseline,0.0366269841269841,0.0,False,True
+18-49 yr,18_49_yr:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,0.0533928571428571,0.0,False,False
+18-49 yr,18_49_yr:validation_only_structure_selection,validation_only_structure_selection,ablation,0.0391850575863337,10.0,False,False
+5-17 yr,5_17_yr:arima_auto_small,arima_auto_small,forecasting_baseline,0.0375925925925925,0.0,False,True
+5-17 yr,5_17_yr:constrained_structure_discovery,constrained_structure_discovery,structured_search,0.0500154184526216,9.0,False,False
+5-17 yr,5_17_yr:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,0.0805869105650665,8.0,False,False
+5-17 yr,5_17_yr:deterministic_seir,deterministic_seir,mechanistic_baseline,0.0799093755041065,8.0,False,False
+5-17 yr,5_17_yr:equal_weight_point_ensemble,equal_weight_point_ensemble,ensemble,0.0471508897165037,0.0,False,True
+5-17 yr,5_17_yr:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,0.0448183664615375,10.0,False,False
+5-17 yr,5_17_yr:fractional_seir,fractional_seir,mechanistic_baseline,0.0808107121142351,9.0,False,False
+5-17 yr,5_17_yr:hospitalized_seihr,hospitalized_seihr,mechanistic_baseline,0.0538887701397637,11.0,False,False
+5-17 yr,5_17_yr:lagged_gradient_boosting,lagged_gradient_boosting,forecasting_baseline,0.040542328042328,0.0,False,True
+5-17 yr,5_17_yr:lagged_ridge,lagged_ridge,forecasting_baseline,0.040542328042328,0.0,False,True
+5-17 yr,5_17_yr:last_observed,last_observed,forecasting_baseline,0.0375925925925925,0.0,False,True
+5-17 yr,5_17_yr:no_observation_search_discovery,no_observation_search_discovery,ablation,0.1018885105702366,6.0,False,False
+5-17 yr,5_17_yr:no_stability_discovery,no_stability_discovery,ablation,0.0353190615374223,10.0,False,False
+5-17 yr,5_17_yr:probabilistic_seir,probabilistic_seir,mechanistic_baseline,0.0429075072549911,9.0,False,False
+5-17 yr,5_17_yr:random_structure_discovery,random_structure_discovery,ablation,0.0504196746490553,9.0,False,False
+5-17 yr,5_17_yr:rolling_mean_2wk,rolling_mean_2wk,forecasting_baseline,0.0359259259259259,0.0,False,True
+5-17 yr,5_17_yr:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,0.040542328042328,0.0,False,True
+5-17 yr,5_17_yr:validation_only_structure_selection,validation_only_structure_selection,ablation,0.0483469157011416,9.0,False,False
+50-64 yr,50_64_yr:arima_auto_small,arima_auto_small,forecasting_baseline,0.0612698412698412,0.0,False,True
+50-64 yr,50_64_yr:constrained_structure_discovery,constrained_structure_discovery,structured_search,0.0540426538599386,6.0,False,False
+50-64 yr,50_64_yr:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,0.0527749982193454,8.0,False,False
+50-64 yr,50_64_yr:deterministic_seir,deterministic_seir,mechanistic_baseline,0.0564049117960326,8.0,False,False
+50-64 yr,50_64_yr:equal_weight_point_ensemble,equal_weight_point_ensemble,ensemble,0.0689384806374572,0.0,False,True
+50-64 yr,50_64_yr:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,0.0540422166483086,6.0,False,False
+50-64 yr,50_64_yr:fractional_seir,fractional_seir,mechanistic_baseline,0.1250957050418382,9.0,True,False
+50-64 yr,50_64_yr:hospitalized_seihr,hospitalized_seihr,mechanistic_baseline,0.0635095125203646,11.0,True,False
+50-64 yr,50_64_yr:lagged_gradient_boosting,lagged_gradient_boosting,forecasting_baseline,0.1087698412698412,0.0,False,False
+50-64 yr,50_64_yr:lagged_ridge,lagged_ridge,forecasting_baseline,0.1087698412698412,0.0,False,False
+50-64 yr,50_64_yr:last_observed,last_observed,forecasting_baseline,0.0612698412698412,0.0,False,True
+50-64 yr,50_64_yr:no_observation_search_discovery,no_observation_search_discovery,ablation,0.0557194610249131,8.0,False,False
+50-64 yr,50_64_yr:no_stability_discovery,no_stability_discovery,ablation,0.054042754528754,6.0,False,False
+50-64 yr,50_64_yr:probabilistic_seir,probabilistic_seir,mechanistic_baseline,0.0825692988543455,9.0,False,False
+50-64 yr,50_64_yr:random_structure_discovery,random_structure_discovery,ablation,0.0540426925928833,6.0,False,False
+50-64 yr,50_64_yr:rolling_mean_2wk,rolling_mean_2wk,forecasting_baseline,0.0682275132275132,0.0,False,True
+50-64 yr,50_64_yr:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,0.1087698412698412,0.0,False,False
+50-64 yr,50_64_yr:validation_only_structure_selection,validation_only_structure_selection,ablation,0.0831333544229542,10.0,False,False
+>= 65 yr,ge_65_yr:arima_auto_small,arima_auto_small,forecasting_baseline,0.2118518518518518,0.0,False,True
+>= 65 yr,ge_65_yr:constrained_structure_discovery,constrained_structure_discovery,structured_search,0.1748237283686136,10.0,True,False
+>= 65 yr,ge_65_yr:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,0.221547799970161,8.0,False,False
+>= 65 yr,ge_65_yr:deterministic_seir,deterministic_seir,mechanistic_baseline,0.2214527261276795,8.0,False,False
+>= 65 yr,ge_65_yr:equal_weight_point_ensemble,equal_weight_point_ensemble,ensemble,0.2570531939571344,0.0,False,False
+>= 65 yr,ge_65_yr:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,0.1690159117505848,10.0,False,True
+>= 65 yr,ge_65_yr:fractional_seir,fractional_seir,mechanistic_baseline,0.3487002538608052,9.0,False,False
+>= 65 yr,ge_65_yr:hospitalized_seihr,hospitalized_seihr,mechanistic_baseline,0.2593269906277726,11.0,True,False
+>= 65 yr,ge_65_yr:lagged_gradient_boosting,lagged_gradient_boosting,forecasting_baseline,0.3226455026455026,0.0,False,False
+>= 65 yr,ge_65_yr:lagged_ridge,lagged_ridge,forecasting_baseline,0.3226455026455026,0.0,False,False
+>= 65 yr,ge_65_yr:last_observed,last_observed,forecasting_baseline,0.2118518518518518,0.0,False,True
+>= 65 yr,ge_65_yr:no_observation_search_discovery,no_observation_search_discovery,ablation,0.2320849287670753,6.0,False,False
+>= 65 yr,ge_65_yr:no_stability_discovery,no_stability_discovery,ablation,0.1992541245289968,10.0,False,False
+>= 65 yr,ge_65_yr:probabilistic_seir,probabilistic_seir,mechanistic_baseline,0.2790092315418986,9.0,False,False
+>= 65 yr,ge_65_yr:random_structure_discovery,random_structure_discovery,ablation,0.1965252983704047,10.0,False,False
+>= 65 yr,ge_65_yr:rolling_mean_2wk,rolling_mean_2wk,forecasting_baseline,0.2294312169312169,0.0,False,True
+>= 65 yr,ge_65_yr:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,0.3226455026455026,0.0,False,False
+>= 65 yr,ge_65_yr:validation_only_structure_selection,validation_only_structure_selection,ablation,0.1576655714557095,10.0,True,False
+Overall,overall:arima_auto_small,arima_auto_small,forecasting_baseline,0.0434920634920634,0.0,False,True
+Overall,overall:constrained_structure_discovery,constrained_structure_discovery,structured_search,0.0888715971007055,6.0,False,False
+Overall,overall:delayed_observation_seir,delayed_observation_seir,mechanistic_baseline,0.0814357127058704,8.0,False,False
+Overall,overall:deterministic_seir,deterministic_seir,mechanistic_baseline,0.0820588425321457,8.0,False,False
+Overall,overall:equal_weight_point_ensemble,equal_weight_point_ensemble,ensemble,0.0817614344288467,0.0,False,False
+Overall,overall:exhaustive_structure_discovery,exhaustive_structure_discovery,ablation,0.0888727874115738,6.0,False,False
+Overall,overall:fractional_seir,fractional_seir,mechanistic_baseline,0.1355639381791604,9.0,False,False
+Overall,overall:hospitalized_seihr,hospitalized_seihr,mechanistic_baseline,0.0856330318490348,11.0,True,False
+Overall,overall:lagged_gradient_boosting,lagged_gradient_boosting,forecasting_baseline,0.1022089947089947,0.0,False,False
+Overall,overall:lagged_ridge,lagged_ridge,forecasting_baseline,0.1022089947089947,0.0,False,False
+Overall,overall:last_observed,last_observed,forecasting_baseline,0.0434920634920634,0.0,False,True
+Overall,overall:no_observation_search_discovery,no_observation_search_discovery,ablation,0.0989187285988708,10.0,False,False
+Overall,overall:no_stability_discovery,no_stability_discovery,ablation,0.0888715335286709,6.0,False,False
+Overall,overall:probabilistic_seir,probabilistic_seir,mechanistic_baseline,0.0956908549562055,9.0,True,False
+Overall,overall:random_structure_discovery,random_structure_discovery,ablation,0.088871950775121,6.0,False,False
+Overall,overall:rolling_mean_2wk,rolling_mean_2wk,forecasting_baseline,0.0588095238095238,0.0,False,True
+Overall,overall:rolling_mean_4wk,rolling_mean_4wk,forecasting_baseline,0.1022089947089947,0.0,False,False
+Overall,overall:validation_only_structure_selection,validation_only_structure_selection,ablation,0.0849143024498197,10.0,False,False

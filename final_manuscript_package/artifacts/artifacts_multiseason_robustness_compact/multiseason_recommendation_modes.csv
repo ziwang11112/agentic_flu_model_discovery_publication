@@ -1,0 +1,4 @@
+age_group,num_seasons,recommended_model_mode,recommended_model_frequency,best_test_model_mode,best_test_model_frequency,best_rolling_model_mode,best_rolling_model_frequency,constrained_discovery_recommended_count,delayed_I_selected_count,positive_observation_search_delta_count
+0-4 yr,6,no_observation_search_discovery,0.3333333333333333,validation_only_structure_selection,0.3333333333333333,arima_auto_small,0.8333333333333334,0,0,1
+>= 65 yr,6,arima_auto_small,0.6666666666666666,constrained_structure_discovery,0.5,arima_auto_small,1.0,0,3,4
+Overall,6,arima_auto_small,0.5,rolling_mean_4wk,0.5,arima_auto_small,1.0,1,1,3

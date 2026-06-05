@@ -1,0 +1,45 @@
+{
+  "artifact_root": "artifacts_selection_policy_eval_compact",
+  "candidate_count": 30,
+  "evaluation_type": "deterministic offline selection policy evaluation",
+  "external_api_used": false,
+  "frozen_artifact_root": "artifacts_discovery_ablation",
+  "multiseason_artifact_root": "artifacts_multiseason_robustness_compact",
+  "policy_names": [
+    "pareto_epsilon",
+    "weighted_rubric",
+    "hard_veto_decision_tree"
+  ],
+  "series_count": 6,
+  "stage2_budgeted_replay_rows": 96,
+  "stage2_enabled": true,
+  "stage2_negative_rejection_rate": 1.0,
+  "stage2_replay_budgets": [
+    3,
+    5,
+    10,
+    15
+  ],
+  "stage2_toy_policy_rows": 30,
+  "stage2_toy_scenarios": [
+    "direct_signal",
+    "lagged_signal_1",
+    "lagged_signal_2",
+    "mixture_signal",
+    "noisy_lagged_signal"
+  ],
+  "stage2_toy_seeds": [
+    1,
+    2
+  ],
+  "toy_recovery_rate": 1.0,
+  "toy_scenarios": [
+    "sinusoidal_direct",
+    "lagged_observation"
+  ],
+  "toy_seeds": [
+    1,
+    2
+  ],
+  "verified_candidate_count": 30
+}

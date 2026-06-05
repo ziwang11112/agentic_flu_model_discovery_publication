@@ -1,0 +1,18 @@
+{
+  "api_run_status": "completed",
+  "artifact_root": "artifacts_selection_policy_eval_compact",
+  "duplicate_count": 0,
+  "duplicate_rate": 0.0,
+  "external_api_used": true,
+  "family_diversity": 4,
+  "observation_label_diversity": 2,
+  "parse_error_count": 0,
+  "parse_errors": "",
+  "proposal_count": 10,
+  "raw_candidate_count": 10,
+  "skip_reason": "",
+  "top_epsilon_useful_count": 10,
+  "top_epsilon_useful_rate": 1.0,
+  "valid_proposal_count": 10,
+  "valid_proposal_rate": 1.0
+}

@@ -1,0 +1,47 @@
+series_name,proposer_type,prompt_contains_test_metric,prompt_contains_test_winner,prompt_contains_posthoc_metric,allowlist_hash,safe_prompt_passed
+direct_signal,mock_api_proposer,False,False,False,96e295c52d90b1ff,True
+direct_signal,deterministic_seed_proposer,False,False,False,96e295c52d90b1ff,True
+direct_signal,random_candidate_proposer,False,False,False,96e295c52d90b1ff,True
+direct_signal,failure_guided_proposer,False,False,False,96e295c52d90b1ff,True
+direct_signal,no_observation_label_baseline,False,False,False,96e295c52d90b1ff,True
+direct_signal,exhaustive_oracle,False,False,False,96e295c52d90b1ff,True
+lagged_signal_1,mock_api_proposer,False,False,False,96e295c52d90b1ff,True
+lagged_signal_1,deterministic_seed_proposer,False,False,False,96e295c52d90b1ff,True
+lagged_signal_1,random_candidate_proposer,False,False,False,96e295c52d90b1ff,True
+lagged_signal_1,failure_guided_proposer,False,False,False,96e295c52d90b1ff,True
+lagged_signal_1,no_observation_label_baseline,False,False,False,96e295c52d90b1ff,True
+lagged_signal_1,exhaustive_oracle,False,False,False,96e295c52d90b1ff,True
+lagged_signal_2,mock_api_proposer,False,False,False,96e295c52d90b1ff,True
+lagged_signal_2,deterministic_seed_proposer,False,False,False,96e295c52d90b1ff,True
+lagged_signal_2,random_candidate_proposer,False,False,False,96e295c52d90b1ff,True
+lagged_signal_2,failure_guided_proposer,False,False,False,96e295c52d90b1ff,True
+lagged_signal_2,no_observation_label_baseline,False,False,False,96e295c52d90b1ff,True
+lagged_signal_2,exhaustive_oracle,False,False,False,96e295c52d90b1ff,True
+mixture_observation,mock_api_proposer,False,False,False,96e295c52d90b1ff,True
+mixture_observation,deterministic_seed_proposer,False,False,False,96e295c52d90b1ff,True
+mixture_observation,random_candidate_proposer,False,False,False,96e295c52d90b1ff,True
+mixture_observation,failure_guided_proposer,False,False,False,96e295c52d90b1ff,True
+mixture_observation,no_observation_label_baseline,False,False,False,96e295c52d90b1ff,True
+mixture_observation,exhaustive_oracle,False,False,False,96e295c52d90b1ff,True
+hidden_component_proxy,mock_api_proposer,False,False,False,96e295c52d90b1ff,True
+hidden_component_proxy,deterministic_seed_proposer,False,False,False,96e295c52d90b1ff,True
+hidden_component_proxy,random_candidate_proposer,False,False,False,96e295c52d90b1ff,True
+hidden_component_proxy,failure_guided_proposer,False,False,False,96e295c52d90b1ff,True
+hidden_component_proxy,no_observation_label_baseline,False,False,False,96e295c52d90b1ff,True
+hidden_component_proxy,exhaustive_oracle,False,False,False,96e295c52d90b1ff,True
+Overall,mock_api_proposer,False,False,False,d9d74325ea4070ea,True
+Overall,deterministic_seed_proposer,False,False,False,d9d74325ea4070ea,True
+Overall,random_candidate_proposer,False,False,False,d9d74325ea4070ea,True
+Overall,oracle_full_candidate_ranking,False,False,False,d9d74325ea4070ea,True
+0-4 yr,mock_api_proposer,False,False,False,d9d74325ea4070ea,True
+0-4 yr,deterministic_seed_proposer,False,False,False,d9d74325ea4070ea,True
+0-4 yr,random_candidate_proposer,False,False,False,d9d74325ea4070ea,True
+0-4 yr,oracle_full_candidate_ranking,False,False,False,d9d74325ea4070ea,True
+18-49 yr,mock_api_proposer,False,False,False,d9d74325ea4070ea,True
+18-49 yr,deterministic_seed_proposer,False,False,False,d9d74325ea4070ea,True
+18-49 yr,random_candidate_proposer,False,False,False,d9d74325ea4070ea,True
+18-49 yr,oracle_full_candidate_ranking,False,False,False,d9d74325ea4070ea,True
+>=65 yr,mock_api_proposer,False,False,False,d9d74325ea4070ea,True
+>=65 yr,deterministic_seed_proposer,False,False,False,d9d74325ea4070ea,True
+>=65 yr,random_candidate_proposer,False,False,False,d9d74325ea4070ea,True
+>=65 yr,oracle_full_candidate_ranking,False,False,False,d9d74325ea4070ea,True

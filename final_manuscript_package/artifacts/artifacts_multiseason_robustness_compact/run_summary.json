@@ -1,0 +1,56 @@
+{
+  "age_groups": [
+    "Overall",
+    "0-4 yr",
+    ">= 65 yr"
+  ],
+  "artifact_root": "artifacts_multiseason_robustness_compact",
+  "completed_seasons_path": "data\\processed_flusurvnet_multiseason\\recommended_completed_seasons.csv",
+  "data_attribution": "Centers for Disease Control and Prevention, RESP-NET/FluSurv-NET",
+  "data_source": "CDC RESP-NET dataset kvib-3txy transformed to FluSurv-NET hospitalization rates",
+  "discovery": {
+    "allow_truncated_exhaustive": true,
+    "beam_width": 2,
+    "exhaustive_max_candidates": 10,
+    "max_rounds": 2
+  },
+  "elapsed_seconds": 1256.108,
+  "evaluation_design": "each completed season is evaluated as its own within-season trajectory",
+  "excluded_seasons": {
+    "2020-21": "incomplete required age-group coverage",
+    "2025-26": "preliminary current surveillance season"
+  },
+  "fitting": {
+    "maxiter": 25,
+    "n_restarts": 1,
+    "rolling_n_restarts": 0
+  },
+  "horizons": [
+    1
+  ],
+  "model_rows": 144,
+  "models": [
+    "last_observed",
+    "rolling_mean_4wk",
+    "arima_auto_small",
+    "deterministic_seir",
+    "delayed_observation_seir",
+    "constrained_structure_discovery",
+    "no_observation_search_discovery",
+    "validation_only_structure_selection"
+  ],
+  "not_transfer_forecasting": true,
+  "raw_csv": "data\\raw\\flusurvnet_multiseason_full.csv",
+  "reduced_budget": true,
+  "seasons": [
+    "2018-19",
+    "2019-20",
+    "2021-22",
+    "2022-23",
+    "2023-24",
+    "2024-25"
+  ],
+  "series_count": 18,
+  "temporary_artifact_root": ".codex_multiseason_tmp\\full",
+  "temporary_artifacts_removed": true
+}

@@ -1,0 +1,39 @@
+{
+  "api_enabled": false,
+  "api_statuses": [],
+  "api_use_mock": true,
+  "artifact_root": "artifacts_iterative_agent_loop_compact",
+  "audit_rows": 36,
+  "budgets": [
+    3,
+    6,
+    9
+  ],
+  "by_round_rows": 36,
+  "candidate_rows": 108,
+  "candidates_per_round": 3,
+  "claim_audit_passed": true,
+  "claim_audit_rows": 12,
+  "external_api_used": false,
+  "frozen_artifact_root": "artifacts_discovery_ablation",
+  "proposers": [
+    "mock_api_iterative",
+    "mock_api_single_shot",
+    "failure_guided_proposer",
+    "random_candidate_proposer",
+    "deterministic_seed_proposer",
+    "oracle_reference"
+  ],
+  "replay_only": true,
+  "replay_rows": 36,
+  "rounds": 3,
+  "runtime_seconds": 0.02515610004775226,
+  "safe_audit_passed": true,
+  "selection_metric_source": "rolling_mean_mae",
+  "series": [
+    "0-4 yr",
+    "18-49 yr"
+  ],
+  "summary_rows": 12,
+  "test_metric_usage": "posthoc_descriptive_only"
+}

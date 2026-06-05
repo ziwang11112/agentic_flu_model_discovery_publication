@@ -1,0 +1,96 @@
+\section{Introduction}
+
+Forecasting under partial observation requires more than choosing the model
+with the smallest error in one table. A hospitalization-rate series can be
+compatible with simple statistical persistence, autoregressive dynamics,
+hand-specified compartmental assumptions, or structured search candidates with
+different observation semantics. The practical question is therefore not only
+which candidate wins, but which recommendation remains credible when evidence
+is split across model families, selection objectives, proposers, and
+evaluation modes.
+
+This issue is acute in influenza hospitalization forecasting. Compartmental
+models offer interpretable latent states and useful constraints, but
+hospitalization rates are not direct observations of canonical infectious
+prevalence. A model can fail because its latent dynamics are misspecified, or
+because the observed quantity is a direct, delayed, mixed, or proxy view of the
+latent process. Age strata may also differ in delay, susceptibility recycling,
+and the relationship between observed hospitalization rates and infectious
+burden. A credible recommendation must therefore use both agreement and
+disagreement across evidence sources, while preventing leakage from held-out
+test evidence and avoiding claims the evidence cannot support.
+
+The central methodological question is:
+\begin{quote}
+How can we use agreement and disagreement across model families, proposers,
+and evidence modes to decide which forecasting recommendations are credible
+under partial observation, while preventing leakage and overclaiming?
+\end{quote}
+
+We answer this question with a verifier-gated, evidence-aware, cross-family
+model-selection framework. The framework represents proposals as structured
+candidate records, checks them against hard verifier rules, attaches
+train/validation or rolling evidence, applies interchangeable policies, and
+audits the boundary between supported and rejected claims. The same framework
+can evaluate deterministic proposers, constrained API-assisted proposers,
+random proposal orderings, failure-guided refinements, and oracle references
+without allowing any proposer to generate executable model code or see
+held-out test metrics. FluSurv-NET hospitalization forecasting is the real-data
+case study, not a leaderboard claim: it compares forecasting baselines,
+hand-specified epidemic models, constrained observation-aware structure
+discovery, same-grammar ablations, bounded candidate execution, and compact
+multi-season robustness.
+
+The contributions are:
+\begin{enumerate}[leftmargin=1.5em]
+\item a verifier-gated cross-family model-selection framework for partially
+observed forecasting candidates;
+\item a constrained agentic proposer protocol with task schemas, explicit
+allowlists, no-leakage contexts, JSON candidate outputs, and verifier
+feedback;
+\item a formal evidence and selection protocol with Pareto-epsilon, weighted
+scoring, hard-veto policies, and claim-boundary auditing;
+\item synthetic structured recovery and candidate-budget execution/replay
+evaluations that test observation-label recovery, delay-label recovery, and
+budget efficiency under controlled settings;
+\item bounded real-data execution and a FluSurv-NET case study showing
+age-dependent and objective-dependent recommendations; and
+\item a four-provider structured proposer benchmark over OpenAI/GPT,
+Anthropic/Claude, Google/Gemini, and DeepSeek under the same verifier and
+no-leakage protocol.
+\end{enumerate}
+
+The empirical conclusions are deliberately bounded. The paper does not claim
+state-of-the-art influenza forecasting, a FluSight leaderboard result, fully
+autonomous science, unrestricted model discovery, or real-world mechanism
+recovery. Instead, it shows how verifier-gated proposal, evidence comparison,
+and claim auditing can turn heterogeneous evidence into cautious
+recommendations. In the FluSurv-NET case study, the strongest positive
+observation-aware discovery signal appears in the pediatric \texttt{0-4 yr}
+series; adult strata often favor simpler forecasting baselines or
+hand-specified epidemic models; and multi-season robustness remains mixed.
+
+\paragraph{Relation to prior work.}
+Operational influenza forecasting efforts, including collaborative FluSight
+evaluations and ensemble systems, focus on prospective public-health
+prediction and operational readiness \cite{reich2019collaborative,
+reich2019accuracy,lutz2019pathforward,ray2024flusion}. Our FluSurv-NET study
+is instead a retrospective case study for verifier-gated cross-family model
+selection under partial observation, not a FluSight leaderboard entry.
+Mechanistic influenza forecasting has shown the value of compartmental
+structure and data assimilation for seasonal prediction
+\cite{shaman2012forecasting,shaman2013realtime}; here, the emphasis is on
+checking observation semantics, comparing against non-mechanistic baselines,
+and auditing which claims the evidence supports. Symbolic-regression systems
+such as SINDy, AI Feynman, and PySR search for interpretable equations from
+data \cite{brunton2016sindy,udrescu2020aifeynman,cranmer2023pysr}; our
+structured search is deliberately narrower and is embedded in a
+verifier-gated selection layer rather than framed as unconstrained equation
+discovery. Recent LLM/evaluator scientific-discovery systems motivate
+proposal-and-evaluation loops \cite{romera2024funsearch,shojaee2024llmsr,
+lu2024aiscientist}, but this work does not claim fully autonomous science:
+API-assisted proposal is optional, allowlisted, and verifier-checked before
+use. The evaluation design follows standard out-of-sample and rolling-origin
+forecasting principles \cite{tashman2000outofsample,hyndman2021fpp3}, while
+the main policy uses a Pareto-style multi-objective selection view inspired by
+multi-objective optimization \cite{deb2002nsga2}.

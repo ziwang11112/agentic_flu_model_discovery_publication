@@ -1,0 +1,64 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{siunitx}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{float}
+
+\sisetup{
+  round-mode=places,
+  round-precision=4,
+  detect-all=true
+}
+
+\title{Verifier-Gated Cross-Family Model Selection\\Under Partial Observation}
+\author{}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Partial observation makes forecasting model recommendation difficult: a series
+may favor simple statistical baselines, hand-specified mechanistic models,
+structured search candidates, or ablations depending on how the observed
+quantity relates to latent dynamics. We present a verifier-gated, evidence-aware
+cross-family model-selection framework that represents proposals as structured
+candidate records, checks them with allowlist and no-leakage guards, selects
+with interchangeable policies, and audits claim boundaries. The language-model
+component, when used, is a constrained agentic proposer protocol: providers
+receive task schemas, non-test context, verifier feedback, and JSON output
+requirements, but cannot generate executable model code or access held-out test
+metrics. We validate the framework with synthetic structured recovery tasks for
+observation-label and delay-label recovery, candidate-budget execution and
+frozen/bounded real-data replay, and a four-provider proposer benchmark over
+OpenAI, Claude, Gemini, and DeepSeek under the same verifier protocol.
+FluSurv-NET hospitalization forecasting serves as the real-data case study. The
+evidence supports age-aware and objective-aware recommendation rather than a
+single global winner: the strongest observation-aware discovery signal appears
+for pediatric \texttt{0-4 yr}, while adult strata often favor simpler baselines
+and multi-season robustness is mixed. The paper does not claim
+state-of-the-art forecasting, autonomous science, or real-world mechanism
+recovery.
+\end{abstract}
+
+\tableofcontents
+
+\input{sections/introduction}
+\input{sections/method}
+\input{sections/experiments}
+\input{sections/results}
+\input{sections/limitations}
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}

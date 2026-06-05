@@ -1,0 +1,13 @@
+series_name,proposer_type,rounds,candidates_per_round,total_budget,final_selected_model,final_best_rolling_score,round1_to_final_improvement,final_top_epsilon_hit,budget_to_top_epsilon,mean_valid_proposal_rate,mean_duplicate_rate,family_diversity,observation_label_diversity,external_api_used,api_statuses
+0-4 yr,mock_api_iterative,3,3,9,constrained_structure_discovery,0.100200235379189,0.0,True,3,1.0,0.0,4,3,False,
+0-4 yr,mock_api_single_shot,3,3,9,constrained_structure_discovery,0.100200235379189,0.0,True,3,,,4,3,False,
+0-4 yr,failure_guided_proposer,3,3,9,constrained_structure_discovery,0.100200235379189,0.0,True,3,1.0,0.0,4,3,False,
+0-4 yr,random_candidate_proposer,3,3,9,constrained_structure_discovery,0.100200235379189,0.0,True,3,1.0,0.0,4,3,False,
+0-4 yr,deterministic_seed_proposer,3,3,9,constrained_structure_discovery,0.100200235379189,0.04146643128747769,True,6,1.0,0.0,4,3,False,
+0-4 yr,oracle_reference,3,3,9,constrained_structure_discovery,0.100200235379189,0.0,True,3,1.0,0.0,4,3,False,
+18-49 yr,mock_api_iterative,3,3,9,arima_auto_small,0.0304497354497354,0.0,True,3,1.0,0.0,4,3,False,
+18-49 yr,mock_api_single_shot,3,3,9,arima_auto_small,0.0304497354497354,0.0,True,3,,,4,3,False,
+18-49 yr,failure_guided_proposer,3,3,9,arima_auto_small,0.0304497354497354,0.0,True,3,1.0,0.0,4,3,False,
+18-49 yr,random_candidate_proposer,3,3,9,arima_auto_small,0.0304497354497354,0.048292084783880494,True,6,1.0,0.0,4,3,False,
+18-49 yr,deterministic_seed_proposer,3,3,9,arima_auto_small,0.0304497354497354,0.0,True,3,1.0,0.0,4,3,False,
+18-49 yr,oracle_reference,3,3,9,arima_auto_small,0.0304497354497354,0.0,True,3,1.0,0.0,4,3,False,

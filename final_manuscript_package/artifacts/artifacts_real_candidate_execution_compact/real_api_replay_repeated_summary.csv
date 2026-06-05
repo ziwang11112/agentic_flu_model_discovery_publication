@@ -1,0 +1,17 @@
+series_name,proposer_type,valid_proposal_rate,duplicate_rate,out_of_allowlist_rejection_rate,claim_safety_violation_rate,family_diversity,observation_label_diversity,top_epsilon_hit_rate,budget_to_top_epsilon,between_run_jaccard_overlap,selected_model_agreement_rate
+Overall,deterministic_seed_proposer,1.0,0.0,0.0,0.0,2.3333333333333335,1.6666666666666667,1.0,3.0,1.0,1.0
+Overall,random_candidate_proposer,1.0,0.0,0.0,0.0,3.2666666666666666,2.3333333333333335,0.6,6.6,0.38333333333333336,1.0
+Overall,failure_guided_proposer,1.0,0.0,0.0,0.0,3.0,2.0,1.0,3.0,1.0,1.0
+Overall,oracle_full_candidate_ranking,1.0,0.0,0.0,0.0,3.0,2.0,1.0,3.0,1.0,1.0
+0-4 yr,deterministic_seed_proposer,1.0,0.0,0.0,0.0,2.3333333333333335,1.6666666666666667,0.3333333333333333,10.0,1.0,1.0
+0-4 yr,random_candidate_proposer,1.0,0.0,0.0,0.0,3.3333333333333335,2.7333333333333334,0.8666666666666667,3.8,0.4916666666666666,1.0
+0-4 yr,failure_guided_proposer,1.0,0.0,0.0,0.0,3.6666666666666665,3.0,1.0,3.0,1.0,1.0
+0-4 yr,oracle_full_candidate_ranking,1.0,0.0,0.0,0.0,3.0,2.3333333333333335,1.0,3.0,1.0,1.0
+18-49 yr,deterministic_seed_proposer,1.0,0.0,0.0,0.0,2.3333333333333335,1.6666666666666667,1.0,3.0,1.0,1.0
+18-49 yr,random_candidate_proposer,1.0,0.0,0.0,0.0,3.066666666666667,2.2666666666666666,0.9333333333333333,3.4,0.625,1.0
+18-49 yr,failure_guided_proposer,1.0,0.0,0.0,0.0,3.0,2.0,1.0,3.0,1.0,1.0
+18-49 yr,oracle_full_candidate_ranking,1.0,0.0,0.0,0.0,3.0,2.3333333333333335,1.0,3.0,1.0,1.0
+>= 65 yr,deterministic_seed_proposer,1.0,0.0,0.0,0.0,2.3333333333333335,1.6666666666666667,0.3333333333333333,10.0,1.0,1.0
+>= 65 yr,random_candidate_proposer,1.0,0.0,0.0,0.0,3.2666666666666666,2.2666666666666666,0.5333333333333333,4.8,0.4,1.0
+>= 65 yr,failure_guided_proposer,1.0,0.0,0.0,0.0,3.0,2.0,0.3333333333333333,5.0,1.0,1.0
+>= 65 yr,oracle_full_candidate_ranking,1.0,0.0,0.0,0.0,3.0,2.3333333333333335,1.0,3.0,1.0,1.0

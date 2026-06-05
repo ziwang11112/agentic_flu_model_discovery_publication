@@ -1,0 +1,32 @@
+name: Build Paper PDF
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "paper_draft/**"
+      - ".github/workflows/build-paper.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  build-paper:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX paper
+        uses: xu-cheng/latex-action@v3
+        with:
+          working_directory: paper_draft
+          root_file: main.tex
+
+      - name: Upload compiled PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: paper-main-pdf
+          path: paper_draft/main.pdf
+          if-no-files-found: error

@@ -1,0 +1,53 @@
+layer,series_name,proposer_type,repeat_idx,prompt_contains_test_metric,prompt_contains_test_winner,prompt_contains_posthoc_metric,selection_uses_test_metric,posthoc_test_metric_only,safe_prompt_passed,safe_selection_passed,allowlist_hash
+frozen_replay_repeated,Overall,deterministic_seed_proposer,0,False,False,False,False,True,True,True,d9d74325ea4070ea
+frozen_replay_repeated,Overall,random_candidate_proposer,0,False,False,False,False,True,True,True,d9d74325ea4070ea
+frozen_replay_repeated,Overall,random_candidate_proposer,1,False,False,False,False,True,True,True,d9d74325ea4070ea
+frozen_replay_repeated,Overall,random_candidate_proposer,2,False,False,False,False,True,True,True,d9d74325ea4070ea
+frozen_replay_repeated,Overall,random_candidate_proposer,3,False,False,False,False,True,True,True,d9d74325ea4070ea
+frozen_replay_repeated,Overall,random_candidate_proposer,4,False,False,False,False,True,True,True,d9d74325ea4070ea
+frozen_replay_repeated,Overall,failure_guided_proposer,0,False,False,False,False,True,True,True,d9d74325ea4070ea
+frozen_replay_repeated,Overall,oracle_full_candidate_ranking,0,False,False,False,False,True,True,True,d9d74325ea4070ea
+frozen_replay_repeated,0-4 yr,deterministic_seed_proposer,0,False,False,False,False,True,True,True,d9d74325ea4070ea
+frozen_replay_repeated,0-4 yr,random_candidate_proposer,0,False,False,False,False,True,True,True,d9d74325ea4070ea
+frozen_replay_repeated,0-4 yr,random_candidate_proposer,1,False,False,False,False,True,True,True,d9d74325ea4070ea
+frozen_replay_repeated,0-4 yr,random_candidate_proposer,2,False,False,False,False,True,True,True,d9d74325ea4070ea
+frozen_replay_repeated,0-4 yr,random_candidate_proposer,3,False,False,False,False,True,True,True,d9d74325ea4070ea
+frozen_replay_repeated,0-4 yr,random_candidate_proposer,4,False,False,False,False,True,True,True,d9d74325ea4070ea
+frozen_replay_repeated,0-4 yr,failure_guided_proposer,0,False,False,False,False,True,True,True,d9d74325ea4070ea
+frozen_replay_repeated,0-4 yr,oracle_full_candidate_ranking,0,False,False,False,False,True,True,True,d9d74325ea4070ea
+frozen_replay_repeated,18-49 yr,deterministic_seed_proposer,0,False,False,False,False,True,True,True,d9d74325ea4070ea
+frozen_replay_repeated,18-49 yr,random_candidate_proposer,0,False,False,False,False,True,True,True,d9d74325ea4070ea
+frozen_replay_repeated,18-49 yr,random_candidate_proposer,1,False,False,False,False,True,True,True,d9d74325ea4070ea
+frozen_replay_repeated,18-49 yr,random_candidate_proposer,2,False,False,False,False,True,True,True,d9d74325ea4070ea
+frozen_replay_repeated,18-49 yr,random_candidate_proposer,3,False,False,False,False,True,True,True,d9d74325ea4070ea
+frozen_replay_repeated,18-49 yr,random_candidate_proposer,4,False,False,False,False,True,True,True,d9d74325ea4070ea
+frozen_replay_repeated,18-49 yr,failure_guided_proposer,0,False,False,False,False,True,True,True,d9d74325ea4070ea
+frozen_replay_repeated,18-49 yr,oracle_full_candidate_ranking,0,False,False,False,False,True,True,True,d9d74325ea4070ea
+frozen_replay_repeated,>= 65 yr,deterministic_seed_proposer,0,False,False,False,False,True,True,True,d9d74325ea4070ea
+frozen_replay_repeated,>= 65 yr,random_candidate_proposer,0,False,False,False,False,True,True,True,d9d74325ea4070ea
+frozen_replay_repeated,>= 65 yr,random_candidate_proposer,1,False,False,False,False,True,True,True,d9d74325ea4070ea
+frozen_replay_repeated,>= 65 yr,random_candidate_proposer,2,False,False,False,False,True,True,True,d9d74325ea4070ea
+frozen_replay_repeated,>= 65 yr,random_candidate_proposer,3,False,False,False,False,True,True,True,d9d74325ea4070ea
+frozen_replay_repeated,>= 65 yr,random_candidate_proposer,4,False,False,False,False,True,True,True,d9d74325ea4070ea
+frozen_replay_repeated,>= 65 yr,failure_guided_proposer,0,False,False,False,False,True,True,True,d9d74325ea4070ea
+frozen_replay_repeated,>= 65 yr,oracle_full_candidate_ranking,0,False,False,False,False,True,True,True,d9d74325ea4070ea
+bounded_real_execution,0-4 yr,deterministic_seed_proposer,0,False,False,False,False,True,True,True,63c118b35bf6ba91
+bounded_real_execution,0-4 yr,random_candidate_proposer,0,False,False,False,False,True,True,True,63c118b35bf6ba91
+bounded_real_execution,0-4 yr,failure_guided_proposer,0,False,False,False,False,True,True,True,63c118b35bf6ba91
+bounded_real_execution,0-4 yr,mock_api_proposer,0,False,False,False,False,True,True,True,63c118b35bf6ba91
+bounded_real_execution,0-4 yr,oracle_full_candidate_ranking,0,False,False,False,False,True,True,True,63c118b35bf6ba91
+bounded_real_execution,18-49 yr,deterministic_seed_proposer,0,False,False,False,False,True,True,True,63c118b35bf6ba91
+bounded_real_execution,18-49 yr,random_candidate_proposer,0,False,False,False,False,True,True,True,63c118b35bf6ba91
+bounded_real_execution,18-49 yr,failure_guided_proposer,0,False,False,False,False,True,True,True,63c118b35bf6ba91
+bounded_real_execution,18-49 yr,mock_api_proposer,0,False,False,False,False,True,True,True,63c118b35bf6ba91
+bounded_real_execution,18-49 yr,oracle_full_candidate_ranking,0,False,False,False,False,True,True,True,63c118b35bf6ba91
+bounded_real_execution,Overall,deterministic_seed_proposer,0,False,False,False,False,True,True,True,63c118b35bf6ba91
+bounded_real_execution,Overall,random_candidate_proposer,0,False,False,False,False,True,True,True,63c118b35bf6ba91
+bounded_real_execution,Overall,failure_guided_proposer,0,False,False,False,False,True,True,True,63c118b35bf6ba91
+bounded_real_execution,Overall,mock_api_proposer,0,False,False,False,False,True,True,True,63c118b35bf6ba91
+bounded_real_execution,Overall,oracle_full_candidate_ranking,0,False,False,False,False,True,True,True,63c118b35bf6ba91
+bounded_real_execution,>= 65 yr,deterministic_seed_proposer,0,False,False,False,False,True,True,True,63c118b35bf6ba91
+bounded_real_execution,>= 65 yr,random_candidate_proposer,0,False,False,False,False,True,True,True,63c118b35bf6ba91
+bounded_real_execution,>= 65 yr,failure_guided_proposer,0,False,False,False,False,True,True,True,63c118b35bf6ba91
+bounded_real_execution,>= 65 yr,mock_api_proposer,0,False,False,False,False,True,True,True,63c118b35bf6ba91
+bounded_real_execution,>= 65 yr,oracle_full_candidate_ranking,0,False,False,False,False,True,True,True,63c118b35bf6ba91

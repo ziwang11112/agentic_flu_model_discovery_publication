@@ -1,0 +1,23 @@
+{
+  "api_statuses": [
+    "api_disabled"
+  ],
+  "artifact_root": "artifacts_real_candidate_execution_compact",
+  "audit_rows": 52,
+  "bounded_execution_rows": 60,
+  "budgets": [
+    3,
+    5,
+    10
+  ],
+  "external_api_used": false,
+  "frozen_artifact_root": "artifacts_discovery_ablation",
+  "replay_rows": 96,
+  "runtime_seconds": 382.9791527999332,
+  "safe_audit_passed": true,
+  "selected_rows": 60,
+  "selection_metric_source": "rolling_mean_mae",
+  "temp_artifacts_removed": true,
+  "test_metric_usage": "posthoc_descriptive_only",
+  "unique_model_executions": 32
+}
