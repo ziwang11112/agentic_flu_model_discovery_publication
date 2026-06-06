@@ -1,283 +1,204 @@
-\section{Experiments}
+\section{Experimental Design}
 
-\subsection{Data and forecasting task}
+The experiments ask whether a recommendation can be made credible by routing
+candidate proposals through the same evidence and safety protocol. We separate
+five questions: whether invalid or leaky evidence is rejected, whether the
+selection logic can recover known observation structure in controlled tasks,
+whether proposer orderings reach useful candidates under fixed budgets, whether
+the structured proposer protocol is stable across LLM providers, and what the
+resulting framework recommends in a real FluSurv-NET case study.
+Table~\ref{tab:rqs} summarizes the design and the interpretation each evidence
+mode can support.
 
-We study weekly influenza hospitalization-rate forecasting using a
-FluSurv-NET CSV export from CDC/RESP-NET sources
-\cite{cdcFluSurvNet2026,cdcRespNet2026,naquin2024flusurvnet}. The benchmark
-reads the raw file with
-\texttt{skiprows=2}, removes non-tabular disclaimer rows with missing
-\texttt{WEEK} or \texttt{YEAR.1}, sorts observations chronologically by year
-and week, and creates a continuous weekly time index. The primary series is
-the weekly hospitalization rate for the \emph{Entire Network} catchment with
-all other metadata fields set to \emph{Overall}. We also evaluate five
-age-stratified series: \texttt{0-4 yr}, \texttt{5-17 yr},
-\texttt{18-49 yr}, \texttt{50-64 yr}, and \texttt{>= 65 yr}.
+\begin{table*}[t]
+\centering
+\small
+\caption{Research-question driven experimental design. Each row uses the same
+candidate schema, verifier, no-leakage rule, and claim-boundary audit, but
+supports a different level of interpretation.}
+\label{tab:rqs}
+\begin{tabularx}{\textwidth}{p{0.9cm}p{3.3cm}p{4.0cm}X}
+\toprule
+RQ & Question & Evidence & Supported interpretation \\
+\midrule
+RQ1 & Can the verifier block unsafe evidence? &
+Negative-set verifier tests, prompt/no-leakage audits, claim audits &
+Evidence provenance, leakage control, and claim-boundary reliability. \\
+RQ2 & Can known observation and delay labels be recovered? &
+Generic structured time-series tasks with direct, lagged, mixture, and proxy
+observations &
+Software validation of observation-label and delay-label selection logic. \\
+RQ3 & Do proposer orderings reach useful candidates under fixed budgets? &
+Synthetic candidate execution, frozen real-data replay, and bounded real-data
+execution &
+Candidate-budget efficiency, not new real-data forecasting superiority. \\
+RQ4 & Is the proposer protocol provider-agnostic? &
+OpenAI/GPT, Claude, Gemini, and DeepSeek under the same schema, allowlist, and
+verifier &
+Structured proposer reliability and replay efficiency, not provider ranking
+for clinical forecasting. \\
+RQ5 & What does the framework recommend in FluSurv-NET? &
+Frozen benchmark, discovery ablations, paired rolling-origin comparisons, and
+a compact multi-season appendix &
+Age- and objective-dependent case-study recommendations. \\
+\bottomrule
+\end{tabularx}
+\end{table*}
 
-For each series, we use a chronological split with the first $60\%$ of weeks
-for training, the next $20\%$ for validation, and the last $20\%$ for held-out
-test evaluation. In addition to fixed test evaluation, we compute
-rolling-origin forecasts at horizons $1$, $2$, and $4$ weeks ahead. The primary
-point metrics are MAE, RMSE, and sMAPE; probabilistic models also report
-interval and likelihood diagnostics when available.
+\subsection{No-leakage split and evidence modes}
 
-\subsection{Frozen result package}
+All selection decisions use non-test evidence only. A candidate may be proposed
+from the series name, the candidate allowlist, budget state, verifier feedback,
+non-final validation or rolling-origin summaries, candidate complexity, and
+numerical-risk indicators. Prompts, feedback objects, and policy inputs are
+audited for forbidden fields, including held-out test MAE, test winners, test
+ranks, post-selection test comparisons, and paper recommendations derived from
+test evidence. Held-out test MAE is computed or read only after a model has
+already been selected and is stored under explicitly post-hoc fields such as
+\texttt{post\_selection\_test\_mae}. This rule is deliberately stricter than a
+typical benchmark table because the central object of study is the
+recommendation protocol rather than a single model score.
 
-The discovery-ablation results used in this draft are frozen in the branch
-\texttt{codex-supplemental-experiment-results}. The implementation commit is
-\texttt{7d8ae4e48bf001ec24daacd413b7f403eb8c4392}; the result artifact commit
-is \texttt{09c93188e319aa51933f6029260fff2f3a09cd03}; the paper
-integration commit is
-\texttt{3608b641dc45ab35a347059ef53567371ce62f1e}. The result-freeze
-manifest is \texttt{reports/result\_freeze\_manifest.md}.
+The paper uses four evidence modes. First, synthetic structured recovery
+provides ground-truth observation and delay labels under generic numerical
+time-series tasks. Second, frozen replay reorders existing compact benchmark
+rows without refitting models. Third, bounded execution evaluates a small
+allowlisted union of real-data candidates with reduced deterministic fitting
+settings and then deletes temporary model artifacts. Fourth, the frozen
+FluSurv-NET discovery-ablation package provides the main real-data case study.
+These modes are intentionally not interchangeable: synthetic recovery supports
+software validation, replay supports ordering efficiency, bounded execution
+supports budget-limited execution feasibility, and the FluSurv-NET benchmark
+supports age- and objective-dependent case-study conclusions.
 
-The main result configuration is
-\texttt{configs/discovery\_ablation.yaml}. It writes artifacts under
-\texttt{artifacts\_discovery\_ablation/}, including
-\texttt{benchmark\_model\_summary.csv},
-\texttt{benchmark\_series\_winners.csv},
-\texttt{age\_group\_recommendation.csv}, and
-\texttt{paired\_rolling\_error\_comparison.csv}. The main frozen report is
-\texttt{reports/baseline\_ablation\_report.md}. Paper-ready compact tables
-are derived from those frozen artifacts without rerunning experiments.
+\subsection{Real-data case study}
 
-\subsection{Model families and opt-in forecasting baselines}
+The real-data case study uses CDC FluSurv-NET/RESP-NET hospitalization-rate
+series for Overall, \texttt{0-4 yr}, \texttt{5-17 yr}, \texttt{18-49 yr},
+\texttt{50-64 yr}, and \texttt{>=65 yr}
+\citep{cdcFluSurvNet2026,cdcRespNet2026,naquin2024flusurvnet}. The frozen
+discovery-ablation package compares standard forecasting baselines, manual
+mechanistic baselines, constrained observation-aware structured search, and
+same-grammar ablations. We keep the frozen benchmark fixed and treat all
+additional selection-policy, agentic-proposer, and bounded-execution experiments
+as downstream audits or budget-efficiency evaluations. No downstream stage
+modifies the frozen discovery-ablation artifacts.
 
-The historical default benchmark remains unchanged: when
-\texttt{benchmark.models} is absent, the repository runs only the six original
-core models:
-\begin{enumerate}[leftmargin=1.5em]
-\item \texttt{deterministic\_seir},
-\item \texttt{probabilistic\_seir},
-\item \texttt{hospitalized\_seihr},
-\item \texttt{delayed\_observation\_seir},
-\item \texttt{fractional\_seir}, and
-\item \texttt{constrained\_structure\_discovery}.
-\end{enumerate}
+The compact multi-season robustness appendix uses completed seasons
+2018--19, 2019--20, 2021--22, 2022--23, 2023--24, and 2024--25 as independent
+within-season trajectories. The incomplete 2020--21 season and preliminary
+2025--26 season are excluded. This appendix is not a previous-season to
+future-season transfer forecast; it is a compact season-separated caveat for
+whether the pediatric observation-aware signal is stable across completed
+seasons under a reduced budget.
 
-The frozen discovery-ablation configuration is opt-in and explicitly adds
-standard forecasting baselines:
-\begin{itemize}[leftmargin=1.5em]
-\item persistence and rolling means:
-\texttt{last\_observed}, \texttt{rolling\_mean\_2wk}, and
-\texttt{rolling\_mean\_4wk};
-\item small validation-selected ARIMA:
-\texttt{arima\_auto\_small};
-\item lagged regression baselines:
-\texttt{lagged\_ridge} and \texttt{lagged\_gradient\_boosting}; and
-\item an explicit \texttt{equal\_weight\_point\_ensemble}.
-\end{itemize}
-The ensemble is restricted by \texttt{benchmark.ensemble\_members} so that it
-does not accidentally average discovery-ablation variants.
+\subsection{Candidate families, ablations, and policies}
 
-\subsection{Discovery-specific ablations}
+The evaluated candidate space contains four main families. Forecasting
+baselines include last observed, rolling-mean, and small automatic ARIMA
+models. Manual mechanistic baselines include deterministic compartmental
+templates with fixed structure. Structured-search candidates use the bounded
+grammar described above, including observation-aware search over direct,
+delayed, mixture, and proxy observation labels. Ablation candidates remove or
+alter parts of the selection protocol: no-observation-search fixes the
+observation label, validation-only selection ignores the stability-aware
+score, no-stability selection removes the stability penalty, and
+random/exhaustive search provide same-grammar controls.
 
-The constrained discovery model searches a bounded epidemic grammar over
-latent structures, fractional dynamics, observation maps, and delayed
-observation. The candidate structures are drawn from
-\texttt{SIR}, \texttt{SEIR}, \texttt{SEIRS}, \texttt{SEIHR}, and
-\texttt{SEIAR}; observation maps include \texttt{I}, \texttt{H},
-\texttt{I+H}, and \texttt{delayed\_I}. Validity rules reject observation maps
-whose required compartments are absent.
+The main policy is Pareto-epsilon selection over non-test evidence:
+validation score when available, rolling-origin MAE, complexity, numerical
+risk, and family diversity. Weighted scoring is retained as a deterministic
+ablation, and the hard-veto decision tree provides a simple interpretable
+policy that can prefer a baseline when it is within epsilon of a more complex
+candidate. The policy layer is evaluated because model recommendation is not
+only a question of the best held-out score: in a partially observed setting,
+the credibility of a recommendation also depends on whether simpler baselines
+are competitive, whether the observation map is supported by ablations, and
+whether numerical failures or flagged rows are being used as evidence.
 
-The frozen ablation run evaluates five discovery-specific alternatives:
-\begin{description}[leftmargin=1.5em]
-\item[\texttt{random\_structure\_discovery}] randomly samples the same grammar
-under an explicit candidate budget and records the requested budget, actual
-budget, universe size, repeats, and seed.
-\item[\texttt{exhaustive\_structure\_discovery}] evaluates the full valid
-candidate universe for the current grammar. In the frozen run this universe has
-44 candidates, below the configured guard of 200.
-\item[\texttt{validation\_only\_structure\_selection}] selects strictly by
-validation MAE. Complexity and age-prior penalties are recorded as diagnostics
-but are not used in the score.
-\item[\texttt{no\_observation\_search\_discovery}] uses the stability-aware
-score but restricts the candidate universe to \texttt{observation\_map=I}.
-\item[\texttt{no\_stability\_discovery}] keeps multi-split, complexity, and
-age-prior terms but removes the rolling stability penalty from the score.
-\end{description}
+\subsection{Verifier and claim-boundary tests}
 
-Every discovery leaderboard records the score policy, score formula, component
-metrics, penalties, and boolean flags indicating which components enter the
-score. The selected structure is then evaluated by the same final model-family
-pipeline as the core epidemic models.
+The verifier is tested with a negative set containing missing required fields,
+duplicate candidate identifiers, absolute artifact paths, invalid observation
+or delay labels, out-of-allowlist model names, held-out test metrics included
+as selection evidence, and numerical-failure rows used as positive support.
+The same no-leakage audit is applied to prompt contexts, feedback objects,
+selection inputs, and compact outputs in the candidate-execution and
+provider-benchmark experiments. Claim-boundary auditing then maps the evidence
+into allowed and rejected statements. In particular, the auditor can allow
+claims about proposal quality, budget efficiency, synthetic recovery, and
+age/objective-dependent case-study behavior, while rejecting claims about
+state-of-the-art forecasting, FluSight leaderboard performance, autonomous
+science, provider clinical superiority, and real-world mechanism recovery.
 
-\subsection{No-leakage evaluation design}
+\subsection{Synthetic structured recovery}
 
-All selection decisions use only training, validation, and rolling-validation
-information. ARIMA order selection uses validation MAE only and is refit on
-train-plus-validation before test evaluation. Discovery structure selection
-uses candidate scores computed from training and validation windows. Delayed
-observation delay selection is validation-only. Held-out test metrics are
-computed only after the model specification or baseline hyperparameter choice
-has been fixed.
+The synthetic sweep is a generic structured time-series validation, not a
+biological simulation. It uses five tasks with known labels: direct signal,
+one-week lagged signal, two-week lagged signal, mixture observation, and
+hidden-component proxy. The observation formulas are
+\begin{align}
+\mathrm{direct}:&\quad y_t=z_t+\epsilon_t,\\
+\mathrm{lagged}(d):&\quad y_t=z_{t-d}+\epsilon_t,\quad d\in\{1,2\},\\
+\mathrm{mixture}:&\quad y_t=\alpha z_t+(1-\alpha)u_t+\epsilon_t,\\
+\mathrm{proxy}:&\quad y_t=u_t+\epsilon_t.
+\end{align}
+The expanded sweep evaluates 100 seeds, five noise levels
+$\{0,0.025,0.05,0.10,0.15\}$, five candidate budgets
+$\{3,5,10,20,40\}$, and six policies or baselines: Pareto-epsilon, weighted
+score, hard-veto decision tree, deterministic seed proposer, random-label
+baseline, and no-observation-label baseline. The resulting compact table
+contains 75,000 policy-condition rows. The primary metrics are observation
+label recovery, delay label recovery, candidate-family recovery, rolling
+error, budget to recover the true label, valid proposal rate, duplicate rate,
+and top-epsilon hit rate.
 
-The paired rolling-origin comparison is post-hoc reporting rather than model
-selection. It loads frozen model artifacts, identifies \texttt{series\_name}
-and \texttt{model\_name} from each \texttt{metrics.json}, and aligns rolling
-forecasts by \texttt{series\_name}, \texttt{horizon}, and \texttt{target\_t}.
-The reported sign convention is
-\[
-\Delta = \text{MAE}_{\text{challenger}} -
-         \text{MAE}_{\text{constrained discovery}},
-\]
-so positive values indicate lower rolling absolute error for constrained
-discovery.
+\subsection{Candidate-budget execution and replay}
 
-\subsection{Offline verifier and selection-policy audit}
+Candidate-budget experiments simulate the question a user faces under limited
+evaluation budget: after $k$ candidates have become available, has the
+proposer exposed a useful candidate? The synthetic execution layer actually
+scores candidates on the generic toy tasks and contains 24,000 evaluated
+rows. The frozen real-data replay layer uses existing compact FluSurv-NET
+rows only and contains 64 replay rows. The bounded real-data execution layer
+evaluates a small allowlisted candidate union on Overall, \texttt{0-4 yr},
+\texttt{18-49 yr}, and \texttt{>=65 yr}. It uses reduced deterministic fitting
+settings, executes each unique series--model pair once, writes temporary
+outputs under a disposable root, suppresses diagnostic plot writes, summarizes
+the metrics, and deletes temporary artifacts. The committed bounded execution
+summary contains 60 series-budget rows, 32 unique real-data executions, and a
+52-row no-leakage audit in which all rows pass.
 
-We also include a deterministic offline verifier and selection-policy audit
-over the compact frozen summary tables. This layer does not call external
-LLM/API services, does not run new forecasting experiments, and does not
-modify model artifacts. It reads existing CSV summaries and checks candidate
-metadata, selection evidence, and claim-boundary labels.
+For real-data replay and bounded execution, selection uses rolling or
+validation evidence, complexity, numerical risk, and verifier status. Test MAE
+is attached only after selection and is interpreted descriptively. The
+comparison includes deterministic seed, random candidate ordering,
+failure-guided ordering, mock agent ordering, and an oracle reference ordering
+derived from the full compact candidate set. The oracle is a reference for
+budget-to-top-epsilon, not a deployable proposer.
 
-The hard verifier evaluates a negative set containing malformed records,
-duplicate candidate identifiers, absolute artifact paths, selection evidence
-that incorrectly includes test metrics, numerically flagged rows used as
-positive evidence, and invalid observation or delay labels. The policy audit
-then compares three deterministic policies over the frozen candidate rows:
-\texttt{pareto\_epsilon}, deterministic weighted scoring, and a hard-veto
-decision tree. These policies are reported as offline interpretations over
-existing evidence. They are not used to select models for the frozen
-benchmark. The same audit emits claim-boundary labels for statements such as
-no single global winner, group-specific signals, post-hoc comparisons not
-being selection evidence, and flagged numerical rows being descriptive only.
+\subsection{Constrained agentic proposer and cross-provider benchmark}
 
-\subsection{Expanded synthetic structured recovery evaluation}
+The language-model component is evaluated as a constrained proposer only. Each
+provider receives the same task protocol: an explicit candidate allowlist,
+series metadata, budget and round index, prior verifier feedback, duplicate
+candidate information, family and observation-label coverage, and non-test
+rolling or validation evidence when available. Each provider must return JSON
+candidate records with fields for candidate id, family, model name,
+observation label, delay label, intended role, rationale, expected failure
+mode, and paired-ablation target. The output is parsed, allowlist-checked,
+verified, and audited before replay. Provider output cannot generate model
+code, add candidate families, alter the allowlist, execute forecasts, or see
+held-out test evidence.
 
-Finally, we include an expanded synthetic structured recovery sweep for the
-offline selection layer. This evaluation uses generic structured time-series
-toy tasks with known labels: \texttt{direct\_signal},
-\texttt{lagged\_signal\_1}, \texttt{lagged\_signal\_2},
-\texttt{mixture\_observation}, and \texttt{hidden\_component\_proxy}. The
-target labels are direct, lagged, mixture, and proxy observation labels, with
-delay labels for the lagged cases.
-
-The final sweep uses seeds 1--100, noise levels \num{0.0}, \num{0.025},
-\num{0.05}, \num{0.10}, and \num{0.15}, and candidate budgets \num{3},
-\num{5}, \num{10}, \num{20}, and \num{40}. It compares
-\texttt{pareto\_epsilon}, deterministic weighted scoring, a hard-veto
-decision tree, a deterministic seed proposer, a random-label baseline, and a
-no-observation-label baseline. This yields \num{75000} evaluated
-policy-condition rows before aggregation. The API-assisted proposal path is
-disabled. The outputs are compact aggregate CSV summaries under
-\texttt{artifacts\_selection\_policy\_eval\_compact/} and the main synthetic
-validation report is
-\texttt{reports/selection\_synthetic\_recovery\_full\_report.md}.
-
-These toy tasks are software validation for observation-label, delay-label,
-and candidate-family recovery logic. They use no real FluSurv-NET data, are
-not real-data forecasting experiments, and are not evidence that the system
-recovers real-world epidemic mechanisms.
-
-\subsection{Verifier-gated candidate execution and replay}
-
-We additionally evaluate candidate proposal ordering under fixed budgets. This
-evaluation has two layers. The synthetic layer performs actual
-deterministic execution on the same generic structured time-series toy tasks
-used above. The real-data layer is replay-only over frozen compact FluSurv-NET
-summary rows and performs no model refitting.
-
-The committed evaluation disables external API access and uses a deterministic
-\texttt{mock\_api\_proposer}. It compares this proposer with a deterministic
-seed proposer, a random candidate proposer, a failure-guided proposer, a
-no-observation-label baseline, and an exhaustive oracle for the synthetic
-tasks. For frozen real-data replay, it compares the mock API proposer,
-deterministic seed proposer, random candidate proposer, and an oracle ranking
-over the existing compact candidate rows. Candidate budgets are \num{3},
-\num{5}, \num{10}, and \num{20}.
-
-No held-out test metrics are included in prompts or selection evidence. The
-prompt audit covers 46 prompt records and all pass: no prompt contains a test
-metric, test winner, or post-hoc metric. Held-out test MAE appears only in
-clearly labeled post-selection descriptive columns in the replay table. The
-outputs are compact CSV, JSON, and JSONL files under
-\texttt{artifacts\_api\_candidate\_execution\_compact/}; no real-data
-forecast traces, per-model metrics, or refit artifacts are generated.
-
-\subsection{Bounded real-data candidate execution}
-
-The bounded real-data execution study extends the candidate-budget evaluation
-from frozen replay to a small allowlisted execution set. Both the smoke and
-evaluation configurations were run. The
-evaluation configuration covers the series \texttt{0-4 yr},
-\texttt{18-49 yr}, \texttt{Overall}, and \texttt{>=65 yr}; candidate budgets
-are \num{3}, \num{5}, and \num{10}. It compares a deterministic seed proposer,
-a random proposer, a failure-guided proposer, a \texttt{mock\_api\_proposer},
-and an oracle reference ranking. The committed evaluation keeps real API access
-disabled, so the API-like proposer is a structured stand-in rather than a real
-external proposal run.
-
-The bounded execution layer runs only allowlisted repository models:
-\texttt{last\_observed}, \texttt{rolling\_mean\_4wk},
-\texttt{arima\_auto\_small}, \texttt{deterministic\_seir},
-\texttt{delayed\_observation\_seir},
-\texttt{constrained\_structure\_discovery},
-\texttt{no\_observation\_search\_discovery}, and
-\texttt{validation\_only\_structure\_selection}. Across the evaluation
-configuration, this required 32 unique real-data model executions. Temporary
-per-model artifacts were written under a local temporary root, diagnostic plot
-writes were suppressed, compact metrics were extracted, and the temporary root
-was removed before committing. The final committed outputs are compact
-summaries under \texttt{artifacts\_real\_candidate\_execution\_compact/}. No
-frozen discovery-ablation artifacts were modified.
-
-The evaluation completed in approximately \num{383} seconds. As in the
-replay-only candidate-budget evaluation,
-selection uses rolling evidence only; held-out test MAE is retained only as a
-post-selection descriptive column. The no-leakage audit contains 52 rows and
-all rows pass.
-
-\subsection{Cross-provider verifier-gated proposer benchmark}
-
-The cross-provider benchmark evaluates OpenAI/GPT, Anthropic/Claude,
-Google/Gemini, and DeepSeek as constrained structured candidate proposers
-under the same prompt-task
-protocol, candidate allowlist, verifier, and no-leakage audit. The providers
-receive only series metadata, the explicit candidate allowlist, candidate
-budgets, and non-test verifier or replay feedback. They do not receive
-held-out test metrics, test winners, test ranks, paper recommendations derived
-from test evidence, or post-selection comparisons.
-
-Provider outputs are parsed as JSON or provider-native structured outputs and
-converted into the shared candidate schema before use. The Gemini adapter uses
-a provider-native structured-output path with compact schema-guided prompting
-after integration hardening, so all four provider families enter the same
-verifier-gated comparison. No provider can generate model code, change the
-candidate allowlist, or directly execute forecasts. Every proposed candidate
-is checked by the deterministic allowlist, verifier, no-leakage audit, and
-claim-safety audit before frozen replay.
-
-The committed benchmark covers the six FluSurv-NET series, three repeats,
-three proposal rounds, three candidates per round, and budgets \num{3},
-\num{6}, and \num{9}. It compares iterative and single-shot provider modes
-with deterministic seed, random, failure-guided, and oracle-reference
-orderings. The real-data layer is frozen replay over compact summaries; no new
-real-data model refitting is performed.
-
-\subsection{Numerical diagnostics}
-
-The frozen benchmark retains all model-series rows for transparency, including
-rows flagged by numerical diagnostics. The summary table records fit-status
-fields, maximum prediction magnitudes, and a
-\texttt{numerical\_failure\_flag}. Flagged rows are reported in
-\texttt{artifacts\_discovery\_ablation/numerical\_failure\_summary.csv} and
-summarized in \texttt{reports/numerical\_failure\_audit.md}. These rows are not
-used to support positive claims.
-
-\subsection{Compact multi-season robustness appendix}
-
-As an appendix-only robustness check, we also evaluate completed FluSurv-NET
-seasons as independent within-season trajectories. This compact check uses CDC
-RESP-NET-derived FluSurv-NET data for seasons \texttt{2018-19},
-\texttt{2019-20}, \texttt{2021-22}, \texttt{2022-23}, \texttt{2023-24}, and
-\texttt{2024-25}; it excludes incomplete \texttt{2020-21} and preliminary
-\texttt{2025-26}. The appendix uses a reduced budget and the compact model set
-\texttt{last\_observed}, \texttt{rolling\_mean\_4wk},
-\texttt{arima\_auto\_small}, \texttt{deterministic\_seir},
-\texttt{delayed\_observation\_seir},
-\texttt{constrained\_structure\_discovery},
-\texttt{no\_observation\_search\_discovery}, and
-\texttt{validation\_only\_structure\_selection}. It is not a
-previous-season-to-future-season transfer-forecasting experiment.
+We first ran a single-provider LLM-backed proposal smoke test to check proposal validity and
+safety, then a three-round iterative proposer loop in frozen replay. The final
+cross-provider benchmark compares OpenAI/GPT, Anthropic Claude, Google Gemini,
+and DeepSeek as structured proposers. It uses six series, three repeats, three
+rounds, three candidates per round, and budgets $\{3,6,9\}$. Both iterative
+and single-shot provider modes are compared to deterministic seed,
+failure-guided, random, and oracle-reference orderings. The benchmark reports
+schema parse success, verifier-valid proposal rate, duplicate rate,
+out-of-allowlist rejection, family and observation-label diversity,
+between-repeat stability, selected-model agreement, and frozen-replay
+top-epsilon hit. It is not a provider leaderboard for clinical forecasting.

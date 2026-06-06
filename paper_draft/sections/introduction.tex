@@ -1,96 +1,114 @@
 \section{Introduction}
 
-Forecasting under partial observation requires more than choosing the model
-with the smallest error in one table. A hospitalization-rate series can be
-compatible with simple statistical persistence, autoregressive dynamics,
-hand-specified compartmental assumptions, or structured search candidates with
-different observation semantics. The practical question is therefore not only
-which candidate wins, but which recommendation remains credible when evidence
-is split across model families, selection objectives, proposers, and
-evaluation modes.
+Forecasting under partial observation is not only a problem of minimizing a
+single error column. In influenza hospitalization forecasting, the observed
+target is a reported hospitalization-rate time series, while many candidate
+models reason in terms of latent quantities such as infectious prevalence,
+hospitalized compartments, or delayed observation processes. A model may appear
+weak because the latent dynamics are wrong, because the observation map is
+wrong, because a simple non-mechanistic baseline is sufficient, or because the
+evidence being used does not match the claim being made.
 
-This issue is acute in influenza hospitalization forecasting. Compartmental
-models offer interpretable latent states and useful constraints, but
-hospitalization rates are not direct observations of canonical infectious
-prevalence. A model can fail because its latent dynamics are misspecified, or
-because the observed quantity is a direct, delayed, mixed, or proxy view of the
-latent process. Age strata may also differ in delay, susceptibility recycling,
-and the relationship between observed hospitalization rates and infectious
-burden. A credible recommendation must therefore use both agreement and
-disagreement across evidence sources, while preventing leakage from held-out
-test evidence and avoiding claims the evidence cannot support.
-
-The central methodological question is:
+This creates a recommendation problem rather than a pure leaderboard problem.
+The central question is:
 \begin{quote}
-How can we use agreement and disagreement across model families, proposers,
-and evidence modes to decide which forecasting recommendations are credible
-under partial observation, while preventing leakage and overclaiming?
+How can agreement and disagreement across model families, proposers, policies,
+and evidence modes be used to decide which forecasting recommendations are
+credible under partial observation, while preventing leakage and overclaiming?
 \end{quote}
 
-We answer this question with a verifier-gated, evidence-aware, cross-family
-model-selection framework. The framework represents proposals as structured
-candidate records, checks them against hard verifier rules, attaches
-train/validation or rolling evidence, applies interchangeable policies, and
-audits the boundary between supported and rejected claims. The same framework
-can evaluate deterministic proposers, constrained API-assisted proposers,
-random proposal orderings, failure-guided refinements, and oracle references
-without allowing any proposer to generate executable model code or see
-held-out test metrics. FluSurv-NET hospitalization forecasting is the real-data
-case study, not a leaderboard claim: it compares forecasting baselines,
-hand-specified epidemic models, constrained observation-aware structure
-discovery, same-grammar ablations, bounded candidate execution, and compact
-multi-season robustness.
+We answer this question with a verifier-gated model-selection framework
+(Figure~\ref{fig:framework}). The framework treats every model suggestion as a
+structured candidate record. Candidates may come from deterministic heuristics,
+random orderings, failure-guided refinement, or constrained LLM-backed
+proposers, but all candidates enter the same verifier. The verifier enforces
+schema validity, explicit allowlists, no-code-generation, no-leakage, budget,
+observation-label, and claim-safety constraints. Only verified candidates are
+evaluated by deterministic code. Selection policies operate on validation or
+rolling-validation evidence, while held-out test metrics are attached only
+after selection as post-hoc descriptive evidence.
 
-The contributions are:
-\begin{enumerate}[leftmargin=1.5em]
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{fig1_agentic_framework_pipeline_fancy.pdf}
+\caption{Verifier-gated agentic framework for credible cross-family
+model selection under partial observation. The constrained agentic proposer
+emits structured candidate records from an explicit cross-family hypothesis
+space. A central verifier gate enforces schema validity, allowlist membership,
+observation compatibility, budget constraints, no-leakage evidence use, no
+code generation, and claim safety before any candidate reaches the evidence
+engines. Evidence-aware policies and a claim auditor convert non-test evidence
+into an audited recommendation rather than a universal-winner claim.}
+\label{fig:framework}
+\end{figure*}
+
+The contribution is methodological, not a claim of operational flu forecasting
+superiority. We make six contributions:
+\begin{enumerate}
 \item a verifier-gated cross-family model-selection framework for partially
-observed forecasting candidates;
+observed forecasting;
 \item a constrained agentic proposer protocol with task schemas, explicit
-allowlists, no-leakage contexts, JSON candidate outputs, and verifier
-feedback;
-\item a formal evidence and selection protocol with Pareto-epsilon, weighted
-scoring, hard-veto policies, and claim-boundary auditing;
-\item synthetic structured recovery and candidate-budget execution/replay
-evaluations that test observation-label recovery, delay-label recovery, and
-budget efficiency under controlled settings;
-\item bounded real-data execution and a FluSurv-NET case study showing
-age-dependent and objective-dependent recommendations; and
-\item a four-provider structured proposer benchmark over OpenAI/GPT,
-Anthropic/Claude, Google/Gemini, and DeepSeek under the same verifier and
-no-leakage protocol.
+allowlists, JSON candidate records, and verifier feedback;
+\item a no-leakage evidence protocol with Pareto-epsilon, weighted-score, and
+hard-veto policies plus claim-boundary auditing;
+\item synthetic structured recovery experiments that test observation-label
+and delay-label recovery under known ground truth;
+\item candidate-budget replay and bounded real-data execution experiments that
+evaluate proposer ordering without unrestricted refitting; and
+\item a FluSurv-NET case study and four-provider agentic proposer benchmark over
+OpenAI/GPT, Claude, Gemini, and DeepSeek under the same verifier protocol.
 \end{enumerate}
 
-The empirical conclusions are deliberately bounded. The paper does not claim
-state-of-the-art influenza forecasting, a FluSight leaderboard result, fully
-autonomous science, unrestricted model discovery, or real-world mechanism
-recovery. Instead, it shows how verifier-gated proposal, evidence comparison,
-and claim auditing can turn heterogeneous evidence into cautious
-recommendations. In the FluSurv-NET case study, the strongest positive
-observation-aware discovery signal appears in the pediatric \texttt{0-4 yr}
-series; adult strata often favor simpler forecasting baselines or
-hand-specified epidemic models; and multi-season robustness remains mixed.
+\section{Related Work}
 
-\paragraph{Relation to prior work.}
-Operational influenza forecasting efforts, including collaborative FluSight
-evaluations and ensemble systems, focus on prospective public-health
-prediction and operational readiness \cite{reich2019collaborative,
-reich2019accuracy,lutz2019pathforward,ray2024flusion}. Our FluSurv-NET study
-is instead a retrospective case study for verifier-gated cross-family model
-selection under partial observation, not a FluSight leaderboard entry.
-Mechanistic influenza forecasting has shown the value of compartmental
-structure and data assimilation for seasonal prediction
-\cite{shaman2012forecasting,shaman2013realtime}; here, the emphasis is on
-checking observation semantics, comparing against non-mechanistic baselines,
-and auditing which claims the evidence supports. Symbolic-regression systems
-such as SINDy, AI Feynman, and PySR search for interpretable equations from
-data \cite{brunton2016sindy,udrescu2020aifeynman,cranmer2023pysr}; our
-structured search is deliberately narrower and is embedded in a
-verifier-gated selection layer rather than framed as unconstrained equation
-discovery. Recent LLM/evaluator scientific-discovery systems motivate
-proposal-and-evaluation loops \cite{romera2024funsearch,shojaee2024llmsr,
-lu2024aiscientist}, but this work does not claim fully autonomous science:
-API-assisted proposal is optional, allowlisted, and verifier-checked before
-use. The evaluation design follows standard out-of-sample and rolling-origin
-forecasting principles \cite{tashman2000outofsample,hyndman2021fpp3}, while
-the main policy uses a Pareto-style multi-objective selection view inspired by
-multi-objective optimization \cite{deb2002nsga2}.
+Operational influenza forecasting has established the value of collaborative
+multi-model assessment, real-time evaluation, and ensemble forecasts
+\citep{shaman2012forecasting,shaman2013realtime,reich2019collaborative,
+reich2019accuracy,lutz2019pathforward,ray2024flusion}. Our setting is
+different. We use FluSurv-NET as a retrospective case study for credible
+model recommendation under partial observation, not as a FluSight leaderboard
+entry or operational forecasting system.
+
+Mechanistic epidemic forecasting and symbolic discovery provide interpretable
+structure, but they also introduce model-space and observation-map choices.
+SINDy, AI Feynman, and PySR search for interpretable equations from data
+\citep{brunton2016sindy,udrescu2020aifeynman,cranmer2023pysr}. Our structured
+search is deliberately narrower: the compartment templates, observation maps,
+and delays are bounded in advance, and all discovered candidates are compared
+against simple forecasting baselines, hand-specified mechanistic baselines, and
+same-grammar ablations.
+
+Recent language-model systems for scientific search motivate proposal and
+evaluation loops \citep{romera2024funsearch,shojaee2024llmsr,lu2024aiscientist}.
+We adopt the loop structure but restrict the autonomy. A language model, when
+used, is a structured proposer. It cannot invent model families, generate
+executable model code, change the allowlist, execute forecasts, or view
+held-out test metrics.
+
+Adjacent AI-for-science pipelines reinforce the same separation between
+proposal, verification, evaluation, and claim discipline. In molecular design,
+REINVENT-style workflows, scaffold-constrained DrugEx search, multi-target
+molecular generation, and pocket-conditioned diffusion propose or optimize
+candidate objects, but their scientific value depends on downstream scoring,
+filtering, multi-objective evaluation, uncertainty, and domain-specific
+validation rather than on generation alone
+\citep{loeffler2024reinvent,liu2023drugex,ai2024mtmolgpt,lin2024diffbp}.
+Platform and benchmarking work makes this boundary explicit: Chemistry42-style
+optimization and MolScore-style evaluation treat proposal quality as something
+that must be filtered, scored, and benchmarked under explicit objectives, while
+uncertainty and conformal-prediction studies emphasize applicability-domain and
+confidence-aware reporting \citep{ivanenkov2023chemistry42,thomas2024molscore,
+dutschmann2023uncertainty,arvidsson2024cpsign}. Prospective de novo design and
+mechanism-aware foundation-model discussions further motivate closed-loop
+feedback and mechanism-grounded evaluation, but they also illustrate why a
+proposal engine should not be confused with a validated scientific conclusion
+\citep{atz2024prospective,lavecchia2026mechanismaware}. We use these
+cross-domain references only to motivate proposer/evaluator separation,
+feedback, uncertainty, and claim boundaries; they do not support influenza
+forecasting performance, FluSurv-NET recommendations, provider superiority, or
+real-world epidemic mechanism recovery.
+
+This design follows standard concerns in out-of-sample and rolling-origin
+forecast evaluation \citep{tashman2000outofsample,hyndman2021fpp3} and uses
+multi-objective selection ideas related to Pareto optimization
+\citep{deb2002nsga2}.

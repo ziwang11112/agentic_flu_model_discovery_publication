@@ -1,56 +1,44 @@
 \documentclass[11pt]{article}
 
-\usepackage[margin=1in]{geometry}
-\usepackage{booktabs}
-\usepackage{tabularx}
-\usepackage{array}
-\usepackage{graphicx}
-\usepackage{subcaption}
-\usepackage{siunitx}
-\usepackage{enumitem}
-\usepackage{amsmath}
-\usepackage{hyperref}
-\usepackage{float}
+\usepackage[margin=0.9in]{geometry}
+\usepackage{amsmath,amssymb,booktabs,tabularx,array,graphicx,subcaption,float,enumitem,siunitx,natbib,hyperref,xcolor}
+\hypersetup{colorlinks=true, linkcolor=blue!55!black, citecolor=blue!55!black, urlcolor=blue!55!black}
+\graphicspath{{figures/}}
+\sisetup{round-mode=places, round-precision=4, detect-all=true}
+\setlist[itemize]{leftmargin=1.25em}
+\setlist[enumerate]{leftmargin=1.45em}
 
-\sisetup{
-  round-mode=places,
-  round-precision=4,
-  detect-all=true
-}
-
-\title{Verifier-Gated Cross-Family Model Selection\\Under Partial Observation}
+\title{Verifier-Gated Agentic Model Selection under Partial Observation}
 \author{}
-\date{\today}
+\date{}
 
 \begin{document}
-
 \maketitle
 
 \begin{abstract}
-Partial observation makes forecasting model recommendation difficult: a series
-may favor simple statistical baselines, hand-specified mechanistic models,
-structured search candidates, or ablations depending on how the observed
-quantity relates to latent dynamics. We present a verifier-gated, evidence-aware
-cross-family model-selection framework that represents proposals as structured
-candidate records, checks them with allowlist and no-leakage guards, selects
-with interchangeable policies, and audits claim boundaries. The language-model
-component, when used, is a constrained agentic proposer protocol: providers
-receive task schemas, non-test context, verifier feedback, and JSON output
-requirements, but cannot generate executable model code or access held-out test
-metrics. We validate the framework with synthetic structured recovery tasks for
-observation-label and delay-label recovery, candidate-budget execution and
-frozen/bounded real-data replay, and a four-provider proposer benchmark over
-OpenAI, Claude, Gemini, and DeepSeek under the same verifier protocol.
-FluSurv-NET hospitalization forecasting serves as the real-data case study. The
-evidence supports age-aware and objective-aware recommendation rather than a
-single global winner: the strongest observation-aware discovery signal appears
-for pediatric \texttt{0-4 yr}, while adult strata often favor simpler baselines
-and multi-season robustness is mixed. The paper does not claim
-state-of-the-art forecasting, autonomous science, or real-world mechanism
-recovery.
+Partially observed forecasting problems make model recommendation difficult:
+the same observed series may be consistent with simple statistical baselines,
+hand-specified mechanistic models, structured-search candidates, or ablations
+that differ mainly in their observation semantics. We study how to make such
+recommendations credible without leaking held-out test evidence or overstating
+what the data support. We introduce a verifier-gated, evidence-aware,
+cross-family model-selection framework. Candidate proposers, including optional
+language-model providers, may only emit structured candidate records from an
+explicit allowlist. A hard verifier rejects malformed, out-of-allowlist,
+leakage-prone, numerically unsafe, or claim-unsafe records. Deterministic
+evidence engines then evaluate verified candidates using synthetic execution,
+frozen replay, bounded real-data execution, and a FluSurv-NET hospitalization
+case study. Selection policies use non-test evidence only, and a claim auditor
+separates supported claims from rejected ones. Across synthetic structured
+recovery, candidate-budget experiments, a four-provider proposer benchmark, and
+FluSurv-NET discovery ablations, the framework supports cautious,
+age-dependent and objective-dependent recommendations. The strongest real-data
+observation-aware discovery signal appears for pediatric \texttt{0-4 yr};
+adult strata often favor simpler baselines; multi-season evidence is mixed.
+The paper does not claim state-of-the-art forecasting, a FluSight leaderboard
+result, autonomous science, provider clinical superiority, or real-world
+mechanism recovery.
 \end{abstract}
-
-\tableofcontents
 
 \input{sections/introduction}
 \input{sections/method}
@@ -58,7 +46,7 @@ recovery.
 \input{sections/results}
 \input{sections/limitations}
 
-\bibliographystyle{plain}
+\bibliographystyle{plainnat}
 \bibliography{references}
 
 \end{document}
