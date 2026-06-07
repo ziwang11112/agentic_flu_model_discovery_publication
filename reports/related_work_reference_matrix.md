@@ -1,6 +1,6 @@
 # Related Work Reference Matrix
 
-This matrix keeps the bibliography focused for *Verifier-Gated Agentic Model Selection under Partial Observation*. It is intentionally not a survey dump. Drug-discovery references are used only as cross-domain analogies for proposal-filter-evaluate-feedback and claim discipline.
+This matrix keeps the bibliography focused for *Verifier-Gated Agentic Model Selection under Partial Observation*. It is intentionally not a survey dump. After review, broad drug-discovery analogies were removed because machine-learning-agent and AutoML evaluation references are closer to the paper's actual protocol.
 
 | Citation key | Bucket | Why included | Claim supported | Claim boundary | Where cited |
 |---|---|---|---|---|---|
@@ -42,13 +42,14 @@ This matrix keeps the bibliography focused for *Verifier-Gated Agentic Model Sel
 | `feurer2015automl` | AutoML | Efficient robust AutoML reference. | Automated model selection motivates fixed-budget comparison. | Not an AutoML leaderboard claim. | Related Work D |
 | `li2018hyperband` | Budgeted model selection | Hyperband adaptive resource allocation. | Budget-to-good-candidate metrics are meaningful. | Not used as a competing method here. | Related Work D |
 | `deb2002nsga2` | Pareto multi-objective selection | NSGA-II / Pareto optimization. | Multi-objective model selection motivates Pareto-epsilon policy. | Does not imply Pareto is universally best. | Related Work D |
-| `loeffler2024reinvent` | Cross-domain claim discipline | ARISE A_full_text; constrained generative molecule-design workflow. | Cross-domain analogy for proposal-filter-feedback separation. | Does not support influenza, clinical, or mechanism claims. | Related Work E |
-| `liu2023drugex` | Cross-domain claim discipline | ARISE A_full_text; scaffold-constrained generative design. | Cross-domain analogy for constrained candidate proposal. | Not evidence for epidemic forecasting. | Related Work E |
-| `thomas2024molscore` | Cross-domain claim discipline | ARISE A_full_text; scoring and benchmarking generative designs. | Cross-domain analogy for evaluator-first discipline. | Not evidence for provider superiority or clinical use. | Related Work E |
-| `arvidsson2024cpsign` | Cross-domain claim discipline | ARISE A_full_text; conformal prediction in cheminformatics. | Cross-domain analogy for calibrated/claim-bounded evidence. | Not evidence for FluSurv-NET recommendations. | Related Work E |
+| `huang2024mlagentbench` | ML-agent evaluation | Benchmarks language agents on machine-learning experimentation. | Supports evaluating agentic proposer/refinement behavior rather than assuming it works. | Not a claim of autonomous science or forecasting performance. | Related Work E |
+| `chan2025mlebench` | ML-agent evaluation | Evaluates agents on machine-learning engineering tasks with held-out scoring. | Supports fixed-protocol evaluation of ML agents under task constraints. | Not a provider leaderboard for clinical forecasting. | Related Work E |
+| `zhang2023automlgpt` | LLM-assisted AutoML | Uses GPT-style prompts to automate parts of ML pipelines. | Contextualizes LLM-backed proposal for model/pipeline selection. | Our proposer cannot generate or execute model code. | Related Work E |
+| `chi2024sela` | LLM-assisted AutoML | Uses tree search with LLM agents for AutoML exploration. | Motivates iterative proposal/search under budget constraints. | Not evidence that iterative feedback is universally superior. | Related Work E |
+| `liang2023helm` | Model/provider evaluation discipline | Standardized multi-scenario, multi-metric language-model evaluation. | Supports cross-provider evaluation under a common protocol and metric set. | Not a provider-superiority or forecasting-performance claim. | Related Work E |
 ## Survey Policy Check
 
-- Drug-discovery references included: 4.
-- Preferred ARISE evidence level: all four selected drug-discovery references are A_full_text entries in `supplementary_evidence_status.csv`.
-- Excluded survey-style references: broad C/D-preview drug-discovery items and references used only to imply biomedical or clinical performance.
-- Boundary: these references support only proposal/evaluator separation, feedback, benchmarking, calibration, and claim discipline.
+- Drug-discovery references included: 0.
+- Reason: the closer ML-agent, AutoML, and model-evaluation literature now covers proposal/evaluator separation, iterative feedback, benchmark discipline, and cross-provider comparison more directly.
+- Excluded survey-style references: broad drug-discovery items, especially references that could imply biomedical, clinical, mechanism-recovery, or intervention claims.
+- Boundary: the selected references support only constrained proposer evaluation, budgeted model-selection protocol design, and claim discipline.

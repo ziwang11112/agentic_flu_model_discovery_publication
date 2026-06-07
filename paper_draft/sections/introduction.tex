@@ -108,13 +108,15 @@ setting combines these ideas in a narrower protocol: constrained agentic
 proposers order cross-family candidates, and Pareto-epsilon, weighted-score,
 and hard-veto policies select from non-test evidence.
 
-\paragraph{Cross-domain claim discipline.}
-We use only a small number of high-evidence drug-discovery survey references as
-cross-domain analogies for proposal-filter-evaluate-feedback and claim
-discipline. REINVENT 4 and DrugEx illustrate constrained generative candidate
-proposal, while MolScore and CPSign emphasize scoring, benchmarking, and
-calibrated evidence \citep{loeffler2024reinvent,liu2023drugex,
-thomas2024molscore,arvidsson2024cpsign}. These references do not support
-epidemic forecasting, mechanism recovery, clinical claims, or provider
-superiority; they only motivate disciplined separation between generation,
-verification, evaluation, and claims.
+\paragraph{Adjacent ML-agent and evaluation discipline.}
+Closer adjacent work evaluates LLM-backed systems on machine-learning
+experimentation and engineering tasks. MLAgentBench and MLE-bench benchmark
+agents that design, run, and iterate over ML experiments, while AutoML-GPT and
+SELA study LLM-assisted AutoML and search over machine-learning pipelines
+\citep{huang2024mlagentbench,chan2025mlebench,zhang2023automlgpt,chi2024sela}.
+HELM motivates standardized, multi-metric evaluation of model behavior across
+providers and scenarios \citep{liang2023helm}. These references are closer to
+our setting than drug-discovery analogies, but our framework is still narrower:
+the constrained agentic proposer cannot generate model code, cannot alter the
+allowlist, and is evaluated only through verifier-gated proposal quality,
+budget efficiency, and claim-bounded replay/execution evidence.
