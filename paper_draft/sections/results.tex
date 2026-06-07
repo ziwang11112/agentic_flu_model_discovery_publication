@@ -39,7 +39,7 @@ tasks remain harder and expose the limits of the current candidate labels.
 
 \begin{figure*}[t]
 \centering
-\includegraphics[width=\textwidth]{fig2_synthetic_recovery.pdf}
+\includegraphics[width=\textwidth]{figures/fig2_synthetic_recovery.pdf}
 \caption{Expanded synthetic structured recovery. The four panels summarize
 overall recovery and top-epsilon hits, budget sensitivity, noise sensitivity,
 and per-task recovery. The sweep uses generic structured time-series tasks and
@@ -71,8 +71,11 @@ claims, not new forecasting-performance claims.
 
 \begin{figure*}[t]
 \centering
-\includegraphics[width=\textwidth]{fig3_budget_efficiency.pdf}
-\caption{Candidate-budget evidence for agentic proposal ordering. Panel A summarizes synthetic execution, panel B summarizes frozen real-data replay, and panel C summarizes bounded real-data execution. The real-data layers use frozen replay or bounded
+\includegraphics[width=\textwidth]{figures/fig3_budget_efficiency.pdf}
+\caption{Candidate-budget efficiency evidence for agentic proposal ordering,
+not operational forecasting performance. Panel A summarizes synthetic
+execution, panel B summarizes frozen real-data replay, and panel C summarizes
+bounded real-data execution. The real-data layers use frozen replay or bounded
 allowlisted execution and keep held-out test metrics post-hoc only.}
 \label{fig:budget}
 \end{figure*}
@@ -123,8 +126,12 @@ replay-efficiency claims only.
 
 \begin{figure*}[t]
 \centering
-\includegraphics[width=\textwidth]{fig4_provider_benchmark.pdf}
-\caption{Four-provider constrained agentic proposer benchmark. The panels summarize verifier-valid proposal rates, replay utility, validity-utility tradeoffs, and proposal diversity. Providers are compared as structured candidate proposers, not as clinical forecasting systems, provider leaderboards, or autonomous scientific agents.}
+\includegraphics[width=\textwidth]{figures/fig4_provider_benchmark.png}
+\caption{Four-provider constrained agentic proposer benchmark. The panels
+summarize verifier-valid proposal rates, replay utility, iterative versus
+single-shot behavior, and proposal diversity. Providers are compared only as
+provider-backed structured proposers, not as provider forecasting superiority,
+clinical forecasting systems, or autonomous scientific agents.}
 \label{fig:providers}
 \end{figure*}
 
@@ -160,11 +167,13 @@ robustness budget.
 
 \begin{figure*}[t]
 \centering
-\includegraphics[width=\textwidth]{fig5_flusurvnet_case_study.pdf}
-\caption{FluSurv-NET case-study evidence. Panel A shows that recommended
-families differ by age group; panel B shows that observation search helps
-selectively rather than uniformly; panel C shows paired rolling-origin
-comparisons against constrained discovery; panel D records numerical-failure
-flags as descriptive transparency rather than positive evidence.}
+\includegraphics[width=\textwidth]{figures/fig5_flusurvnet_case_study.png}
+\caption{Retrospective FluSurv-NET case-study evidence, not a FluSight
+leaderboard or SOTA forecasting claim. Panel A shows that recommended families
+differ by age group; panel B shows that observation search helps selectively
+rather than uniformly; panel C shows paired rolling-origin comparisons against
+constrained discovery, where positive values favor constrained discovery; panel
+D records numerical-failure flags as descriptive transparency rather than
+positive evidence.}
 \label{fig:flusurvnet}
 \end{figure*}
