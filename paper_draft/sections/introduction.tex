@@ -61,54 +61,60 @@ OpenAI/GPT, Claude, Gemini, and DeepSeek under the same verifier protocol.
 
 \section{Related Work}
 
+\paragraph{Influenza forecasting and mechanistic epidemic models.}
 Operational influenza forecasting has established the value of collaborative
-multi-model assessment, real-time evaluation, and ensemble forecasts
-\citep{shaman2012forecasting,shaman2013realtime,reich2019collaborative,
-reich2019accuracy,lutz2019pathforward,ray2024flusion}. Our setting is
-different. We use FluSurv-NET as a retrospective case study for credible
-model recommendation under partial observation, not as a FluSight leaderboard
-entry or operational forecasting system.
+multi-model assessment, real-time evaluation, and ensemble forecasts through
+FluSight-style challenges and follow-on systems
+\citep{shaman2012forecasting,shaman2013realtime,biggerstaff2016challenge,
+mcgowan2019collaborative,reich2019collaborative,reich2019accuracy,
+lutz2019pathforward,ray2025flusion}. Mechanistic epidemic modeling provides
+interpretable state variables and constrained dynamics
+\citep{anderson1991infectious,keeling2008modeling,breto2009mechanistic,
+king2016pomp}. Our setting is different from an operational leaderboard:
+FluSurv-NET is used as a retrospective case study for credible model
+recommendation under partial observation, not as a FluSight or Flusion
+replacement.
 
-Mechanistic epidemic forecasting and symbolic discovery provide interpretable
-structure, but they also introduce model-space and observation-map choices.
-SINDy, AI Feynman, and PySR search for interpretable equations from data
-\citep{brunton2016sindy,udrescu2020aifeynman,cranmer2023pysr}. Our structured
-search is deliberately narrower: the compartment templates, observation maps,
-and delays are bounded in advance, and all discovered candidates are compared
-against simple forecasting baselines, hand-specified mechanistic baselines, and
-same-grammar ablations.
+\paragraph{Partial observation and forecast evaluation.}
+Partially observed epidemic time series require an observation model in
+addition to latent dynamics; reporting-delay and nowcasting studies make this
+separation explicit \citep{king2016pomp,lawless1994reporting,mcgough2020nowcasting}.
+Forecast evaluation work motivates out-of-sample, rolling-origin, and
+temporally structured validation
+\citep{tashman2000outofsample,hyndman2021fpp3,bergmeir2012cv,roberts2017cv}.
+Data-leakage studies further motivate separating selection evidence from
+held-out test evidence \citep{kaufman2012leakage,kapoor2023leakage}. These
+lines motivate our no-leakage rule: held-out test metrics are post-selection
+descriptive only.
 
-Recent language-model systems for scientific search motivate proposal and
-evaluation loops \citep{romera2024funsearch,shojaee2024llmsr,lu2024aiscientist}.
-We adopt the loop structure but restrict the autonomy. A language model, when
-used, is a structured proposer. It cannot invent model families, generate
-executable model code, change the allowlist, execute forecasts, or view
-held-out test metrics.
+\paragraph{Symbolic regression and LLM/evaluator scientific discovery.}
+Symbolic regression and equation-discovery systems search for interpretable
+equations from data
+\citep{schmidt2009distilling,brunton2016sindy,udrescu2020aifeynman,
+cranmer2023pysr,lacava2021symbolic}. LLM/evaluator systems such as FunSearch,
+LLM-SR, and the AI Scientist motivate proposal-and-evaluation loops
+\citep{romera2024funsearch,shojaee2024llmsr,lu2024aiscientist}. We borrow the
+loop pattern but not unrestricted autonomy: the LLM-backed proposer emits
+allowlisted JSON candidate records, while deterministic verifiers and
+evaluators control evidence use and claims.
 
-Adjacent AI-for-science pipelines reinforce the same separation between
-proposal, verification, evaluation, and claim discipline. In molecular design,
-REINVENT-style workflows, scaffold-constrained DrugEx search, multi-target
-molecular generation, and pocket-conditioned diffusion propose or optimize
-candidate objects, but their scientific value depends on downstream scoring,
-filtering, multi-objective evaluation, uncertainty, and domain-specific
-validation rather than on generation alone
-\citep{loeffler2024reinvent,liu2023drugex,ai2024mtmolgpt,lin2024diffbp}.
-Platform and benchmarking work makes this boundary explicit: Chemistry42-style
-optimization and MolScore-style evaluation treat proposal quality as something
-that must be filtered, scored, and benchmarked under explicit objectives, while
-uncertainty and conformal-prediction studies emphasize applicability-domain and
-confidence-aware reporting \citep{ivanenkov2023chemistry42,thomas2024molscore,
-dutschmann2023uncertainty,arvidsson2024cpsign}. Prospective de novo design and
-mechanism-aware foundation-model discussions further motivate closed-loop
-feedback and mechanism-grounded evaluation, but they also illustrate why a
-proposal engine should not be confused with a validated scientific conclusion
-\citep{atz2024prospective,lavecchia2026mechanismaware}. We use these
-cross-domain references only to motivate proposer/evaluator separation,
-feedback, uncertainty, and claim boundaries; they do not support influenza
-forecasting performance, FluSurv-NET recommendations, provider superiority, or
-real-world epidemic mechanism recovery.
+\paragraph{Agentic proposal and budgeted model selection.}
+Agentic LLM work studies reasoning-action loops, self-refinement, and
+benchmarked agent behavior \citep{yao2023react,madaan2023selfrefine,
+liu2023agentbench}. AutoML and budgeted optimization study how to allocate
+limited evaluation budgets across candidates
+\citep{snoek2012bayesian,feurer2015automl,li2018hyperband,deb2002nsga2}. Our
+setting combines these ideas in a narrower protocol: constrained agentic
+proposers order cross-family candidates, and Pareto-epsilon, weighted-score,
+and hard-veto policies select from non-test evidence.
 
-This design follows standard concerns in out-of-sample and rolling-origin
-forecast evaluation \citep{tashman2000outofsample,hyndman2021fpp3} and uses
-multi-objective selection ideas related to Pareto optimization
-\citep{deb2002nsga2}.
+\paragraph{Cross-domain claim discipline.}
+We use only a small number of high-evidence drug-discovery survey references as
+cross-domain analogies for proposal-filter-evaluate-feedback and claim
+discipline. REINVENT 4 and DrugEx illustrate constrained generative candidate
+proposal, while MolScore and CPSign emphasize scoring, benchmarking, and
+calibrated evidence \citep{loeffler2024reinvent,liu2023drugex,
+thomas2024molscore,arvidsson2024cpsign}. These references do not support
+epidemic forecasting, mechanism recovery, clinical claims, or provider
+superiority; they only motivate disciplined separation between generation,
+verification, evaluation, and claims.
